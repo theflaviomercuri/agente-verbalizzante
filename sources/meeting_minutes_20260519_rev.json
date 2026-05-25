@@ -1,0 +1,365 @@
+{
+  "document": {
+    "title": "Verbale SAL – Reingegnerizzazione UI/UX ASI – 19/05/2026",
+    "document_name": "VRB_SAL_20260519",
+    "document_type": "Verbale di riunione",
+    "ssu_code": "-",
+    "client_references": [],
+    "management_area": "GDP – Gestione Dipendenti Pubblici",
+    "application_code": "ASI",
+    "contract_reference": "-",
+    "supplier": "-",
+    "version": "1.0",
+    "author": {
+      "name": "Mercuri Flavio",
+      "organization": "-"
+    },
+    "history": [
+      {
+        "version": "1.0",
+        "date": "19/05/2026",
+        "description": "Versione iniziale",
+        "sections": ""
+      }
+    ],
+    "distribution": [
+      {
+        "name": "Mercuri Flavio",
+        "role": "Design Lead / Project Manager (Fornitore)",
+        "organization": "-"
+      },
+      {
+        "name": "Friscia Michele",
+        "role": "Responsabile Funzionale",
+        "organization": "INPS"
+      },
+      {
+        "name": "Capobianco Paolo",
+        "role": "Referente Tecnico-Funzionale",
+        "organization": "INPS"
+      },
+      {
+        "name": "Piscitelli Terenzio",
+        "role": "Coordinatore di Progetto",
+        "organization": "INPS"
+      },
+      {
+        "name": "Laferla Gianluca",
+        "role": "Sviluppatore (Fornitore)",
+        "organization": "-"
+      },
+      {
+        "name": "Vicino Emanuele",
+        "role": "Sviluppatore Backend (Fornitore)",
+        "organization": "-"
+      },
+      {
+        "name": "Tantar Ana Maria",
+        "role": "-",
+        "organization": "-"
+      }
+    ],
+    "approvals": [
+      {
+        "version": "1.0",
+        "approval_date": "-",
+        "name": "-",
+        "organization": "-"
+      }
+    ]
+  },
+  "meeting": {
+    "date": "19/05/2026",
+    "start_time": "13:04",
+    "end_time": "14:46",
+    "location": "Microsoft Teams",
+    "subject": "Reingegnerizzazione UI/UX ASI – Stato Avanzamento Lavori",
+    "participants": [
+      {
+        "name": "Mercuri Flavio",
+        "role": "Design Lead / Project Manager (Fornitore)",
+        "organization": "-"
+      },
+      {
+        "name": "Friscia Michele",
+        "role": "Responsabile Funzionale",
+        "organization": "INPS"
+      },
+      {
+        "name": "Capobianco Paolo",
+        "role": "Referente Tecnico-Funzionale",
+        "organization": "INPS"
+      },
+      {
+        "name": "Piscitelli Terenzio",
+        "role": "Coordinatore di Progetto",
+        "organization": "INPS"
+      },
+      {
+        "name": "Laferla Gianluca",
+        "role": "Sviluppatore (Fornitore)",
+        "organization": "-"
+      },
+      {
+        "name": "Vicino Emanuele",
+        "role": "Sviluppatore Backend (Fornitore)",
+        "organization": "-"
+      },
+      {
+        "name": "Tantar Ana Maria",
+        "role": "-",
+        "organization": "-"
+      }
+    ]
+  },
+  "references": [],
+  "glossary": [
+    {
+      "term": "ASI",
+      "description": "Applicativo INPS oggetto della reingegnerizzazione, dedicato alla gestione delle cessazioni del servizio per dipendenti pubblici."
+    },
+    {
+      "term": "Sirio",
+      "description": "Design System INPS utilizzato come framework visuale e di componenti per la reingegnerizzazione dell'interfaccia utente."
+    },
+    {
+      "term": "GDP",
+      "description": "Gestione Dipendenti Pubblici – area INPS di pertinenza dell'applicativo ASI."
+    },
+    {
+      "term": "SAL",
+      "description": "Stato Avanzamento Lavori – tipologia di riunione periodica di monitoraggio del progetto."
+    },
+    {
+      "term": "MEMO",
+      "description": "Strumento di pianificazione e gestione delle attività di progetto adottato da INPS per il controllo dello stato di avanzamento."
+    },
+    {
+      "term": "PBI",
+      "description": "Product Backlog Item – elemento della bacheca del progetto Agile, utilizzato per tracciare le richieste di modifica."
+    },
+    {
+      "term": "Arianna",
+      "description": "Sistema backend di riferimento per i servizi applicativi dell'ASI, da cui vengono estratti i dati esposti nell'interfaccia."
+    },
+    {
+      "term": "Domus",
+      "description": "Identificativo numerico alternativo al codice fiscale, utilizzato nel contesto web per l'identificazione delle pratiche."
+    },
+    {
+      "term": "Toast",
+      "description": "Componente UI che mostra una notifica temporanea sullo schermo per confermare un'azione avvenuta con successo."
+    },
+    {
+      "term": "Chip",
+      "description": "Componente UI del Design System Sirio che rappresenta un filtro o tag selezionabile, visualizzato come etichetta interattiva."
+    },
+    {
+      "term": "Quasi pronte",
+      "description": "Sottoinsieme di attività da avviare per le quali tutti i prerequisiti sono stati soddisfatti e che sono prossime alla lavorazione da parte dell'operatore."
+    },
+    {
+      "term": "CF",
+      "description": "Codice Fiscale."
+    },
+    {
+      "term": "LPI",
+      "description": "Servizio backend che espone il contatore delle attività nella home page. Definizione da confermare."
+    }
+  ],
+  "sections": [
+    {
+      "number": "1",
+      "title": "Scopo del documento",
+      "paragraphs": [
+        "Il presente documento costituisce il verbale del SAL relativo alla reingegnerizzazione dell'interfaccia utente dell'applicativo ASI (INPS). Riporta le osservazioni raccolte dal referente funzionale INPS e le decisioni operative concordate in vista del collaudo con gli utenti amministrativi."
+      ]
+    },
+    {
+      "number": "2",
+      "title": "Introduzione",
+      "paragraphs": [
+        "Il fornitore ha completato la reingegnerizzazione dell'intera interfaccia utente dell'applicativo ASI sulla base della code baseline di dicembre 2025 – gennaio 2026. La riunione ha lo scopo di raccogliere le osservazioni del committente su tutte le funzionalità reingegnerizzate, in preparazione alla sessione di test con gli utenti amministrativi pianificata entro il 25/06/2026. Le osservazioni si intendono limitate a interventi non strutturali, compatibili con la tempistica disponibile.",
+        "A partire da questa riunione la frequenza del SAL è stata portata da bisettimanale a settimanale, ogni martedì alle 15:00, per garantire un ritmo di revisione adeguato agli obiettivi di delivery."
+      ]
+    },
+    {
+      "number": "3",
+      "title": "Stato avanzamento reingegnerizzazione",
+      "paragraphs": [
+        "La reingegnerizzazione è dichiarata completa per la parte frontend destinata agli utenti finali. Rimangono da eseguire le attività di testing. Eventuali modifiche di natura strutturale al funzionamento dell'applicativo esulano dall'ambito della presente fase e richiederebbero una gestione separata."
+      ]
+    },
+    {
+      "number": "4",
+      "title": "Home page – dimensionamento font e spaziatura",
+      "paragraphs": [
+        "La richiesta di riduzione del font nella home page non viene accolta: la dimensione attuale è al minimo consentito dal Design System Sirio per garantire la leggibilità. Come intervento alternativo, il fornitore verificherà la possibilità di ridurre ulteriormente la spaziatura nella barra delle 'Liste veloci', dove era già stata effettuata una compressione in precedenza."
+      ]
+    },
+    {
+      "number": "5",
+      "title": "Lista Preferiti – notifica Toast e tooltip azioni",
+      "paragraphs": [
+        "Concordata l'implementazione di una notifica Toast con messaggio 'Preferito eliminato' alla rimozione di una pratica dalla lista dei preferiti. La notifica comparirà in alto a sinistra e si chiuderà automaticamente dopo circa tre secondi, senza richiedere interazione dell'utente.",
+        "Concordata l'implementazione con priorità elevata di tooltip sulle icone delle colonne azioni in tutte le tabelle dell'applicativo. La libreria nativa non prevede questa funzionalità; il fornitore la introdurrà tramite customizzazione."
+      ]
+    },
+    {
+      "number": "6",
+      "title": "Attività Recenti – nomenclatura colonne",
+      "paragraphs": [
+        "La colonna attualmente denominata 'Descrizione' nella sezione Attività Recenti è rinominata in 'Descrizione lavorazione', per distinguerla dalla colonna 'Stato' ed evitare ambiguità con la lavorazione web dell'applicativo."
+      ]
+    },
+    {
+      "number": "7",
+      "title": "Sezione 'Da Avviare' – filtri e accesso rapido Quasi Pronte",
+      "paragraphs": [
+        "I pannelli filtri nella sezione 'Da Avviare' atterrano collassati. Il filtro rapido 'Quasi Pronte' rimane nella posizione attuale all'interno del pannello filtri. Nella lista 'Quasi Pronte' i filtri 'tipologia' e 'qualifica' vengono disabilitati, in quanto privi di utilità su un insieme già pre-filtrato per disponibilità operativa. La sezione 'Quasi Pronte' rimane accessibile anche dalla home page tramite le liste veloci."
+      ]
+    },
+    {
+      "number": "8",
+      "title": "Area Operativa – ordine schede",
+      "paragraphs": [
+        "Concordato e approvato il seguente ordine delle schede nell'Area Operativa: 1) Cessazioni pregresse, 2) Mese corrente, 3) Tre mesi futuri, 4) Decesso, 5) In attesa di domanda."
+      ]
+    },
+    {
+      "number": "9",
+      "title": "Indicatori visivi filtri applicati",
+      "paragraphs": [
+        "La richiesta di evidenziare visivamente i campi filtro attivi a pannello collassato non viene implementata nella presente fase. Il Design System Sirio non prevede questa funzionalità nativa e l'alternativa tramite chip dinamici potrebbe generare confusione con le chip fisse già presenti. L'esigenza sarà rilevata durante il test con gli utenti amministrativi e valutata di conseguenza."
+      ]
+    },
+    {
+      "number": "10",
+      "title": "Contatore attività home page – discrepanza",
+      "paragraphs": [
+        "Rilevata una discrepanza tra il contatore delle attività visualizzato nella home page (3) e il numero di pratiche presenti nel backend (5). La causa è da ricercare nella logica del servizio API che alimenta il contatore; il team di sviluppo è incaricato di verificare il criterio di calcolo e allinearlo al requisito. Il dato è da considerare legato al dominio backend e non all'interfaccia."
+      ]
+    },
+    {
+      "number": "11",
+      "title": "Lista Precalcolate e campo numero Domus",
+      "paragraphs": [
+        "La sezione Precalcolate viene lasciata invariata nella configurazione attuale. Il campo 'numero Domus' verrà aggiunto alla lista attività da avviare, affiancando il campo 'Codice Fiscale' già presente. La colonna 'Qualifica' viene mantenuta su indicazione del referente tecnico-funzionale INPS."
+      ]
+    },
+    {
+      "number": "12",
+      "title": "Pianificazione SAL e test amministrativo",
+      "paragraphs": [
+        "Concordato l'aumento della frequenza SAL da bisettimanale a settimanale, ogni martedì ore 15:00, a partire dal 26/05/2026. Il MEMO di progetto deve essere portato dallo stato 'inserito' a 'in lavorazione'. La data target per l'avvio del test amministrativo è confermata al 25/06/2026. INPS si farà carico di contattare gli utenti amministrativi per verificarne la disponibilità entro il SAL successivo."
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "AZ-01",
+      "owner": "Laferla Gianluca",
+      "due_date": "-",
+      "status": "aperta",
+      "action": "Verificare e ridurre la spaziatura nella barra 'Liste veloci' in home page"
+    },
+    {
+      "id": "AZ-02",
+      "owner": "Laferla Gianluca",
+      "due_date": "-",
+      "status": "aperta",
+      "action": "Implementare tooltip sulle icone delle colonne azioni in tutte le tabelle (priorità alta)"
+    },
+    {
+      "id": "AZ-03",
+      "owner": "Laferla Gianluca",
+      "due_date": "-",
+      "status": "aperta",
+      "action": "Implementare notifica Toast 'Preferito eliminato' alla rimozione di una pratica dai preferiti"
+    },
+    {
+      "id": "AZ-04",
+      "owner": "Laferla Gianluca",
+      "due_date": "-",
+      "status": "aperta",
+      "action": "Rinominare colonna 'Descrizione' in 'Descrizione lavorazione' nella sezione Attività Recenti"
+    },
+    {
+      "id": "AZ-05",
+      "owner": "Laferla Gianluca",
+      "due_date": "-",
+      "status": "aperta",
+      "action": "Impostare filtri collassati al caricamento nella sezione 'Da Avviare'"
+    },
+    {
+      "id": "AZ-06",
+      "owner": "Laferla Gianluca",
+      "due_date": "-",
+      "status": "aperta",
+      "action": "Disabilitare filtri 'tipologia' e 'qualifica' nella lista Quasi Pronte"
+    },
+    {
+      "id": "AZ-07",
+      "owner": "Laferla Gianluca",
+      "due_date": "-",
+      "status": "aperta",
+      "action": "Riordinare schede Area Operativa: 1) Cessazioni pregresse 2) Mese corrente 3) Tre mesi futuri 4) Decesso 5) In attesa di domanda"
+    },
+    {
+      "id": "AZ-08",
+      "owner": "Vicino Emanuele",
+      "due_date": "-",
+      "status": "aperta",
+      "action": "Aggiungere colonna numero Domus nella lista attività da avviare"
+    },
+    {
+      "id": "AZ-09",
+      "owner": "Laferla Gianluca / Vicino Emanuele",
+      "due_date": "-",
+      "status": "aperta",
+      "action": "Verificare logica servizio LPI per contatore attività home page e allineare al requisito"
+    },
+    {
+      "id": "AZ-10",
+      "owner": "Mercuri Flavio",
+      "due_date": "26/05/2026",
+      "status": "aperta",
+      "action": "Creare PBI in bacheca con tutte le modifiche richieste nella presente riunione"
+    },
+    {
+      "id": "AZ-11",
+      "owner": "Piscitelli Terenzio",
+      "due_date": "26/05/2026",
+      "status": "aperta",
+      "action": "Riorganizzare le convocazioni SAL con cadenza settimanale ogni martedì ore 15:00"
+    },
+    {
+      "id": "AZ-12",
+      "owner": "Friscia Michele / Capobianco Paolo",
+      "due_date": "26/05/2026",
+      "status": "aperta",
+      "action": "Contattare utenti amministrativi per disponibilità test 25/06/2026 e portare il MEMO in stato 'in lavorazione'"
+    }
+  ],
+  "notes": [
+    "Prossimo SAL: martedì 26/05/2026 ore 15:00.",
+    "Test amministrativo target: 25/06/2026. La data è confermata salvo necessità di ripianificazione motivata."
+  ],
+  "issues": [
+    {
+      "code": "ISS-004",
+      "description": "Discrepanza contatore attività home page: 3 mostrate vs 5 attese. Logica backend servizio LPI da verificare con Laferla/Vicino.",
+      "severity": "media"
+    }
+  ],
+  "generation_options": {
+    "include_summary": true,
+    "include_references_section": true,
+    "include_glossary_section": true,
+    "include_issues_section": true,
+    "date_format": "dd/MM/yyyy",
+    "empty_value_placeholder": "-",
+    "language": "it",
+    "synthesis_level": "resolved"
+  }
+}

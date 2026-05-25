@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "total_patterns": 1,
+    "last_updated": "25/05/2026"
+  },
+  "patterns": [
+    {
+      "pattern_id": "CRR-001",
+      "verbale": "20260519",
+      "category": "sections",
+      "changes": [
+        {
+          "field": "sections[1]",
+          "title": "Scopo del documento",
+          "original_length": 297,
+          "revised_length": 291,
+          "char_delta": -6
+        },
+        {
+          "field": "sections[10]",
+          "title": "Contatore attività home page – discrepanza",
+          "original_length": 391,
+          "revised_length": 391,
+          "char_delta": 0
+        },
+        {
+          "field": "sections[12]",
+          "title": "Pianificazione SAL e test amministrativo",
+          "original_length": 495,
+          "revised_length": 402,
+          "char_delta": -93
+        }
+      ],
+      "description": "",
+      "occurrences": 1,
+      "first_seen": "20260519",
+      "last_seen": "20260519"
+    }
+  ]
+}
