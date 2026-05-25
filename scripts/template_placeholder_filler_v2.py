@@ -222,7 +222,7 @@ def build_repeat_data(data: Dict[str, Any]) -> Dict[Tuple[str, ...], List[List[s
     return {
         ('V', 'DV', 'DESCV', 'SEZV'): [[text(r.get('version')), fmt_date(r.get('date')), text(r.get('description')), text(r.get('sections'))] for r in history_rows],
         ('V', 'AUTORE', 'ORG_AUT'): [[text(doc.get('version', '1.0')), text(doc.get('author', {}).get('name')), text(doc.get('author', {}).get('organization'))]],
-        ('DIST', 'DDIST'): [[text(r.get('list')), fmt_date(r.get('date'))] for r in distribution_rows],
+        ('DIST', 'DDIST'): [[text(r.get('name')), text(r.get('organization'))] for r in distribution_rows],
         ('VA', 'DA', 'NA', 'OA'): [[text(r.get('version')), fmt_date(r.get('approval_date')), text(r.get('name')), text(r.get('organization'))] for r in approval_rows],
         ('PN', 'PR', 'PO'): [[text(p.get('name')), text(p.get('role')), text(p.get('organization'))] for p in participants],
         ('RDOC', 'RV', 'RD'): [[text(r.get('document')), text(r.get('version')), fmt_date(r.get('date'))] for r in references],
@@ -374,12 +374,13 @@ def prune_empty_paragraphs(doc: DocumentObject) -> None:
         remove_paragraph(p)
 
 
-def fill_template(template_path: str | Path, json_path: str | Path, output_path: str | Path) -> None:
+def fill_template(template_path: str | Path, json_path: str | Path, output_path: str | Path, logo_path: str | Path | None = None) -> None:
     data = load_json(json_path)
     doc = Document(str(template_path))
     # Logo INPS centrato in cima alla pagina 1
-    logo_path = Path(template_path).parent / 'logo inps.png'
-    insert_logo_first_page(doc, logo_path)
+    if logo_path is None:
+        logo_path = Path(template_path).parent / 'logo inps.png'
+    insert_logo_first_page(doc, Path(logo_path))
     for tokens, rows in build_repeat_data(data).items():
         populate_repeat_table(doc, list(tokens), rows)
     ensure_dynamic_sections(doc, data)
@@ -394,6 +395,7 @@ def fill_template(template_path: str | Path, json_path: str | Path, output_path:
             print(f'WARN: placeholder non riempito rimosso: {{{{{k}}}}}', file=sys.stderr)
     replace_everywhere(doc, {k: '' for k in remaining})
     prune_empty_paragraphs(doc)
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     doc.save(str(output_path))
 
 
@@ -402,8 +404,9 @@ def main() -> None:
     ap.add_argument('input_json')
     ap.add_argument('output_docx')
     ap.add_argument('--template', required=True)
+    ap.add_argument('--logo', default=None, help='Percorso al logo (default: logo inps.png nella cartella del template)')
     args = ap.parse_args()
-    fill_template(args.template, args.input_json, args.output_docx)
+    fill_template(args.template, args.input_json, args.output_docx, logo_path=args.logo)
 
 
 if __name__ == '__main__':

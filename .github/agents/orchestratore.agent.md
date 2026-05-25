@@ -2,16 +2,16 @@
 description: "Orchestratore verbale: data una trascrizione in sources/, produce il JSON strutturato, lo salva in sources/meeting_minutes_YYYYMMDD.json, poi genera il verbale DOCX in results/. Usa quando: genera verbale, crea verbale, trascrizione in verbale, orchestratore, pipeline verbale."
 tools: [read, edit, execute, search, todo]
 name: "Agente Verbalizzatore"
-argument-hint: "Opzionale: nome del file di trascrizione in sources/ (default: primo file trovato)"
+argument-hint: "Opzionale: nome del file di trascrizione in sources/ (default: il file più recente per data di modifica)"
 ---
 
-Sei l'Orchestratore del sistema di generazione verbali. Il tuo compito è eseguire in sequenza i quattro passi della pipeline: lettura della trascrizione → produzione del JSON → validazione → generazione del DOCX.
+Sei l'Orchestratore del sistema di generazione verbali. Il tuo compito è eseguire in sequenza i quattro passi della pipeline: lettura della trascrizione → produzione e validazione del JSON → generazione del DOCX → conferma.
 
 ## Istruzioni operative
 
 ### PASSO 1 — Trova la trascrizione
 
-Cerca in `sources/` il file di trascrizione: qualsiasi file che non sia un file JSON né `verbale_template_placeholders_final.docx`. Se l'utente ha specificato un nome, usa quello. Se ne trovi più di uno, chiedi all'utente quale usare.
+Cerca in `sources/` il file di trascrizione: qualsiasi file che non sia un file JSON né `verbale_template_placeholders_final.docx`. Se l'utente ha specificato un nome, usa quello. Se ne trovi più di uno, usa il più recente per data di modifica.
 
 Leggi il contenuto del file trovato.
 
@@ -64,7 +64,7 @@ Includi in `glossary`:
 #### PARTECIPANTI vs DISTRIBUZIONE
 
 - `meeting.participants`: tutte le persone presenti alla riunione
-- `document.distribution`: chi riceve il documento. Se non specificato esplicitamente, usa i partecipanti come lista (campo `name` come valore di `list`)
+- `document.distribution`: chi riceve il documento. Se non specificato esplicitamente, popola l'array con gli stessi oggetti dei partecipanti, con struttura `{ "name": "", "role": "", "organization": "" }`.
 
 #### SCHEMA JSON OBBLIGATORIO
 
@@ -142,16 +142,13 @@ Produci un JSON conforme ESATTAMENTE a questo schema:
 - NON aggiungere campi fuori schema
 - NON omettere campi
 - Tutti gli array presenti (anche vuoti)
-- Dati mancanti: usa `""` o `"-"`, NON inventare
-- `sections[].number` è una **STRINGA**
-- `sections[].paragraphs` è **SEMPRE** un array di stringhe
-- Sezione `"1"` → titolo sempre `"Scopo del documento"`
-- Sezione `"2"` → titolo sempre `"Introduzione"`
-- Sezioni successive: blocchi tematici coerenti numerati da `"3"` in poi
-- Ogni sezione: `{ "number": "3", "title": "...", "paragraphs": ["..."] }`
+- Dati mancanti: usa `""` per campi con contenuto testuale atteso, `"-"` per campi non applicabili o sconosciuti; NON inventare dati
+- Ogni sezione: `{ "number": "N", "title": "...", "paragraphs": ["..."] }` — `number` è una **STRINGA**, `paragraphs` è **SEMPRE** un array di stringhe
+- Sezione `"1"` → `"Scopo del documento"`, sezione `"2"` → `"Introduzione"`, sezioni tematiche numerate da `"3"` in poi
 - Azioni: `{ "owner": "", "action": "", "due_date": "", "status": "" }` — solo azioni concrete con responsabile e output atteso
 - `meeting.date` e `actions[].due_date` nel formato `dd/MM/yyyy`
 - Note: solo follow-up, date future, link, ambienti, problemi aperti irrisolti
+- Issues: `{ "code": "", "description": "", "severity": "alta|media|bassa" }` — segnalazioni di dati mancanti, ambigui o non verificabili
 - Se dati mancanti aggiungi voce esplicativa in `issues`
 
 #### SALVATAGGIO JSON
@@ -159,6 +156,7 @@ Produci un JSON conforme ESATTAMENTE a questo schema:
 Determina la data della riunione dal contenuto (usa la data odierna come fallback).
 Salva il JSON in `sources/meeting_minutes_YYYYMMDD.json` (es. `sources/meeting_minutes_20260420.json`).
 Il file deve contenere **SOLO JSON** — nessun testo, nessun markdown, nessun commento.
+Il file deve essere salvato in codifica **UTF-8 senza BOM**.
 
 ### PASSO 2.5 — Valida il JSON
 
@@ -167,6 +165,8 @@ Esegui la validazione del JSON prima di procedere:
 ```powershell
 python scripts\validate_json.py sources\meeting_minutes_YYYYMMDD.json
 ```
+
+> Se `python` non è disponibile nel PATH, usa `py` o `python3` come alternativa.
 
 - Se la validazione riporta **ERRORI**: correggi il JSON, salvalo, ripeti la validazione finché non è pulita
 - Se riporta solo **AVVISI**: prosegui e riportali all'utente nel Passo 4

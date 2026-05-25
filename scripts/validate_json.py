@@ -100,7 +100,7 @@ def validate(data: dict) -> None:
                     if not isinstance(p, str):
                         err(f"sections[{i}].paragraphs[{j}] deve essere una stringa")
         if not has_section_1:
-            warn("Sezione '1' (Scopo del documento) mancante")
+            err("Sezione '1' (Scopo del documento) obbligatoria ma mancante")
         if not has_section_2:
             err("Sezione '2' (Introduzione) obbligatoria ma mancante")
         thematic_count = len([s for s in sections if s.get('number') not in ('1', '2')])
@@ -108,6 +108,9 @@ def validate(data: dict) -> None:
             warn(f"Solo {thematic_count} sezioni tematiche (dalla 3 in poi): potrebbe essere troppo sintetico")
         if thematic_count > 12:
             warn(f"{thematic_count} sezioni tematiche: valutare se accorpare argomenti correlati")
+        numbers = [str(s.get('number')) for s in sections if s.get('number') is not None]
+        if len(numbers) != len(set(numbers)):
+            err("sections: numeri di sezione duplicati")
 
     # --- actions ---
     actions = data.get('actions')
@@ -122,19 +125,40 @@ def validate(data: dict) -> None:
             due = str(a.get('due_date') or '')
             if due and due != '-' and not DATE_RE.match(due):
                 warn(f"actions[{i}].due_date '{due}' non e' nel formato dd/MM/yyyy")
+            if not a.get('status'):
+                warn(f"actions[{i}].status vuoto")
 
     # --- notes ---
     if not isinstance(data.get('notes'), list):
         err("'notes' deve essere un array")
 
     # --- references / glossary ---
-    for key in ('references', 'glossary'):
-        if not isinstance(data.get(key), list):
-            err(f"'{key}' deve essere un array")
+    if not isinstance(data.get('references'), list):
+        err("'references' deve essere un array")
+    glossary = data.get('glossary')
+    if not isinstance(glossary, list):
+        err("'glossary' deve essere un array")
+    else:
+        for i, g in enumerate(glossary):
+            if not g.get('term') and not g.get('acronym'):
+                warn(f"glossary[{i}]: manca 'term' o 'acronym'")
+            if not g.get('description'):
+                warn(f"glossary[{i}].description vuoto")
 
     # --- issues ---
-    if not isinstance(data.get('issues'), list):
+    issues = data.get('issues')
+    if not isinstance(issues, list):
         warn("'issues' mancante o non e' un array")
+    else:
+        _valid_severities = {'alta', 'media', 'bassa'}
+        for i, issue in enumerate(issues):
+            if not issue.get('code'):
+                warn(f"issues[{i}].code vuoto")
+            if not issue.get('description'):
+                warn(f"issues[{i}].description vuoto")
+            sev = issue.get('severity', '')
+            if sev not in _valid_severities:
+                warn(f"issues[{i}].severity '{sev}' non valido (atteso: alta|media|bassa)")
 
     # --- generation_options ---
     opts = data.get('generation_options')
@@ -143,6 +167,9 @@ def validate(data: dict) -> None:
 
 
 def main() -> None:
+    global _errors, _warnings
+    _errors.clear()
+    _warnings.clear()
     if len(sys.argv) < 2:
         print("Uso: python scripts\\validate_json.py <path_json>")
         sys.exit(1)
