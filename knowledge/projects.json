@@ -1,0 +1,21 @@
+{
+    "_meta": {
+        "version": "1.0",
+        "last_updated": "26/05/2026"
+    },
+    "projects": [
+        {
+            "slug": "inps_asi_uiux",
+            "display_name": "INPS - ASI Reingegnerizzazione UIUX",
+            "aliases": [
+                "ASI Reingegnerizzazione UIUX",
+                "ASI UIUX",
+                "INPS - ASI Reingegnerizzazione UI/UX",
+                "ASI Reingegnerizzazione UI/UX"
+            ],
+            "header_token": "INPS - ASI Reingegnerizzazione UIUX",
+            "created": "19/05/2026",
+            "kb_path": "knowledge/inps_asi_uiux"
+        }
+    ]
+}

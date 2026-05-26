@@ -11,17 +11,47 @@ Merge rules:
 Uso:
     python scripts\\thesaurus_updater.py sources\\meeting_minutes_YYYYMMDD.json
 
+    Il percorso del thesaurus viene risolto automaticamente dal campo
+    document.project_slug del JSON. Se assente, fallback a knowledge/.
+
 Uscita:
     0  aggiornamento completato (con o senza avvisi di conflitto)
     1  errore bloccante (file non trovato, JSON malformato, ecc.)
 """
 
 import json
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
 
-THESAURUS_PATH = Path("knowledge/thesaurus.json")
+
+# ---------------------------------------------------------------------------
+# KB path resolution
+# ---------------------------------------------------------------------------
+
+def _slugify(text: str) -> str:
+    """Normalizza un display_name in uno slug sicuro per filesystem."""
+    text = text.lower().strip()
+    text = re.sub(r"[\s\-/]+", "_", text)
+    text = re.sub(r"[^a-z0-9_]", "", text)
+    text = re.sub(r"_+", "_", text).strip("_")
+    return text
+
+
+def resolve_kb_dir(verbale_data: dict) -> Path:
+    """
+    Ritorna la directory della knowledge base per il progetto del verbale.
+    Legge document.project_slug; se assente, usa knowledge/ come fallback.
+    Crea la directory se non esiste.
+    """
+    slug = verbale_data.get("document", {}).get("project_slug", "").strip()
+    if slug:
+        kb = Path(f"knowledge/{slug}")
+    else:
+        kb = Path("knowledge")
+    kb.mkdir(parents=True, exist_ok=True)
+    return kb
 
 
 # ---------------------------------------------------------------------------
@@ -43,9 +73,9 @@ def save_json(path: Path, data: dict) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def load_thesaurus() -> dict:
-    if THESAURUS_PATH.exists():
-        return load_json(THESAURUS_PATH)
+def load_thesaurus(path: Path) -> dict:
+    if path.exists():
+        return load_json(path)
     return {
         "_meta": {
             "version": "1.0",
@@ -257,6 +287,10 @@ def main() -> None:
         print(f"ERRORE: JSON malformato in {verbale_path}: {e}")
         sys.exit(1)
 
+    # Resolve knowledge base directory from project_slug
+    kb_dir = resolve_kb_dir(verbale)
+    thesaurus_path = kb_dir / "thesaurus.json"
+
     # Derive YYYYMMDD from filename
     stem = verbale_path.stem
     parts = stem.split("_")
@@ -266,13 +300,14 @@ def main() -> None:
         else datetime.now().strftime("%Y%m%d")
     )
 
-    thesaurus = load_thesaurus()
+    thesaurus = load_thesaurus(thesaurus_path)
     report: list[str] = []
 
     sep = "=" * 55
     print(f"\n{sep}")
     print("AGGIORNAMENTO THESAURUS")
     print(f"Verbale: {verbale_path.name}  |  data: {verbale_date}")
+    print(f"KB:      {thesaurus_path}")
     print(sep)
 
     report.append("\nPARTECIPANTI:")
@@ -297,8 +332,9 @@ def main() -> None:
     thesaurus["_meta"]["last_updated"]   = datetime.now().strftime("%d/%m/%Y")
     thesaurus["_meta"]["last_verbale"]   = verbale_path.name
     thesaurus["_meta"]["total_meetings"] = thesaurus["_meta"].get("total_meetings", 0) + 1
+    thesaurus["_meta"]["project_slug"]   = verbale.get("document", {}).get("project_slug", "")
 
-    save_json(THESAURUS_PATH, thesaurus)
+    save_json(thesaurus_path, thesaurus)
 
     for line in report:
         print(line)
@@ -306,7 +342,7 @@ def main() -> None:
     total_conf = p_conf + t_conf
     print(f"\n{sep}")
     if total_conf > 0:
-        print(f"ATTENZIONE: {total_conf} conflitti → verificare knowledge/thesaurus.json")
+        print(f"ATTENZIONE: {total_conf} conflitti → verificare {thesaurus_path}")
     print(
         f"Thesaurus aggiornato: +{p_new} partecipanti, +{t_new} termini, +{i_new} issues"
     )

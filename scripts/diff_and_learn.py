@@ -10,6 +10,9 @@ DOCX corretto dall'utente e salvandolo come meeting_minutes_YYYYMMDD_rev.json.
 Uso:
     python scripts\\diff_and_learn.py <generated_json> <revised_json>
 
+    Il percorso della knowledge base viene risolto automaticamente dal campo
+    document.project_slug del JSON generato.
+
     es:  python scripts\\diff_and_learn.py \\
              sources\\meeting_minutes_20260519.json \\
              sources\\meeting_minutes_20260519_rev.json
@@ -20,12 +23,38 @@ Uscita:
 """
 
 import json
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
 
-THESAURUS_PATH     = Path("knowledge/thesaurus.json")
-CORRECTION_LOG_PATH = Path("knowledge/correction_log.json")
+
+# ---------------------------------------------------------------------------
+# KB path resolution
+# ---------------------------------------------------------------------------
+
+def _slugify(text: str) -> str:
+    """Normalizza un display_name in uno slug sicuro per filesystem."""
+    text = text.lower().strip()
+    text = re.sub(r"[\s\-/]+", "_", text)
+    text = re.sub(r"[^a-z0-9_]", "", text)
+    text = re.sub(r"_+", "_", text).strip("_")
+    return text
+
+
+def resolve_kb_dir(verbale_data: dict) -> Path:
+    """
+    Ritorna la directory della knowledge base per il progetto del verbale.
+    Legge document.project_slug; se assente, usa knowledge/ come fallback.
+    Crea la directory se non esiste.
+    """
+    slug = verbale_data.get("document", {}).get("project_slug", "").strip()
+    if slug:
+        kb = Path(f"knowledge/{slug}")
+    else:
+        kb = Path("knowledge")
+    kb.mkdir(parents=True, exist_ok=True)
+    return kb
 
 
 # ---------------------------------------------------------------------------
@@ -47,15 +76,15 @@ def save_json(path: Path, data: dict) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def load_thesaurus() -> dict:
-    if THESAURUS_PATH.exists():
-        return load_json(THESAURUS_PATH)
+def load_thesaurus(path: Path) -> dict:
+    if path.exists():
+        return load_json(path)
     return {"participants": [], "technical_terms": [], "_meta": {}}
 
 
-def load_correction_log() -> dict:
-    if CORRECTION_LOG_PATH.exists():
-        return load_json(CORRECTION_LOG_PATH)
+def load_correction_log(path: Path) -> dict:
+    if path.exists():
+        return load_json(path)
     return {"_meta": {"version": "1.0", "total_patterns": 0, "last_updated": ""}, "patterns": []}
 
 
@@ -312,8 +341,13 @@ def main() -> None:
         print(f"ERRORE: JSON malformato: {e}")
         sys.exit(1)
 
-    thesaurus = load_thesaurus()
-    log       = load_correction_log()
+    # Resolve knowledge base directory from project_slug (reads from gen)
+    kb_dir = resolve_kb_dir(gen)
+    thesaurus_path      = kb_dir / "thesaurus.json"
+    correction_log_path = kb_dir / "correction_log.json"
+
+    thesaurus = load_thesaurus(thesaurus_path)
+    log       = load_correction_log(correction_log_path)
 
     # Derive YYYYMMDD from generated filename
     stem  = gen_path.stem
@@ -331,6 +365,7 @@ def main() -> None:
     print("DIFF & LEARN")
     print(f"  generato : {gen_path.name}")
     print(f"  revisionato: {rev_path.name}")
+    print(f"  KB:          {kb_dir}")
     print(sep)
 
     report.append("\nPARTECIPANTI:")
@@ -359,8 +394,8 @@ def main() -> None:
     log["_meta"]["total_patterns"] = len(log["patterns"])
     log["_meta"]["last_updated"]   = datetime.now().strftime("%d/%m/%Y")
 
-    save_json(THESAURUS_PATH, thesaurus)
-    save_json(CORRECTION_LOG_PATH, log)
+    save_json(thesaurus_path, thesaurus)
+    save_json(correction_log_path, log)
 
     for line in report:
         print(line)

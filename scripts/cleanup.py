@@ -12,9 +12,9 @@ Uso:
           Se omessa, lo script la rileva automaticamente dai file presenti.
 
 Logica di identificazione file eliminabili:
-  - sources/meeting_minutes_{data}.json      eliminabile se esiste _rev.json
-  - results/verbale_{data}_v*.docx           eliminabile se esiste *_rev.docx
-  - sources/_transcript_tmp.txt              eliminabile sempre (file temp)
+  - sources/<slug>/meeting_minutes_{data}.json      eliminabile se esiste _rev.json
+  - results/<slug>/verbale_{data}_v*.docx           eliminabile se esiste *_rev.docx
+  - sources/_transcript_tmp.txt                     eliminabile sempre (file temp)
 
 Uscita:
     0  operazione completata (eliminazione effettuata o rifiutata)
@@ -35,13 +35,14 @@ RESULTS_DIR = Path("results")
 # ---------------------------------------------------------------------------
 
 def _detect_dates() -> list[str]:
-    """Rileva le date disponibili in base ai file _rev.json presenti."""
+    """Rileva le date disponibili in base ai file _rev.json presenti
+    nelle sottocartelle per-progetto di sources/."""
     dates = []
-    for p in SOURCES_DIR.glob("meeting_minutes_*_rev.json"):
+    for p in SOURCES_DIR.glob("*/meeting_minutes_*_rev.json"):
         m = re.search(r"meeting_minutes_(\d{8})_rev\.json", p.name)
         if m:
             dates.append(m.group(1))
-    return sorted(dates)
+    return sorted(set(dates))
 
 
 # ---------------------------------------------------------------------------
@@ -51,27 +52,24 @@ def _detect_dates() -> list[str]:
 def _find_candidates(date: str) -> list[tuple[Path, str]]:
     """
     Restituisce lista di (Path, motivo) per i file eliminabili relativi a `date`.
+    Cerca nelle sottocartelle per-progetto di sources/ e results/.
     """
     candidates: list[tuple[Path, str]] = []
 
-    # 1) JSON bozza
-    draft_json = SOURCES_DIR / f"meeting_minutes_{date}.json"
-    rev_json   = SOURCES_DIR / f"meeting_minutes_{date}_rev.json"
-    if draft_json.exists() and rev_json.exists():
-        candidates.append((draft_json, "bozza JSON pre-revisione (superata da _rev.json)"))
-    elif draft_json.exists() and not rev_json.exists():
-        # rev non esiste ancora: non eliminare il draft
-        pass
+    # 1) JSON bozza — cerca in sources/<slug>/
+    for draft_json in SOURCES_DIR.glob(f"*/meeting_minutes_{date}.json"):
+        rev_json = draft_json.parent / f"meeting_minutes_{date}_rev.json"
+        if rev_json.exists():
+            candidates.append((draft_json, "bozza JSON pre-revisione (superata da _rev.json)"))
 
-    # 2) DOCX bozza (tutti i _vN.docx senza _rev nel nome)
-    for p in RESULTS_DIR.glob(f"verbale_{date}_v*.docx"):
+    # 2) DOCX bozza — cerca in results/<slug>/
+    for p in RESULTS_DIR.glob(f"*/verbale_{date}_v*.docx"):
         if "_rev" not in p.name:
-            # Verifica che esista almeno un _rev.docx corrispondente
             rev_docx_pattern = f"verbale_{date}_v*_rev.docx"
-            if list(RESULTS_DIR.glob(rev_docx_pattern)):
+            if list(p.parent.glob(rev_docx_pattern)):
                 candidates.append((p, "bozza DOCX pre-revisione (superata da _rev.docx)"))
 
-    # 3) File temp trascrizione
+    # 3) File temp trascrizione (radice sources/)
     tmp_txt = SOURCES_DIR / "_transcript_tmp.txt"
     if tmp_txt.exists():
         candidates.append((tmp_txt, "trascrizione temporanea estratta"))
@@ -148,7 +146,7 @@ def main() -> int:
     else:
         dates = _detect_dates()
         if not dates:
-            print("Nessun verbale completato trovato (nessun *_rev.json in sources/).")
+            print("Nessun verbale completato trovato (nessun *_rev.json in sources/<slug>/).")
             print("Assicurarsi che il processo sia stato completato prima di eseguire la pulizia.")
             return 0
 
