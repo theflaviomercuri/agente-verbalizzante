@@ -15,7 +15,7 @@ Uso:
     python scripts\\docx_reverse_map.py \\
         results\\<slug>\\verbale_YYYYMMDD_v1_rev.docx \\
         sources\\<slug>\\meeting_minutes_YYYYMMDD.json \\
-        --template templates\\verbale_template_placeholders_final.docx \\
+        --template templates\\template_verbale_INPS.docx \\
         [--output sources\\<slug>\\meeting_minutes_YYYYMMDD_rev.json]
 
     Se --output non è specificato, il file viene salvato automaticamente nella
@@ -471,7 +471,7 @@ def main() -> None:
     ap.add_argument(
         "--template",
         required=True,
-        help="Template DOCX con placeholder (es. templates/verbale_template_placeholders_final.docx)",
+        help="Template DOCX con placeholder (es. templates/template_verbale_INPS.docx)",
     )
     ap.add_argument(
         "--output",

@@ -15,7 +15,8 @@
             ],
             "header_token": "INPS - ASI Reingegnerizzazione UIUX",
             "created": "19/05/2026",
-            "kb_path": "knowledge/inps_asi_uiux"
+            "kb_path": "knowledge/inps_asi_uiux",
+            "template": "templates/template_verbale_INPS.docx"
         }
     ]
 }

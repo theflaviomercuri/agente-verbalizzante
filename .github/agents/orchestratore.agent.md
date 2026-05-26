@@ -22,6 +22,7 @@ python -c "import tkinter as tk; from tkinter import filedialog; root=tk.Tk(); r
 ```
 
 Cattura l'output del comando (il percorso del file scelto dall'utente).
+
 - Se l'output è vuoto (l'utente ha annullato la selezione), fermati e mostra il messaggio: `"Nessun file selezionato. Avvia di nuovo l'agente e seleziona un file di trascrizione."`
 - Se il percorso è valido, procedi.
 
@@ -42,12 +43,13 @@ python scripts\parse_header.py sources\_transcript_tmp.txt
 ```
 
 Lo script stampa su stdout un JSON con i campi:
-- `meeting_date`   → usa come `meeting.date` e `document.history[0].date`
-- `start_time`     → usa come `meeting.start_time`
-- `end_time`       → usa come `meeting.end_time`
-- `document_name`  → usa come `document.document_name`
-- `project_slug`   → usa per risolvere il percorso knowledge base
-- `project_name`   → usa come riferimento per il titolo del documento
+
+- `meeting_date` → usa come `meeting.date` e `document.history[0].date`
+- `start_time` → usa come `meeting.start_time`
+- `end_time` → usa come `meeting.end_time`
+- `document_name` → usa come `document.document_name`
+- `project_slug` → usa per risolvere il percorso knowledge base
+- `project_name` → usa come riferimento per il titolo del documento
 
 Memorizza questi valori: saranno iniettati nel JSON in FASE 2.
 
@@ -57,6 +59,7 @@ Se lo script emette errore (exit code 1), leggi manualmente l'header da `sources
 ### 0c. Carica il knowledge base
 
 Carica `knowledge/thesaurus.json` se esiste. Estrai:
+
 - Lista partecipanti noti (nome, ruolo, organizzazione, alias) → da usare in FASE 2
 - Lista termini tecnici noti con definizioni confermate → da usare in FASE 2
 - Pattern di correzione attivi da `knowledge/correction_log.json` se esiste → anti-pattern da evitare in FASE 2
@@ -70,6 +73,7 @@ python scripts\detect_speakers.py sources\_transcript_tmp.txt
 ```
 
 Lo script stampa su stdout un JSON con:
+
 - `total_unique_speakers` → numero totale di speaker distinti
 - `known` → lista speaker già nel thesaurus (con nome, ruolo, organizzazione)
 - `new` → lista nomi speaker non nel thesaurus
@@ -77,7 +81,26 @@ Lo script stampa su stdout un JSON con:
 
 Usa questo output per FASE 1 (domanda sui nuovi partecipanti) e per pre-popolare FASE 2.
 
+### 0e. Risolvi il template DOCX
+
+Leggi `knowledge/projects.json` e cerca il progetto con `slug` uguale al `project_slug` estratto in 0b. Memorizza il percorso come `TEMPLATE_PATH`.
+
+**Caso A — progetto già registrato con campo `template`:**
+Imposta `TEMPLATE_PATH = projects[slug].template`. Nessun'altra azione richiesta.
+
+**Caso B — progetto già registrato ma senza campo `template`:**
+Elenca i file `.docx` presenti in `templates/`. Se ce n'è uno solo, usalo come default. Altrimenti chiedi all'utente quale usare tramite `vscode_askQuestions`. Aggiorna `projects.json` aggiungendo il campo `"template"`. Imposta `TEMPLATE_PATH`.
+
+**Caso C — progetto non ancora registrato (nuovo slug):**
+
+1. Crea la cartella `knowledge/<slug>/` con `thesaurus.json` e `correction_log.json` vuoti (struttura minima)
+2. Elenca i file `.docx` presenti in `templates/`. Se ce n'è uno solo, proponi quello come default. Chiedi conferma o scelta diversa tramite `vscode_askQuestions`
+3. Aggiungi il progetto a `projects.json` con i campi: `slug`, `display_name` (dal `project_name` in 0b), `template`, `created` (data odierna), `kb_path`
+4. Imposta `TEMPLATE_PATH`
+5. Informa l'utente nel messaggio successivo: _"Nuovo progetto registrato: [display_name] → template: [TEMPLATE_PATH]"_
+
 Mostra un messaggio di orientamento sintetico:
+
 ```
 Trascrizione rilevata: [project_name] – [meeting_date] [start_time]
 Durata: [start_time → end_time]
@@ -99,30 +122,32 @@ Usa il tool `vscode_askQuestions` con questa configurazione esatta:
 
 ```json
 {
-  "questions": [{
-    "header": "Livello di sintesi",
-    "question": "Con quale livello di dettaglio vuoi le sezioni tematiche del verbale?",
-    "options": [
-      {
-        "label": "Verbale esteso",
-        "description": "Citazioni e parafrasi attribuite ai singoli partecipanti. Include il dibattito."
-      },
-      {
-        "label": "Verbale standard",
-        "description": "Topic + argomenti principali + soluzione, con attribuzione ai contributori chiave.",
-        "recommended": true
-      },
-      {
-        "label": "Verbale sintetico",
-        "description": "Solo il topic e la decisione o l'esito finale concordato."
-      },
-      {
-        "label": "Sintesi esecutiva",
-        "description": "Una riga per argomento: esito e impatto operativo. Nessuna attribuzione."
-      }
-    ],
-    "allowFreeformInput": false
-  }]
+  "questions": [
+    {
+      "header": "Livello di sintesi",
+      "question": "Con quale livello di dettaglio vuoi le sezioni tematiche del verbale?",
+      "options": [
+        {
+          "label": "Verbale esteso",
+          "description": "Citazioni e parafrasi attribuite ai singoli partecipanti. Include il dibattito."
+        },
+        {
+          "label": "Verbale standard",
+          "description": "Topic + argomenti principali + soluzione, con attribuzione ai contributori chiave.",
+          "recommended": true
+        },
+        {
+          "label": "Verbale sintetico",
+          "description": "Solo il topic e la decisione o l'esito finale concordato."
+        },
+        {
+          "label": "Sintesi esecutiva",
+          "description": "Una riga per argomento: esito e impatto operativo. Nessuna attribuzione."
+        }
+      ],
+      "allowFreeformInput": false
+    }
+  ]
 }
 ```
 
@@ -134,22 +159,24 @@ Se in FASE 0d hai rilevato **almeno un nuovo speaker**, usa `vscode_askQuestions
 
 ```json
 {
-  "questions": [{
-    "header": "Nuovi partecipanti",
-    "question": "Trovato/i [N] partecipante/i non presente/i nel thesaurus: [elenco nomi]. Come procedere?",
-    "options": [
-      {
-        "label": "Lascia i campi vuoti",
-        "description": "Inserisco nel verbale con role e organization impostati a '-'.",
-        "recommended": true
-      },
-      {
-        "label": "Ignora completamente",
-        "description": "Non inserire nel verbale né nel thesaurus."
-      }
-    ],
-    "allowFreeformInput": true
-  }]
+  "questions": [
+    {
+      "header": "Nuovi partecipanti",
+      "question": "Trovato/i [N] partecipante/i non presente/i nel thesaurus: [elenco nomi]. Come procedere?",
+      "options": [
+        {
+          "label": "Lascia i campi vuoti",
+          "description": "Inserisco nel verbale con role e organization impostati a '-'.",
+          "recommended": true
+        },
+        {
+          "label": "Ignora completamente",
+          "description": "Non inserire nel verbale né nel thesaurus."
+        }
+      ],
+      "allowFreeformInput": true
+    }
+  ]
 }
 ```
 
@@ -162,6 +189,7 @@ Se l'utente fornisce dati testuali (es. "Tantar Ana Maria, PM, Acme"), usali per
 ### CONTESTO DAL THESAURUS
 
 Prima di generare, considera:
+
 - **Partecipanti noti**: pre-popola `name`, `role`, `organization` dai dati del thesaurus per i partecipanti già riconosciuti. Non sovrascrivere con valori meno precisi estratti dalla trascrizione.
 - **Termini tecnici noti**: includi nel `glossary` i termini già presenti nel thesaurus con le loro definizioni confermate (`status: confirmed`). Aggiungi eventuali nuovi termini emersi dalla trascrizione.
 - **Pattern di correzione**: se `correction_log.json` contiene pattern attivi, leggine la `description` e usala come anti-pattern. Es.: se un pattern dice "In sezioni filtri/navigazione preferire forma collettiva", applica quella regola nel livello `attributed`.
@@ -171,24 +199,28 @@ Prima di generare, considera:
 Applica le seguenti istruzioni in base a `SYNTHESIS_LEVEL` scelto dall'utente:
 
 **`verbatim` — Verbale esteso**
+
 - Includi citazioni dirette tra virgolette attribuite al parlante, o parafrasi molto strette
 - Riporta le posizioni intermedie e i contro-argomenti rilevanti
 - Attribuisci ogni affermazione significativa al suo parlante
 - Ogni sezione ha 3-6 paragrafi ricchi di attribuzioni
 
-**`attributed` — Verbale standard** *(default)*
+**`attributed` — Verbale standard** _(default)_
+
 - Riassumi la discussione con attribuzione ai contributori principali
 - Includi topic, argomenti chiave e soluzione/decisione con attribuzione
 - Ometti interventi brevi, ripetizioni, intercalari
 - Ogni sezione ha 2-4 paragrafi con attribuzioni selettive
 
 **`resolved` — Verbale sintetico**
+
 - Riporta solo la decisione finale o l'esito concordato per ogni argomento
 - Includi la motivazione solo se spiega direttamente la decisione
 - Nessun dibattito, nessuna posizione intermedia
 - Ogni sezione ha 1-2 paragrafi brevi e diretti
 
 **`executive` — Sintesi esecutiva**
+
 - Una sola frase per argomento: cosa è stato deciso + impatto operativo
 - Nessuna attribuzione, nessun dibattito, nessuna motivazione
 - Ogni sezione ha 1 paragrafo di 1-2 righe massimo
@@ -196,6 +228,7 @@ Applica le seguenti istruzioni in base a `SYNTHESIS_LEVEL` scelto dall'utente:
 ### ANALISI
 
 Dalla trascrizione estrai:
+
 - Partecipanti (dagli speaker label; integra con dati thesaurus)
 - Contesto della riunione
 - Punti di discussione rilevanti
@@ -228,6 +261,7 @@ Dalla trascrizione estrai:
 ### GLOSSARIO
 
 Includi in `glossary`:
+
 - Tutti i termini già confermati nel thesaurus che compaiono nella trascrizione
 - Nuovi acronimi non autoesplicanti, nomi di sistemi, termini di dominio
 
@@ -254,9 +288,23 @@ Produci un JSON conforme ESATTAMENTE a questo schema:
     "supplier": "",
     "version": "1.0",
     "author": { "name": "", "organization": "" },
-    "history": [{ "version": "1.0", "date": "", "description": "Versione iniziale", "sections": "" }],
+    "history": [
+      {
+        "version": "1.0",
+        "date": "",
+        "description": "Versione iniziale",
+        "sections": ""
+      }
+    ],
     "distribution": [],
-    "approvals": [{ "version": "1.0", "approval_date": "-", "name": "-", "organization": "-" }]
+    "approvals": [
+      {
+        "version": "1.0",
+        "approval_date": "-",
+        "name": "-",
+        "organization": "-"
+      }
+    ]
   },
   "meeting": {
     "date": "",
@@ -328,7 +376,10 @@ python scripts\validate_semantic.py sources\meeting_minutes_YYYYMMDD.json
 ## FASE 3 — Genera il verbale DOCX
 
 ```powershell
-python scripts\template_placeholder_filler_v2.py sources\meeting_minutes_YYYYMMDD.json results\verbale_YYYYMMDD_v1.docx --template sources\verbale_template_placeholders_final.docx
+python scripts\template_placeholder_filler_v2.py `
+    sources\<slug>\meeting_minutes_YYYYMMDD.json `
+    results\<slug>\verbale_YYYYMMDD_v1.docx `
+    --template $TEMPLATE_PATH
 ```
 
 Il nome del DOCX include sempre il suffisso `_v1` per distinguerlo dalle revisioni successive.
@@ -391,12 +442,13 @@ Esegui lo script di reverse-mapping (deterministico, nessun LLM — legge le tab
 python scripts\docx_reverse_map.py `
     results\<slug>\verbale_YYYYMMDD_v1_rev.docx `
     sources\<slug>\meeting_minutes_YYYYMMDD.json `
-    --template templates\verbale_template_placeholders_final.docx
+    --template $TEMPLATE_PATH
 ```
 
 Lo script produce automaticamente `sources/<slug>/meeting_minutes_YYYYMMDD_rev.json`.
 
 **Cosa estrae lo script senza LLM:**
+
 - `meeting.participants` e `document.distribution` dalla tabella partecipanti
 - `glossary` dalla tabella glossario
 - `references` dalla tabella riferimenti

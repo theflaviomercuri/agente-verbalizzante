@@ -27,7 +27,7 @@ La pipeline è progettata per **minimizzare l'uso del modello LLM**: tutte le op
 │       ├── verbale_YYYYMMDD_v1.docx        # DOCX bozza (pre-revisione)
 │       └── verbale_YYYYMMDD_v1_rev.docx    # DOCX definitivo (post-revisione utente)
 ├── templates/
-│   └── verbale_template_placeholders_final.docx  # Template DOCX con placeholder {{…}}
+│   └── template_verbale_<cliente>.docx     # Un template DOCX per cliente (es. template_verbale_INPS.docx)
 └── scripts/
     ├── extract_transcript.py               # Estrae testo pulito da DOCX/TXT → _transcript_tmp.txt
     ├── parse_header.py                     # Parsea header strutturato → JSON (data, ore, slug)
@@ -184,10 +184,10 @@ Verifica coerenza interna: owner delle azioni ricavabile dai partecipanti, `due_
 python scripts\template_placeholder_filler_v2.py `
     sources\<slug>\meeting_minutes_YYYYMMDD.json `
     results\<slug>\verbale_YYYYMMDD_v1.docx `
-    --template templates\verbale_template_placeholders_final.docx
+    --template <da projects.json: projects[slug].template>
 ```
 
-I placeholder `{{NOME}}` nel template vengono sostituiti con i valori del JSON. Sezioni, azioni, note e righe delle tabelle (partecipanti, glossario, ecc.) sono espanse dinamicamente. Il nome del DOCX include sempre il suffisso `_v1`.
+Il template DOCX viene risolto automaticamente dall'agente leggendo il campo `template` del progetto in `knowledge/projects.json`. I placeholder `{{NOME}}` nel template vengono sostituiti con i valori del JSON. Sezioni, azioni, note e righe delle tabelle (partecipanti, glossario, ecc.) sono espanse dinamicamente. Il nome del DOCX include sempre il suffisso `_v1`.
 
 ---
 
@@ -217,7 +217,7 @@ Quando l'utente conferma di aver salvato il DOCX revisionato:
 python scripts\docx_reverse_map.py `
     results\<slug>\verbale_YYYYMMDD_v1_rev.docx `
     sources\<slug>\meeting_minutes_YYYYMMDD.json `
-    --template templates\verbale_template_placeholders_final.docx
+    --template <da projects.json: projects[slug].template>
 ```
 
 Lo script usa il template come riferimento strutturale per identificare ogni tabella nel DOCX (partecipanti, glossario, distribuzione, storico, riferimenti) ed estrae i valori corretti. Le sezioni tematiche, le azioni e le note vengono re-parsate dai paragrafi numerati del documento. I metadati scalari (titolo, date, codici) vengono copiati dal JSON originale.
@@ -285,10 +285,11 @@ python scripts\validate_json.py sources\<slug>\meeting_minutes_YYYYMMDD.json
 python scripts\validate_semantic.py sources\<slug>\meeting_minutes_YYYYMMDD.json
 
 # Generazione DOCX (FASE 3)
+# Il template è registrato in knowledge/projects.json → projects[slug].template
 python scripts\template_placeholder_filler_v2.py `
     sources\<slug>\meeting_minutes_YYYYMMDD.json `
     results\<slug>\verbale_YYYYMMDD_v1.docx `
-    --template templates\verbale_template_placeholders_final.docx
+    --template templates\template_verbale_<cliente>.docx
 
 # Aggiornamento thesaurus (FASE 4)
 python scripts\thesaurus_updater.py sources\<slug>\meeting_minutes_YYYYMMDD.json
@@ -297,7 +298,7 @@ python scripts\thesaurus_updater.py sources\<slug>\meeting_minutes_YYYYMMDD.json
 python scripts\docx_reverse_map.py `
     results\<slug>\verbale_YYYYMMDD_v1_rev.docx `
     sources\<slug>\meeting_minutes_YYYYMMDD.json `
-    --template templates\verbale_template_placeholders_final.docx
+    --template templates\template_verbale_<cliente>.docx
 
 python scripts\diff_and_learn.py `
     sources\<slug>\meeting_minutes_YYYYMMDD.json `
@@ -307,7 +308,7 @@ python scripts\diff_and_learn.py `
 python scripts\cleanup.py YYYYMMDD
 
 # Utilità
-python scripts\inspect_template.py templates\verbale_template_placeholders_final.docx
+python scripts\inspect_template.py templates\template_verbale_INPS.docx
 ```
 
 ---
