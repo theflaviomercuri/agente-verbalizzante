@@ -467,6 +467,32 @@ Se lo script emette errore (exit code 1), leggi manualmente il DOCX revisionato 
 python scripts\diff_and_learn.py sources\meeting_minutes_YYYYMMDD.json sources\meeting_minutes_YYYYMMDD_rev.json
 ```
 
+### 6c.5. Analizza le differenze e popola le descrizioni dei pattern
+
+Dopo l'esecuzione di `diff_and_learn.py`, il `correction_log.json` contiene i nuovi pattern con `"description": ""`. Compila ora il campo `description` per ciascun pattern la cui `last_seen` corrisponde alla data della riunione corrente.
+
+Per ogni pattern nuovo:
+
+1. Leggi `category` e `changes` per capire cosa è cambiato
+2. Per ogni `change`, confronta i testi effettivi nei due JSON già in contesto (originale e revisionato)
+3. Scrivi una `description` strutturata in due parti:
+   - **Analisi**: cosa era sbagliato nel testo generato (eccessiva verbosità, tono informale, dettaglio operativo non richiesto, terminologia imprecisa, ecc.)
+   - **Istruzione**: regola applicabile in FASE 2, in forma imperativa e direttamente utilizzabile come anti-pattern
+
+   Esempio:
+
+   ```
+   "Il testo generato elencava i sotto-passi di pianificazione con eccessivo dettaglio operativo. L'utente ha condensato in una sintesi decisionale. → In FASE 2, per sezioni di pianificazione preferire la decisione e la data concordata, omettendo le micro-attività esecutive."
+   ```
+
+4. Aggiorna il campo `description` nel file `knowledge/<slug>/correction_log.json`
+
+**Regole:**
+
+- Se la `description` è già valorizzata (pattern con `occurrences > 1` già descritto), non sovrascrivere
+- Basa la descrizione esclusivamente sui testi effettivi dei due JSON — non fare ipotesi
+- Scrivi in italiano, tono diretto e operativo, massimo 2-3 frasi per pattern
+
 ### 6d. Mostra il report delle correzioni apprese
 
 ```

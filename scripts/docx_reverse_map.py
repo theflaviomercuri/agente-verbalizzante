@@ -114,6 +114,13 @@ def _scan_template_tables(template_path: Path) -> dict[str, dict]:
                     # Ordina le colonne per indice
                     ordered_cols = sorted(col_tokens.keys())
                     col_order = [col_tokens[c] for c in ordered_cols]
+                    if role in result and result[role]["table_idx"] != t_idx:
+                        print(
+                            f"AVVISO: ruolo tabella '{role}' già trovato "
+                            f"(tabella {result[role]['table_idx']}); "
+                            f"sovrascritta dalla tabella {t_idx}.",
+                            file=sys.stderr,
+                        )
                     result[role] = {
                         "table_idx": t_idx,
                         "header_row_count": r_idx,
@@ -172,7 +179,14 @@ def _extract_table_rows(
 # ---------------------------------------------------------------------------
 
 def _is_section_title(para: Paragraph) -> re.Match | None:
-    """Ritorna il match se il paragrafo è un titolo di sezione numerata."""
+    """Ritorna il match se il paragrafo è un titolo di sezione numerata.
+
+    Esclude paragrafi con stile lista per evitare falsi positivi
+    su elenchi numerati nel corpo del testo.
+    """
+    style_name = (para.style.name or "").lower()
+    if "list" in style_name or "bullet" in style_name:
+        return None
     return SECTION_TITLE_RE.match(para.text.strip())
 
 
@@ -439,8 +453,12 @@ def rebuild_json(
             for sec in body["thematic"]
         ]
 
-    # Actions
+    # Actions — preserva status dal JSON originale (match per posizione)
     if body["actions"]:
+        orig_actions = original.get("actions", [])
+        for i, act in enumerate(body["actions"]):
+            if i < len(orig_actions):
+                act["status"] = orig_actions[i].get("status", "open")
         data["actions"] = body["actions"]
 
     # Notes
@@ -448,6 +466,75 @@ def rebuild_json(
         data["notes"] = body["notes"]
 
     return data
+
+
+# ---------------------------------------------------------------------------
+# Validation report
+# ---------------------------------------------------------------------------
+
+def _print_validation_report(
+    original: dict, rebuilt: dict, verbose: bool, out
+) -> None:
+    """
+    Confronta i conteggi chiave tra JSON originale e JSON ricostruito.
+    Stampa warning se le differenze superano soglie di attenzione (>30%).
+    """
+    sep = "-" * 55
+    print(f"\n{sep}", file=out)
+    print("REPORT ESTRAZIONE", file=out)
+    print(sep, file=out)
+
+    checks = [
+        ("Sezioni",      "sections",   lambda d: d.get("sections", [])),
+        ("Azioni",        "actions",    lambda d: d.get("actions", [])),
+        ("Partecipanti",  "meeting",    lambda d: d.get("meeting", {}).get("participants", [])),
+        ("Glossario",     "glossary",   lambda d: d.get("glossary", [])),
+        ("Riferimenti",   "references", lambda d: d.get("references", [])),
+    ]
+
+    all_ok = True
+    for label, _key, getter in checks:
+        orig_list = getter(original)
+        rev_list  = getter(rebuilt)
+        n_orig = len(orig_list)
+        n_rev  = len(rev_list)
+        delta  = n_rev - n_orig
+        sign   = f"+{delta}" if delta > 0 else str(delta)
+
+        if n_orig == 0 and n_rev == 0:
+            status = "OK"
+        elif n_orig == 0:
+            status = f"OK  ({n_rev} nuovi)"
+        elif delta == 0:
+            status = f"OK  ({n_rev})"
+        elif abs(delta) / n_orig > 0.30:
+            status = f"\u26d1 ATTENZIONE  {n_rev}/{n_orig} ({sign})"
+            all_ok = False
+        else:
+            status = f"    {n_rev}/{n_orig} ({sign})"
+
+        print(f"  {label:<20} {status}", file=out)
+
+        if verbose and _key == "sections":
+            orig_nums = {str(s.get("number", "")): s.get("title", "") for s in orig_list}
+            rev_nums  = {str(s.get("number", "")): s.get("title", "") for s in rev_list}
+            for num in sorted(orig_nums, key=lambda x: int(x) if x.isdigit() else 999):
+                if num not in rev_nums:
+                    print(f"      \u2717 MANCANTE  {num}: '{orig_nums[num]}'", file=out)
+                else:
+                    print(f"      \u2713 {num}. {rev_nums[num]}", file=out)
+            for num in rev_nums:
+                if num not in orig_nums:
+                    print(f"      + NUOVA     {num}: '{rev_nums[num]}'", file=out)
+
+    if all_ok:
+        print("  Nessuna anomalia rilevata.", file=out)
+    else:
+        print(
+            "\n  \u26d1 Verificare i campi segnalati prima di eseguire diff_and_learn.py",
+            file=out,
+        )
+    print(sep, file=out)
 
 
 # ---------------------------------------------------------------------------
@@ -472,6 +559,11 @@ def main() -> None:
         "--template",
         required=True,
         help="Template DOCX con placeholder (es. templates/template_verbale_INPS.docx)",
+    )
+    ap.add_argument(
+        "--verbose", "-v",
+        action="store_true",
+        help="Stampa il dettaglio sezione per sezione nel report di estrazione.",
     )
     ap.add_argument(
         "--output",
@@ -521,6 +613,9 @@ def main() -> None:
 
     # Ricostruzione
     rev_json = rebuild_json(original, template_map, rev_doc)
+
+    # --- Report di validazione ---
+    _print_validation_report(original, rev_json, args.verbose, sys.stderr)
 
     # Scrittura
     output_path.parent.mkdir(parents=True, exist_ok=True)

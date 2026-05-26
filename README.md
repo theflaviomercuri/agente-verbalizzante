@@ -50,26 +50,27 @@ Questa distinzione è centrale per capire il costo operativo del sistema e cosa 
 
 ### Operazioni **deterministiche** (script Python, nessun LLM)
 
-| Fase | Script                              | Cosa fa                                                                                                                         |
-| ---- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| 0a   | `extract_transcript.py`             | Legge il file DOCX/TXT e produce testo pulito in `_transcript_tmp.txt`                                                          |
-| 0b   | `parse_header.py`                   | Parsea l'header strutturato della trascrizione con regex: estrae data, orari, durata, document_name, project_slug               |
-| 0d   | `detect_speakers.py`                | Trova i label speaker (`Nome   HH:MM:SS`) nella trascrizione e li confronta con il thesaurus                                    |
-| 2.5  | `validate_json.py`                  | Verifica la conformità del JSON allo schema obbligatorio                                                                        |
-| 2.6  | `validate_semantic.py`              | Verifica coerenza interna: owner nelle azioni, date valide, sezioni consecutive                                                 |
-| 3    | `template_placeholder_filler_v2.py` | Sostituisce i placeholder `{{…}}` nel template DOCX con i valori del JSON                                                       |
-| 4    | `thesaurus_updater.py`              | Merge dei nuovi dati dal JSON verso il thesaurus del progetto                                                                   |
-| 6b   | `docx_reverse_map.py`               | Legge il DOCX revisionato, estrae partecipanti/sezioni/azioni/glossario dalle tabelle e dai paragrafi, ricostruisce `_rev.json` |
-| 6c   | `diff_and_learn.py`                 | Confronta JSON generato vs revisionato, scrive pattern nel correction_log                                                       |
-| 7    | `cleanup.py`                        | Rimuove file intermedi (con conferma)                                                                                           |
+| Fase | Script                              | Cosa fa                                                                                                                                                                                                                           |
+| ---- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0a   | `extract_transcript.py`             | Legge il file DOCX/TXT e produce testo pulito in `_transcript_tmp.txt`                                                                                                                                                            |
+| 0b   | `parse_header.py`                   | Parsea l'header strutturato della trascrizione con regex: estrae data, orari, durata, document_name, project_slug                                                                                                                 |
+| 0d   | `detect_speakers.py`                | Trova i label speaker (`Nome   HH:MM:SS`) nella trascrizione e li confronta con il thesaurus                                                                                                                                      |
+| 2.5  | `validate_json.py`                  | Verifica la conformità del JSON allo schema obbligatorio                                                                                                                                                                          |
+| 2.6  | `validate_semantic.py`              | Verifica coerenza interna: owner nelle azioni, date valide, sezioni consecutive                                                                                                                                                   |
+| 3    | `template_placeholder_filler_v2.py` | Sostituisce i placeholder `{{…}}` nel template DOCX con i valori del JSON                                                                                                                                                         |
+| 4    | `thesaurus_updater.py`              | Merge dei nuovi dati dal JSON verso il thesaurus del progetto                                                                                                                                                                     |
+| 6b   | `docx_reverse_map.py`               | Legge il DOCX revisionato, estrae partecipanti/sezioni/azioni/glossario dalle tabelle e dai paragrafi, ricostruisce `_rev.json`; include report di validazione post-estrazione con warning se i conteggi divergono dall'originale |
+| 6c   | `diff_and_learn.py`                 | Confronta JSON generato vs revisionato, scrive pattern nel correction_log                                                                                                                                                         |
+| 7    | `cleanup.py`                        | Rimuove file intermedi (con conferma)                                                                                                                                                                                             |
 
 ### Operazioni che **richiedono il modello LLM**
 
-| Fase | Operazione                                  | Perché serve il modello                                                                                                                  |
-| ---- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 1    | Domande interattive (`vscode_askQuestions`) | Interpretazione della risposta utente su nuovi partecipanti in formato libero                                                            |
-| 2    | Analisi trascrizione → JSON strutturato     | Comprensione del parlato, sintesi, raggruppamento tematico, disambiguazione degli interventi, applicazione del livello di sintesi scelto |
-| 0c   | Lettura e contestualizzazione del thesaurus | Il modello usa thesaurus e correction_log come contesto per la generazione                                                               |
+| Fase | Operazione                                  | Perché serve il modello                                                                                                                                                          |
+| ---- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | Domande interattive (`vscode_askQuestions`) | Interpretazione della risposta utente su nuovi partecipanti in formato libero                                                                                                    |
+| 2    | Analisi trascrizione → JSON strutturato     | Comprensione del parlato, sintesi, raggruppamento tematico, disambiguazione degli interventi, applicazione del livello di sintesi scelto                                         |
+| 0c   | Lettura e contestualizzazione del thesaurus | Il modello usa thesaurus e correction_log come contesto per la generazione                                                                                                       |
+| 6c.5 | Analisi diff → descrizione pattern          | Il modello confronta i testi originale/revisionato per ogni pattern e scrive nel `correction_log` una descrizione actionable dell'errore e l'anti-pattern da applicare in FASE 2 |
 
 La **FASE 2** è l'unica operazione cognitivamente complessa e irriducibile al solo codice: trasformare decine di minuti di parlato non strutturato in un documento formale richiede comprensione semantica. Tutto il resto è eseguito da script.
 
@@ -217,7 +218,8 @@ Quando l'utente conferma di aver salvato il DOCX revisionato:
 python scripts\docx_reverse_map.py `
     results\<slug>\verbale_YYYYMMDD_v1_rev.docx `
     sources\<slug>\meeting_minutes_YYYYMMDD.json `
-    --template <da projects.json: projects[slug].template>
+    --template <da projects.json: projects[slug].template> `
+    [--verbose]   # stampa dettaglio sezione per sezione nel report di estrazione
 ```
 
 Lo script usa il template come riferimento strutturale per identificare ogni tabella nel DOCX (partecipanti, glossario, distribuzione, storico, riferimenti) ed estrae i valori corretti. Le sezioni tematiche, le azioni e le note vengono re-parsate dai paragrafi numerati del documento. I metadati scalari (titolo, date, codici) vengono copiati dal JSON originale.
@@ -233,6 +235,15 @@ python scripts\diff_and_learn.py `
 ```
 
 Confronta campo per campo i due JSON, scrive le correzioni in `knowledge/<slug>/correction_log.json` come pattern (`CRR-XXX`) applicati automaticamente alle generazioni future.
+
+**6c.5 — Analisi LLM delle differenze `[LLM]`:**
+
+Il modello legge i nuovi pattern scritti in `correction_log.json` (quelli con `description` vuota) e, confrontando i testi effettivi dal JSON originale e revisionato già in contesto, popola il campo `description` di ciascun pattern con:
+
+- **Analisi** di cosa era sbagliato nel testo generato
+- **Istruzione** applicabile in FASE 2 come anti-pattern, in forma imperativa
+
+Questo è l'unico punto del feedback loop in cui interviene il modello. L'output è un aggiornamento mirato al `correction_log.json` — nessun nuovo file prodotto.
 
 ---
 
