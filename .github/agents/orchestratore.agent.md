@@ -23,26 +23,36 @@ python -c "import tkinter as tk; from tkinter import filedialog; root=tk.Tk(); r
 
 Cattura l'output del comando (il percorso del file scelto dall'utente).
 - Se l'output è vuoto (l'utente ha annullato la selezione), fermati e mostra il messaggio: `"Nessun file selezionato. Avvia di nuovo l'agente e seleziona un file di trascrizione."`
-- Se il percorso è valido, leggine il contenuto.
+- Se il percorso è valido, procedi.
 
-Leggi il contenuto del file al percorso ottenuto.
+**Estrai il testo della trascrizione con lo script dedicato** (elimina metadati Word, produce testo pulito leggibile dal modello):
+
+```powershell
+python scripts\extract_transcript.py "<percorso_trascrizione>" --output sources\_transcript_tmp.txt
+```
+
+Leggi il file `sources\_transcript_tmp.txt` per le elaborazioni successive.
 
 ### 0b. Estrai metadata dall'header
 
-Il **primo paragrafo non vuoto** della trascrizione contiene sempre:
-```
-[Titolo riunione] - SAL-YYYYMMDD_HHmmss-Registrazione della riunione
-DD mese YYYY, HH:MMam/pm
-X h Y m Z s
-```
-Da questo header estrai:
-- `meeting.date` → seconda riga, es. "19 maggio 2026" → `19/05/2026`
-- `meeting.start_time` → seconda riga, es. "01:04PM" → `13:04`
-- `meeting.end_time` → start_time + durata della terza riga
-- `document.document_name` → es. `VRB_SAL_20260519`
-- `document.history[0].date` → stesso valore di `meeting.date`
+Esegui lo script di parsing dell'header (deterministico, nessun LLM):
 
-**Non usare mai la data odierna come fallback se l'header è presente.**
+```powershell
+python scripts\parse_header.py sources\_transcript_tmp.txt
+```
+
+Lo script stampa su stdout un JSON con i campi:
+- `meeting_date`   → usa come `meeting.date` e `document.history[0].date`
+- `start_time`     → usa come `meeting.start_time`
+- `end_time`       → usa come `meeting.end_time`
+- `document_name`  → usa come `document.document_name`
+- `project_slug`   → usa per risolvere il percorso knowledge base
+- `project_name`   → usa come riferimento per il titolo del documento
+
+Memorizza questi valori: saranno iniettati nel JSON in FASE 2.
+
+**Non usare mai la data odierna come fallback se lo script ha prodotto output valido.**
+Se lo script emette errore (exit code 1), leggi manualmente l'header da `sources\_transcript_tmp.txt` e ricava i valori.
 
 ### 0c. Carica il knowledge base
 
@@ -53,14 +63,26 @@ Carica `knowledge/thesaurus.json` se esiste. Estrai:
 
 ### 0d. Identifica speaker nuovi
 
-Scansiona rapidamente la trascrizione per individuare i label degli speaker (formato `Nome Cognome   HH:MM:SS`). Confronta con i partecipanti noti nel thesaurus. Determina quanti speaker sono **nuovi** (non presenti nel thesaurus né come nome né come alias).
+Esegui lo script di rilevamento speaker (deterministico, nessun LLM):
+
+```powershell
+python scripts\detect_speakers.py sources\_transcript_tmp.txt
+```
+
+Lo script stampa su stdout un JSON con:
+- `total_unique_speakers` → numero totale di speaker distinti
+- `known` → lista speaker già nel thesaurus (con nome, ruolo, organizzazione)
+- `new` → lista nomi speaker non nel thesaurus
+- `thesaurus_loaded` → true/false
+
+Usa questo output per FASE 1 (domanda sui nuovi partecipanti) e per pre-popolare FASE 2.
 
 Mostra un messaggio di orientamento sintetico:
 ```
-Trascrizione rilevata: [titolo] – [data] [ora inizio]
-Durata: [durata]
+Trascrizione rilevata: [project_name] – [meeting_date] [start_time]
+Durata: [start_time → end_time]
 
-Thesaurus: [N] partecipanti riconosciuti[, M nuovo/i] 
+Thesaurus: [N] partecipanti riconosciuti[, M nuovo/i]
            [N] termini tecnici noti caricati
            [N] pattern di correzione attivi
 
@@ -363,13 +385,29 @@ Cerca in `results/` il file `verbale_YYYYMMDD_v1_rev.docx`. Se non esiste, chied
 
 ### 6b. Riestragi il JSON dal verbale revisionato
 
-Leggi il DOCX revisionato con python-docx (estrai tutto il testo) e confrontalo con il JSON originale. Identifica le differenze in:
-- Partecipanti (nome, ruolo, organizzazione)
-- Voci di glossario (termine, definizione)
-- Azioni (owner, testo, data, stato)
-- Contenuto delle sezioni (paragrafi modificati)
+Esegui lo script di reverse-mapping (deterministico, nessun LLM — legge le tabelle e le sezioni del DOCX e ricostruisce il JSON):
 
-Produci il file `sources/meeting_minutes_YYYYMMDD_rev.json` con la stessa struttura del JSON originale ma con i valori aggiornati dalle correzioni dell'utente.
+```powershell
+python scripts\docx_reverse_map.py `
+    results\<slug>\verbale_YYYYMMDD_v1_rev.docx `
+    sources\<slug>\meeting_minutes_YYYYMMDD.json `
+    --template templates\verbale_template_placeholders_final.docx
+```
+
+Lo script produce automaticamente `sources/<slug>/meeting_minutes_YYYYMMDD_rev.json`.
+
+**Cosa estrae lo script senza LLM:**
+- `meeting.participants` e `document.distribution` dalla tabella partecipanti
+- `glossary` dalla tabella glossario
+- `references` dalla tabella riferimenti
+- `document.history` dalla tabella storico versioni
+- Sezioni tematiche (titoli + body) dai paragrafi numerati
+- Azioni dalla sezione "Azioni successive" (parsing `• Owner: testo (Scadenza: gg/mm/aaaa)`)
+- Note dalla sezione "Note"
+
+**I metadati scalari** (titolo, date, codici documento) vengono copiati dal JSON originale, che l'utente modifica raramente in Word.
+
+Se lo script emette errore (exit code 1), leggi manualmente il DOCX revisionato ed estrai le differenze rispetto all'originale per produrre il file `_rev.json`.
 
 ### 6c. Esegui diff_and_learn
 

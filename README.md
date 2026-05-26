@@ -2,34 +2,76 @@
 
 Sistema di generazione automatica di verbali di riunione a partire da trascrizioni audio/testo. Converte una trascrizione grezza in un documento DOCX formattato, passando per un JSON strutturato come stadio intermedio verificabile. Include un knowledge base persistente che apprende dai feedback e un ciclo di revisione che aggiorna automaticamente il thesaurus.
 
+La pipeline è progettata per **minimizzare l'uso del modello LLM**: tutte le operazioni strutturali (parsing, validazione, generazione DOCX, diff, reverse-mapping) sono eseguite da script Python deterministici. Il modello interviene esclusivamente dove è indispensabile la comprensione del linguaggio naturale.
+
 ---
 
 ## Struttura del progetto
 
 ```
 ├── .github/agents/
-│   └── orchestratore.agent.md            # Definizione agente Copilot "Agente Verbalizzatore"
+│   └── orchestratore.agent.md              # Definizione agente Copilot "Agente Verbalizzatore"
 ├── knowledge/
-│   ├── thesaurus.json                     # Partecipanti noti, termini tecnici, decisioni, issue aperte
-│   └── correction_log.json               # Pattern di correzione appresi dai feedback (CRR-XXX)
+│   └── <project_slug>/
+│       ├── thesaurus.json                  # Partecipanti noti, termini tecnici, decisioni, issue aperte
+│       └── correction_log.json             # Pattern di correzione appresi dai feedback (CRR-XXX)
+│   └── projects.json                       # Registro progetti: slug → display_name + aliases
 ├── sources/
-│   ├── <trascrizione>.docx               # Input: trascrizione della riunione
-│   ├── verbale_template_placeholders_final.docx  # Template DOCX con placeholder {{…}}
-│   ├── logo inps.png                     # Asset grafico del template
-│   ├── meeting_minutes_YYYYMMDD.json     # JSON bozza generato dall'agente
-│   └── meeting_minutes_YYYYMMDD_rev.json # JSON definitivo dopo revisione utente
+│   └── <project_slug>/
+│       ├── <trascrizione>.docx             # Input: trascrizione della riunione (Teams/Zoom)
+│       ├── meeting_minutes_YYYYMMDD.json   # JSON bozza generato dall'agente
+│       └── meeting_minutes_YYYYMMDD_rev.json # JSON definitivo dopo revisione utente
+│   └── _transcript_tmp.txt                 # Testo estratto temporaneamente dalla trascrizione
 ├── results/
-│   ├── verbale_YYYYMMDD_v1.docx          # DOCX bozza (pre-revisione)
-│   └── verbale_YYYYMMDD_v1_rev.docx      # DOCX definitivo (post-revisione utente)
+│   └── <project_slug>/
+│       ├── verbale_YYYYMMDD_v1.docx        # DOCX bozza (pre-revisione)
+│       └── verbale_YYYYMMDD_v1_rev.docx    # DOCX definitivo (post-revisione utente)
+├── templates/
+│   └── verbale_template_placeholders_final.docx  # Template DOCX con placeholder {{…}}
 └── scripts/
-    ├── validate_json.py                  # Valida schema del JSON strutturato
-    ├── validate_semantic.py              # Valida coerenza semantica interna del JSON
-    ├── template_placeholder_filler_v2.py # Genera il DOCX dal JSON + template
-    ├── thesaurus_updater.py              # Aggiorna knowledge/thesaurus.json dal JSON verbale
-    ├── diff_and_learn.py                 # Confronta JSON bozza vs rev, aggiorna thesaurus e correction_log
-    ├── cleanup.py                        # Elimina i file intermedi a fine processo (con conferma)
-    └── inspect_template.py               # Utility: ispeziona i placeholder nel template
+    ├── extract_transcript.py               # Estrae testo pulito da DOCX/TXT → _transcript_tmp.txt
+    ├── parse_header.py                     # Parsea header strutturato → JSON (data, ore, slug)
+    ├── detect_speakers.py                  # Rileva speaker della trascrizione, confronta con thesaurus
+    ├── validate_json.py                    # Valida schema del JSON strutturato
+    ├── validate_semantic.py                # Valida coerenza semantica interna del JSON
+    ├── template_placeholder_filler_v2.py   # Genera il DOCX dal JSON + template
+    ├── thesaurus_updater.py                # Aggiorna knowledge/thesaurus.json dal JSON verbale
+    ├── diff_and_learn.py                   # Confronta JSON bozza vs rev, aggiorna thesaurus e correction_log
+    ├── docx_reverse_map.py                 # Ricostruisce _rev.json dal DOCX revisionato (senza LLM)
+    ├── cleanup.py                          # Elimina file intermedi a fine processo (con conferma)
+    └── inspect_template.py                 # Utility: ispeziona i placeholder nel template
 ```
+
+---
+
+## Dove interviene il modello LLM e dove no
+
+Questa distinzione è centrale per capire il costo operativo del sistema e cosa può essere verificato/controllato deterministicamente.
+
+### Operazioni **deterministiche** (script Python, nessun LLM)
+
+| Fase | Script                              | Cosa fa                                                                                                                         |
+| ---- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| 0a   | `extract_transcript.py`             | Legge il file DOCX/TXT e produce testo pulito in `_transcript_tmp.txt`                                                          |
+| 0b   | `parse_header.py`                   | Parsea l'header strutturato della trascrizione con regex: estrae data, orari, durata, document_name, project_slug               |
+| 0d   | `detect_speakers.py`                | Trova i label speaker (`Nome   HH:MM:SS`) nella trascrizione e li confronta con il thesaurus                                    |
+| 2.5  | `validate_json.py`                  | Verifica la conformità del JSON allo schema obbligatorio                                                                        |
+| 2.6  | `validate_semantic.py`              | Verifica coerenza interna: owner nelle azioni, date valide, sezioni consecutive                                                 |
+| 3    | `template_placeholder_filler_v2.py` | Sostituisce i placeholder `{{…}}` nel template DOCX con i valori del JSON                                                       |
+| 4    | `thesaurus_updater.py`              | Merge dei nuovi dati dal JSON verso il thesaurus del progetto                                                                   |
+| 6b   | `docx_reverse_map.py`               | Legge il DOCX revisionato, estrae partecipanti/sezioni/azioni/glossario dalle tabelle e dai paragrafi, ricostruisce `_rev.json` |
+| 6c   | `diff_and_learn.py`                 | Confronta JSON generato vs revisionato, scrive pattern nel correction_log                                                       |
+| 7    | `cleanup.py`                        | Rimuove file intermedi (con conferma)                                                                                           |
+
+### Operazioni che **richiedono il modello LLM**
+
+| Fase | Operazione                                  | Perché serve il modello                                                                                                                  |
+| ---- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | Domande interattive (`vscode_askQuestions`) | Interpretazione della risposta utente su nuovi partecipanti in formato libero                                                            |
+| 2    | Analisi trascrizione → JSON strutturato     | Comprensione del parlato, sintesi, raggruppamento tematico, disambiguazione degli interventi, applicazione del livello di sintesi scelto |
+| 0c   | Lettura e contestualizzazione del thesaurus | Il modello usa thesaurus e correction_log come contesto per la generazione                                                               |
+
+La **FASE 2** è l'unica operazione cognitivamente complessa e irriducibile al solo codice: trasformare decine di minuti di parlato non strutturato in un documento formale richiede comprensione semantica. Tutto il resto è eseguito da script.
 
 ---
 
@@ -37,36 +79,66 @@ Sistema di generazione automatica di verbali di riunione a partire da trascrizio
 
 La pipeline si articola in **10 fasi**, eseguite dall'agente Copilot **Agente Verbalizzatore**.
 
-### FASE 0 — Preparazione
+### FASE 0 — Preparazione `[deterministico]`
 
-L'agente apre la finestra di selezione file per scegliere la trascrizione (`.docx` o `.txt`), estrae i metadati dall'header e carica il knowledge base (`thesaurus.json`, `correction_log.json`).
+L'agente localizza la trascrizione (tramite finestra di dialogo nativa o argomento passato direttamente), poi delega a tre script:
 
-Il **primo paragrafo non vuoto** del file di trascrizione contiene un header strutturato:
+**0a — Estrazione testo:**
+
+```powershell
+python scripts\extract_transcript.py "<percorso_trascrizione>" --output sources\_transcript_tmp.txt
+```
+
+Legge il file DOCX o TXT e produce `sources/_transcript_tmp.txt` con testo pulito, eliminando metadati Word. Questo file è l'unico input del modello: il DOCX binario non viene mai letto dal modello direttamente.
+
+**0b — Parsing header:**
+
+```powershell
+python scripts\parse_header.py sources\_transcript_tmp.txt
+```
+
+Il primo paragrafo non vuoto di ogni trascrizione ha questo formato fisso:
 
 ```
 [INPS - ASI Reingegnerizzazione UIUX] - SAL-YYYYMMDD_HHmmss-Registrazione della riunione
-DD mese YYYY, HH:MMAM/PM
-Xh MM m SS s
+DD mese YYYY, HH:MMam/pm
+Xh Ym Zs
 ```
 
-Da questo header vengono estratti: data, orario di inizio, durata → orario di fine, nome del documento.
+Lo script estrae con regex: `meeting_date`, `start_time`, `end_time`, `document_name`, `project_slug`. L'output è un JSON stampato su stdout, pronto per essere iniettato nel contesto del modello per FASE 2.
 
-### FASE 1 — Parametri di generazione
+**0c — Caricamento knowledge base:** Il modello legge `knowledge/<slug>/thesaurus.json` e `correction_log.json` per pre-popolare partecipanti, termini tecnici e anti-pattern da evitare.
 
-L'agente chiede il **livello di sintesi** desiderato:
+**0d — Rilevamento speaker:**
+
+```powershell
+python scripts\detect_speakers.py sources\_transcript_tmp.txt
+```
+
+Scansiona la trascrizione con regex (`Nome Cognome   HH:MM:SS`), confronta con il thesaurus e produce l'elenco di speaker noti e nuovi. Usato sia per la domanda interattiva in FASE 1 sia per la pre-popolazione di FASE 2.
+
+---
+
+### FASE 1 — Parametri di generazione `[LLM — interazione utente]`
+
+Il modello pone due domande tramite `vscode_askQuestions`:
+
+**Domanda 1 — Livello di sintesi** (sempre obbligatoria):
 
 | Livello      | Descrizione                                                  |
 | ------------ | ------------------------------------------------------------ |
-| `verbatim`   | Parafrasi ravvicinate con attribuzioni nominali              |
-| `attributed` | Argomenti principali con attribuzioni ai contributori chiave |
+| `verbatim`   | Citazioni e parafrasi attribuite ai singoli partecipanti     |
+| `attributed` | Argomenti principali con attribuzione ai contributori chiave |
 | `resolved`   | Solo topic e decisione finale concordata                     |
 | `executive`  | Una riga per argomento, nessuna attribuzione                 |
 
-Se sono presenti partecipanti non ancora in thesaurus, vengono chiesti ruolo e organizzazione.
+**Domanda 2 — Nuovi partecipanti** (solo se `detect_speakers.py` ha trovato speaker non nel thesaurus): l'utente può fornire ruolo e organizzazione in formato libero.
 
-### FASE 2 — Produzione JSON
+---
 
-L'agente analizza la trascrizione tenendo conto del thesaurus e del livello scelto, e produce `sources/meeting_minutes_YYYYMMDD.json`.
+### FASE 2 — Produzione del JSON strutturato `[LLM — operazione principale]`
+
+Il modello analizza `sources/_transcript_tmp.txt` tenendo conto del thesaurus, del livello di sintesi e dei metadata estratti in FASE 0b. Produce `sources/<slug>/meeting_minutes_YYYYMMDD.json`.
 
 Il JSON contiene:
 
@@ -74,89 +146,113 @@ Il JSON contiene:
 | -------------------- | ---------------------------------------------------------- |
 | `document`           | Metadati (titolo, versione, autore, storia, distribuzione) |
 | `meeting`            | Data, orario, luogo, oggetto, partecipanti                 |
-| `sections`           | Sezioni tematiche numerate (titolo + paragrafi)            |
-| `actions`            | Azioni con `id`, `action`, `owner`, `due_date`, `status`   |
-| `notes`              | Follow-up, date future, segnalazioni                       |
+| `sections`           | Sezioni tematiche numerate (titolo + array di paragrafi)   |
+| `actions`            | Azioni con `owner`, `action`, `due_date`, `status`         |
+| `notes`              | Follow-up, date future, problemi aperti                    |
 | `glossary`           | Termini con `term` e `description`                         |
 | `references`         | Documenti o fonti citate                                   |
-| `issues`             | Anomalie o dati ambigui rilevati nella trascrizione        |
+| `issues`             | Anomalie o ambiguità rilevate nella trascrizione           |
 | `generation_options` | `synthesis_level`, lingua, formato date                    |
 
-Le prime due sezioni sono sempre: `"1"` → **Scopo del documento**, `"2"` → **Introduzione**.
+Le sezioni `"1"` (Scopo del documento) e `"2"` (Introduzione) sono sempre presenti. Le sezioni tematiche partono da `"3"`.
 
-### FASE 2.5 — Validazione schema
+---
 
-```powershell
-python scripts\validate_json.py sources\meeting_minutes_YYYYMMDD.json
-```
-
-Errori bloccanti vengono corretti prima di proseguire. Gli avvisi vengono riportati senza bloccare.
-
-### FASE 2.6 — Validazione semantica
+### FASE 2.5 — Validazione schema `[deterministico]`
 
 ```powershell
-python scripts\validate_semantic.py sources\meeting_minutes_YYYYMMDD.json
+python scripts\validate_json.py sources\<slug>\meeting_minutes_YYYYMMDD.json
 ```
 
-Controlla coerenza interna: owner delle azioni presenti nei partecipanti, date valide, sezioni consecutive, termini glossario usati nel testo.
+Verifica campi obbligatori, formati data, struttura array. Errori bloccanti → il modello corregge il JSON prima di procedere.
 
-### FASE 3 — Generazione DOCX
+---
+
+### FASE 2.6 — Validazione semantica `[deterministico]`
 
 ```powershell
-python scripts\template_placeholder_filler_v2.py \
-  sources\meeting_minutes_YYYYMMDD.json \
-  results\verbale_YYYYMMDD_v1.docx \
-  --template sources\verbale_template_placeholders_final.docx
+python scripts\validate_semantic.py sources\<slug>\meeting_minutes_YYYYMMDD.json
 ```
 
-I placeholder `{{NOME}}` nel template vengono sostituiti con i valori del JSON. Sezioni, azioni e note sono espanse dinamicamente.
+Verifica coerenza interna: owner delle azioni ricavabile dai partecipanti, `due_date >= meeting.date`, numerazione sezioni sequenziale, codici issue univoci.
 
-### FASE 4 — Aggiornamento thesaurus
+---
+
+### FASE 3 — Generazione DOCX `[deterministico]`
 
 ```powershell
-python scripts\thesaurus_updater.py sources\meeting_minutes_YYYYMMDD.json
+python scripts\template_placeholder_filler_v2.py `
+    sources\<slug>\meeting_minutes_YYYYMMDD.json `
+    results\<slug>\verbale_YYYYMMDD_v1.docx `
+    --template templates\verbale_template_placeholders_final.docx
 ```
 
-Aggiorna `knowledge/thesaurus.json` con nuovi partecipanti, termini tecnici, decisioni e issue emerse dalla riunione.
+I placeholder `{{NOME}}` nel template vengono sostituiti con i valori del JSON. Sezioni, azioni, note e righe delle tabelle (partecipanti, glossario, ecc.) sono espanse dinamicamente. Il nome del DOCX include sempre il suffisso `_v1`.
 
-### FASE 5 — Report e attesa revisione
+---
 
-L'agente presenta il riepilogo (file prodotti, avvisi, issue aperte) e rimane in attesa che l'utente depositi il verbale revisionato.
-
-### FASE 6 — Feedback loop (revisione utente)
-
-Quando l'utente salva le proprie correzioni in `results/verbale_YYYYMMDD_v1_rev.docx`, l'agente:
-
-1. Ri-estrae il testo dal DOCX revisionato
-2. Produce `sources/meeting_minutes_YYYYMMDD_rev.json` con le correzioni applicate
-3. Esegue il diff e aggiorna il knowledge base:
+### FASE 4 — Aggiornamento thesaurus `[deterministico]`
 
 ```powershell
-python scripts\diff_and_learn.py \
-  sources\meeting_minutes_YYYYMMDD.json \
-  sources\meeting_minutes_YYYYMMDD_rev.json
+python scripts\thesaurus_updater.py sources\<slug>\meeting_minutes_YYYYMMDD.json
 ```
 
-Le correzioni vengono registrate in `knowledge/correction_log.json` come pattern riutilizzabili nelle riunioni successive.
+Merge JSON → `knowledge/<slug>/thesaurus.json`: aggiunge nuovi partecipanti e termini, segnala conflitti se un termine viene ridefinito con una descrizione divergente.
 
-### FASE 7 — Pulizia (automatica)
+---
 
-L'agente chiede conferma e rimuove i file intermedi non più necessari (bozza JSON e bozza DOCX pre-revisione):
+### FASE 5 — Report e attesa revisione `[LLM — comunicazione]`
+
+Il modello presenta il riepilogo (file prodotti, avvisi di validazione, issue aperte, modifiche al thesaurus) e rimane in attesa che l'utente depositi il verbale revisionato come `results/<slug>/verbale_YYYYMMDD_v1_rev.docx`.
+
+---
+
+### FASE 6 — Feedback loop `[deterministico]`
+
+Quando l'utente conferma di aver salvato il DOCX revisionato:
+
+**6b — Reverse-mapping DOCX → JSON:**
+
+```powershell
+python scripts\docx_reverse_map.py `
+    results\<slug>\verbale_YYYYMMDD_v1_rev.docx `
+    sources\<slug>\meeting_minutes_YYYYMMDD.json `
+    --template templates\verbale_template_placeholders_final.docx
+```
+
+Lo script usa il template come riferimento strutturale per identificare ogni tabella nel DOCX (partecipanti, glossario, distribuzione, storico, riferimenti) ed estrae i valori corretti. Le sezioni tematiche, le azioni e le note vengono re-parsate dai paragrafi numerati del documento. I metadati scalari (titolo, date, codici) vengono copiati dal JSON originale.
+
+Il file `sources/<slug>/meeting_minutes_YYYYMMDD_rev.json` viene prodotto **senza alcuna chiamata al modello**.
+
+**6c — Diff e apprendimento:**
+
+```powershell
+python scripts\diff_and_learn.py `
+    sources\<slug>\meeting_minutes_YYYYMMDD.json `
+    sources\<slug>\meeting_minutes_YYYYMMDD_rev.json
+```
+
+Confronta campo per campo i due JSON, scrive le correzioni in `knowledge/<slug>/correction_log.json` come pattern (`CRR-XXX`) applicati automaticamente alle generazioni future.
+
+---
+
+### FASE 7 — Pulizia `[deterministico]`
 
 ```powershell
 python scripts\cleanup.py YYYYMMDD
 ```
 
-I file definitivi (`_rev.json` e `_rev.docx`) e il knowledge base non vengono mai toccati.
+Dopo conferma dell'utente, rimuove i file intermedi (bozza JSON e bozza DOCX pre-revisione). I file definitivi (`_rev.json`, `_rev.docx`) e il knowledge base non vengono mai toccati.
 
 ---
 
 ## Knowledge base
 
-Il sistema mantiene memoria persistente tra le riunioni:
+Il sistema mantiene memoria persistente tra le riunioni, organizzata per progetto:
 
-- **`knowledge/thesaurus.json`** — Partecipanti con ruoli e organizzazione, termini tecnici con descrizione, log delle decisioni, issue aperte. Aggiornato automaticamente in FASE 4 e FASE 6.
-- **`knowledge/correction_log.json`** — Pattern di correzione appresi (es. sostituzione sistematica di termini errati). Applicati automaticamente nelle generazioni successive.
+- **`knowledge/projects.json`** — Registro dei progetti attivi: slug, display_name, aliases. Permette il riconoscimento automatico del progetto dall'header della trascrizione.
+- **`knowledge/<slug>/thesaurus.json`** — Partecipanti con ruoli e organizzazione, termini tecnici con descrizione, log delle decisioni, issue aperte. Aggiornato in FASE 4 (da JSON generato) e FASE 6 (da diff con revisione).
+- **`knowledge/<slug>/correction_log.json`** — Pattern di correzione appresi (es. "preferire forma collettiva nelle sezioni filtri"). Applicati come anti-pattern in FASE 2 per migliorare la qualità del testo generato.
 
 ---
 
@@ -165,11 +261,11 @@ Il sistema mantiene memoria persistente tra le riunioni:
 Aprire GitHub Copilot Chat in VS Code e selezionare l'agente **Agente Verbalizzatore** (definito in `.github/agents/orchestratore.agent.md`).
 
 ```
-vai
+genera verbale
 ```
 
 ```
-genera verbale
+vai
 ```
 
 L'agente apre automaticamente la finestra di selezione file e conduce l'intera pipeline in autonomia.
@@ -179,23 +275,39 @@ L'agente apre automaticamente la finestra di selezione file e conduce l'intera p
 ## Utilizzo manuale degli script
 
 ```powershell
-# 1. Validazione schema
-python scripts\validate_json.py sources\meeting_minutes_YYYYMMDD.json
+# Preparazione (FASE 0)
+python scripts\extract_transcript.py <trascrizione.docx> --output sources\_transcript_tmp.txt
+python scripts\parse_header.py sources\_transcript_tmp.txt
+python scripts\detect_speakers.py sources\_transcript_tmp.txt
 
-# 2. Validazione semantica
-python scripts\validate_semantic.py sources\meeting_minutes_YYYYMMDD.json
+# Validazione (FASE 2.5 e 2.6)
+python scripts\validate_json.py sources\<slug>\meeting_minutes_YYYYMMDD.json
+python scripts\validate_semantic.py sources\<slug>\meeting_minutes_YYYYMMDD.json
 
-# 3. Generazione DOCX
-python scripts\template_placeholder_filler_v2.py sources\meeting_minutes_YYYYMMDD.json results\verbale_YYYYMMDD_v1.docx --template sources\verbale_template_placeholders_final.docx
+# Generazione DOCX (FASE 3)
+python scripts\template_placeholder_filler_v2.py `
+    sources\<slug>\meeting_minutes_YYYYMMDD.json `
+    results\<slug>\verbale_YYYYMMDD_v1.docx `
+    --template templates\verbale_template_placeholders_final.docx
 
-# 4. Aggiornamento thesaurus
-python scripts\thesaurus_updater.py sources\meeting_minutes_YYYYMMDD.json
+# Aggiornamento thesaurus (FASE 4)
+python scripts\thesaurus_updater.py sources\<slug>\meeting_minutes_YYYYMMDD.json
 
-# 5. Diff e apprendimento (dopo revisione)
-python scripts\diff_and_learn.py sources\meeting_minutes_YYYYMMDD.json sources\meeting_minutes_YYYYMMDD_rev.json
+# Feedback loop (FASE 6)
+python scripts\docx_reverse_map.py `
+    results\<slug>\verbale_YYYYMMDD_v1_rev.docx `
+    sources\<slug>\meeting_minutes_YYYYMMDD.json `
+    --template templates\verbale_template_placeholders_final.docx
 
-# 6. Pulizia file intermedi (con conferma interattiva)
+python scripts\diff_and_learn.py `
+    sources\<slug>\meeting_minutes_YYYYMMDD.json `
+    sources\<slug>\meeting_minutes_YYYYMMDD_rev.json
+
+# Pulizia (FASE 7)
 python scripts\cleanup.py YYYYMMDD
+
+# Utilità
+python scripts\inspect_template.py templates\verbale_template_placeholders_final.docx
 ```
 
 ---
