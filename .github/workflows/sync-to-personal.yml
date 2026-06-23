@@ -1,0 +1,21 @@
+name: Sync to personal repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sorgente
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # serve per avere tutta la storia
+
+      - name: Push al repo destinazione
+        run: |
+          git remote add target https://x-access-token:${{ secrets.TARGET_PAT }}@github.com/theflaviomercuri/agente-verbalizzante.git
+          git push target main --force
+        # --force solo se vuoi sovrascrivere sempre; rimuovilo per un push normale
