@@ -14,8 +14,13 @@ jobs:
         with:
           fetch-depth: 0 # serve per avere tutta la storia
 
+      - name: Test autenticazione PAT
+        run: |
+          curl -s -o /dev/null -w "HTTP status: %{http_code}\n" \
+            -H "Authorization: Bearer ${{ secrets.TARGET_PAT }}" \
+            https://api.github.com/repos/theflaviomercuri/agente-verbalizzante
+
       - name: Push al repo destinazione
         run: |
           git remote add target https://x-access-token:${{ secrets.TARGET_PAT }}@github.com/theflaviomercuri/agente-verbalizzante.git
           git push target main --force
-        # --force solo se vuoi sovrascrivere sempre; rimuovilo per un push normale
