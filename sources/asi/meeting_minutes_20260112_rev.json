@@ -1,0 +1,372 @@
+{
+  "document": {
+    "title": "Verbale SAL – Reingegnerizzazione UI/UX ASI – 12/01/2026",
+    "document_name": "Verbale SAL – Reingegnerizzazione UI/UX ASI – 12/01/2026",
+    "document_type": "Verbale di riunione",
+    "ssu_code": "-",
+    "client_references": [],
+    "management_area": "Reingegnerizzazione UI/UX",
+    "application_code": "-",
+    "contract_reference": "-",
+    "supplier": "Almaviva S.p.A.",
+    "version": "1.0",
+    "author": {
+      "name": "Mercuri Flavio",
+      "organization": "Almaviva S.p.A."
+    },
+    "history": [
+      {
+        "version": "1.0",
+        "date": "12/01/2026",
+        "description": "Versione iniziale",
+        "sections": "-"
+      }
+    ],
+    "distribution": [
+      {
+        "name": "Capobianco Paolo",
+        "role": "-",
+        "organization": "INPS"
+      },
+      {
+        "name": "Damiani Alessandro",
+        "role": "-",
+        "organization": "Almaviva S.p.A."
+      },
+      {
+        "name": "Laferla Gianluca",
+        "role": "-",
+        "organization": "Almaviva S.p.A."
+      },
+      {
+        "name": "Mercuri Flavio",
+        "role": "-",
+        "organization": "Almaviva S.p.A."
+      },
+      {
+        "name": "Michele Friscia",
+        "role": "-",
+        "organization": "INPS"
+      },
+      {
+        "name": "Piscitelli Terenzio",
+        "role": "-",
+        "organization": "Almaviva S.p.A."
+      },
+      {
+        "name": "Tantar Ana Maria",
+        "role": "-",
+        "organization": "Almaviva S.p.A."
+      }
+    ],
+    "approvals": [
+      {
+        "version": "1.0",
+        "approval_date": "-",
+        "name": "-",
+        "organization": "-"
+      }
+    ]
+  },
+  "meeting": {
+    "date": "12/01/2026",
+    "start_time": "09:36",
+    "end_time": "10:25",
+    "location": "Microsoft Teams",
+    "subject": "SAL – Reingegnerizzazione UI/UX portale ASI",
+    "participants": [
+      {
+        "name": "Capobianco Paolo",
+        "role": "Referente Cliente",
+        "organization": "INPS"
+      },
+      {
+        "name": "Damiani Alessandro",
+        "role": "Sviluppatore BE",
+        "organization": "Almaviva S.p.A."
+      },
+      {
+        "name": "Laferla Gianluca",
+        "role": "Sviluppatore FE",
+        "organization": "Almaviva S.p.A."
+      },
+      {
+        "name": "Mercuri Flavio",
+        "role": "Sviluppatore Lead UI/UX FE",
+        "organization": "Almaviva S.p.A."
+      },
+      {
+        "name": "Michele Friscia",
+        "role": "Referente Cliente",
+        "organization": "INPS"
+      },
+      {
+        "name": "Monteleone Giuseppe Carlo",
+        "role": "-",
+        "organization": "-"
+      },
+      {
+        "name": "Piscitelli Terenzio",
+        "role": "Coordinamento progetto",
+        "organization": "Almaviva S.p.A."
+      },
+      {
+        "name": "Tantar Ana Maria",
+        "role": "Sviluppatore FE",
+        "organization": "Almaviva S.p.A."
+      }
+    ]
+  },
+  "references": [
+    {
+      "document": "SAL",
+      "version": "Stato di Avanzamento Lavori: riunione periodica di monitoraggio dell'avanzamento del progetto.",
+      "date": "-"
+    },
+    {
+      "document": "UI/UX",
+      "version": "User Interface / User Experience: disciplina di progettazione delle interfacce utente e dell'esperienza d'uso.",
+      "date": "-"
+    },
+    {
+      "document": "Sticky",
+      "version": "Proprietà visuale che mantiene una colonna (o elemento) fissa nella sua posizione mentre il contenuto adiacente scorre orizzontalmente.",
+      "date": "-"
+    },
+    {
+      "document": "Ellipsis",
+      "version": "Troncamento visivo del testo con tre puntini (…) applicato quando il contenuto supera la larghezza disponibile della colonna.",
+      "date": "-"
+    },
+    {
+      "document": "Spalla laterale",
+      "version": "Area laterale del layout (sidebar); con “spalla stretta” si intende una versione ridotta in larghezza per ottimizzare lo spazio della pagina.",
+      "date": "-"
+    },
+    {
+      "document": "Legacy",
+      "version": "Versione precedente del sistema informatico attualmente in produzione, oggetto del processo di reingegnerizzazione.",
+      "date": "-"
+    },
+    {
+      "document": "Sirio",
+      "version": "Design system di riferimento utilizzato per lo sviluppo dell'interfaccia del portale.",
+      "date": "-"
+    },
+    {
+      "document": "JBoss",
+      "version": "Server applicativo Java utilizzato nell'ambiente di sviluppo del progetto.",
+      "date": "-"
+    },
+    {
+      "document": "Utenza risorse",
+      "version": "Account/profilo di accesso ai sistemi di sviluppo, documentazione e board di progetto (es. design system, repository).",
+      "date": "-"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "SAL",
+      "description": "Stato di Avanzamento Lavori: riunione periodica di monitoraggio dell'avanzamento del progetto."
+    },
+    {
+      "term": "UI/UX",
+      "description": "User Interface / User Experience: disciplina di progettazione delle interfacce utente e dell'esperienza d'uso."
+    },
+    {
+      "term": "Sticky",
+      "description": "Proprietà visuale che mantiene una colonna (o elemento) fissa nella sua posizione mentre il contenuto adiacente scorre orizzontalmente."
+    },
+    {
+      "term": "Ellipsis",
+      "description": "Troncamento visivo del testo con tre puntini (…) applicato quando il contenuto supera la larghezza disponibile della colonna."
+    },
+    {
+      "term": "Spalla laterale",
+      "description": "Area laterale del layout (sidebar); con “spalla stretta” si intende una versione ridotta in larghezza per ottimizzare lo spazio della pagina."
+    },
+    {
+      "term": "Legacy",
+      "description": "Versione precedente del sistema informatico attualmente in produzione, oggetto del processo di reingegnerizzazione."
+    },
+    {
+      "term": "Sirio",
+      "description": "Design system di riferimento utilizzato per lo sviluppo dell'interfaccia del portale."
+    },
+    {
+      "term": "JBoss",
+      "description": "Server applicativo Java utilizzato nell'ambiente di sviluppo del progetto."
+    },
+    {
+      "term": "Utenza risorse",
+      "description": "Account/profilo di accesso ai sistemi di sviluppo, documentazione e board di progetto (es. design system, repository)."
+    }
+  ],
+  "sections": [
+    {
+      "number": "1",
+      "title": "Scopo del documento",
+      "paragraphs": [
+        "Il presente documento riporta la trascrizione di quanto è stato discusso e stabilito durante lo svolgimento della riunione.",
+        "Dati di sintesi",
+        "Riferimenti",
+        "Glossario",
+        "Il presente documento riporta le decisioni e gli esiti del SAL del 12/01/2026 relativo al progetto di Reingegnerizzazione UI/UX del portale ASI."
+      ]
+    },
+    {
+      "number": "2",
+      "title": "Introduzione",
+      "paragraphs": [
+        "La riunione è la prima dell’anno e riprende i lavori sospesi per le festività. Costituisce il follow-up del SAL del 16/12/2025, nel corso del quale erano state definite le modifiche da implementare sul componente tabellare del portale e sulla navigazione generale. L’obiettivo della sessione è verificare l’avanzamento delle attività pendenti, acquisire il feedback del committente INPS sulle soluzioni proposte e pianificare il prossimo rilascio in sviluppo."
+      ]
+    },
+    {
+      "number": "4",
+      "title": "Propagazione modifiche layout: spalla laterale e riorganizzazione menu header",
+      "paragraphs": [
+        "La modifica della spalla laterale più stretta, concordata nel SAL precedente, è stata propagata a tutto il portale. Le voci «Funzioni» e «I tuoi strumenti» sono state rimosse dall’header e ridistribuite nelle rispettive sezioni delle liste veloci. La modifica è considerata definitiva e pronta per il rilascio."
+      ]
+    },
+    {
+      "number": "5",
+      "title": "Navigazione dalle voci header non ancora linkate",
+      "paragraphs": [
+        "Le voci «Area documentale», «Blocco delle domande», «Registro forzature», «Abitazioni» e «Risoluzione del rapporto di lavoro» sono presenti nell’header ma non ancora collegate. È stato concordato che tutte le voci non ancora attivate devono reindirizzare alla pagina di lavorazione, analogamente a quanto già previsto per «Area documentale». L’implementazione è assegnata a Laferla Gianluca entro metà settimana."
+      ]
+    },
+    {
+      "number": "6",
+      "title": "Terminologia e stato della funzionalità Gestione Blocco Domande",
+      "paragraphs": [
+        "La funzionalità attualmente denominata «Blocco domande» deve essere rinominata «Gestione blocco domande»: il sistema non esegue il blocco delle domande, bensì gestisce quelle già bloccate automaticamente. La funzionalità è presente in produzione ma non ancora integrata nell’ambiente di sviluppo UI. L’etichetta «blocca/sblocca» sarà sostituita con una terminologia meno equivoca; la modifica sarà applicata in produzione e recepita nel nuovo sistema al momento dell’integrazione."
+      ]
+    },
+    {
+      "number": "7",
+      "title": "Modifiche al componente tabellare: ellipsis, sticky e riordino colonne",
+      "paragraphs": [
+        "Sono state confermate e approvate dal committente le seguenti modifiche al componente tabellare, da propagare a tutto il portale: troncamento con ellipsis per i testi che eccedono la larghezza della colonna (con tooltip al passaggio del mouse); colonna «Azioni» sticky, visibile durante lo scorrimento orizzontale della tabella; spalla laterale più stretta già propagata.",
+        "Per la tabella delle lavorazioni, è concordato di spostare la colonna «Notifiche» immediatamente dopo «Tipo domanda» e prima di «Sede», per garantirne la visibilità senza scorrimento. Le colonne «Operatore» e «Data avvio» saranno spostate nel pannello di dettaglio dell’attività. Rendere «Notifiche» sticky non è percorribile con l’attuale implementazione di Sirio, che non consente la selezione configurabile delle colonne fisse."
+      ]
+    },
+    {
+      "number": "8",
+      "title": "Funzionalità «I tuoi messaggi» (chat operativa)",
+      "paragraphs": [
+        "La funzionalità di messaggistica è presente nella versione in sviluppo come replica del comportamento Legacy. Il comportamento confermato dal committente è: il clic sul pulsante apre l’area operativa dell’iscritto alla schermata di composizione del messaggio. Il problema riscontrato da Laferla Gianluca nell’ambiente locale è attribuibile a un malfunzionamento dell’ambiente (crash di JBoss). L’etichetta del pulsante è stata modificata da «Invia risposta» a «Componi risposta», in quanto l’invio avviene in una fase successiva."
+      ]
+    },
+    {
+      "number": "9",
+      "title": "Revisione roadmap: chiusura attività al 16/12/2025",
+      "paragraphs": [
+        "Tutte le attività definite nel SAL del 16/12/2025 risultano completate: rimozione del menu funzioni dall’header, badge numerici sui link della home, modifica pulsante azioni con spostamento della clessidra in prima posizione, variazione icone (eliminata la X rossa ambigua), adeguamento della nomenclatura in comparto scuola. Le uniche modifiche ancora in corso sono quelle al componente tabellare (ellipsis, sticky azioni), attese entro metà settimana.",
+        "Sono state identificate due attività future: definizione dei campi ordinabili per ogni tabella del portale (attualmente tutte le colonne sono abilitate all’ordinamento); integrazione del nuovo header con sistema di notifiche e badge, che verrà presentata al prossimo SAL."
+      ]
+    },
+    {
+      "number": "10",
+      "title": "Pianificazione rilascio e test amministrativi",
+      "paragraphs": [
+        "Il rilascio delle modifiche sull’ambiente di sviluppo è previsto entro metà settimana. È concordato un passaggio di test con gli utenti amministrativi prima del rilascio in produzione. Al termine del test, se non emergono richieste di modifica si procede al rilascio in produzione; in caso contrario le modifiche necessarie saranno valutate e inserite nel piano o posticipate alla conclusione del refactoring complessivo dell’interfaccia. Il prossimo SAL è confermato per martedì della settimana successiva."
+      ]
+    },
+    {
+      "number": "11",
+      "title": "Attivazione utenza risorse per Laferla Gianluca",
+      "paragraphs": [
+        "L’attivazione dell’utenza risorse per Laferla Gianluca è pendente nonostante richieste già inviate. L’assenza impedisce l’accesso al design system, alla board di progetto e agli strumenti necessari allo sviluppo, risultando bloccante sia operativamente che organizzativamente. Mercuri Flavio reinvierà immediatamente la richiesta via mail a Michele Friscia (INPS)."
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "owner": "Almaviva",
+      "action": "Implementare il reindirizzamento alla pagina di lavorazione per le voci header non ancora linkate (Blocco domande, Area documentale e altri)",
+      "due_date": "14/01/2026",
+      "status": "open"
+    },
+    {
+      "owner": "Almaviva",
+      "action": "Completare e rilasciare su ambiente sviluppo le modifiche tabellari: ellipsis sui testi lunghi, colonna Azioni sticky, spalla laterale stretta",
+      "due_date": "14/01/2026",
+      "status": "open"
+    },
+    {
+      "owner": "Almaviva",
+      "action": "Implementare il riordino delle colonne nella tabella lavorazioni: spostare Notifiche dopo Tipo domanda; spostare Operatore e Data avvio nel pannello di dettaglio",
+      "due_date": "14/01/2026",
+      "status": "open"
+    },
+    {
+      "owner": "Almaviva",
+      "action": "Modificare l’etichetta del pulsante nella chat da «Invia risposta» a «Componi risposta»",
+      "due_date": "14/01/2026",
+      "status": "open"
+    },
+    {
+      "owner": "Almaviva",
+      "action": "Rinominare la funzionalità «Blocco domande» in «Gestione blocco domande» nell’interfaccia (Scadenza: -)",
+      "due_date": "-",
+      "status": "open"
+    },
+    {
+      "owner": "Almaviva",
+      "action": "Reinviare la mail a Michele Friscia (INPS) per l’attivazione dell’utenza risorse a Laferla Gianluca",
+      "due_date": "12/01/2026",
+      "status": "open"
+    },
+    {
+      "owner": "INPS",
+      "action": "Attivare l’utenza risorse per Laferla Gianluca (accesso design system, board di progetto, servizi di sviluppo) (Scadenza: -)",
+      "due_date": "-",
+      "status": "open"
+    },
+    {
+      "owner": "INPS",
+      "action": "Organizzare sessione di test delle modifiche con gli utenti amministrativi prima del rilascio in produzione (Scadenza: -)",
+      "due_date": "-",
+      "status": "open"
+    },
+    {
+      "owner": "Almaviva",
+      "action": "Presentare la proposta del nuovo header (con sistema notifiche/badge) al prossimo SAL (Scadenza: -)",
+      "due_date": "-",
+      "status": "open"
+    },
+    {
+      "owner": "INPS",
+      "action": "Definire, per ogni funzionalità del portale, quali colonne tabellari devono essere abilitate all’ordinamento.",
+      "due_date": "-",
+      "status": "open"
+    }
+  ],
+  "notes": [
+    "Il prossimo SAL è confermato per martedì della settimana successiva (19/01/2026).",
+    "Il nuovo header con sistema di notifiche/badge sarà presentato al prossimo SAL.",
+    "La funzionalità «I tuoi messaggi» è oggetto dello stesso rilascio previsto per metà settimana."
+  ],
+  "issues": [
+    {
+      "code": "I01",
+      "description": "Il ruolo e l’organizzazione di Monteleone Giuseppe Carlo non sono esplicitati nella trascrizione.",
+      "severity": "bassa"
+    },
+    {
+      "code": "I02",
+      "description": "La data del test con gli amministrativi non è stata definita durante la riunione.",
+      "severity": "bassa"
+    }
+  ],
+  "generation_options": {
+    "include_summary": true,
+    "include_references_section": true,
+    "include_glossary_section": true,
+    "include_issues_section": true,
+    "date_format": "dd/MM/yyyy",
+    "empty_value_placeholder": "-",
+    "language": "it",
+    "synthesis_level": "resolved"
+  }
+}

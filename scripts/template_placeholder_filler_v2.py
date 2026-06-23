@@ -163,7 +163,7 @@ def build_scalar_mapping(data: Dict[str, Any]) -> Dict[str, str]:
 
     sections = data.get('sections', [])
     intro_section = next((s for s in sections if str(s.get('number')) == '2'), {})
-    thematic = [s for s in sections if str(s.get('number')) != '2']
+    thematic = [s for s in sections if str(s.get('number')) not in ('1', '2')]
 
     actions = data.get('actions', [])
     notes = data.get('notes', [])
@@ -172,7 +172,6 @@ def build_scalar_mapping(data: Dict[str, Any]) -> Dict[str, str]:
         'TITOLO': text(d.get('title', m.get('subject', '-'))),
         'NOME_DOC': text(d.get('document_name')),
         'SSU': text(d.get('ssu_code')),
-        'REF': text(d.get('client_references')),
         'AREA': text(d.get('management_area')),
         'APP': text(d.get('application_code')),
         'CTR': text(d.get('contract_reference')),
@@ -189,13 +188,19 @@ def build_scalar_mapping(data: Dict[str, Any]) -> Dict[str, str]:
         mapping[f'S{idx}T'] = text(sec.get('title'))
         mapping[f'S{idx}B'] = join_paragraphs(sec.get('paragraphs', []))
 
+    # REF auto-derivato dagli INPS participants se client_references è vuoto
+    client_refs = d.get('client_references') or []
+    if client_refs:
+        ref_str = text(client_refs)
+    else:
+        inps_parts = [p.get('name', '') for p in (m.get('participants') or []) if 'INPS' in str(p.get('organization', ''))]
+        ref_str = ', '.join(inps_parts) if inps_parts else '-'
+    mapping['REF'] = ref_str
+
     for idx, act in enumerate(actions, start=1):
         owner = text(act.get('owner'))
-        action = text(act.get('action'))
-        due = act.get('due_date')
-        label = f'{owner}: {action}'
-        if due:
-            label += f' (Scadenza: {fmt_date(due)})'
+        action_text_val = text(act.get('action'))
+        label = f'{owner}: {action_text_val}'
         mapping[f'A{idx}'] = label
 
     for idx, note in enumerate(notes, start=1):
@@ -251,7 +256,7 @@ def remove_paragraph(paragraph: Paragraph) -> None:
 
 
 def ensure_dynamic_sections(doc: DocumentObject, data: Dict[str, Any]) -> None:
-    sections = [s for s in data.get('sections', []) if str(s.get('number')) != '2']
+    sections = [s for s in data.get('sections', []) if str(s.get('number')) not in ('1', '2')]
     title_placeholders = []
     paras = doc.paragraphs
     for p in paras:
@@ -297,10 +302,7 @@ def ensure_dynamic_actions(doc: DocumentObject, data: Dict[str, Any]) -> None:
     for action in actions[capacity:]:
         owner = text(action.get('owner'))
         action_text = text(action.get('action'))
-        due = action.get('due_date')
         line = f'• {owner}: {action_text}'
-        if due:
-            line += f' (Scadenza: {fmt_date(due)})'
         new_p = insert_paragraph_after(cursor, line)
         try:
             new_p.style = cursor.style

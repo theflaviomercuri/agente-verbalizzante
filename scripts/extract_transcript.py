@@ -72,7 +72,11 @@ def main() -> None:
         out = Path(args.output)
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(content, encoding="utf-8")
-        print(f"Estratto: {out} ({len(lines)} righe)", file=sys.stderr)
+        physical_lines = content.count("\n") + 1
+        print(
+            f"Estratto: {out} ({len(lines)} paragrafi, {physical_lines} righe fisiche)",
+            file=sys.stderr,
+        )
     else:
         print(content)
 

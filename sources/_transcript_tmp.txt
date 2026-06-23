@@ -1,0 +1,2167 @@
+Reingegnerizzazione UIUX ASI-20260616_150656-Registrazione della riunione
+16 giugno 2026, 01:06PM
+1 h 45 m 7 s
+
+Piscitelli Terenzio trascrizione avviata
+
+Piscitelli Terenzio   0:05
+OK, dovrebbe essere essersi avviato.
+
+Mercuri Flavio   0:06
+Ok.
+Sì, è andata andata OK Michele, Dicevi scusa.
+
+Michele Friscia   0:13
+E che abbiamo fatto delle prove insieme a Paolo.
+Allora?
+Va beh, una cosa forse un pochino, un pochino così.
+Allora quando si va nell'aria, vediamo se.
+Una ricerca anagrafica.
+Vado, non hai problemi.
+Allora siamo da casa e viene un po più difficile, no?
+Da un povero mio.
+Non si sente nulla?
+
+Piscitelli Terenzio   1:25
+Noi risentiamo.
+
+Michele Friscia   1:27
+No, non sente l'applicativo, non sente, non si, non si sposta.
+
+Laferla Gianluca   1:33
+Lo sto testando anche io su sviluppo e mi funziona a me il click, quindi forse c'è qualche problema.
+
+Michele Friscia   1:42
+Fusco di rete.
+
+Tantar Ana Maria   1:46
+Puoi andare un attimino più su, per favore.
+Perché mi sembra infatti non c'è l'accesso?
+Se vedi non si è loggato correttamente, prova a fare un attimino un refresh della pagina.
+
+Michele Friscia   2:04
+L'ho appena fatto, però faccio così.
+Qui ci sono i miei dati, qua invece c'è accedi se va bene così.
+
+Tantar Ana Maria   2:43
+No, mi sa che devi prima accedere da quello Legacy e poi passare su questo Sirio.
+
+Michele Friscia   2:48
+Allora?
+Vestito che ho già fatto, poi facciamo così.
+Vediamo un po.
+Beh, Paolo, se vuoi provare tu.
+Tu sei in ufficio OA casa?
+
+Capobianco Paolo   3:31
+No, adesso a casa prima c'ho avuto dei problemi, mo non lo so se si è si è sistemato un po.
+Tu devi saltare mezzo mondo, lo provo pure.
+No, provo un attimo.
+Tu continua a fare, io nel frattempo faccio una prova e vediamo.
+
+Michele Friscia   4:04
+Oppure condividete voi, non è tanto.
+Delle cose che non che ho visto me le sono mandate via mail e quindi le so.
+
+Piscitelli Terenzio   4:29
+Diciamo che è un po' lentino, quello sì, però quello capita spesso sull'ambiente di sviluppo che sia lento, però a me sembra che sia funzionante.
+Quindi se volete posso.
+
+Michele Friscia   4:44
+Un po.
+
+Piscitelli Terenzio   4:48
+Condividerei tu su quale sede dovevi andare?
+
+Michele Friscia   4:51
+Ma Roma credo che fosse il Monteverde.
+
+Piscitelli Terenzio   5:02
+Vabbè dai Michele, intanto magari Dimmi come mi devo muovere.
+
+Michele Friscia   5:10
+Allora quello che allora su.
+Allora vai in area operativa.
+Se si mette cognome e nome, tutti e due li mette dentro il cognome, invece nel Lega si metteva il cognome da una parte e il secondo nome nel nome.
+
+Piscitelli Terenzio   5:44
+OK, quindi, cioè nel senso, se io faccio tipo così?
+
+Capobianco Paolo   5:45
+Però questo sta scritto.
+
+Michele Friscia   5:49
+Sì.
+
+Piscitelli Terenzio   5:50
+Quindi com'era prima il cognome e poi il nome giusto?
+
+Capobianco Paolo   5:55
+Sì.
+
+Piscitelli Terenzio   5:56
+Faccio ricerca.
+OK.
+
+Mercuri Flavio   6:02
+In realtà però, scusa se torni indietro.
+
+Capobianco Paolo   6:02
+Però nel tuo tip sta scritto.
+
+Mercuri Flavio   6:06
+Bravo, bravo se torni indietro.
+
+Capobianco Paolo   6:09
+No.
+Possiamo dire che non ci piace, che è un poco esagerato, però.
+
+Mercuri Flavio   6:16
+No, ma perché in realtà se tu vai a esplorare la funzione Legacy non funziona col col nome, cioè ti dice che puoi mettere il nome ma non funziona.
+
+Piscitelli Terenzio   6:21
+No, vai di continuo.
+
+Capobianco Paolo   6:26
+No, funziona perché io ho.
+
+Michele Friscia   6:27
+No, funziona.
+
+Mercuri Flavio   6:31
+Anna e Gianluca funziona.
+
+Tantar Ana Maria   6:35
+Allora funziona così, praticamente tu metti la prima cosa che inserisci, te la inserisce come codice fiscale, anche se metti un cognome, lui te lo mette direttamente dentro al codice fiscale. Quello che abbiamo fatto noi è fare un passo in.
+Più nel senso che quello che scrivi per primo se rispetta delle regole per cui la cosa scritta esatto, per cui la cosa scritta se è un codice fiscale lo metti dentro al codice fiscale, altrimenti all'interno del cognome.
+
+Mercuri Flavio   7:03
+La validazione del codice fiscale.
+
+Piscitelli Terenzio   7:05
+Speriamo che la prossima.
+
+Capobianco Paolo   7:12
+Ed è strano perché questo c'era pure lì, cioè su pure sul Legacy c'era prima, almeno forse è stato assaltato, però prima c'era terenzio non c'era, no?
+
+Mercuri Flavio   7:12
+Cioè, in realtà noi abbiamo solo dato un.
+
+Tantar Ana Maria   7:12
+La funzionalità è esattamente.
+La.
+
+Laferla Gianluca   7:24
+Ho appena testato su Legacy, ho messo un il nome e se metti solo il nome lo va a mettere direttamente nel codice fiscale dando poi errore.
+
+Piscitelli Terenzio   7:26
+Ok.
+
+Laferla Gianluca   7:34
+Quindi legge.
+
+Tantar Ana Maria   7:35
+Esatto, quindi noi quello.
+
+Mercuri Flavio   7:35
+Vabbè diciamo noi abbiamo scusate, noi abbiamo semplicemente standardizzato e dato una funzionalità diciamo forse più basica perché c'è prevede nome, prevede codice fiscale e cognome però che funzioni esattamente come promette di funzionare.
+
+Capobianco Paolo   7:39
+No, va bene.
+Sì.
+
+Mercuri Flavio   7:56
+Diciamo che non so se in realtà il nome faccia veramente la differenza nella ricerca e certo se lo fa diventa un po' meno semplice da gestire, bisogna fare un lavoro un po' più complicato perché in realtà un.
+
+Piscitelli Terenzio   7:56
+Ciao.
+
+Mercuri Flavio   8:15
+Per distinguere un nome da un cognome noi proprio non esiste, non ce l'abbiamo, quindi bisognerebbe o forzare un meccanismo, diciamo però lato utente, quindi essere sicuri che l'utente sappia che la prima cosa che mette un nome, la seconda un cognome, ma per esempio uno che c'ha un nome composto già.
+Crea un problema.
+
+Capobianco Paolo   8:37
+Sì, no, allora sicuramente ho questo cognome e nome. Ma figurati, pure prendendo prima il cognome e poi il nome che sta un cognome composto ti spalla tutto. Insomma no, non si riesce a funzionare, quindi sicuramente non funzionava.
+
+Mercuri Flavio   8:37
+Scusate.
+Sì.
+Diciamo che in potenza si può sicuramente fare, cioè dobbiamo scrivere.
+
+Capobianco Paolo   8:53
+Per dove sabato che prima funzionava Terenzio, ma ti ricordi no che a noi ci funzionava la cosa poi forse sarà saltato? Boh.
+
+Piscitelli Terenzio   8:58
+Sì, no Paola, stavo provando.
+Stavo provando in sviluppo e sul Legacy non me lo trova, cioè me li mette correttamente nei campi cognome e nome, ma non me lo trova lo stesso il soggetto provo un attimo in esercizio perché comunque in esercizio funzionava.
+
+Capobianco Paolo   9:22
+Può darsi pure che nel frattempo, in qualche modo, se.
+
+Michele Friscia   9:23
+E io sto cercando di andare in esercizio.
+
+Capobianco Paolo   9:27
+È andato via di più.
+
+Michele Friscia   9:28
+No, c'era, c'era. Se mettevi il codice fiscale lo mettevi il codice fiscale. Poi la ricerca normale. Se mettevi due cognome e nome, lui prendeva cognome e nome, metteva uno il primo del cognome e il secondo del nome.
+Se invece dovevi avere due nomi, quindi mettevi 3 3 nomi, diciamo dovevi mettere la virgola per dire qual era il secondo i due nomi.
+Quindi potevi mettere Friscia virgola, Michele, Denis e mettevi, c'era la virgola che ti che ti che ti separava i due nomi.
+
+Capobianco Paolo   10:10
+E funzionava come funzionava pure Friscia Rossi, virgola Michele lo pigliava Friscia Rossi come cognome era così giusto che andava.
+
+Michele Friscia   10:15
+Sì.
+Sì.
+Sì, c'era un signore per un agricola che ti diceva come comportarsi.
+
+Capobianco Paolo   10:21
+Vabbè, mo.
+Che si parava.
+
+Piscitelli Terenzio   10:26
+Ma va, sto vedendo che per qualche motivo non sta funzionando la ricerca per neanche in esercizio.
+Quindi.
+
+Capobianco Paolo   10:38
+No, ma deve essere interessato.
+
+Piscitelli Terenzio   10:40
+Deve essere saltato qualche cosa, effettivamente.
+
+Capobianco Paolo   10:41
+Questo.
+
+Piscitelli Terenzio   10:45
+De.
+
+Capobianco Paolo   10:46
+Non che ne siamo accorti perché sai quanti sono stati, non che ne siamo accorti.
+
+Piscitelli Terenzio   10:49
+Sì, forse in qualche momento X deve essere saltato, per che motivo?
+Proprio non nel senso proprio non cerca più con cognome e nome, ma proprio non funziona l'esercizio.
+
+Capobianco Paolo   11:05
+Anche perché poi, diciamo sulla verità, il 90%, se non di più, dei dei casi.
+
+Michele Friscia   11:06
+Neanche, neanche lo so banale.
+
+Piscitelli Terenzio   11:10
+In esercizio funziona solo se metti cognome, nome e data di nascita adesso.
+Cognome e nome e data di nascita funziona, ma solo cognome e nome no.
+
+Capobianco Paolo   11:27
+Ma diciamo sempre sul.
+Nell'home page stiamo parlando oppure nella pagina di ricerca?
+
+Piscitelli Terenzio   11:34
+Allora io adesso sto facendo, aspetta, no, come non detto, adesso sembra che stia funzionando. Aspetta, Fammi, Fammi vedere.
+
+Capobianco Paolo   11:35
+OK.
+
+Michele Friscia   11:43
+Vabbè, questo date.
+
+Piscitelli Terenzio   11:48
+Capito?
+Vabbè questa la verifichiamo noi in esercizio anche su Legacy sembrerebbe che ci sia qualche cosa un po' particolare, non lo so. Alcune volte mi sembra che funziona, altre volte no, è un po' random. Non capisco il perché in esercizio sto un po' di prove.
+
+Michele Friscia   12:35
+No, non ho capito che ha detto Terenzio.
+
+Piscitelli Terenzio   12:37
+No, dicevo, ho fatto un po' di prove nell'esercizio così, mettendo nome cognome sia nella ricerca sulla home che nella ricerca anagrafica. Sulla ricerca anagrafica a volte funziona, a volte no. Non so perché diciamo.
+È randomico diciamo se metti la data, nome, cognome e data funziona, se poi togli la data e continui a fare la ricerca continua a funzionare, ma se metti direttamente all'inizio nome e cognome non funziona.
+
+Capobianco Paolo   13:08
+E.
+Comunque diciamo solo cognome non serve a nulla, perché?
+In produzione con quasi tutti i cognomi, prende così tanti elementi che alla fine si richiesta ricerca non va bene, perché se sono troppi.
+I risultati sono eccessivi insomma, quindi ti chiede di fare una discrimina un poco più profonda, quindi diciamo come cosa qua non è che servirebbe tanto quello di fare solo il cognome già?
+
+Piscitelli Terenzio   13:42
+Vabbè.
+
+Capobianco Paolo   13:42
+Cognome e nome molto spesso ti dà, ti dà che ci sono troppi soggetti.
+Figurati solo con cognome, proprio non avrebbe alcun molto senso.
+
+Piscitelli Terenzio   13:52
+Chiara.
+
+Mercuri Flavio   13:55
+Questa forse allora è il caso di spacchettarla di ricerca, forse non è una ricerca intelligente quella che ci serve.
+
+Piscitelli Terenzio   13:56
+E poi?
+
+Capobianco Paolo   13:57
+Va.
+
+Piscitelli Terenzio   14:03
+Ciao.
+
+Capobianco Paolo   14:05
+Sì.
+
+Mercuri Flavio   14:05
+Perché è come ripeto, cioè.
+
+Piscitelli Terenzio   14:06
+No, ma in realtà è già spacchettata in ricerca anagrafica e questa era diciamo era quella era la ricerca veloce che c'avevamo su asi che senza passare diciamo dalla maschera di ricerca anagrafica consentiva attraverso un unico campo velocemente.
+
+Capobianco Paolo   14:09
+No.
+Esatto.
+
+Piscitelli Terenzio   14:22
+Di fare la ricerca o per codice fiscale o per cognome e nome principalmente diciamo diciamo per queste due categorie di ricerca.
+
+Mercuri Flavio   14:31
+Però sarei veramente curioso di sapere come hanno pensato.
+Di distinguere il nome dal cognome.
+Magari poi mi confronto con Emanuele.
+
+Capobianco Paolo   14:43
+Ma ti ripeto, di base, di base, lui vede se ci stanno due elementi separati da uno spazio. Insomma, il primo è il cognome, il secondo è il cognome. Se invece avevi situazioni più complesse, un cognome.
+Un nome composto, ti dovevi separare con la virgola.
+OK, questo era il criterio che adottavo.
+
+Mercuri Flavio   15:06
+Quindi però queste sono tutte informazioni delegate alla competenza del dell'utente.
+
+Capobianco Paolo   15:08
+Sì.
+Sì, diciamo così, anche se c'è da dire, io vi ripeto. Quindi il 99% delle persone utilizza questa ricerca veloce ed è molto utilizzata con il codice fiscale.
+
+Mercuri Flavio   15:16
+Bravo.
+
+Piscitelli Terenzio   15:21
+Allora, Giuseppe, grazie.
+
+Mercuri Flavio   15:24
+Codice fiscale e allora se voi siete d'accordo, io farei direttamente una ricerca per codice fiscale, punto e basta.
+
+Capobianco Paolo   15:26
+Sì.
+
+Mercuri Flavio   15:33
+O al massimo per cognome, ma tanto quanti omonimi possono diciamo accavallare su un codice fiscale?
+
+Capobianco Paolo   15:38
+Perché ce ne sono tanti.
+No, sul codice fiscale no, ma sul cognome sì, tanti, cioè solo il cognome non serve a niente.
+
+Mercuri Flavio   15:42
+Dagos fiscale.
+Sì, no, ma infatti. Ma infatti, come ti dicevo Paolo, come dicevo prima, secondo me una ricerca intelligente per la ricerca omonimi non è indicata proprio, cioè perché non c'hai tu considera che il vostro sistema nuovo di Arca non permette nemmeno più di mettere solo due dati su.
+
+Michele Friscia   15:48
+Perché?
+
+Mercuri Flavio   16:04
+Tre, cioè adesso in Arca per cercare l'anagrafica devi cercare nome, cognome e data di nascita, sennò non ti risponde proprio.
+
+Piscitelli Terenzio   16:11
+Allora forse per questo.
+
+Capobianco Paolo   16:11
+No, funziona pure col sesso.
+
+Piscitelli Terenzio   16:14
+Forse è per questo allora, Paolo, che l'esercizio del nome e cognome non sta più funzionando.
+
+Capobianco Paolo   16:18
+Perfetto.
+
+Mercuri Flavio   16:21
+Ma qua non cerchi su Arca. Però mi sa qua cerchi su Arca. E allora certo, Arca l'hanno stravolto nel frattempo.
+
+Piscitelli Terenzio   16:21
+Perché Arca non ti restituisce nulla? Sì, certo.
+
+Michele Friscia   16:26
+Il tablet è rotto, come facciamo? Il tablet è rotto, come facciamo?
+
+Piscitelli Terenzio   16:28
+No, volevo dire.
+
+Mercuri Flavio   16:38
+Quindi ecco, io, io farei così, io lascerei l'arcano.
+
+Piscitelli Terenzio   16:38
+Vabbè allora ecco, ha scoperto l'arcano, diciamo Arca.
+Marco fa stravolto.
+
+Mercuri Flavio   16:46
+Io farei così, io farei così. Lascerei una ricerca intelligente, veloce per i codici fiscali, perché naturalmente se uno usa il codice fiscale il risultato è univoco, quindi è proprio la ricerca che è un concetto un po' più strano. Già, e poi se uno deve fare una ricerca.
+Aspettandosi degli omonimi, deve andare AA inserire più roba.
+Chiedeva tu sei d'accordo?
+
+Capobianco Paolo   17:11
+Chi è che va bene così, che dobbiamo fa?
+
+Mercuri Flavio   17:15
+Ok.
+
+Michele Friscia   17:15
+Allora vediamo un po, vediamo come funziona in produzione adesso io io non perderei le funzionalità comunque.
+Non farei solo un codice fiscale.
+
+Piscitelli Terenzio   17:26
+Michele, Michele, come ti ho detto, Guarda, l'ho appena verificato, ho fatto una prova mettendo solo cognome e nome non mi tira fuori nulla in esercizio, se aggiungo la data di nascita invece lo tiro fuori il record e.
+Quindi questo mi trova conferma anche in quello che ha appena detto Flavio che arca ha tolto la possibilità di fare la ricerca soltanto con cognome e nome, quindi con due campi, ma agendo almeno un terzo campo.
+
+Michele Friscia   17:51
+Quindi mette anche per forza la data.
+
+Piscitelli Terenzio   17:54
+Sì, con la data di nascita infatti mi esce fuori, mi ritrova il soggetto senza data di nascita non lo trova. Questo è sia un esercizio che sviluppo.
+
+Capobianco Paolo   18:05
+Ma adesso sì, ma in Arca comunque ci stanno i tre campi della data in Arca che voi ricordiate è una domanda difficile, sono sempre separati oppure devi mettere proprio la data? Perché fino a qualche tempo fa sicuramente erano separati, nel senso che molto spesso le persone mettono.
+
+Piscitelli Terenzio   18:05
+Guardate, adesso facciamo pure la prova.
+
+Capobianco Paolo   18:24
+Scrivono cognome, nome ed anno di nascita per fare la ricerca, non so se adesso hanno messo invece la data completa che bisogna mettere.
+
+Mercuri Flavio   18:36
+Ma allora intanto intanto da quello che so io ancora non hanno nemmeno finito di fare gli sviluppi nuovi e forse non hanno manco rilasciato ancora tutto, quindi c'è un momento di comunque di revisione di come funziona Arca.
+
+Piscitelli Terenzio   18:53
+State state guardando?
+
+Mercuri Flavio   18:54
+Questa novità qui ve la ve la do quasi per sì, stiamo guardando, ve la do quasi per certo, perché mi è successo sul nostro progetto che abbiamo dovuto riscrivere un po' di cose, perché senza la Terna l'anagrafica non torna proprio. Arca risponde proprio male.
+
+Piscitelli Terenzio   18:58
+Ecco, vedete?
+Ecco, infatti guardate.
+Mettendo nome e cognome non torna niente, se aggiungo la data di nascita come terzo criterio, eccola qua.
+
+Mercuri Flavio   19:12
+Vedi intorno al niente.
+Sì, ma è così, è così.
+Quello che possiamo fare qua se volete per facilitare diciamo la pulizia dalla confusione possiamo fare un termine di valutazione più stringente del Form, quindi se non metti se metti il codice fiscale poi puoi mettere qualsiasi altro dato tanto Arca se lo Magna tranquilla.
+Se invece cerchi per addirittura io nel progetto in cui di cui stavo parlando prima, che è un'altra area, l'ho proprio divise le ricerche, ho fatto una parte di ricerca per codice fiscale.
+Per codice DME una parte invece di ricerca proprio per anagrafica, per c'hanno due validazioni molto differenti, diciamo codice fiscale o codice DM sono risultati univoci e invece cognome, nome e data di nascita comunque possono produrre dei degli omonimi.
+Quindi se volete quello che un primo passo che possiamo fare intanto è estendere la validazione ai tre campi alla Terna di campi. Quindi se metti cognome e nome il sistema risponde guarda devi mettere pure la data di nascita, se metti solo cognome ti dice devi mettere nome e data di nascita.
+Intanto, se la regola è questa, secondo me è una cosa da fare perché anche perché sennò non passa mai l'accessibilità.
+
+Piscitelli Terenzio   20:38
+Va bene?
+
+Mercuri Flavio   20:42
+Va bene?
+
+Capobianco Paolo   20:44
+Che.
+
+Mercuri Flavio   20:46
+OK, rispetto invece alla.
+
+Michele Friscia   20:47
+Quindi nome, cognome, data di nascita.
+
+Mercuri Flavio   20:49
+Sì.
+
+Capobianco Paolo   20:50
+Ma qui lui sta parlando in questa diciamo nella pagina di ricerca.
+
+Michele Friscia   20:54
+Sì.
+
+Mercuri Flavio   20:57
+Esatto nel invece nella ricerca esatto in quella lì io lascerei solo una ricerca veloce per codice fiscale e per il resto delegherei alla a questa qua perché se non la devi mettere.
+
+Capobianco Paolo   21:00
+Nella home page invece.
+
+Mercuri Flavio   21:12
+Tre informazioni, cioè diventa.
+
+Piscitelli Terenzio   21:12
+Le vediamo insieme.
+
+Michele Friscia   21:13
+No, vabbè, quella.
+Quella pagina iniziale, se tu metti il codice fiscale poi rischio puntuale, ma se metti il nome e cognome ti porta su questa scheda.
+E vabbè, è sempre una facilitazione.
+
+Capobianco Paolo   21:32
+In che senso?
+
+Mercuri Flavio   21:32
+Allora io non io non sì, ma io ho capito quello che dice Michele, che in realtà è quello che come funziona adesso, cioè non parte una ricerca ma setta i filtri, setta i filtri. Io però non sono molto da devo dico la mia, poi è solo la mia opinione, non sono molto da.
+
+Michele Friscia   21:38
+Come funziona adesso sì.
+
+Piscitelli Terenzio   21:43
+Francesco.
+Emanuele.
+
+Mercuri Flavio   21:48
+D'accordo con una regola che non sta nell'applicativo ma sta nella testa del dell'utente, cioè se io sono utente nuovo e improvvisamente me scappa sta regola scrivo prima il nome e poi il cognome, me trovo il cognome e il nome invertiti se per esempio questi due nomi sono cioè bianca Rossi.
+
+Piscitelli Terenzio   21:54
+Lo.
+Se vuoi condividere con.
+
+Mercuri Flavio   22:09
+Oppure un nome e un cognome che possono essere diciamo sia nome che cognome interpretabili. A me poi sta regola me se confonde non ci si capisce più niente. Capite? Secondo me la regola di validazione.
+
+Michele Friscia   22:22
+Nella in produzione c'è una specie di leggenda.
+
+Mercuri Flavio   22:23
+Del dato nel Form deve essere.
+Ma no, però una leggenda è una leggenda, mentre il Form deve essere, diciamo, se c'ha delle regole a cui si attende, deve essere sottoposto a validazione, cioè una parte applicativa che si occupa effettivamente di decretare che tu non stai a mettere dei dati.
+
+Michele Friscia   22:28
+Nella, nella.
+
+Mercuri Flavio   22:43
+A caso, perché se no è un attimo che qualcuno arriva e dice, guardate che st'iscritto non c'è, non esiste. Hai cercato? Sì, ho cercato come hai cercato. Così scappa pure a seconda vista. Invece una regola applicativa evita tutto questo.
+
+Piscitelli Terenzio   23:00
+Sì.
+
+Mercuri Flavio   23:00
+Credo io, cioè questo è la mia, il mio modo di vedere le cose. Poi se voi ritenete che sia comunque uno strumento utile che in qualche maniera mettendo un'etichetta può può non essere frainteso, può funzionare.
+
+Michele Friscia   23:15
+C'è, c'è l'esempio, c'è un esempio di ricerca.
+
+Piscitelli Terenzio   23:21
+E Michele, giusto per la cronaca, guarda te lo riconfermo anche questo c'è proprio il messaggio che sto vedendo che si dice anche in questo momento. Parametri obbligatori mancanti con nome nomi.
+E data nascita devono essere presenti, quindi è per questo che ha smesso di funzionare la ricerca per cognome e nome dalla ricerca veloce perché ha aggiunto anche la data di nascita se vogliamo farla funzionare.
+
+Michele Friscia   23:51
+Presto e preciso.
+
+Piscitelli Terenzio   23:53
+Quindi soltanto cognome e nome, mi dispiace ma non funziona, non perché non vogliamo farla funzionare a noi, ma proprio perché Arc non ce lo consente più.
+Purtroppo questo non lo sapevo, non lo sapevo io, l'ho scoperto in questo momento perché fa Flavio l'ha detto, insomma.
+
+Michele Friscia   24:22
+OK, si tratta di vedere se va bene quella schermata che semplifica l'instrumento successivo oppure no.
+Però io non vorrei perdere tutto questo tempo su questa ricerca anagrafica.
+A questo punto per me va bene così.
+Solo che il secondo nome deve essere messo nel dove c'è il nome.
+
+Capobianco Paolo   24:47
+E invece.
+
+Mercuri Flavio   24:52
+Così come va bene, però aspetta che mi sono perso.
+
+Piscitelli Terenzio   24:53
+Cioè.
+Cioè nel senso che se io torno su ricerca no su boh.
+Ricerca anagrafica, no, dov'era? Io l'ho sputato, dove stava quella veloce, la radio operativa.
+
+Mercuri Flavio   25:06
+È in area operativa.
+
+Piscitelli Terenzio   25:11
+OK, quindi se io scrivo qui.
+Così.
+Tu vuoi.
+Rossetti rimanga sotto cognome, Elisabetta sotto nome.
+Giusto, Michele?
+
+Michele Friscia   25:33
+Sì.
+
+Mercuri Flavio   25:36
+E però ci a questo punto dovremmo concordare qual è il livello di precisione che vorremmo implementare, cioè ci accontentiamo della dello spazio che divide i due nomi, dobbiamo implementare delle regole di divisione in stringhe.
+
+Piscitelli Terenzio   25:49
+Emanuele.
+Sì.
+
+Mercuri Flavio   25:52
+Virgole, puntini, attributi.
+
+Piscitelli Terenzio   25:55
+Allora beh, qui si potrebbe, diciamo, ereditare quello che abbiamo già.
+
+Capobianco Paolo   25:57
+No, direi, non facciamo le cose troppo complesse, scusatemi, una cosa semplice.
+
+Mercuri Flavio   26:00
+No, ma anche perché lasci sempre in caso fuori, capito? Lasci sempre comunque in caso uno che è uno, ma o lasci fuori.
+
+Capobianco Paolo   26:04
+Sì, ma perciò voglio dire pigliamo le casistiche semplici in cui il primo spazio, solo il primo spazio, prepara il cognome dal nome.
+
+Mercuri Flavio   26:13
+Dividere nome e cognome.
+
+Capobianco Paolo   26:16
+OK, quindi se io mi chiamo abruzzese Rossi Elisabetta qui erroneamente entrerà qui dentro e mi metterà abruzzese e poi come nome Rossi Elisabetta, sbagliando.
+Però diamine, cioè non esageriamo.
+
+Michele Friscia   26:34
+Allora in posso farvi posso vedere come funziona in produzione?
+Ti ho fatto.
+
+Piscitelli Terenzio   26:41
+Poi.
+Poi con chi vi interessi, bye.
+
+Michele Friscia   26:44
+Sì.
+Può essere questo, no?
+OK.
+Allora se io scrivo.
+
+Piscitelli Terenzio   27:02
+Benissimo.
+
+Michele Friscia   27:10
+Ho messo il la virgola e quindi i primi due me lo prende come cognome.
+E viceversa, se metto la virgola dopo.
+
+Piscitelli Terenzio   27:31
+Aurora.
+
+Michele Friscia   27:36
+Se lo dico qui.
+No, questo video l'ho messo il punto.
+
+Piscitelli Terenzio   27:46
+No.
+La linea.
+E non.
+E capito che ti voglio dire?
+
+Michele Friscia   28:08
+E mi torna indietro.
+Ma qua mi si è bloccato.
+
+Capobianco Paolo   28:26
+Non ci riesci più home, vai su home, dai, dovrebbe funzionare anche il piano.
+
+Michele Friscia   28:30
+E ci sto, ci sto.
+
+Mercuri Flavio   28:31
+Comunque vabbè no è chiaro, ma il principio di funzionamento è chiaro, io sono cioè continuo ad essere comunque scettico anche cioè comprendo che comunque per voi questa è una funzionalità che c'avete non la volete perdere?
+
+Capobianco Paolo   28:32
+Di.
+
+Piscitelli Terenzio   28:40
+Sì.
+
+Mercuri Flavio   28:49
+Probabilmente non ci non ci troviamo molto d'accordo sul fatto che sia una funzionalità, a me sembra un solo un diciamo un artefatto che traballa un po' e ho paura che possa diciamo portare confusione invece che.
+Che essere uno strumento chiaro come dovrebbe essere, ripeto, già delegare un sistema di controllo a un utente è già fare un'operazione un po' pericolosetta e oltretutto.
+Non c'ha nemmeno un funzionamento chiaro e non copre tutti i casi, non lo so.
+Dite voi, non mi rimetto alla vostra volontà.
+
+Michele Friscia   30:00
+Allora non lo so, possiamo chiedere agli amministrativi se lo ritengono utile.
+Questa questo fatto delle dei della scrittura automatica sulla sulla schermata successiva.
+
+Mercuri Flavio   30:12
+Però però però Michele, essendo onesti sul fatto che non funziona comunque.
+Beh, essendo onesti sul fatto che non funziona nel senso cioè io lo posso anche far funzionare, però bisogna trovare un sistema, come ripeto, che demanda le regole e per me non è una funzionalità, per me è un artefatto rischioso.
+Per questo io sono costretto a dirtelo, per me non è un non te lo, non te lo Consiglio. Ecco, non te lo consiglierei da consulente perché faccio il consulente, quindi semplicemente ti dico, questo non mi sembra consigliabile.
+
+Michele Friscia   30:41
+Va.
+
+Mercuri Flavio   30:50
+Però forse la modalità migliore fa fa. Se ritieni che sia meglio così, facciamo così. Assolutamente non c'è problema.
+
+Piscitelli Terenzio   31:25
+Si è mutato.
+
+Michele Friscia   31:29
+Sono tornato, va bene, ci riflettiamo.
+
+Capobianco Paolo   31:35
+Però, Michele, non pensare mai di poter.
+Di cercare questo Michele, Denis, Romolo Friscia, cioè basta, lasciamolo perdere, non gliela diamo la pensione uno così.
+
+Piscitelli Terenzio   31:55
+D'accordo.
+
+Capobianco Paolo   31:58
+E sentiamo, cioè dà fastidio proprio.
+
+Michele Friscia   31:59
+Tanto, ma infatti non me la daranno.
+
+Piscitelli Terenzio   32:00
+Se va bene.
+
+Capobianco Paolo   32:03
+O tre nomi.
+
+Mercuri Flavio   32:06
+È ingordo.
+
+Piscitelli Terenzio   32:10
+È stato un problema.
+
+Michele Friscia   32:10
+Vedi, qui c'è nella I c'è c'è l'esempio, vabbè.
+
+Capobianco Paolo   32:11
+Vabbè, dai.
+
+Piscitelli Terenzio   32:19
+Su.
+
+Michele Friscia   32:19
+Io guardi, io sentirei gli amministrativi, vediamo se va bene.
+
+Capobianco Paolo   32:23
+Ok, dai, siamo loro e no, quindi facciamo un attimo in sospeso e.
+
+Michele Friscia   32:31
+E poi va a finire sempre nella schermata di prima.
+
+Piscitelli Terenzio   32:32
+OK.
+
+Michele Friscia   32:39
+Per quello nella ricerca anagrafica, OK.
+
+Capobianco Paolo   32:40
+Sì, io io non capisco veramente mo aldilà di tutto Michele, se tu comunque vai a finire la schermata della del della ricerca anagrafica ma.
+Che lo metti a fa qua con le virgole, con ste regolette vai direttamente ricerca anagrafica e te lo fai lo spacchettamento direttamente lì.
+
+Michele Friscia   33:05
+Ma io, allora Paolo, io sono qua, allora io, io, io sono qui. Se metto il codice fiscale vado direttamente a fare la ricerca, no, OK.
+
+Capobianco Paolo   33:06
+Capito? No, son d'accordo.
+OKE, questa è una cosa che non voglio, nessuno di noi vuole perdere, questa ci deve stare, punto e basta.
+
+Michele Friscia   33:18
+OK, ma neanche vado, questa neanche l'ho provata.
+
+Piscitelli Terenzio   33:21
+OK.
+
+Michele Friscia   33:23
+E in sviluppo come funziona?
+Si vada a finire nell'area operativa.
+
+Piscitelli Terenzio   33:33
+Sì.
+
+Capobianco Paolo   33:39
+Sì, questa vai.
+
+Michele Friscia   33:40
+No, io questo no.
+Io non ho provato gli sviluppo se ha questo comportamento.
+
+Capobianco Paolo   33:43
+Se vai direttamente in area operativa o nei risultati della no direttamente in area operativa, vedi sei andato.
+
+Michele Friscia   33:50
+Centro in area operativa, OK.
+Torniamo in home.
+Se non metti il codice fiscale, metto.
+Il cognome.
+Vado nella ricerca anagrafica.
+
+Capobianco Paolo   34:16
+Sì.
+Questa è la motivazione per cui normalmente non si fa questa cosa, no?
+
+Michele Friscia   34:25
+Quindi la.
+De le.
+
+Capobianco Paolo   34:30
+Nessuno si permette di scrivere Friscia perché ci vogliono tre ore per darti per dirti che casomai l'elenco è troppo lungo, OK?
+
+Michele Friscia   34:30
+Cosa?
+Sì, ma a questo punto sta facendo la ricerca su Arca? Spero di no.
+Cioè se c'ho un solo elemento non ne ho tre, non posso fare il cerchio sull'hacker.
+
+Capobianco Paolo   34:48
+Guarda, adesso non dovrebbe, non dovrebbe farlo, può darsi che adesso è andato in errore e addirittura non tappato.
+Sì, questo secondo me, perché questo dovrebbe andare in errore giusto secondo le regole che abbiamo visto di arte.
+
+Michele Friscia   35:15
+Cioè se io metto dei non è.
+
+Piscitelli Terenzio   35:16
+E tu dove sei? Esercizio esercizio. Io ho fatto la stessa, io ho fatto la stessa cosa che ha fatto Michele a me m'ha risposto istantaneamente dicendomi che l'ha preso per un codice fiscale, avendo trovato diciamo.
+
+Capobianco Paolo   35:20
+In esercizio dove ce ne stanno tanti.
+
+Piscitelli Terenzio   35:32
+Un unico elemento, quindi un unico elemento è un codice fiscale, è entrato nella pagina di ricerca anagrafica dicendo che lunghezza del codice fiscale è errata, quindi è come se si se ASI avesse interpretato quel campo come un codice fiscale e l'avesse.
+
+Capobianco Paolo   35:44
+Sì, diciamo allora quelle che erano le regole che ci stavano, secondo me son saltate quel grossa parte che saltavano.
+
+Piscitelli Terenzio   35:51
+No, non so saltate, non so saltate.
+
+Mercuri Flavio   35:53
+Ma quello poi la validazione della validazione del formato del codice fiscale dovrebbe avvenire in sede di Form e non in sede di. Cioè quando tu lo inserisci nel momento in cui lo inserisci noi lo possiamo facciamo addirittura Real Time no? E se digiti la quattordicesima cifra valida il Form non ti fanno avanti nella ricerca.
+
+Michele Friscia   36:11
+Sì, insomma.
+
+Mercuri Flavio   36:12
+Quattordicesimo carattere però. Insomma, a parte questo, ripeto, emergono, cioè +1 lo navighiamo più emergono dei meccanismi un po' un po' traballanti. Voi se volete delle soluzioni, noi possiamo pure pensare a delle soluzioni.
+Però non nascondo che insomma sono cioè processare le stringhe aumentando il livello di complicazione, cioè le complicazioni non è lineare, è esponenziale.
+
+Piscitelli Terenzio   36:38
+Per quanto riguarda ogni raccolta.
+
+Michele Friscia   36:43
+No vabbè, a parte questo qui.
+E qui si mette nome e cognome, si deve andare nella scheda anagrafica o no? Qual è il qual è il vostro?
+
+Piscitelli Terenzio   36:54
+Dobbiamo cantare.
+
+Michele Friscia   36:56
+La vostra idea?
+
+Mercuri Flavio   37:01
+Allora la mia personalmente è la mia personalmente è che diciamo che.
+
+Michele Friscia   37:03
+Però.
+
+Piscitelli Terenzio   37:07
+Eccolo qui, allora cosa abbiamo fatto?
+
+Michele Friscia   37:09
+Ecco, qui lui l'ha preso come codice fiscale.
+
+Mercuri Flavio   37:11
+Scusate Teresa, t'ho t'ho mutato un secondo perché ti rientra la collega davanti. La mia idea personale è che una ricerca veloce, diciamo intelligente, le cosiddette intellisech sono pensate per essere.
+Strumentalmente semplici, cioè devono essere strumenti super immediati. Se già io devo aggiungere un livello di pensiero non è già +1 ricerca intelligente, una ricerca come un'altra, solo che ce l'ho in home page invece che avercela lì, però a quel punto sarebbe equivalente al link, cioè io.
+Clicco e quando clicco devo semplicemente mettere il cognome che avrei invece messo prima. Ma non cambia niente. Cioè veramente non cambia niente. un'altro caso è che invece noi possiamo fare una ricerca intelligente che si mangia solo il codice fiscale.
+Se io so il codice fiscale non passo nemmeno per la ricerca, arrivo in pagina già con la ricerca triggerata per quel codice fiscale questa OK, però questa è una funzionalità.
+
+Michele Friscia   38:02
+E questo e questo e questo lo facciamo.
+
+Mercuri Flavio   38:09
+OK, nell'altro caso anche sollecitati dai movimenti che fa arca, che evidentemente, cioè evidentemente la vostra, diciamo gestione delle anagrafiche non è molto d'accordo su ste sintesi e su ste ricerche così.
+
+Capobianco Paolo   38:19
+La ringrazio.
+
+Mercuri Flavio   38:27
+Povere perché probabilmente sono molto costose a livello di sistema per loro, quindi questo ci fa intuire che comunque sono già loro che guidano un tipo di ricerca con più dati.
+
+Michele Friscia   38:38
+Sì, ma io io torno, io torno, io torno normalmente alla domanda di prima.
+Sono nell'home, se metti codici scale vado direttamente, se metto se c'ho nome e cognome e data di nascita ho bisogno di un'altro pulsantino.
+C'è questa dice questa stringa qui c'ho se c'ho codice fiscale metti codice fiscale se c'ho nome cognome di nascita che fai vado in un'altro link in un'altra schermata o uso sempre la stessa stringa che c'è qua?
+
+Mercuri Flavio   39:11
+Ma per me vai, Paola.
+
+Capobianco Paolo   39:11
+Allora io direi scusa, io direi in generale devi utilizzare la nuova pagina, cioè la pagina, quelle con le informazioni separate, OK?
+Quello che si potrebbe pensare se io tra virgolette, tra virgolette Michele Ascoltami, Ascoltami Michele io quello che dico se io per tra virgolette errore in questa nella home metto.
+
+Michele Friscia   39:24
+Cioè io devo andare qua, vado qua, devo qua ricerca anagrafica.
+
+Capobianco Paolo   39:38
+Cognome e nome tipo per dire, allora ci si può pensare che casomai ti mando alla schermata diciamo normale della cosa cercando di posizionarti cognome e nome nei posti corretti per quello che posso.
+Senza esagerare, tra l'altro io sarei che far l'esagerazione.
+
+Mercuri Flavio   39:59
+Scusate però scusa Paolo se te ti interrompo io vorrei vorrei però sollevare una.
+
+Capobianco Paolo   40:01
+Ma io vi io ti dico, io personalmente che cosa faccio? Quando c'ho il codice fiscale vado direttamente nella home, metto il codice fiscale e mi passa direttamente e mi butta nell'area operativa quando invece so cognome e nome e casomai pure la data di nascita.
+Ma io non li metto qua, io vado direttamente nel pulsante ricerca anagrafica.
+
+Mercuri Flavio   40:25
+Ecco, e ti posso dimostrare io questa cosa qua, Paolo?
+
+Capobianco Paolo   40:26
+Questo è quello che faccio io, però gli operatori non sono tutti come me.
+
+Mercuri Flavio   40:31
+Ma noi non però noi non possiamo delegare questa questo tipo di intelligenza a un operatore. E adesso ti faccio un esempio molto veloce per farti capire che in realtà questa qua è una funzionalità non funzionalità quando tu cerchi per codice fiscale.
+Cerchi dalla home page un codice fiscale e atterri direttamente sulla pagina del dell'iscritto e questa è una funzionalità. Nell'altro caso tu inserisci una volta nome e cognome. OK. Qui nella home page inserisci nome e cognome. Scrivi nome e cognome una volta.
+
+Capobianco Paolo   40:59
+Sì.
+
+Mercuri Flavio   41:03
+Premi un bottone e poi arrivi nella pagina della ricerca.
+Se io invece faccio l'altro percorso clicco su ricerca anagrafica, quindi sempre in click ho fatto una home page e inserisco una volta nome e cognome nei filtri dell'anagrafica ho sempre fatto un click e ho sempre inserito una volta nome e cognome non gli ho risolto niente.
+
+Capobianco Paolo   41:22
+E non poi ne devi fare un'altro di scritto, però.
+
+Mercuri Flavio   41:26
+No, lo farei comunque e son sempre due click, sempre due click, lo faresti comunque?
+
+Capobianco Paolo   41:26
+Nella pagina lo puoi fare, no?
+
+Michele Friscia   41:28
+Cangiare.
+
+Capobianco Paolo   41:34
+Beh, diciamo come funzionava prima.
+Ascoltami. Io mettevo cognome e nome nella nella home page. Questo mi andava nella ricerca normale, ma mi faceva direttamente la ricerca. Capito che cosa combinava? Sì.
+
+Mercuri Flavio   41:49
+Vedere direttamente i risultati e allora dovresti mettere pure la data di nascita qua adesso.
+
+Capobianco Paolo   41:52
+Così faceva.
+E adesso ci sta questa complicazione della data di nascita.
+E ha senso utilizzare questa cosa nella home per tre informazioni da mettere insieme? Non lo so, non ve lo so dire.
+
+Mercuri Flavio   42:14
+Beh, se è se è importante.
+
+Capobianco Paolo   42:14
+Ti ripeto, io normalmente non la uso così, però ti volevo dire.
+
+Mercuri Flavio   42:21
+Ma ripeto, secondo me a uno gli viene naturale pensare che un click di distanza non è, cioè non te ci metti proprio, sai dove devi andare, sai quello che devi fare, non te ci metti. un'altro conto è che dici scrivo direttamente qua e arrivo direttamente dove devo arrivare. Comunque, al di là di questo, un'altra soluzione proponibile è che se io.
+So che però invece di sottrarli aggiungiamo così click, se io so che voglio cercare una per una ricerca anagrafica, se mette un bottoncino là vicino alla ricerca che switcha tra ricerca di codice fiscale e ricerca anagrafica, che però comunque devono essere tre campi.
+Quindi io faccio inserire tre campi, esce un Form piccolino sempre lineare così su una linea lo possiamo lo possiamo pensare così, però secondo me ripeto, a livello funzionale risolve proprio poco, cioè 1 1 rischio di delega.
+Non in questo caso, chiaramente in questo caso è meno ci abbiamo più controllo, ci avremmo più controllo perché?
+
+Capobianco Paolo   43:21
+Non lo so se ha senso perché?
+Così pasticciamo un poco la home page che già le tue complicazioni, insomma un home page nuovo.
+
+Mercuri Flavio   43:31
+Io concordo con te.
+
+Capobianco Paolo   43:34
+Non lo so, devo essere qualche qualche cosa perché voglio dire, noi il pulsante lo teniamo, vai, ritorna. Chi è Michele? Michele ritorna nel nuovo.
+El Sirio.
+In the home page.
+Secondo me è sufficiente quella ricerca anagrafica che sta in alto a destra, basta insomma.
+Poi vai in area operativa, lo teniamo pure questo link anche in area operativa.
+Presidenziale, quindi lì.
+
+Michele Friscia   44:35
+No, lo sviluppo non mi non mi non entro in sviluppo.
+Tempo.
+Anche qui sembra che sono entrato, ora vediamo.
+Su Sirio, no.
+
+Capobianco Paolo   44:58
+No, ci vai, forse c'hai qualche problema tu mio.
+
+Michele Friscia   45:03
+Una posta per mandare questo sviluppo.
+Perché io qua c'ho la ricerca anografica che mi dà la schermata.
+
+Capobianco Paolo   45:18
+Ti stai dicendo di andare perché non ti sto vedendo gli a me non funziona però OK?
+
+Michele Friscia   45:27
+Anche questa è la **** anagrafica, quella con i campi.
+
+Capobianco Paolo   45:33
+Ci sei andato con la cosa di ricerca anagrafica in alto a destra, giusto?
+
+Michele Friscia   45:34
+Ok.
+In questo link.
+Sì, se vado in area operativa.
+
+Capobianco Paolo   45:39
+Questa è la gomma.
+L'ho provato io, adesso funziona nel senso che c'è questa è normale, questa scorciatoia chiamiamolo così. E poi vedi in alto a destra c'hai ricerca anagrafica che naturalmente va lì e ci metti tutti i tuoi.
+
+Michele Friscia   45:52
+Sì.
+
+Capobianco Paolo   45:59
+I casi, i casi.
+E poi ti va qua e ti si vede, ti porta col cognome fatto così.
+
+Michele Friscia   46:08
+Sì.
+
+Capobianco Paolo   46:14
+Io l'unica cosa che farei è se vogliamo rimanere questo fatto di andare in ricerca anagrafica portandoci diciamo le informazioni testuali diverse dal codice fiscale che ci stanno qui sopra.
+Farei la valutazione che il primo spazio separi il cognome dal nome, non di più, solo questa regola metterei.
+
+Mercuri Flavio   46:47
+OK, tanto per essere chiari, se vuoi reintrodurre pure la regola della virgola, per noi non è un problema.
+
+Capobianco Paolo   46:49
+E più secondo me è una è più io la vedo più come una gestione dell'errore, come ti voglio dire.
+
+Michele Friscia   46:50
+Va bene.
+Allora?
+
+Capobianco Paolo   46:57
+Una gestione di un errore de che era una funzionale.
+
+Michele Friscia   47:06
+Allora io toglierei la ricerca anagrafica che c'è nel nome.
+
+Mercuri Flavio   47:06
+OKOK, se voi desiderate noi la.
+
+Michele Friscia   47:11
+La ricerca che c'è nell'home la ricerca anagrafica che c'è nell'home io la toglierei questa qui.
+
+Capobianco Paolo   47:11
+Che hai detto, Michele?
+
+Michele Friscia   47:20
+E lo mettete nell'area operativa, qui nell'area operativa c'era la ricerca anagrafica.
+
+Capobianco Paolo   47:25
+E perché lo vuoi togliere di nuovo?
+
+Michele Friscia   47:29
+Perché l'area operativa inizia da qui?
+Gianluca.
+
+Capobianco Paolo   47:34
+Ho capito, ma se io.
+Sono appena entrato, so che devo andare con il signor Mario Rossi.
+E chi lo hizo?
+Cioè se io devo cercare il signor Mario Giallorusso.
+Voglio andare direttamente su ricerca anagrafica e cerco la persona che me ne importa che non sto in area operativa.
+Voglio andare direttamente dalla home, perché non ci devo poter andare?
+
+Michele Friscia   48:11
+Questo fa parte del vabbè del disegno di prima. Vabbè, cioè nel motivo per cui si sposta la ricerca anagrafica dentro l'operativa, se rimane l'home non abbiamo fatto niente comunque.
+Va bene?
+
+Capobianco Paolo   48:31
+E quindi gli togli pure il la ricerca veloce, un codice fiscale però.
+
+Michele Friscia   48:38
+Dell'area operativa.
+
+Capobianco Paolo   48:40
+No, nella home sto dicendo.
+
+Michele Friscia   48:41
+Nella.
+Nell'home non c'è, nell'home non c'è, il che è veloce.
+
+Capobianco Paolo   48:47
+La ricerca con l'Ufficio c'hai ragione, non c'è scusami, mi viene ragione, questa è una ********.
+
+Michele Friscia   48:56
+Se lasci qui non abbiamo fatto niente.
+Secondo me.
+Vabbè, passiamo ad altro, poi questo ci ragioniamo meglio.
+Allora io qua vediamo se.
+Volevo cambiare sede.
+Perché a me le sete come faccio qua?
+A cambio sede qui.
+
+Capobianco Paolo   49:39
+E però non ce l'abbiamo.
+L'indicazione della sedia non ce l'abbiamo.
+
+Michele Friscia   49:52
+Qui no, qua la sede.
+
+Capobianco Paolo   49:55
+Dove sta?
+
+Michele Friscia   49:57
+Tedero a Montesagro.
+Grazie, Francesco.
+
+Capobianco Paolo   50:02
+OK, serve spostare qua sotto, vabbè, OK.
+
+Mercuri Flavio   50:06
+Non ricordo forse pure se Apri il cruscottino del dente connesso, se fai clic sul tuo nome.
+
+Capobianco Paolo   50:14
+Sì, ci sta.
+
+Michele Friscia   50:16
+Sì.
+
+Mercuri Flavio   50:16
+Certo, da Ciao OK, questo qua in adeguamento va un po tutti i sistemi nuovi di INPS.
+
+Michele Friscia   50:26
+Allora sì.
+Allora io ho fatto una prova su scarati.
+Michele.
+Ma qua vediamo un problema sul conto, dunque qui mi sembra di aver visto.
+Se faccio ripristino lavorazione?
+Capisco in lavorazione, non posso cambiare i dati della cessazione.
+E qui io quando dovrei avere la possibilità di cambiare i dati della cessazione?
+Ci dovrebbe essere il pulsantino qui modifica dati cessazione.
+Così come qui sotto c'è scritto modifica dati economici.
+
+Mercuri Flavio   51:50
+C'era una Gianluca, Anna Gianluca.
+
+Tantar Ana Maria   51:53
+E sto verificando un attimino qual era il codice fiscale questo qui.
+
+Michele Friscia   51:59
+Il codice fiscale.
+
+Tantar Ana Maria   52:02
+Sopra sopra OK, lo riesci a mandare un attimino in chat così me lo me lo copio?
+
+Michele Friscia   52:03
+Questo essere essere.
+Sì.
+
+Tantar Ana Maria   52:25
+Perfetto.
+
+Michele Friscia   52:30
+Quindi io dovrei avere la possibilità di modificare dei dati della cessazione?
+Posso.
+Qui vabbè, ho fatto la modifica dei dati economici e questo me lo fa fare.
+Non posso modificare.
+I dati pensionistici o quant'altro?
+Però qui mi sembra che si pianti un pochino, non finisce ora non so se la mia posizione sia.
+Ti ha pulito oppure no?
+Io ho dovuto fare il refresh della pagina.
+Allora qui non posso modificare i dati pensionistici, posso inserire il nuovo beneficio, la cessazione, qui non posso mettere i miglioramenti contrattuali.
+Mi manca il tasto.
+Ora, al di là che non è che mi piace tantissimo questo pulsante messo qui in fondo.
+Anche se legati, mi sembra che è così.
+
+Tantar Ana Maria   54:16
+Sì, in allega si stava sempre sotto.
+
+Michele Friscia   54:16
+E tre.
+Metterei un più qua, insomma una cosa, aggiungi, aggiungi qui, in questo, in questa parte dove c'è canto espandi.
+
+Capobianco Paolo   54:31
+Sì, in altre parti così così è stato fatto, insomma nella nel banner superiore inserito un più, insomma, per fare i nuovi inserimenti.
+
+Michele Friscia   54:31
+E.
+E poi questo expand che c'è qui forse lo toglierei perché secondo me non ha tanto senso perché è molto.
+La lista è corta? No, è stretta. Forse qui non può portare a alla confusione dell'utente. Non so se si può togliere.
+
+Capobianco Paolo   55:09
+Quel comunque non deve funzionare così, che mi importa, cioè non è che mi faccia una da pagina.
+
+Tantar Ana Maria   55:32
+Io non riesco a trovare l'errore, quello che hai trovato tu prima del quello del pulsante che non c'era qua.
+
+Michele Friscia   55:36
+Quale?
+Qui ci dovrebbero essere modifiche dati alla cessazione.
+
+Tantar Ana Maria   55:46
+Sì.
+
+Michele Friscia   55:46
+C'è il pulsante salva, come te dico nomi salva, te dico nomi e modifica te.
+
+Tantar Ana Maria   55:51
+E puoi andare un attimino un pochino più sopra.
+
+Michele Friscia   55:56
+Ancora.
+
+Tantar Ana Maria   55:58
+OK quindi tu stai su inserimento aspetta un attimino che rifaccio proprio tutto il.
+
+Michele Friscia   56:24
+C'è qua.
+Vedi, questo è produzione.
+Fusco ne c'è.
+Questi due tasti, questi due pulsanti che sono disabilitati perché la posizione è chiusa.
+OK.
+
+Tantar Ana Maria   56:59
+OK, me lo fai vedere un attimino da dal nostro.
+
+Michele Friscia   57:04
+OK.
+
+Tantar Ana Maria   57:11
+Allora però tu sei entrato prima dalla ricerca anagrafica, poi dove sei andato?
+
+Michele Friscia   57:17
+E nell'area operativa.
+Posso selezionare un'altra persona e vediamo se il problema è di questo iscritto.
+OK.
+
+Tantar Ana Maria   57:29
+Sì, verifichiamo un attimino perché non lo riesco proprio a.
+
+Michele Friscia   57:58
+La prendiamo anche questo.
+
+Tantar Ana Maria   58:00
+OK, ci sono appena arrivata. Aspetta un attimino. Ci sono appena arrivata da me. Il bottoncino c'è però.
+Cioè io la possibilità di modifica cè l'ho e se ci clicco me lo me li abilita i campi.
+
+Michele Friscia   58:11
+Sì.
+Controlliamo un'altro.
+No, qui non c'è.
+Questo è il problema mio, non lo so, però.
+Qui manca l'altro pulsante.
+Uy.
+Posso fare il ripisso di lavorazione? Vediamo se compare.
+No.
+Poi un'altra cosa qui, questa dati cessione servizio e voce retributiva di cessazioni non è non è che mi piacciono, non mi fanno impazzire perché non c'è, non si vede una la divisione.
+E in produzione, invece, c'è 1 1 specie di pannellino.
+No, qui c'è un rettangolo con l'ombra e anche qua.
+Se si può studiare qualcosa di simile, insomma, in modo da raggruppare gli argomenti.
+
+Mercuri Flavio   1:00:01
+Scusa, vuoi tornare di là?
+
+Michele Friscia   1:00:04
+Torno di là.
+Quindi questo dovrebbe essere fino a salvo, dovrebbe essere un far parte di un argomento e qui sono positivi la cessazione.
+Cosa?
+
+Mercuri Flavio   1:00:28
+Bianco secondo me li possiamo differenziare mettendo dei fondi dietro uno bianco e uno di quel colore chiarissimo che si usa nel design system per i fondi.
+Che fa una sorta di griglia, no, che divide.
+
+Michele Friscia   1:00:47
+Sì.
+
+Mercuri Flavio   1:00:48
+Divide semanticamente.
+
+Michele Friscia   1:00:49
+Sì.
+Sì, qualcosa del genere.
+
+Mercuri Flavio   1:00:52
+OK.
+
+Michele Friscia   1:00:57
+Faccio vedere la punizione qua.
+Sì, c'è questo rettangolo che chiude i dati e pulsanti, una cosa del genere.
+E poi qui c'è il tasto che manca.
+Metterei un più, vabbè dove all'inizio del banner vediamo che cos'altro avevo visto.
+Ma tante cose che avevo visto quando si va nel nella lista dei penso che sia.
+O in tutte a vedere i dettagli questa lista delle attività preferite.
+Allora il dettaglio.
+Allora le informazioni visualizzate qui non sono, cioè diciamo che sono le stesse che sono qui.
+Quindi data via così fiscale.
+Da completare eccetera, dovremmo aumentare il dettaglio con altre informazioni.
+OK.
+
+Mercuri Flavio   1:02:36
+No, non ho capito.
+
+Michele Friscia   1:02:38
+Cioè il le informazioni presenti nel dettaglio sono le stesse, sono le stesse che c'è scritto qui.
+
+Capobianco Paolo   1:02:40
+Cioè questo dettaglio non mi dà niente in più, non mi dà informazioni in più.
+
+Piscitelli Terenzio   1:02:46
+Paolo, questo è una cosa che eredita da Legacy, quindi?
+Diciamo è così che funziona anche, diciamo quello, l'esercizio sì, lo sappiamo da sempre. Insomma, è così.
+
+Capobianco Paolo   1:03:03
+OK, dobbiamo farla sotto perché voglio dire, se no, che dettaglio è?
+
+Michele Friscia   1:03:11
+Lo adoro, tu ya me dettallo.
+
+Capobianco Paolo   1:03:11
+Perché mai dovrei premere là sopra?
+
+Michele Friscia   1:03:17
+No capito, Paola.
+
+Capobianco Paolo   1:03:19
+Dico, perché mai dovrei premere su visualizza dettaglio?
+
+Piscitelli Terenzio   1:03:26
+E in più, diciamo, c'è soltanto la via, se non mi ricordo male nel dettaglio rispetto al.
+Parte questa la domanda.
+
+Michele Friscia   1:03:45
+Questi sono i preferiti.
+
+Piscitelli Terenzio   1:03:45
+No, perché sì, no OK, no vabbè, queste comunque sono le domande. Vabbè no perché in realtà la stessa cosa vale anche un po' sulla ricerca più o meno c'abbiamo la stessa situazione, tu metti sul dettaglio dove la maggior parte dei campi sono gli stessi che già vedi nella nella lista.
+Ma queste sono tutte cose che eredita dal Legacy.
+
+Mercuri Flavio   1:04:03
+Ok.
+Passo.
+Posso provare a fare una, diciamo un giro di prospettiva, un cambio di prospettiva, ma i dati che sono esposti in questa tabella sono tutti essenziali al primo sguardo.
+
+Michele Friscia   1:04:19
+Ciao a tutti.
+
+Mercuri Flavio   1:04:20
+Sono tutti essenziali al primo sguardo, cioè sono tutti dati che io devo avere appena vedo il dato.
+Perché eventualmente quello che potremmo pensare di fare è, se non sono informazioni necessarie, scaricare questa tabella di informazioni che farebbe un grosso favore cognitivo al all'utente che non se non se non sono richieste. Se faccio un esempio?
+Se io tendenzialmente qua sopra quello che voglio vedere al primo sguardo è quante righe so e facciamo conto più o meno in che stato della lavorazione sono e che tipo di domande sono, allora magari il numero Domus se mi serve in qualche caso più.
+Un po più sporadico, me lo vado a vedere in un dettaglio.
+
+Michele Friscia   1:05:15
+L'unica.
+Nuovo Domus è un'informazione centrale per i per l'operatore INPS.
+
+Mercuri Flavio   1:05:22
+OK, certo, vabbè, mo io questa questione nulla.
+
+Michele Friscia   1:05:24
+Perché fa tutto col numero Domus, l'unica cosa che potrebbe.
+
+Mercuri Flavio   1:05:28
+E se dovessimo cercare un'informazione marginale?
+
+Michele Friscia   1:05:31
+Una cosa è la sede di lavorazione, che io sono un montesacro, quindi la sede di lavorazione è me stessa, quindi è quella, ma questa serve più.
+Io, io come lavoro come coordinatore centrale mi serve questa informazione rispetto a un operatore della sede, cioè a me, a me, a Luigi Pallotta, a Paolo serve la sede di lavorazione.
+Al singolo operatore forse non gli serve, però è un'informazione.
+
+Capobianco Paolo   1:06:02
+Comunque ritornando al Domus, per capirci, per i per i puristi della privacy e del GPGPR come ***** si chiama, insomma di tutti i problemi di data branch e roba del genere.
+Il numero Domus potrebbe essere l'unica cosa che deve rimanere in tutte queste liste, levando nominativo, codice fiscale e quant'altro, figurati quanto è centrale questo numero Domus.
+
+Michele Friscia   1:06:31
+Sì.
+No, allora qui io nel dettaglio ci metterei informazioni che potrebbero servire, cioè tipo l'amministrazione, contatto e qualifica, la data di caricamento del conto assicurativo, cioè se dobbiamo mettere.
+
+Capobianco Paolo   1:06:46
+Sì.
+
+Michele Friscia   1:06:59
+Taglio aggiungerei alcune informazioni, non credo che sia un problema aggiungere informazioni in questa schermata.
+
+Capobianco Paolo   1:07:05
+Eventuali eventuali importi di pensione precalcolato nel caso in cui ci sia precalcolato.
+
+Mercuri Flavio   1:07:10
+Allora guarda ce l'ho, ce l'ho secondo me ce lo dici direttamente tu se è un problema o meno se premi F 12 oppure fai control, scusa se fai click destro in mezzo alla finestra e poi premi su ispeziona vediamo quale dati porta l'a PI.
+Se c'abbiamo i dati ce li possiamo mettere, quelli li scegli direttamente da lì.
+
+Michele Friscia   1:07:31
+Che devo fare?
+
+Mercuri Flavio   1:07:33
+Puoi premere F 12 sulla tastiera.
+OK, adesso.
+Questo che browser è non è non è Chrome.
+
+Michele Friscia   1:07:52
+No.
+
+Mercuri Flavio   1:07:54
+OK, però dovresti avere da qualche parte una scheda, vedi quella esatto, il simbolino del Wi-Fi.
+
+Laferla Gianluca   1:07:57
+Simbolino del Wi-Fi dovrebbe essere il network.
+
+Mercuri Flavio   1:08:01
+Sopra in alto.
+Sulla prima barra, esatto, lì, su quella barra lì c'è il simbolino tipo Wi-Fi, quello vai, premi lì.
+
+Michele Friscia   1:08:04
+Voglio andare.
+
+Mercuri Flavio   1:08:12
+OK, adesso refresha la pagina.
+OK, allora per semplicità di lettura potresti attivare quel filtro fetch XHR su in alto sotto alla casellina dei filtri.
+Pronto.
+
+Michele Friscia   1:08:43
+Tu devi andare.
+
+Mercuri Flavio   1:08:44
+Poco più sotto, poco più sotto.
+
+Michele Friscia   1:08:49
+Filtro, filtro.
+
+Capobianco Paolo   1:08:50
+Dopo filtro.
+
+Mercuri Flavio   1:08:51
+Subito sotto.
+Cioè è fetch fetch XHR.
+
+Capobianco Paolo   1:08:54
+Affianco a tutto.
+
+Michele Friscia   1:08:58
+OK, sì, non ti sento, va bene.
+
+Mercuri Flavio   1:09:03
+Ok.
+
+Capobianco Paolo   1:09:05
+Tu stai lavorando troppo la tua vita, dai.
+
+Mercuri Flavio   1:09:05
+Allora quale?
+Dietro numero attività preferite, vero ragazzi, la rotta che porta porta dati.
+
+Tantar Ana Maria   1:09:14
+Sto controllando un attimino perché ce ne stanno un po.
+
+Laferla Gianluca   1:09:18
+I sai quella da solo il numero dei preferiti?
+
+Tantar Ana Maria   1:09:21
+Allora mi sembra sia.
+Si chiama in carica.
+
+Mercuri Flavio   1:09:30
+Eccola là sopra, allora guarda, c'è uno di queste righe trovi in carica, premi lì.
+
+Michele Friscia   1:09:33
+Sì.
+
+Mercuri Flavio   1:09:38
+Ora lì, sulle schede che sono apparse, se vai in anteprima.
+Esatto.
+Content espandi content.
+
+Tantar Ana Maria   1:09:48
+Content.
+
+Michele Friscia   1:09:53
+Dove sta?
+
+Mercuri Flavio   1:09:54
+Sopra il primo no, lì nella nel nell'oggetto, lì c'è content sotto.
+
+Michele Friscia   1:10:01
+Che.
+
+Mercuri Flavio   1:10:03
+È il primo, quello esatto, espandine uno qualsiasi.
+Uno quasi a.
+Ok, questi sono tutti i dati che abbiamo a disposizione.
+Se espandi pure quelli ti ritrovi i dati, quello è il soggetto, naturalmente.
+
+Michele Friscia   1:10:30
+Nascita.
+
+Mercuri Flavio   1:10:37
+Là c'è informazioni di processo che puoi espandere se vuoi vedere se c'è qualcosa che ti interessa, quello step attivo non penso che sia una cosa che ti che interessi.
+
+Michele Friscia   1:10:48
+Verifica delle relazioni, questo è.
+Questo è un attimo.
+La questione di manuale delle attività.
+E qui la pale, per esempio, non c'è, non esiste.
+
+Mercuri Flavio   1:11:28
+La.
+
+Michele Friscia   1:11:30
+Importo di pensione?
+C'è il codice pensionato, c'è una qualifica ****.
+Certo, un attimo.
+Vabbè dunque io cioè possiamo individuare alcune informazioni che possono essere utili per aumentare il dettaglio in modo che abbia una valenza e poi vedete un po se ci sono.
+
+Mercuri Flavio   1:12:05
+Ok.
+
+Michele Friscia   1:12:07
+Di non.
+Non lo capisco, allora.
+Dunque questa.
+Vediamo cos'altro ho visto.
+Allora l'informazione che noi ho immaginato era amministrazione, contratto e qualifica.
+Data cessazione, eventualmente la decorrenza della pensione.
+Ti porto la pensione eccetera, però lo dico meglio.
+Poi.
+C'era qualche errore ortografico nella chiusura attività? Vediamo se.
+Allora questo qui?
+Ciao.
+Abbiamo degli integrativi.
+Vado a lavorare il processo.
+Allora qui c'era qualcosa che non che non che non è che andava benissimo.
+Non so se dipende dal fatto che la posizione assicurativa dentro questo, per questo caso di sviluppo sia un po.
+Magari non è perfetta.
+Però allora, per quanto riguarda l'errore.
+Allora vi faccio vedere le mail così si faccio prima.
+Condivido la mail.
+Allora nei messaggi durante la.
+Più sull'attività c'è scritto questa, c'è una e senza accento. Attenzione, è stata rilevata una variazione del conto assicurativo.
+OK.
+E poi un errore qui su sì.
+
+Tantar Ana Maria   1:15:15
+Un attimino com'era la.
+
+Michele Friscia   1:15:18
+Attenzione, è stata rilevata una variazione del conto assicurativo, un messaggio, un info.
+
+Tantar Ana Maria   1:15:28
+OK, mi sa che questo qua è un errore che però ci arriva dal backend, se non mi ricordo male.
+
+Michele Friscia   1:15:35
+È stata l'accento.
+
+Tantar Ana Maria   1:15:41
+OK, no, l'ho trovato OKOK.
+
+Michele Friscia   1:15:46
+Poi in fase di riciclo c'è scritto confermato l'operazione riciclo ripartirà, mi manca l'accento qui dello step di gestione conto assicurativo.
+L'hai segnato?
+
+Tantar Ana Maria   1:16:10
+Sì, segnato.
+
+Laferla Gianluca   1:16:11
+E.
+
+Michele Friscia   1:16:14
+E poi durante il processo, vabbè, qua c'è un errore che questo dovrebbe essere la vecchia maschera.
+Ma più che altro c'è, mi compare dei messaggi di info sulla destra.
+
+Tantar Ana Maria   1:16:29
+OK.
+
+Michele Friscia   1:16:31
+Non so se è voluto, non è voluto.
+
+Tantar Ana Maria   1:16:34
+Allora in realtà questi messaggi, questo qua attenzione è quello Legacy, però vorrei sapere con quale utenza sei riuscito AA sbloccarlo perché noi non ce l'abbiamo questi questo errore qua in particolare.
+
+Michele Friscia   1:16:54
+Questo l'operatore sempre è sempre operatore no, ma più che altro mi domandavo su.
+
+Tantar Ana Maria   1:16:59
+OK, quindi il codice fiscale, quello di prima?
+
+Michele Friscia   1:17:02
+Sì, mi domandavo più che altro il problema delle della.
+
+Tantar Ana Maria   1:17:03
+OK.
+
+Michele Friscia   1:17:07
+Della dei messaggi a destra che poi scompaiono.
+Che.
+Vediamo se riesco a riprodurli, non mi sembra proprio il massimo però.
+
+Laferla Gianluca   1:17:22
+I toast di Sirio che hanno forse 5 secondi di visualizzazione.
+
+Michele Friscia   1:17:23
+Ciao.
+Sì, c'era una.
+
+Mercuri Flavio   1:17:30
+Ma non ho capito però.
+
+Tantar Ana Maria   1:17:31
+Quei toast però li li trovi su tutto il portale.
+
+Mercuri Flavio   1:17:36
+Non ho capito qual è il.
+
+Michele Friscia   1:17:39
+Il problema?
+Allora che compaiono questi messaggi a destra che mi sembra un po non tanto evidenti.
+Anziché essere al centro.
+Vediamo se riesco a.
+
+Mercuri Flavio   1:18:00
+Sì, sono i toast, i toast, però si chiamano toast perché escono fuori come le fette di pane dal toaster, però quello è uno standard vostro.
+
+Michele Friscia   1:18:05
+Post.
+E si mette, sono sempre, cioè sono sempre sulla destra.
+
+Mercuri Flavio   1:18:18
+So proprio che sì, così uniforme sì.
+In alto a destra, perché poi quelli fanno una pila, capito? Se te ne escono 5 insieme che può succedere? Fanno una pila e quindi alto e basso non c'ha +1, cioè non ha +1 vero riferimento.
+
+Michele Friscia   1:18:34
+Infatti ne ho visti due o tre insieme.
+
+Mercuri Flavio   1:18:37
+Sì, può succedere, sì.
+
+Michele Friscia   1:18:39
+Ma se poi scompaiono dopo 5 secondi, non ce n'è uno che era lunghissimo, non sono neanche riuscito a leggerlo.
+
+Mercuri Flavio   1:18:43
+Ma quello è andato quello.
+Quello è un dettaglio che possiamo controllare perché la diciamo la c'è un suggerimento insomma, che è quello lì, questo che abbiamo messo noi, però se volete quello si può aumentare, diminuire.
+Tanto quello mi pare che c'ha pure una crocettina sì, tanto mi sembra che c'abbia pure una crocettina volendo per chiuderlo, quindi se poi sta in mezzo che dà fastidio se lo chiudono.
+
+Michele Friscia   1:19:01
+Il tempo di latenza.
+Se compare qualcosa?
+Ecco questi 15.
+
+Mercuri Flavio   1:19:23
+Eccolo, sì, esatto.
+Il toaster.
+
+Michele Friscia   1:19:35
+Allora un po un po si confonde, questo non deve comparire, no?
+Questo messaggio, questi qui è vecchio.
+
+Tantar Ana Maria   1:19:43
+Sì, questo qua è vecchio.
+
+Michele Friscia   1:19:44
+E della versione Lega? Sì, OK, dovrebbe essere in teoria comparire questo messaggio di questo tipo.
+
+Mercuri Flavio   1:19:51
+Sì.
+
+Michele Friscia   1:19:53
+OK, però questo messaggio blu su blu.
+Non lo so, si può fare diversamente.
+
+Mercuri Flavio   1:20:03
+Se tu premi control -1 paio di volte non.
+Cioè, ripeto, quello che accade dal punto di vista dimensionale sul tuo schermo è una cosa che è relativa alla tua risoluzione, a come ci hai messo la finestra.
+
+Michele Friscia   1:20:22
+E stai parlando con me sul control me, no?
+
+Mercuri Flavio   1:20:25
+Sì, dico, la posizione degli elementi di sovrapposizione dipende da come c'hai tu, da che schermo c'hai, che risoluzione, come com'è gestito, insomma, perché quelli sono elementi di sovrapposizione. Se fai un dezoom all'ottanta per 100, quello finisce da un'altra parte.
+
+Capobianco Paolo   1:20:26
+OK.
+
+Mercuri Flavio   1:20:44
+Perché è una posizione relativa, non assoluta.
+
+Michele Friscia   1:20:48
+Io questo vabbè 100% ce l'ho.
+Cioè non lo non lo so, a me mi boh mi sembra un po un po.
+
+Mercuri Flavio   1:20:55
+Vedi?
+
+Michele Friscia   1:20:59
+Non dico fastidioso, però se è questo lo standard.
+
+Mercuri Flavio   1:21:02
+Allora guarda i toaster, io li trovo fastidiosi dal momento zero, dagli anni 90 li trovo fastidiosi però effettivamente c'hanno proprio questo scopo qua, cioè quello di generare un fastidio visivo per cui uno è costretto a leggere il messaggio.
+O quantomeno a recepire che t'è successo qualcosa nel sistema serve a dialogare con l'utente in modo che l'utente abbia cognizione del fatto che quel qualcosa è accaduto. E poi infatti vedi che voi c'avete più colori a disposizione, la il vostro sistema mette più colori a disposizione.
+Il rosso, quello mi sa che è l'arancione del warning rosso più scuro, è un rosso che indica un'operazione che non è andata a buon fine, oppure il verde che è un'operazione andata a buon fine. Quindi c'è anche una comunicazione semantica a livello di colore, perché con la coda dell'occhio tu già vedi se hai un errore, per cui te ne devi.
+O se pure hai cancellato un record e quello ti sta a dire OK, record hai cancellato o sei o sei da solo e poi ti puoi permettere di non guardarlo, tanto scompare da solo. Questa è un po' la dinamica di funzionamento del toaster.
+E non inizia a piacerte, però, Michele.
+
+Michele Friscia   1:22:19
+Tre.
+Allora io farei, allora non farei 5 secondi, ne faremo un attimino di più.
+
+Capobianco Paolo   1:22:26
+Grazie.
+
+Mercuri Flavio   1:22:28
+OK.
+
+Michele Friscia   1:22:30
+Mi sembra pochi 5 secondi, soprattutto all'inizio, quando tu non sai quello che succede e farei messaggi più corti perché ce n'è uno che prendeva tre, cioè tre sezioni, è un messaggio che ne metterà.
+
+Capobianco Paolo   1:22:42
+Vabbè, però se ci riprendi ci riappare, quindi voglio dire, non è che.
+
+Michele Friscia   1:22:48
+No, dipende che cosa faccio, cioè qui in questo caso, vabbè, sto qui.
+
+Mercuri Flavio   1:22:53
+Qua non lo so ragazzi, ma questi son messaggi generati affrontando o salgono da backend?
+
+Tantar Ana Maria   1:22:59
+Beh, mi sa che questi qua sono proprio i generali del back end.
+Cioè la maggior parte sono generati backend, non so adesso quello in particolare.
+Com'è fatto?
+
+Laferla Gianluca   1:23:14
+Sto controllando questi in particolare, noi li gestiamo front-end.
+Sì.
+
+Mercuri Flavio   1:23:20
+Grazie.
+E allora qua Michele, vedi, Vedi tu se vuoi revisionare il testo dei messaggi.
+
+Michele Friscia   1:23:29
+Devo beccare il messaggio, quello.
+Quello del mi è comparso così era in chiusura attività però.
+Allora vediamo un po'.
+Prendiamo questo.
+
+Piscitelli Terenzio   1:23:54
+Io vi devo lasciare, vi saluto, Ciao, Ciao, Ciao.
+
+Michele Friscia   1:23:58
+OK.
+
+Tantar Ana Maria   1:24:00
+Ciao.
+
+Capobianco Paolo   1:24:01
+La Terenzio.
+
+Mercuri Flavio   1:24:14
+Allora intanto chiederei ai ragazzi quanti appunti ci stiamo portando a casa per capire se è il caso che magari interrompiamo e riprendiamo il discorso la prossima volta, perché se son tante già abbiamo condensato tante osservazioni è.
+
+Michele Friscia   1:24:31
+No, ma io ho finito il nostro.
+
+Mercuri Flavio   1:24:32
+Utile, utile, OK.
+
+Michele Friscia   1:24:35
+Credo che non ci sia più niente.
+
+Laferla Gianluca   1:24:35
+E un po' di appunti ce l'abbiamo giusto sull'area operativa riguardante la search bar, alla fine credo siamo rimasti che ci dobbiamo aggiornare su come funziona la logica della search bar.
+
+Mercuri Flavio   1:24:48
+Ma noi secondo me quello che possiamo fare in questo momento è intanto implementare la divisione nome cognome, cioè scusa cognome, nome divisi dallo spazio e in caso di doppio cognome o doppio nome.
+
+Michele Friscia   1:24:48
+Sì.
+
+Mercuri Flavio   1:25:04
+Cognome e nome di visita, una virgola.
+
+Laferla Gianluca   1:25:07
+OK, sì, come il Legacy.
+
+Mercuri Flavio   1:25:09
+Questa cosa la implementiamo io, la cioè la implementiamo con sempre con riserva perché per me non è non è una buona idea demandare.
+Logica al all'utente ricontrolliamo Gianluca se il messaggio è se il messaggio quello cioè vediamo, ci dovrebbe essere un tool nella libreria De Sirio per quel per quella se.
+Parlo, ci dovrebbe essere un tool che mi pare si chiama pop-up info che mette una piccola i vicino alla casella non mi vorrei sbagliare, mi sembra di ricordarmi una cosa del genere. Se c'è mettiamo una.
+Diciamo un'informativa su come si usa sta sta roba nella i quantomeno.
+
+Laferla Gianluca   1:26:01
+Sì.
+
+Mercuri Flavio   1:26:05
+A te sto tanto.
+
+Michele Friscia   1:26:06
+Omar.
+Allora qui allora diciamo che io il colore se qui non so se c'è compare il toaster.
+Però qui c'è questo messaggio qui arancione sul blu, che è lo stesso sfondo del toaster, cioè se compare sulla destra mi fa un po' di confusione poi.
+So se si possono cambiare o cambiare questo qui perché si vede o il toaster, lo sfondo del toaster.
+
+Mercuri Flavio   1:26:38
+Allora non mi ricordo se questi ragazzi, voi vi ricordate se sono nella versione dark e se c'è disponibile la versione light?
+
+Michele Friscia   1:26:38
+Guarda, proviamo.
+
+Laferla Gianluca   1:26:46
+Credo abbiano solo questa colorazione.
+
+Tantar Ana Maria   1:26:46
+Allora questa.
+Esatto.
+
+Mercuri Flavio   1:26:50
+E niente pure qua Michele, sempre design system.
+
+Michele Friscia   1:27:02
+E non fare vedere comodità, vediamo che succede.
+Allora qui vedete con guidarci, manca l'acqua, l'accento.
+Mi piacerebbe che ci fosse un po più di enfasi.
+Questo messaggio.
+Magari più grande del fondo, questo qui.
+
+Capobianco Paolo   1:27:30
+In che senso?
+
+Laferla Gianluca   1:27:34
+Punto esclamativo finale.
+
+Capobianco Paolo   1:27:35
+Madonna.
+
+Michele Friscia   1:27:37
+Cosa?
+
+Laferla Gianluca   1:27:39
+Dico un punto esclamativo finale, forse.
+
+Michele Friscia   1:27:43
+No, i caratteri un po più grandi, questo verifico comunità al centro.
+
+Laferla Gianluca   1:27:45
+Certo.
+
+Capobianco Paolo   1:27:46
+No, ma dai, ma c'è anche sul gigante qua stai così esagerando?
+
+Mercuri Flavio   1:27:51
+Pure quello comunque credo che sia un parametro già già impostato da voi, però vediamo se ci abbiamo margine, magari minimo.
+Lo possiamo.
+
+Michele Friscia   1:28:02
+Siccome è un e questa è una è un'approvazione praticamente, cioè è un elemento formale, cioè vorrei un po più di enfasi.
+Qui nel Legacy questo qui c'è un punto virgolettato perché si è fatto il la prima attività.
+C'è un segno di spunta verde, se non ricordo male.
+Perché è un'attività che deve essere fatta e deve essere è stata fatta, i dati pensionistici e poi la seconda attività invece deve essere svolta ancora, è la registrazione su felpe.
+Però qua mi manca, mi sa che mi manca qualcosa.
+No, giusto per continuare con la richiestazione tramite VS procede con salvo informazioni su felpe salvo informazioni su felpe dovrebbe essere abilitato però.
+Perché io devo fare, devo. Adesso il prossimo passo è salvare informazioni.
+
+Laferla Gianluca   1:29:15
+Non devi fare prima la verifica congruità acconto.
+
+Michele Friscia   1:29:18
+E questo l'ho fatto.
+Ho fatto, venite come vi racconto quello di prima.
+
+Laferla Gianluca   1:29:23
+Sì.
+
+Michele Friscia   1:29:24
+E quindi qui mi dice, adesso sono adesso disponibili i dati.
+OK, ho fatto questi qui mi.
+
+Mercuri Flavio   1:29:31
+Scusa, prova a refreshare un secondo Michele, per favore.
+
+Michele Friscia   1:30:03
+Ho fatto verifica conclusa.
+Che storia del processo è questo?
+
+Mercuri Flavio   1:30:12
+E mo dovresti tornare dove stavi prima.
+
+Michele Friscia   1:30:23
+E qui scompare.
+
+Mercuri Flavio   1:30:25
+E allora noi non abbiamo ricaricato la pagina dopo.
+
+Michele Friscia   1:30:29
+OK.
+
+Mercuri Flavio   1:30:30
+Dopo la verifica ragazzi bisogna o vedete voi se quando risolve la chiamata dobbiamo ricaricare direttamente?
+
+Laferla Gianluca   1:30:41
+Sì.
+
+Michele Friscia   1:30:45
+Poi salvo l'informazione su Facebook a questo punto.
+OK, mi qui in questo caso il tastino DVS risulta abilitato, dice il refresh.
+Ok.
+E qui manca una e con l'accento.
+Emanuele segni di spunta.
+Va bene e qui poi a parte vedere se funziona effettivamente il servizio su felpe.
+Facciamo riprendere il conto assicurativo.
+Sì, questo è un errore che magari la cache della posizione assicurativa è vecchia, controllate.
+Lui mi dava stessi problemi del di prima.
+Hey.
+E non posso fare Salve e prosegui.
+Ma sempre questo dipende dalla.
+Tutta la posizione della banca dati del scritto che stiamo esaminando.
+Va bene.
+Questi altri le avete, le avete fatte, le avete fatte, sì.
+Io diciamo mi continua a non piacermi, a non piacermi questa qui area consulenziale qua, questa scritta in un'altro modo più piccola.
+Fa impazzire.
+Va bene?
+Voi mi dovete fare vedere qualche qualche cosa.
+Novità.
+
+Tantar Ana Maria   1:33:37
+No, abbiamo fatto le modifiche, quelle che avevate richiesto l'altra volta. Quindi nulla di nuovo. Ecco, sì.
+
+Mercuri Flavio   1:33:48
+Fate blogliate qui.
+OK, quindi se te ne ricordi qualcuna già Michele, oppure se vuoi supporto, magari vediamo un attimo al volo dal dalla Board se vuoi dare un'occhiata. Comunque tendenzialmente sono le cose che c'eravamo detti nella scorsa riunione.
+
+Michele Friscia   1:34:03
+Il.
+Che brevemente io non me ricordo, però.
+
+Mercuri Flavio   1:34:11
+Ok ragazzi, lo coadiuviamo Anna Gianluca.
+
+Tantar Ana Maria   1:34:15
+Come.
+
+Laferla Gianluca   1:34:15
+Sì.
+
+Mercuri Flavio   1:34:16
+Lo aiutiamo con la board AA capire qual'è la modifica che abbiamo fatto.
+
+Laferla Gianluca   1:34:18
+Sì.
+
+Tantar Ana Maria   1:34:20
+Sì, aspetta.
+
+Laferla Gianluca   1:34:20
+Sicuramente una di quelle che manca sono da vedere le dialog, quelle che avevamo adattato, che si caricano quando non ci sono i dati l'avevamo resa dinamica in modo da far apparire il chiudi quando sono caricati i dati.
+
+Michele Friscia   1:34:30
+Sì.
+Sì, però io qua non l'ho visto perché dava se per loro ricaricamente la professione assicurativa, quindi.
+
+Laferla Gianluca   1:34:38
+Ecco.
+
+Tantar Ana Maria   1:34:47
+Guarda, se vuoi te la posso far vedere io al volo che ce l'ho davanti agli occhi.
+
+Michele Friscia   1:34:49
+Sì, Fammi vedere.
+
+Tantar Ana Maria   1:35:16
+Che è questa qua.
+
+Laferla Gianluca   1:35:20
+Poi refreshando ti potrebbero apparire anche le altre.
+Che è proprio quasi istantaneo. Il cambio però è dinamico, a volte se ci mette di più si nota.
+
+Michele Friscia   1:35:43
+Io mi sembra la stessa, però.
+La News.
+
+Laferla Gianluca   1:35:53
+Queste sono due.
+Dialogue fisse che si alternano randomicamente. Mi ricordo che eravamo rimasti che in caso ci avreste detto voi se avevate altri contenuti da mostrare, però sono sempre queste due fisse.
+
+Michele Friscia   1:36:09
+Sì, ma io le vedo, le ho viste tutte e due uguali, ho visto queste scuole 2026.
+
+Tantar Ana Maria   1:36:15
+No, mi sa che hai visto la stessa, mi sa che hai visto la stessa la.
+
+Laferla Gianluca   1:36:17
+Prova sì alle pressione.
+
+Michele Friscia   1:36:18
+Sì, la stessa.
+
+Tantar Ana Maria   1:36:26
+Sì, si cambia proprio all'istante, è super veloce.
+
+Laferla Gianluca   1:36:31
+Vabbè che c'è il 50 e 50 di beccare una o l'altra, quindi a volte può capitare la stessa varie volte.
+
+Tantar Ana Maria   1:36:38
+Troppo veloce.
+
+Laferla Gianluca   1:36:38
+Prova a chiuderla questa anche con te.
+Ma che gli volevo far vedere con le spunte verdi dell'altra versione.
+
+Tantar Ana Maria   1:36:41
+A tutti.
+Aspetta un attimo, facciamo, vediamo così.
+Eccolo.
+
+Michele Friscia   1:37:08
+Sì.
+
+Tantar Ana Maria   1:37:10
+Questa e poi l'altra.
+
+Michele Friscia   1:37:14
+Sì.
+E questo se è pulsante chiudi e poi c'è anche un tempo massimo.
+
+Laferla Gianluca   1:37:21
+No, rimane fissa finché non si chiude.
+
+Michele Friscia   1:37:23
+Rimane fissa.
+
+Laferla Gianluca   1:37:24
+Sì.
+Perché non avrebbe tempo di leggere il testo se no l'utente?
+
+Tantar Ana Maria   1:37:32
+Che è esattamente la stessa cosa che dicevamo l'altra volta, che siccome magari uno vuole leggere tutto ci deve avere il pulsantino di chiudi.
+
+Michele Friscia   1:37:50
+Però l'operazione continua, giusto?
+
+Tantar Ana Maria   1:37:54
+Com'è?
+
+Michele Friscia   1:37:56
+Elaborazione sotto continua.
+
+Tantar Ana Maria   1:38:00
+Sì, quello sotto sì.
+
+Laferla Gianluca   1:38:00
+Sì.
+Appena appare il chiudi vuol dire che è pronto.
+
+Michele Friscia   1:38:10
+Non ho capito, ripeti.
+
+Laferla Gianluca   1:38:13
+E appena appare il pulsantino di chiudi vuol dire che sotto ha caricato, quindi l'utente non può vedere la loading comunque perché non potrebbe chiudere questa finché non è caricato.
+
+Tantar Ana Maria   1:38:14
+Sotto.
+
+Michele Friscia   1:38:18
+OK, va bene, quindi?
+OK, ben.
+Va bene.
+
+Tantar Ana Maria   1:38:34
+Poi quali altre erano le cose, non mi ricordo.
+
+Laferla Gianluca   1:38:38
+Poi avevamo messo i testi, quelli che stavano su tre righe con l'ellipsis su una sola riga di tipo domanda.
+
+Tantar Ana Maria   1:38:46
+OK, sì, è questo qua.
+
+Laferla Gianluca   1:38:47
+È questo qui.
+Poi in conto assicurativo integrato avevamo messo la nuova dialog nuova UI.
+
+Tantar Ana Maria   1:38:59
+Qua.
+O dov'era?
+
+Laferla Gianluca   1:39:09
+Era conto assicurativo integrato dentro tutti i periodi e gestione dati di cessazione.
+Tutto il periodo.
+
+Capobianco Paolo   1:39:18
+Sì.
+
+Tantar Ana Maria   1:39:19
+OK.
+Sì, giusto, però qua non abbiamo il dato. Dobbiamo entrare dall'altra parte. Sì, no, aspetta, dobbiamo entrare dall'altra parte.
+
+Laferla Gianluca   1:39:27
+Sì.
+E questo forse ha più utenze.
+
+Tantar Ana Maria   1:39:37
+Tanta cambio sei dal volo.
+Ecco.
+Allora qua entravamo su dettaglio e da qua appariva la nuova schermata.
+Che è questo.
+Con anche la parte di lista maggiorazioni che giustamente però non ci sono informazioni.
+
+Michele Friscia   1:40:53
+A me piace come dettaglio, era tipo un dettaglio che era carino, con delle righe, con delle colonne.
+
+Tantar Ana Maria   1:41:03
+Questa.
+
+Michele Friscia   1:41:06
+No, questo è a righe, no, c'ha una riga eccetera. Quello c'ho informazioni su più colonne, su tre colonne. Veramente sembrava buona. Perché insomma.
+
+Tantar Ana Maria   1:41:16
+Considera il dettaglio delle diciamo tutti i dettagli li abbiamo fatti così, quindi magari quella era una cosa particolare dove dentro il dettaglio c'era una tabella possibile.
+
+Michele Friscia   1:41:30
+Adesso non mi ricordo qual era, però c'erano tre colonne.
+
+Mercuri Flavio   1:41:31
+Centro i dettagli di attività da avviare.
+
+Laferla Gianluca   1:41:36
+In chat vi ho mandato com'era il Legacy.
+L'abbiamo emulato nella versione nuova UI.
+
+Michele Friscia   1:41:47
+Sì, questo è uguale.
+Cosette attività da avviare un po.
+No, non è quello, non è di te, di attività da avviare.
+Forse nel monitoraggio.
+E nessuno.
+Sto cercando aspetta, vediamo qua.
+Non lo trovo, appena lo trovo ve lo faccio vedere. Insomma, era.
+Di questi in lista.
+Va bene, io direi di.
+Non c'è altro.
+
+Mercuri Flavio   1:44:07
+Ci siamo, OK, perfetto, OK, allora ci riportiamo a casa quello che ci siamo detti, vi faccio avere al più presto il verbale e ci vediamo al prossimo appuntamento per.
+
+Laferla Gianluca   1:44:07
+No, era tutto. Sì, era tutto.
+
+Michele Friscia   1:44:16
+Ma.
+Va bene.
+
+Mercuri Flavio   1:44:23
+Vorrei vedere tutto.
+E vabbè, non so se voi avete l'impressione che ci rimanga ancora tanto, se vi sentite, diciamo, confortevoli rispetto a.
+
+Michele Friscia   1:44:34
+Bisogna fare un po' un giro operativo, vedere se funziona i tasti come ho fatto io adesso, insomma, però fare un giro un po' su sulla simulazione, insomma fare.
+
+Mercuri Flavio   1:44:40
+Ora.
+OKOK va bene, allora ci aggiorniamo alla prossima al prossimo sal.
+
+Michele Friscia   1:44:47
+Delle prove.
+OK.
+
+Mercuri Flavio   1:44:53
+Prossima settimana, intanto grazie e buon pomeriggio.
+
+Capobianco Paolo   1:44:54
+OK.
+Grazie a voi, Ciao.
+
+Michele Friscia   1:44:58
+Ciao.
+
+Tantar Ana Maria   1:44:59
+Ciao.
+
+Laferla Gianluca   1:44:59
+Tutti.
+
+Mercuri Flavio   1:44:59
+Ciao, Ciao, Ciao.
+
+Capobianco Paolo   1:45:00
+Ciao, Ciao.
+
+Mercuri Flavio trascrizione arrestata

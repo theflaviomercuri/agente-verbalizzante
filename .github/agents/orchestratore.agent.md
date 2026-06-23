@@ -86,7 +86,8 @@ Usa questo output per FASE 1 (domanda sui nuovi partecipanti) e per pre-popolare
 Leggi `knowledge/projects.json` e cerca il progetto con `slug` uguale al `project_slug` estratto in 0b. Memorizza il percorso come `TEMPLATE_PATH`.
 
 **Caso A — progetto già registrato con campo `template`:**
-Imposta `TEMPLATE_PATH = projects[slug].template`. Nessun'altra azione richiesta.
+Imposta `TEMPLATE_PATH = projects[slug].template`.
+Leggi e memorizza eventuali metadati progetto-level presenti nell'entry: `contract_reference`, `management_area` (nome direttore area). Questi valori sovrascriveranno i campi corrispondenti nel JSON in FASE 2.
 
 **Caso B — progetto già registrato ma senza campo `template`:**
 Elenca i file `.docx` presenti in `templates/`. Se ce n'è uno solo, usalo come default. Altrimenti chiedi all'utente quale usare tramite `vscode_askQuestions`. Aggiorna `projects.json` aggiungendo il campo `"template"`. Imposta `TEMPLATE_PATH`.
@@ -270,6 +271,16 @@ Includi in `glossary`:
 - `meeting.participants`: tutte le persone presenti
 - `document.distribution`: se non specificato, usa gli stessi partecipanti
 
+### INFORMAZIONI DOCUMENTO (metadati da knowledge base)
+
+Per i campi dell'area "Informazioni Documento" del template INPS:
+
+- `document.client_references`: **non usare array vuoto**. Deriva automaticamente i nomi (stringa separata da virgola) dei partecipanti la cui `organization` contiene `"INPS"` dalla lista `meeting.participants`. Es: `["Michele Friscia, Paolo Capobianco"]`.
+- `document.contract_reference`: usa il valore `contract_reference` letto da `projects.json` in FASE 0e. Se non presente, usa `"-"`.
+- `document.management_area`: usa il valore `management_area` letto da `projects.json` in FASE 0e (nome del direttore d'area, non l'area tematica). Se non presente, usa `"-"`.
+
+**Importante**: questi tre campi devono sempre essere valorizzati correttamente; `"-"` è accettabile solo se il valore non è disponibile nel knowledge base.
+
 ### SCHEMA JSON OBBLIGATORIO
 
 Produci un JSON conforme ESATTAMENTE a questo schema:
@@ -343,6 +354,8 @@ Produci un JSON conforme ESATTAMENTE a questo schema:
 - `generation_options.synthesis_level` → imposta il valore interno scelto (`verbatim` / `attributed` / `resolved` / `executive`)
 - Note: solo follow-up, date future, problemi aperti irrisolti
 - Issues: `{ "code": "", "description": "", "severity": "alta|media|bassa" }`
+- **Sezioni**: numera le sezioni tematiche a partire da `"3"`. Le sezioni `"1"` (Scopo) e `"2"` (Introduzione) sono riservate. La sezione `"1"` va sempre inclusa nel JSON ma il suo corpo non viene renderizzato nel DOCX (il template ha testo fisso); includi comunque un testo descrittivo sintetico.
+- **Azioni — owner**: usa sempre la denominazione organizzativa (`Almaviva S.p.A.` o `INPS`), mai il nominativo individuale, salvo che la responsabilità sia esplicitamente e nominalmente attribuita nella trascrizione.
 
 ### SALVATAGGIO JSON
 
@@ -385,6 +398,14 @@ python scripts\template_placeholder_filler_v2.py `
 Il nome del DOCX include sempre il suffisso `_v1` per distinguerlo dalle revisioni successive.
 Raccogli eventuali righe `WARN:` emesse dallo script.
 
+Dopo la generazione, crea immediatamente una copia del file da revisionare:
+
+```powershell
+Copy-Item results\<slug>\verbale_YYYYMMDD_v1.docx results\<slug>\verbale_YYYYMMDD_v1_rev.docx
+```
+
+Sarà questo file `_rev.docx` che l'utente aprirà in Word per la revisione.
+
 ---
 
 ## FASE 4 — Aggiorna il thesaurus
@@ -416,9 +437,11 @@ VERBALE GENERATO
 THESAURUS — modifiche applicate:
   [elenco sintetico: +N partecipanti, +N termini, ⚑N conflitti]
 
-Quando hai revisionato il verbale in Word, salvalo come:
-  results/verbale_YYYYMMDD_v1_rev.docx
-e comunicamelo in questa chat.
+Ho già creato la copia da revisionare:
+  results/<slug>/verbale_YYYYMMDD_v1_rev.docx
+
+Apri quel file in Word, revisiona e salva (sovrascrivendo la copia _rev.docx).
+Quando hai finito, comunicamelo in questa chat.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 

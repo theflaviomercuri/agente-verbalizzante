@@ -1,0 +1,477 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "total_patterns": 8,
+    "last_updated": "23/06/2026"
+  },
+  "patterns": [
+    {
+      "pattern_id": "CRR-001",
+      "verbale": "20260112",
+      "category": "actions",
+      "changes": [
+        {
+          "field": "actions[0].owner",
+          "original": "Laferla Gianluca",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[1].owner",
+          "original": "Damiani Alessandro",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[2].owner",
+          "original": "Tantar Ana Maria",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[3].owner",
+          "original": "Laferla Gianluca",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[4].owner",
+          "original": "Laferla Gianluca",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[4].action",
+          "original": "Rinominare la funzionalità «Blocco domande» in «Gestione blocco domande» nell’interfaccia",
+          "corrected": "Rinominare la funzionalità «Blocco domande» in «Gestione blocco domande» nell’interfaccia (Scadenza: -)"
+        },
+        {
+          "field": "actions[5].owner",
+          "original": "Mercuri Flavio",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[6].owner",
+          "original": "Michele Friscia",
+          "corrected": "INPS"
+        },
+        {
+          "field": "actions[6].action",
+          "original": "Attivare l’utenza risorse per Laferla Gianluca (accesso design system, board di progetto, servizi di sviluppo)",
+          "corrected": "Attivare l’utenza risorse per Laferla Gianluca (accesso design system, board di progetto, servizi di sviluppo) (Scadenza: -)"
+        },
+        {
+          "field": "actions[7].owner",
+          "original": "Michele Friscia",
+          "corrected": "INPS"
+        },
+        {
+          "field": "actions[7].action",
+          "original": "Organizzare sessione di test delle modifiche con gli utenti amministrativi prima del rilascio in produzione",
+          "corrected": "Organizzare sessione di test delle modifiche con gli utenti amministrativi prima del rilascio in produzione (Scadenza: -)"
+        },
+        {
+          "field": "actions[8].owner",
+          "original": "Mercuri Flavio",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[8].action",
+          "original": "Presentare la proposta del nuovo header (con sistema notifiche/badge) al prossimo SAL",
+          "corrected": "Presentare la proposta del nuovo header (con sistema notifiche/badge) al prossimo SAL (Scadenza: -)"
+        },
+        {
+          "field": "actions[9].owner",
+          "original": "-",
+          "corrected": "INPS"
+        },
+        {
+          "field": "actions[9].action",
+          "original": "Definire, per ogni funzionalità del portale, quali colonne tabellari devono essere abilitate all’ordinamento",
+          "corrected": "Definire, per ogni funzionalità del portale, quali colonne tabellari devono essere abilitate all’ordinamento."
+        }
+      ],
+      "description": "Il testo generato assegnava le azioni ai singoli partecipanti (Laferla Gianluca, Damiani Alessandro, Tantar Ana Maria, Mercuri Flavio, Michele Friscia) invece che all’organizzazione. L’utente ha normalizzato tutti gli owner usando la denominazione organizzativa (Almaviva per il team di sviluppo, INPS per i referenti cliente). → In FASE 2, per il campo owner delle azioni usare sempre la denominazione organizzativa (Almaviva o INPS) e non il nominativo individuale, salvo che la responsabilità sia esplicitamente e nominalmente attribuita nella trascrizione.",
+      "occurrences": 1,
+      "first_seen": "20260112",
+      "last_seen": "20260112"
+    },
+    {
+      "pattern_id": "CRR-002",
+      "verbale": "20260112",
+      "category": "sections",
+      "changes": [
+        {
+          "field": "sections[1]",
+          "title": "Scopo del documento",
+          "original_length": 144,
+          "revised_length": 306,
+          "char_delta": 162
+        },
+        {
+          "field": "sections[4]",
+          "title": "Propagazione modifiche layout: spalla laterale e riorganizzazione menu header",
+          "original_length": 412,
+          "revised_length": 310,
+          "char_delta": -102
+        },
+        {
+          "field": "sections[5]",
+          "title": "Navigazione dalle voci header non ancora linkate",
+          "original_length": 480,
+          "revised_length": 412,
+          "char_delta": -68
+        },
+        {
+          "field": "sections[6]",
+          "title": "Terminologia e stato della funzionalità Gestione Blocco Domande",
+          "original_length": 802,
+          "revised_length": 480,
+          "char_delta": -322
+        },
+        {
+          "field": "sections[7]",
+          "title": "Modifiche al componente tabellare: ellipsis, sticky e riordino colonne",
+          "original_length": 529,
+          "revised_length": 802,
+          "char_delta": 273
+        },
+        {
+          "field": "sections[8]",
+          "title": "Funzionalità «I tuoi messaggi» (chat operativa)",
+          "original_length": 725,
+          "revised_length": 529,
+          "char_delta": -196
+        },
+        {
+          "field": "sections[9]",
+          "title": "Revisione roadmap: chiusura attività al 16/12/2025",
+          "original_length": 507,
+          "revised_length": 725,
+          "char_delta": 218
+        },
+        {
+          "field": "sections[10]",
+          "title": "Pianificazione rilascio e test amministrativi",
+          "original_length": 364,
+          "revised_length": 507,
+          "char_delta": 143
+        }
+      ],
+      "description": "Alcune sezioni tematiche contenevano motivazioni tecniche e ragionamenti intermedi eccedenti rispetto al livello resolved richiesto. L’utente ha condensato le sezioni più verbose mantenendo esclusivamente la decisione o l’esito concordato. → In FASE 2, per il livello resolved, ogni paragrafo deve contenere unicamente la decisione finale e il suo impatto operativo; omettere le motivazioni tecniche di dettaglio e i passaggi intermedi della discussione.",
+      "occurrences": 1,
+      "first_seen": "20260112",
+      "last_seen": "20260112"
+    },
+    {
+      "pattern_id": "CRR-003",
+      "verbale": "20260526",
+      "category": "actions",
+      "changes": [
+        {
+          "field": "actions[0].status",
+          "original": "",
+          "corrected": "open"
+        },
+        {
+          "field": "actions[1].status",
+          "original": "",
+          "corrected": "open"
+        },
+        {
+          "field": "actions[2].status",
+          "original": "",
+          "corrected": "open"
+        },
+        {
+          "field": "actions[3].status",
+          "original": "",
+          "corrected": "open"
+        },
+        {
+          "field": "actions[4].status",
+          "original": "",
+          "corrected": "open"
+        },
+        {
+          "field": "actions[5].status",
+          "original": "",
+          "corrected": "open"
+        },
+        {
+          "field": "actions[6].status",
+          "original": "",
+          "corrected": "open"
+        },
+        {
+          "field": "actions[7].status",
+          "original": "",
+          "corrected": "open"
+        },
+        {
+          "field": "actions[8].status",
+          "original": "",
+          "corrected": "open"
+        },
+        {
+          "field": "actions[9].status",
+          "original": "",
+          "corrected": "open"
+        },
+        {
+          "field": "actions[10].status",
+          "original": "",
+          "corrected": "open"
+        }
+      ],
+      "description": "Il testo generato non valorizzava il campo status delle azioni, lasciandolo vuoto. L'utente ha impostato manualmente \"open\" su tutte le azioni. → In FASE 2, inizializzare sempre il campo status di ogni azione al valore \"open\" per i verbali nuovi.",
+      "occurrences": 1,
+      "first_seen": "20260526",
+      "last_seen": "20260526"
+    },
+    {
+      "pattern_id": "CRR-004",
+      "verbale": "20260526",
+      "category": "sections",
+      "changes": [
+        {
+          "field": "sections[1]",
+          "title": "Scopo del documento",
+          "original_length": 243,
+          "revised_length": 405,
+          "char_delta": 162
+        },
+        {
+          "field": "sections[4]",
+          "title": "Avanzamento lavori: task sprint precedente",
+          "original_length": 506,
+          "revised_length": 290,
+          "char_delta": -216
+        },
+        {
+          "field": "sections[5]",
+          "title": "Ordinamento card e correzione bug nell’area operativa",
+          "original_length": 362,
+          "revised_length": 506,
+          "char_delta": 144
+        },
+        {
+          "field": "sections[6]",
+          "title": "Reinserimento della funzionalità di ricerca anagrafica nell’area operativa",
+          "original_length": 707,
+          "revised_length": 362,
+          "char_delta": -345
+        },
+        {
+          "field": "sections[7]",
+          "title": "Testi descrittivi per le sezioni dell’area operativa",
+          "original_length": 1066,
+          "revised_length": 707,
+          "char_delta": -359
+        },
+        {
+          "field": "sections[8]",
+          "title": "Ordinamento liste veloci e gestione sezioni in evidenza",
+          "original_length": 483,
+          "revised_length": 1066,
+          "char_delta": 583
+        },
+        {
+          "field": "sections[9]",
+          "title": "Denominazione sezioni temporali e ordinamento eventi",
+          "original_length": 401,
+          "revised_length": 483,
+          "char_delta": 82
+        },
+        {
+          "field": "sections[10]",
+          "title": "Revisione colonne e filtri nelle tabelle",
+          "original_length": 459,
+          "revised_length": 401,
+          "char_delta": -58
+        }
+      ],
+      "description": "Il testo generato numerava le sezioni tematiche a partire da \"3\", causando un conflitto con la sezione fissa del template INPS (Dati di sintesi) che occupa la posizione 3. L'utente ha rinumerato tutte le sezioni tematiche a partire da \"4\", spostando ogni sezione successiva di un'unità. → In FASE 2, numerare le sezioni tematiche a partire da \"4\" (non da \"3\"), riservando la posizione 3 alla sezione Dati di sintesi generata automaticamente dal template.",
+      "occurrences": 1,
+      "first_seen": "20260526",
+      "last_seen": "20260526"
+    },
+    {
+      "pattern_id": "CRR-005",
+      "verbale": "20260604",
+      "category": "actions",
+      "changes": [
+        {
+          "field": "actions[7].action",
+          "original": "Rimuovere il testo «Caricamento conto assicurativo in corso» dalla modale informativa; sostituire la X con un bottone «Chiudi» primario attivato dinamicamente al termine del caricamento.",
+          "corrected": "Dinamizzare il testo «Caricamento conto assicurativo in corso» nella modale informativa; sostituire la X con un bottone «Chiudi» primario attivato dinamicamente al termine del caricamento."
+        }
+      ],
+      "description": "Il testo generato descriveva l'azione sulla modale informativa con il verbo 'rimuovere', ma la decisione concordata era di rendere dinamico il testo di caricamento (aggiornarlo al termine del processo), non di eliminarlo. → In FASE 2, quando un'azione riguarda la modifica comportamentale di un elemento UI (es. testo che cambia stato), usare verbi trasformativi ('dinamizzare', 'aggiornare', 'modificare') anziché distruttivi ('rimuovere', 'eliminare'), salvo che la rimozione sia esplicitamente confermata nella trascrizione.",
+      "occurrences": 1,
+      "first_seen": "20260604",
+      "last_seen": "20260604"
+    },
+    {
+      "pattern_id": "CRR-006",
+      "verbale": "20260604",
+      "category": "sections",
+      "changes": [
+        {
+          "field": "sections[1]",
+          "title": "Scopo del documento",
+          "original_length": 497,
+          "revised_length": 659,
+          "char_delta": 162
+        },
+        {
+          "field": "sections[6]",
+          "title": "Review flusso Dati Integrazione Pensionistica — modifiche concordate",
+          "original_length": 1568,
+          "revised_length": 1568,
+          "char_delta": 0
+        },
+        {
+          "field": "sections[7]",
+          "title": "Modale informativa — gestione della chiusura e accessibilità",
+          "original_length": 763,
+          "revised_length": 717,
+          "char_delta": -46
+        },
+        {
+          "field": "sections[8]",
+          "title": "Pianificazione test e prossimo SAL",
+          "original_length": 594,
+          "revised_length": 551,
+          "char_delta": -43
+        }
+      ],
+      "description": "Delta sezioni: (1) il +162 nella sezione 'Scopo del documento' è un artefatto ricorrente del reverse mapper (prefix fisso del template), non una modifica dell'utente — stessa delta rilevata in CRR-002 e CRR-004. (2) Nella sezione 6 l'utente ha corretto il nome del sistema Legacy da 'SIM' a 'SIN': il sistema corretto si chiama SIN. (3) Nella sezione 7 l'utente ha allineato il testo alla correzione CRR-005 (dinamizzare anziché rimuovere). (4) Nella sezione 8 e nelle note l'utente ha rimosso il qualificatore incerto sull'orario del SAL ('possibile spostamento alle 15:30') e la nota sulle MEV Legacy. → In FASE 2: usare 'SIN' (non 'SIM') per riferirsi al sistema Legacy di INPS; omettere nelle sezioni i qualificatori di incertezza su date e orari già confermati; non includere nelle note informazioni su attività escluse dal perimetro del verbale.",
+      "occurrences": 1,
+      "first_seen": "20260604",
+      "last_seen": "20260604"
+    },
+    {
+      "pattern_id": "CRR-007",
+      "verbale": "20260616",
+      "category": "actions",
+      "changes": [
+        {
+          "field": "actions[0].owner",
+          "original": "Laferla Gianluca / Tantar Ana Maria",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[1].owner",
+          "original": "Tantar Ana Maria",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[2].owner",
+          "original": "Laferla Gianluca / Tantar Ana Maria",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[3].owner",
+          "original": "Tantar Ana Maria / Laferla Gianluca",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[4].owner",
+          "original": "Tantar Ana Maria / Laferla Gianluca",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[5].owner",
+          "original": "Tantar Ana Maria / Laferla Gianluca",
+          "corrected": "Almaviva"
+        },
+        {
+          "field": "actions[6].owner",
+          "original": "Michele Friscia",
+          "corrected": "INPS"
+        }
+      ],
+      "description": "Il testo generato assegnava le azioni ai singoli partecipanti (Laferla Gianluca, Tantar Ana Maria, Michele Friscia) invece che all'organizzazione. L'utente ha normalizzato tutti gli owner usando la denominazione organizzativa (Almaviva per il team di sviluppo, INPS per i referenti cliente). → In FASE 2, per il campo owner delle azioni usare sempre la denominazione organizzativa (Almaviva S.p.A. o INPS) e non il nominativo individuale, salvo che la responsabilità sia esplicitamente e nominalmente attribuita nella trascrizione. Questo pattern è ricorrente (già in CRR-001).",
+      "occurrences": 1,
+      "first_seen": "20260616",
+      "last_seen": "20260616"
+    },
+    {
+      "pattern_id": "CRR-008",
+      "verbale": "20260616",
+      "category": "sections",
+      "changes": [
+        {
+          "field": "sections[1]",
+          "title": "Scopo del documento",
+          "original_length": 327,
+          "revised_length": 489,
+          "char_delta": 162
+        },
+        {
+          "field": "sections[2]",
+          "title": "Introduzione",
+          "original_length": 465,
+          "revised_length": 352,
+          "char_delta": -113
+        },
+        {
+          "field": "sections[4]",
+          "title": "Ricerca veloce in home page: vincoli imposti da Arca",
+          "original_length": 656,
+          "revised_length": 407,
+          "char_delta": -249
+        },
+        {
+          "field": "sections[5]",
+          "title": "Logica di parsing cognome/nome nella ricerca veloce",
+          "original_length": 448,
+          "revised_length": 656,
+          "char_delta": 208
+        },
+        {
+          "field": "sections[6]",
+          "title": "Comportamento della home page con ricerca per cognome/nome: redirect",
+          "original_length": 463,
+          "revised_length": 448,
+          "char_delta": -15
+        },
+        {
+          "field": "sections[7]",
+          "title": "Scheda di dettaglio attività preferite: arricchimento informativo",
+          "original_length": 439,
+          "revised_length": 463,
+          "char_delta": 24
+        },
+        {
+          "field": "sections[8]",
+          "title": "Pulsante “Modifica dati cessazione”: anomalia",
+          "original_length": 505,
+          "revised_length": 439,
+          "char_delta": -66
+        },
+        {
+          "field": "sections[9]",
+          "title": "Separatori visivi nelle sezioni della scheda iscritto",
+          "original_length": 318,
+          "revised_length": 505,
+          "char_delta": 187
+        },
+        {
+          "field": "sections[10]",
+          "title": "Errori ortografici nei messaggi di sistema",
+          "original_length": 427,
+          "revised_length": 318,
+          "char_delta": -109
+        },
+        {
+          "field": "sections[11]",
+          "title": "Toast di sistema: durata e leggibilità",
+          "original_length": 493,
+          "revised_length": 427,
+          "char_delta": -66
+        }
+      ],
+      "description": "Alcune sezioni tematiche risultavano più verbose del necessario per il livello resolved: le sezioni sulla ricerca Arca (-249 char) e sui toast (-66 char) contenevano ragionamenti tecnici intermedi che l'utente ha eliminato lasciando solo la decisione finale. Il +162 su 'Scopo del documento' è un artefatto ricorrente del reverse mapper (prefisso fisso del template), non una modifica dell'utente. La nuova sezione 12 (Dialog di caricamento) è emersa da materiale non estratto dal reverse mapper nella riunione precedente. → In FASE 2, per il livello resolved, ogni paragrafo deve contenere unicamente la decisione finale e il suo impatto operativo; omettere le motivazioni tecniche di dettaglio e i passaggi intermedi della discussione (stesso principio di CRR-002).",
+      "occurrences": 1,
+      "first_seen": "20260616",
+      "last_seen": "20260616"
+    }
+  ]
+}
