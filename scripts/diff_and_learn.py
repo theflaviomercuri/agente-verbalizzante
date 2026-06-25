@@ -341,10 +341,13 @@ def main() -> None:
         print(f"ERRORE: JSON malformato: {e}")
         sys.exit(1)
 
-    # Resolve knowledge base directory from project_slug (reads from gen)
+    # Resolve knowledge base directory and filenames from project_slug (reads from gen)
+    slug = gen.get("document", {}).get("project_slug", "").strip()
     kb_dir = resolve_kb_dir(gen)
-    thesaurus_path      = kb_dir / "thesaurus.json"
-    correction_log_path = kb_dir / "correction_log.json"
+    thesaurus_filename      = f"thesaurus_{slug}.json" if slug else "thesaurus_global.json"
+    correction_log_filename = f"correction_log_{slug}.json" if slug else "correction_log_global.json"
+    thesaurus_path      = kb_dir / thesaurus_filename
+    correction_log_path = kb_dir / correction_log_filename
 
     thesaurus = load_thesaurus(thesaurus_path)
     log       = load_correction_log(correction_log_path)

@@ -124,8 +124,8 @@ def _slug_from_header(paragraphs: list[str]) -> str:
 def load_thesaurus_participants(slug: str) -> list[dict]:
     """Carica la lista partecipanti dal thesaurus del progetto."""
     for kb_path in (
-        Path(f"knowledge/{slug}/thesaurus.json"),
-        Path("knowledge/thesaurus.json"),
+        Path(f"knowledge/{slug}/thesaurus_{slug}.json"),
+        Path("knowledge/thesaurus_global.json"),
     ):
         if kb_path.exists():
             try:

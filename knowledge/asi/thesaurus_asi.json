@@ -1,10 +1,10 @@
 {
   "_meta": {
     "version": "1.0",
-    "last_updated": "23/06/2026",
-    "last_verbale": "meeting_minutes_20260616.json",
-    "total_meetings": 6,
-    "project_slug": ""
+    "last_updated": "25/06/2026",
+    "last_verbale": "meeting_minutes_20260624.json",
+    "total_meetings": 8,
+    "project_slug": "asi"
   },
   "participants": [
     {
@@ -44,7 +44,8 @@
         "20260112",
         "20260526",
         "20260604",
-        "20260616"
+        "20260616",
+        "20260624"
       ],
       "confirmed_in": 0,
       "status": "pending_review"
@@ -59,7 +60,8 @@
         "20260112",
         "20260526",
         "20260604",
-        "20260616"
+        "20260616",
+        "20260624"
       ],
       "confirmed_in": 0,
       "status": "pending_review"
@@ -74,7 +76,8 @@
         "20260112",
         "20260526",
         "20260604",
-        "20260616"
+        "20260616",
+        "20260624"
       ],
       "confirmed_in": 0,
       "status": "pending_review"
@@ -101,7 +104,8 @@
         "20260112",
         "20260526",
         "20260604",
-        "20260616"
+        "20260616",
+        "20260624"
       ],
       "confirmed_in": 0,
       "status": "pending_review"
@@ -116,7 +120,8 @@
         "20260112",
         "20260526",
         "20260604",
-        "20260616"
+        "20260616",
+        "20260624"
       ],
       "confirmed_in": 0,
       "status": "pending_review"
@@ -141,7 +146,7 @@
       "normalized": "sal",
       "description": "Stato di Avanzamento Lavori: riunione periodica di monitoraggio dell'avanzamento del progetto.",
       "first_seen": "20260112",
-      "last_seen": "20260604",
+      "last_seen": "20260624",
       "confirmed_in": 0,
       "status": "pending_review",
       "_pending_description": "Stato di Avanzamento Lavori: riunione periodica di monitoraggio dell’avanzamento del progetto."
@@ -151,7 +156,7 @@
       "normalized": "ui/ux",
       "description": "User Interface / User Experience: disciplina di progettazione delle interfacce utente e dell'esperienza d'uso.",
       "first_seen": "20260112",
-      "last_seen": "20260604",
+      "last_seen": "20260624",
       "confirmed_in": 0,
       "status": "pending_review",
       "_pending_description": "User Interface / User Experience: disciplina di progettazione delle interfacce utente e dell’esperienza d’uso."
@@ -188,7 +193,7 @@
       "normalized": "legacy",
       "description": "Versione precedente del sistema informatico attualmente in produzione, oggetto del processo di reingegnerizzazione.",
       "first_seen": "20260112",
-      "last_seen": "20260616",
+      "last_seen": "20260624",
       "confirmed_in": 0,
       "status": "pending_review",
       "_pending_description": "Versione precedente dell’applicativo ASI, utilizzata come riferimento per il confronto funzionale."
@@ -198,10 +203,10 @@
       "normalized": "sirio",
       "description": "Design system di riferimento utilizzato per lo sviluppo dell'interfaccia del portale.",
       "first_seen": "20260112",
-      "last_seen": "20260616",
+      "last_seen": "20260624",
       "confirmed_in": 0,
       "status": "pending_review",
-      "_pending_description": "Portale/framework di riferimento per il design system e i componenti UI adottati nell’applicativo."
+      "_pending_description": "Design system di riferimento adottato per lo sviluppo dell’interfaccia del portale."
     },
     {
       "term": "JBoss",
@@ -318,9 +323,10 @@
       "normalized": "toast",
       "description": "Notifica temporanea sovrapposta all’interfaccia, posizionata in alto a destra, che informa l’utente dell’esito di un’operazione. Scompare automaticamente dopo un intervallo di tempo configurabile.",
       "first_seen": "20260616",
-      "last_seen": "20260616",
+      "last_seen": "20260624",
       "confirmed_in": 0,
-      "status": "pending_review"
+      "status": "pending_review",
+      "_pending_description": "Notifica visiva temporanea sovrapposta all’interfaccia, che informa l’utente dell’esito di un’operazione. Scompare automaticamente dopo un intervallo di tempo configurabile."
     },
     {
       "term": "Domus",
@@ -355,6 +361,60 @@
       "description": "Tipologia di chiamata HTTP asincrona effettuata dal frontend verso il backend per recuperare dati. Visibile tramite gli strumenti di sviluppo del browser.",
       "first_seen": "20260616",
       "last_seen": "20260616",
+      "confirmed_in": 0,
+      "status": "pending_review"
+    },
+    {
+      "term": "FELPE",
+      "normalized": "felpe",
+      "description": "Sistema INPS per l’invio e la liquidazione dei dati pensionistici; il flusso di lavorazione ASI prevede il salvataggio delle informazioni su FELPE come passaggio finale prima della liquidazione.",
+      "first_seen": "20260624",
+      "last_seen": "20260624",
+      "confirmed_in": 0,
+      "status": "pending_review"
+    },
+    {
+      "term": "WebDOM",
+      "normalized": "webdom",
+      "description": "Portale web INPS per la gestione e la presa in carico delle domande pensionistiche. La versione 2.0 è in sperimentazione; l’ambiente ufficiale in esercizio è Richieste2008.",
+      "first_seen": "20260624",
+      "last_seen": "20260624",
+      "confirmed_in": 0,
+      "status": "pending_review"
+    },
+    {
+      "term": "MEV",
+      "normalized": "mev",
+      "description": "Manutenzione Evolutiva: attività di sviluppo fuori dall’ambito del requisito contrattuale corrente, da pianificare in una fase successiva.",
+      "first_seen": "20260624",
+      "last_seen": "20260624",
+      "confirmed_in": 0,
+      "status": "pending_review"
+    },
+    {
+      "term": "Comparto",
+      "normalized": "comparto",
+      "description": "Campo che identifica la categoria contrattuale/previdenziale del lavoratore iscritto, espresso come codice numerico nel sistema; la descrizione testuale è derivata dal campo Contratto.",
+      "first_seen": "20260624",
+      "last_seen": "20260624",
+      "confirmed_in": 0,
+      "status": "pending_review"
+    },
+    {
+      "term": "Numero Domus",
+      "normalized": "numero domus",
+      "description": "Identificativo numerico univoco della pratica/domanda pensionistica nel sistema INPS; utilizzato dagli operatori come riferimento primario per l’assegnazione dei carichi di lavoro.",
+      "first_seen": "20260624",
+      "last_seen": "20260624",
+      "confirmed_in": 0,
+      "status": "pending_review"
+    },
+    {
+      "term": "CPDEL",
+      "normalized": "cpdel",
+      "description": "Cassa Pensioni Dipendenti Enti Locali: ente previdenziale con caratteristiche specifiche che influenzano il flusso di invio a FELPE (il messaggio di alert per la liquidazione è visualizzato solo per iscritti CPDEL).",
+      "first_seen": "20260624",
+      "last_seen": "20260624",
       "confirmed_in": 0,
       "status": "pending_review"
     }
@@ -395,6 +455,18 @@
       "verbale": "Verbale SAL – Reingegnerizzazione UI/UX ASI – 16/06/2026",
       "actions_count": 7,
       "sections_count": 9
+    },
+    {
+      "date": "24/06/2026",
+      "verbale": "Verbale SAL – Reingegnerizzazione UI/UX ASI – 24/06/2026",
+      "actions_count": 7,
+      "sections_count": 7
+    },
+    {
+      "date": "24/06/2026",
+      "verbale": "Verbale SAL – Reingegnerizzazione UI/UX ASI – 24/06/2026",
+      "actions_count": 7,
+      "sections_count": 7
     }
   ],
   "open_issues": [

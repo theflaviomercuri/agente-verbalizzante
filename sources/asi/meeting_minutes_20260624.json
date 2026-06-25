@@ -1,0 +1,290 @@
+{
+    "document": {
+        "title": "Verbale SAL \u2013 Reingegnerizzazione UI/UX ASI \u2013 24/06/2026",
+        "document_name": "Verbale SAL \u2013 Reingegnerizzazione UI/UX ASI \u2013 24/06/2026",
+        "document_type": "Verbale di riunione",
+        "ssu_code": "-",
+        "client_references": [
+            "Michele Friscia"
+        ],
+        "management_area": "Santina Niglio",
+        "application_code": "-",
+        "project_slug": "asi",
+        "contract_reference": "\u00abSviluppo Applicativo INPS\u00bb Lotto 2 CIG: 96497845AB",
+        "supplier": "Almaviva S.p.A.",
+        "version": "1.0",
+        "author": {
+            "name": "Mercuri Flavio",
+            "organization": "Almaviva S.p.A."
+        },
+        "history": [
+            {
+                "version": "1.0",
+                "date": "24/06/2026",
+                "description": "Versione iniziale",
+                "sections": "-"
+            }
+        ],
+        "distribution": [
+            {
+                "name": "Laferla Gianluca",
+                "role": "-",
+                "organization": "Almaviva S.p.A."
+            },
+            {
+                "name": "Mercuri Flavio",
+                "role": "-",
+                "organization": "Almaviva S.p.A."
+            },
+            {
+                "name": "Michele Friscia",
+                "role": "-",
+                "organization": "INPS"
+            },
+            {
+                "name": "Piscitelli Terenzio",
+                "role": "-",
+                "organization": "Almaviva S.p.A."
+            },
+            {
+                "name": "Tantar Ana Maria",
+                "role": "-",
+                "organization": "Almaviva S.p.A."
+            }
+        ],
+        "approvals": [
+            {
+                "version": "1.0",
+                "approval_date": "-",
+                "name": "-",
+                "organization": "-"
+            }
+        ]
+    },
+    "meeting": {
+        "date": "24/06/2026",
+        "start_time": "09:04",
+        "end_time": "10:02",
+        "location": "Videoconferenza",
+        "subject": "SAL Reingegnerizzazione UI/UX ASI \u2013 Verifica sviluppi, test flusso di lavorazione e anomalie interfaccia",
+        "participants": [
+            {
+                "name": "Laferla Gianluca",
+                "role": "Sviluppatore FE",
+                "organization": "Almaviva S.p.A."
+            },
+            {
+                "name": "Mercuri Flavio",
+                "role": "Sviluppatore Lead UI/UX FE",
+                "organization": "Almaviva S.p.A."
+            },
+            {
+                "name": "Michele Friscia",
+                "role": "Referente Cliente",
+                "organization": "INPS"
+            },
+            {
+                "name": "Piscitelli Terenzio",
+                "role": "Coordinamento progetto",
+                "organization": "Almaviva S.p.A."
+            },
+            {
+                "name": "Tantar Ana Maria",
+                "role": "Sviluppatore FE",
+                "organization": "Almaviva S.p.A."
+            }
+        ]
+    },
+    "references": [],
+    "glossary": [
+        {
+            "term": "SAL",
+            "description": "Stato di Avanzamento Lavori: riunione periodica di monitoraggio dell\u2019avanzamento del progetto."
+        },
+        {
+            "term": "UI/UX",
+            "description": "User Interface / User Experience: disciplina di progettazione delle interfacce utente e dell\u2019esperienza d\u2019uso."
+        },
+        {
+            "term": "Legacy",
+            "description": "Versione precedente dell\u2019applicativo ASI, utilizzata come riferimento per il confronto funzionale."
+        },
+        {
+            "term": "Sirio",
+            "description": "Design system di riferimento adottato per lo sviluppo dell\u2019interfaccia del portale."
+        },
+        {
+            "term": "Toast",
+            "description": "Notifica visiva temporanea sovrapposta all\u2019interfaccia, che informa l\u2019utente dell\u2019esito di un\u2019operazione. Scompare automaticamente dopo un intervallo di tempo configurabile."
+        },
+        {
+            "term": "FELPE",
+            "description": "Sistema INPS per l\u2019invio e la liquidazione dei dati pensionistici; il flusso di lavorazione ASI prevede il salvataggio delle informazioni su FELPE come passaggio finale prima della liquidazione."
+        },
+        {
+            "term": "WebDOM",
+            "description": "Portale web INPS per la gestione e la presa in carico delle domande pensionistiche. La versione 2.0 \u00e8 in sperimentazione; l\u2019ambiente ufficiale in esercizio \u00e8 Richieste2008."
+        },
+        {
+            "term": "MEV",
+            "description": "Manutenzione Evolutiva: attivit\u00e0 di sviluppo fuori dall\u2019ambito del requisito contrattuale corrente, da pianificare in una fase successiva."
+        },
+        {
+            "term": "Comparto",
+            "description": "Campo che identifica la categoria contrattuale/previdenziale del lavoratore iscritto, espresso come codice numerico nel sistema; la descrizione testuale \u00e8 derivata dal campo Contratto."
+        },
+        {
+            "term": "Numero Domus",
+            "description": "Identificativo numerico univoco della pratica/domanda pensionistica nel sistema INPS; utilizzato dagli operatori come riferimento primario per l\u2019assegnazione dei carichi di lavoro."
+        },
+        {
+            "term": "CPDEL",
+            "description": "Cassa Pensioni Dipendenti Enti Locali: ente previdenziale con caratteristiche specifiche che influenzano il flusso di invio a FELPE (il messaggio di alert per la liquidazione \u00e8 visualizzato solo per iscritti CPDEL)."
+        }
+    ],
+    "sections": [
+        {
+            "number": "1",
+            "title": "Scopo del documento",
+            "paragraphs": [
+                "Il presente verbale documenta i risultati del SAL (Stato di Avanzamento Lavori) del 24 giugno 2026 relativo al progetto di Reingegnerizzazione UI/UX dell\u2019applicativo ASI. Vengono riportati gli sviluppi verificati, le anomalie rilevate, le decisioni adottate e le azioni operative concordate tra INPS e Almaviva S.p.A."
+            ]
+        },
+        {
+            "number": "2",
+            "title": "Introduzione",
+            "paragraphs": [
+                "La riunione si \u00e8 svolta in videoconferenza tra il referente INPS e il team di sviluppo Almaviva. L\u2019incontro aveva come obiettivo principale la verifica degli sviluppi rilasciati a valle del precedente SAL e il test del flusso completo di lavorazione in ambiente di sviluppo, con particolare attenzione al completamento dell\u2019invio dati a FELPE. Sono emersi inoltre punti aperti relativi all\u2019interfaccia e alle dipendenze con sistemi esterni (WebDOM)."
+            ]
+        },
+        {
+            "number": "3",
+            "title": "Verifica sviluppi rilasciati",
+            "paragraphs": [
+                "Laferla Gianluca ha illustrato le funzionalit\u00e0 implementate a seguito del precedente SAL: integrazione della ricerca anagrafica per cognome e nome nell\u2019area operativa, analoga al Legacy; aggiunta dei pulsanti per la modifica dei dati di cessazione al servizio e dei dati economici; implementazione dei pulsanti per i benefici dei miglioramenti contrattuali; gestione dei toast con persistenza estesa a 10 secondi; correzione delle etichette con lettere accentate.",
+                "La funzionalit\u00e0 di ricerca per cognome e nome (con separatore virgola) era funzionante in locale il giorno precedente ma non risulta ancora disponibile in ambiente di sviluppo; sar\u00e0 inclusa nel prossimo rilascio."
+            ]
+        },
+        {
+            "number": "4",
+            "title": "Anomalie sul dettaglio soggetto",
+            "paragraphs": [
+                "L\u2019etichetta \u00abData cessazione\u00bb nel dettaglio di un soggetto deceduto \u00e8 stata valutata: si concorda di mantenerla invariata, in quanto il campo \u00abMotivo di cessazione\u00bb gi\u00e0 fornisce il contesto necessario per distinguere il decesso dalle altre cause di cessazione.",
+                "Si rileva inoltre una discrepanza tra la data di cessazione visualizzata nella lista (es. 2022) e quella mostrata nel dettaglio (es. 2023) per lo stesso soggetto. Il fenomeno \u00e8 attribuito a dati non consistenti nell\u2019ambiente di sviluppo e/o alla presenza di pi\u00f9 posizioni assicurative. Non sono previsti interventi applicativi; la situazione sar\u00e0 monitorata."
+            ]
+        },
+        {
+            "number": "5",
+            "title": "Anomalia campo Comparto: codice senza descrizione",
+            "paragraphs": [
+                "Nel dettaglio del soggetto, il campo Comparto mostra il codice numerico (es. \u00ab36\u00bb) senza la descrizione testuale associata, poich\u00e9 il campo Contratto risulta vuoto nell\u2019ambiente di sviluppo. L\u2019applicazione esegue gi\u00e0 la concatenazione codice+descrizione, ma in assenza del valore testuale viene visualizzato solo il codice. Si decide di verificare se il medesimo comportamento si presenta nel Legacy prima di procedere con eventuali interventi correttivi."
+            ]
+        },
+        {
+            "number": "6",
+            "title": "Flusso di lavorazione, invio a FELPE e blocco WebDOM",
+            "paragraphs": [
+                "Il flusso di completamento lavorazione con invio dei dati a FELPE \u00e8 stato testato con esito positivo su un caso idoneo. \u00c8 confermato che il messaggio di alert (\u00abPer continuare con la liquidazione, accedi a salvo informazioni su FELPE\u00bb) compare correttamente solo per gli iscritti CPDEL e non per i soggetti generici, in linea con il comportamento atteso.",
+                "Nel corso del test \u00e8 emerso un nuovo vincolo: la pratica deve essere preventivamente presa in carico su WebDOM affinch\u00e9 il flusso su ASI possa procedere. Il meccanismo dipende da regole recentemente introdotte da WebDOM, non ancora verificate dal team Almaviva. Si concorda di approfondire il funzionamento del vincolo e, se necessario, di organizzare una riunione con gli uffici amministrativi INPS. Il test completo del flusso sar\u00e0 ripetuto nella prossima call con un caso di test pulito, da identificare e comunicare da INPS."
+            ]
+        },
+        {
+            "number": "7",
+            "title": "Ricerca per numero Domus: rinvio a fase successiva",
+            "paragraphs": [
+                "Michele Friscia ha proposto di integrare la ricerca anagrafica per numero Domus per consentire agli operatori di accedere direttamente al soggetto senza dover prima recuperare il codice fiscale da WebDOM. La funzionalit\u00e0 non era presente nel Legacy. La proposta \u00e8 classificata come MEV fuori dal perimetro contrattuale corrente e rinviata a una fase successiva del progetto."
+            ]
+        },
+        {
+            "number": "8",
+            "title": "Tabella Periodo da prestazione: ripristino colonne tramite Dettaglio",
+            "paragraphs": [
+                "La nuova UI della tabella Periodo da prestazione espone meno colonne rispetto al Legacy (Retribuzione teorica, Retribuzione contrattuale e Imponibile contributivo erano state rimosse su indicazione di INPS per ridurre lo scroll orizzontale). Si concorda di aggiungere un pulsante Dettaglio che consenta di visualizzare le colonne aggiuntive su richiesta, mantenendo la vista principale snella."
+            ]
+        },
+        {
+            "number": "9",
+            "title": "Tabella anzianit\u00e0 contributiva: conformit\u00e0 al Design System Sirio",
+            "paragraphs": [
+                "La tabella dell\u2019anzianit\u00e0 contributiva riproduce la struttura del Legacy, con righe di subtotale e totale evidenziate in nero, risultando non conforme al Design System Sirio. Mercuri Flavio propone di sostituire le righe di riepilogo con intestazioni di sezione che introducano tabelle separate per ciascun blocco. Michele Friscia prende atto della non conformit\u00e0 e richiede di ricevere un mock-up della soluzione proposta prima della prossima call."
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "id": "A01",
+            "owner": "Almaviva S.p.A.",
+            "due_date": "-",
+            "status": "aperta",
+            "action": "Verificare se il campo Comparto (es. codice 36) appare senza descrizione testuale anche nel Legacy, analizzando se e per quali soggetti il campo Contratto sia alimentato in ambiente di sviluppo."
+        },
+        {
+            "id": "A02",
+            "owner": "Almaviva S.p.A.",
+            "due_date": "-",
+            "status": "aperta",
+            "action": "Rilasciare in ambiente di sviluppo la funzionalit\u00e0 di ricerca anagrafica per cognome e nome (con separatore virgola), gi\u00e0 testata e funzionante in locale."
+        },
+        {
+            "id": "A03",
+            "owner": "Almaviva S.p.A.",
+            "due_date": "-",
+            "status": "aperta",
+            "action": "Approfondire il meccanismo di presa in carico su WebDOM e valutare l\u2019impatto sul flusso di lavorazione ASI; riportare le conclusioni nella prossima call."
+        },
+        {
+            "id": "A04",
+            "owner": "INPS",
+            "due_date": "-",
+            "status": "aperta",
+            "action": "Organizzare una riunione con gli uffici amministrativi INPS per chiarire il processo corretto di presa in carico su WebDOM in relazione al flusso ASI."
+        },
+        {
+            "id": "A05",
+            "owner": "INPS",
+            "due_date": "-",
+            "status": "aperta",
+            "action": "Comunicare ad Almaviva casi di test puliti (non deteriorati da utilizzi precedenti) da utilizzare per il test completo del flusso di lavorazione nella prossima call."
+        },
+        {
+            "id": "A06",
+            "owner": "Almaviva S.p.A.",
+            "due_date": "-",
+            "status": "aperta",
+            "action": "Aggiungere il pulsante Dettaglio nella tabella Periodo da prestazione per consentire la visualizzazione delle colonne aggiuntive (Retribuzione teorica, Retribuzione contrattuale, Imponibile contributivo) su richiesta dell\u2019utente."
+        },
+        {
+            "id": "A07",
+            "owner": "Almaviva S.p.A.",
+            "due_date": "-",
+            "status": "aperta",
+            "action": "Predisporre e inviare a INPS un mock-up della nuova visualizzazione della tabella anzianit\u00e0 contributiva, conforme al Design System Sirio, da esaminare nel prossimo SAL."
+        }
+    ],
+    "notes": [
+        "Il test del flusso completo di lavorazione (invio a FELPE) sar\u00e0 ripetuto nella prossima call con un caso di test pulito, previo chiarimento del meccanismo di presa in carico su WebDOM.",
+        "La proposta di ricerca per numero Domus \u00e8 stata catalogata come MEV e rinviata a una fase successiva del progetto, fuori dal perimetro contrattuale corrente."
+    ],
+    "issues": [
+        {
+            "code": "I01",
+            "description": "Il campo Comparto visualizza solo il codice numerico senza descrizione testuale, perch\u00e9 il campo Contratto \u00e8 vuoto nell\u2019ambiente di sviluppo. Comportamento da verificare sul Legacy prima di intervenire.",
+            "severity": "media"
+        },
+        {
+            "code": "I02",
+            "description": "La presa in carico su WebDOM \u00e8 diventata prerequisito per procedere con il flusso ASI a seguito di nuove regole introdotte da WebDOM. Meccanismo non ancora chiarito; potenziale impatto sui test e sull\u2019operativit\u00e0.",
+            "severity": "alta"
+        }
+    ],
+    "generation_options": {
+        "include_summary": true,
+        "include_references_section": true,
+        "include_glossary_section": true,
+        "include_issues_section": true,
+        "date_format": "dd/MM/yyyy",
+        "empty_value_placeholder": "-",
+        "language": "it",
+        "synthesis_level": "resolved"
+    }
+}

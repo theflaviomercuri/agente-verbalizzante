@@ -1,8 +1,9 @@
 {
   "_meta": {
     "version": "1.0",
-    "total_patterns": 8,
-    "last_updated": "23/06/2026"
+    "total_patterns": 9,
+    "last_updated": "25/06/2026",
+    "project_slug": "asi"
   },
   "patterns": [
     {
@@ -472,6 +473,31 @@
       "occurrences": 1,
       "first_seen": "20260616",
       "last_seen": "20260616"
+    },
+    {
+      "pattern_id": "CRR-009",
+      "verbale": "20260624",
+      "category": "sections",
+      "changes": [
+        {
+          "field": "sections[1]",
+          "title": "Scopo del documento",
+          "original_length": 317,
+          "revised_length": 161,
+          "char_delta": -156
+        },
+        {
+          "field": "sections[7]",
+          "title": "Ricerca per numero Domus: rinvio a fase successiva",
+          "original_length": 374,
+          "revised_length": 373,
+          "char_delta": -1
+        }
+      ],
+      "description": "Il testo generato descriveva la sezione 'Scopo del documento' con un riassunto specifico del verbale (sviluppi verificati, anomalie rilevate, decisioni adottate, azioni concordate). L'utente ha sostituito l'intero contenuto con la frase boilerplate fissa del template INPS: 'Il presente documento riporta la trascrizione di quanto è stato discusso e stabilito durante lo svolgimento della riunione.' Nella sezione 7, il termine 'contrattuale' è stato corretto in 'progettuale' per riferirsi al perimetro del progetto e non a quello contrattuale. → In FASE 2, la sezione 'Scopo del documento' deve contenere esclusivamente la frase boilerplate standard del template, senza riassumere il contenuto del verbale; per le MEV rinviate, usare 'perimetro progettuale' anziché 'perimetro contrattuale'.",
+      "occurrences": 1,
+      "first_seen": "20260624",
+      "last_seen": "20260624"
     }
   ]
 }

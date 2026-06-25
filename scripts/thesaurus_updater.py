@@ -287,9 +287,11 @@ def main() -> None:
         print(f"ERRORE: JSON malformato in {verbale_path}: {e}")
         sys.exit(1)
 
-    # Resolve knowledge base directory from project_slug
+    # Resolve knowledge base directory and thesaurus filename from project_slug
+    slug = verbale.get("document", {}).get("project_slug", "").strip()
     kb_dir = resolve_kb_dir(verbale)
-    thesaurus_path = kb_dir / "thesaurus.json"
+    thesaurus_filename = f"thesaurus_{slug}.json" if slug else "thesaurus_global.json"
+    thesaurus_path = kb_dir / thesaurus_filename
 
     # Derive YYYYMMDD from filename
     stem = verbale_path.stem
