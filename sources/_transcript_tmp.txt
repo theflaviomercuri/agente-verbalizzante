@@ -1,1221 +1,1549 @@
-Reingegnerizzazione UIUX ASI-20260624_110448-Registrazione della riunione
-24 giugno 2026, 09:04AM
-58 m 27 s
+Reingegnerizzazione UIUX ASI-20260630_150617-Registrazione della riunione
+30 giugno 2026, 01:06PM
+1 h 6 m 18 s
 
 Mercuri Flavio trascrizione avviata
 
 Michele Friscia   0:03
-No vabbè, però.
-Devo anche beccare le posizioni corrette.
-Cioè nel senso che mi danno non so poco fa, adesso c'era.
+Un caso.
+Aspetta, torni indietro perché vi faccio vedere una cosa che.
+Allora qui c'è.
+Qui c'è tra la XE il tasto c'è una sovrapposizione, non so se la vedete.
 
-Mercuri Flavio   0:13
-In questo non so, forse ti può aiutare, forse ti puoi aiutare un po a Terenzio in questo.
-Se c'ha qualche codice fiscale?
+Mercuri Flavio   0:34
+Io non vedo proiezioni, c'ho gli altri.
 
-Michele Friscia   0:20
-C'è.
-
-Mercuri Flavio   0:27
-Io t'ho perso Michele, non so se gli altri t'hanno sentito.
-
-Michele Friscia   0:29
-Grazie.
-
-Piscitelli Terenzio   0:32
-No, anche io.
-
-Michele Friscia   0:33
-No, non so, dipende da è perfetta. Sto provando adesso uno ma mi sa.
-Dalla che si dà comunque voi avete fatto, avete rilasciato qualcosa?
-
-Mercuri Flavio   0:55
-Allora non so, non ho capito bene se è stato già rilasciato in tutto sviluppo, però probabilmente Gianluca ha finito di fare qualche qualche modifica già ieri.
-
-Laferla Gianluca   1:08
-Sì.
-Tutte le cose emerse all'ultimo sal sono già in sviluppo, mentre quelle emerse con Terenzio ieri ancora no.
-
-Mercuri Flavio   1:15
-OK.
-OK, noi nel frattempo Michele stiamo facendo qualche giretto anche noi e quindi ogni tanto esce fuori qualcosa e la correggiamo autonomamente quando quando riusciamo. Poi c'è un tema invece che.
-Dobbiamo un attimo discutere insieme perché noi tra di noi non ci siamo risolti e dopo lo vediamo. Nel frattempo come vogliamo fare? Vogliamo partire dalle cose sistemate da che erano emerse nello scorso Sal e che abbiamo sistemato. Iniziamo a vedere quelle.
-
-Michele Friscia   1:51
-Sì, va bene, io mi sembra che il soste è più è più persistente.
-
-Mercuri Flavio   1:59
-OK, vuoi provare tu? Sento che credo che tu c'abbia una connessione un po non elegantissima.
-
-Michele Friscia   2:03
+Laferla Gianluca   0:37
 No.
-E sì, esatto, non è proprio il massimo.
 
-Mercuri Flavio   2:10
-Te te perdiamo, te perdiamo un po frequentemente, se vuoi magari fanno un giro i ragazzi, o Gianluca o Anna, vedete voi chi.
+Michele Friscia   0:38
+No, non mi sto, non mi stavo condividendo, quindi si aspetta.
+E Terenzio mi fai il relatore?
 
-Michele Friscia   2:10
-Allora?
-
-Mercuri Flavio   2:18
-È più.
-
-Michele Friscia   2:21
-Io se andate su pensione su prestiti, se andate sulla.
-
-Laferla Gianluca   2:21
-Sì, volendo.
-Lo sviluppo su.
-
-Mercuri Flavio   2:23
-Vai.
-Proiettate, ragazzi.
-
-Laferla Gianluca   2:26
+Piscitelli Terenzio   0:46
 Sì.
+Bye.
 
-Michele Friscia   2:27
-Se andate sulla lista dei giochi superstiti.
-Aurora.
-Andando su Roma, Roma EUR.
-Ecco, prendi questo donato, il primo donato.
-Montefiori, grazie Occidentali, esatto.
+Michele Friscia   1:10
+Quando si inserisce il nome qua c'è fra la XE il pulsante c'è una sovrapposizione, non so se la vedete.
 
-Laferla Gianluca   3:19
-Si sente?
-Si sente un po male l'audio.
+Mercuri Flavio   1:21
+Non solo la vediamo, ma mi sa che quella è.
+Allora la sovrapposizione, diciamo, interviene quando viene.
+Mostrato il contorno che corrisponde al focus, purtroppo questa lo sai che è una configurazione che è già così nella libreria vostra.
 
-Michele Friscia   3:24
-C'è comparto 36, compare il codice e non la descrizione.
+Michele Friscia   1:38
+Sì, con tutto.
 
-Laferla Gianluca   3:32
-Manca la descrizione.
+Mercuri Flavio   1:48
+Non fa impazzire nemmeno noi e anche noi ci siamo interrogati sulla possibilità di intervenire per generare un po' di spazio tra la casella e il bottone, però boh c'ho paura che poi magari noi la.
 
-Michele Friscia   3:35
-E anche la codifica è vuota, se invece vai su sulle c'è il contatto della codifica.
+Michele Friscia   2:04
+Ma solo solo su questo l'ho visto o perché c'è solo questa questo pulsante, questa.
 
-Mercuri Flavio   3:50
-Scusa Michele, però ti sentiamo proprio veramente non arriva niente, arriva una specie di cosa robotica che non riusciamo a decifrare.
+Mercuri Flavio   2:09
+Questo qua, quello che tu vedi, è un elemento che esiste, è proprio una ricerca già formalizzata dalla libreria de dell'Inps.
+Capito? Non l'abbiamo composta noi, come detto, come un form, è proprio un elemento.
 
-Laferla Gianluca   3:51
-Perdonami, non ho sentito.
-
-Mercuri Flavio   4:06
-Dicci, cioè scrivici eventualmente come ti possiamo aiutare perché proprio non sentiamo niente.
-
-Michele Friscia   4:18
-Proprio sentite?
-
-Mercuri Flavio   4:21
-Forse è un po meglio.
-
-Michele Friscia   4:24
-Io faccio.
-
-Mercuri Flavio   4:26
-Sì, dai, prova a ripetere il concetto, così capiamo pure come.
-
-Michele Friscia   4:31
-Allora lì sul contratto c'è il sul comparto c'è il codice, non la descrizione.
-
-Mercuri Flavio   4:37
-O che deve essere invece codice e descrizione o solo descrizione?
-
-Michele Friscia   4:41
-Descrizione, descrizione.
-
-Mercuri Flavio   4:42
-Gianluca, per favore, potresti aprire il network così vediamo che dati, se arrivano tutti STI dati dove stanno, come si chiamano e ti prendi appunti.
-
-Laferla Gianluca   4:43
+Michele Friscia   2:20
 Sì.
-
-Piscitelli Terenzio   4:51
-Va beh Michele, però una cosa nel senso in questi casi qui magari hai verificato per caso anche se la versione normale restituisse 36 anziché la descrizione, perché poi magari questo potrebbe essere un problema.
-Che avevamo già.
-
-Michele Friscia   5:08
-No.
-Non ho capito Terenzio.
-
-Mercuri Flavio   5:13
-Content, Gian.
-
-Piscitelli Terenzio   5:14
-Intendevo dire se avevi verificato se comparisse 36 anche sulla versione attuale del software.
-
-Michele Friscia   5:22
-No, non lo so, non lo so, questo non l'ho visto.
-
-Mercuri Flavio   5:24
-Quello è comparto.
-
-Piscitelli Terenzio   5:24
-OK, no, perché poi no, perché può darsi che c'abbiamo lo stesso problema, magari anche su quello attuale.
-
-Michele Friscia   5:29
-E se ho rifuso?
-
-Mercuri Flavio   5:35
-Ma diciamo che Se però lui se in questo momento si ritiene che sia meglio avere un'altro dato non lo possiamo mettere tranquillamente, solo che bisogna trovare qual è dentro a queste 36 è scusa Gianluca sali un attimo 36 che come si chiama il campo?
-
-Laferla Gianluca   5:52
-Comparto.
-
-Mercuri Flavio   5:53
-36 è comparto e quindi la descrizione quale dovrebbe essere relativa al comparto.
-
-Michele Friscia   6:02
-Comportante sei contratto, forse sta nel contratto.
-
-Mercuri Flavio   6:09
-No, scendi, scendi Gianluca, sì, forse sta nel contratto, ma che è come che cioè che forma dovrebbe avere, come faccio un esempio.
-
-Laferla Gianluca   6:17
-Perché ci sta arrivando vuoto a noi qui contratto.
-
-Michele Friscia   6:24
-Sì, dovrebbe essere quella la descrizione del comparto.
-
-Mercuri Flavio   6:27
-OK, allora probabilmente probabilmente già la concateniamo, solo che non essendoci non vediamo la concatenazione.
-
-Michele Friscia   6:34
-Però però ci mette dei 36, non so se viene se viene fuori 36 più, che so, scuola, cioè contratto scuola.
-
-Mercuri Flavio   6:41
-Sì, probabilmente la facciamo già la concatenazione, solo che siccome il campo è vuoto concatena una stringa vuota, quindi vedi 36 vuoto.
-
-Laferla Gianluca   6:50
-Ci fosse un valore qui lo stamperebbe, sì.
-
-Mercuri Flavio   6:51
-Se ci esatto.
-Non so se c'abbiamo un caso in cui magari sto contratto c'è.
-
-Michele Friscia   7:06
-E qui non l'ho visto, vedi la colonna contratto qui è sempre vuota.
-
-Laferla Gianluca   7:11
-Grazie.
-E gli unici due casi presenti hanno tutti e due il 36.
-Potrei controllare il Legacy e vedere, ma mi aspetto che stampi anche il Legacy solo il 36 perché non gli arriva comunque un'altro dato oltre quello.
-
-Michele Friscia   7:39
-Poi qui, sempre sul dettaglio, c'è la data di cessazione, però questo è deceduto, quindi dovrebbe essere data di decesso.
-E non cessazione.
-
-Laferla Gianluca   7:55
-Questa è data di decesso, OK?
-
-Michele Friscia   7:58
-Sì.
-Questo contesto o si mette data cessazione slash decesso.
-Si cambia.
-
-Mercuri Flavio   8:25
-Dicci, dicci tu, Michele, che dobbiamo mettere dalla cessazione o dal decesso?
-
-Michele Friscia   8:30
-Ci possiamo mettere? Terenzio, che ne pensi? Mettiamo data, data, cessazione, slash, decesso.
-Così prendiamo tutti e due i casi.
-
-Piscitelli Terenzio   8:47
-Sì.
-Data di cessazione barra decesso, cioè nel senso che lui poteva anche lasciare, si poteva anche lasciare data di cessazione tanto.
-Cioè anche se metti decesso sì, fai capire che lì c'è anche un decesso, ma poi non riesci però a capire se quella cessazione del decesso da questa schermata qui.
-Anzi, va beh, lo dovresti leggere dal motivo di cessazione, se presente sì decesso. Però tecnicamente data di cessazione e motivo di cessazione insieme dovrebbe già. Cioè se tu leggi decesso e motivo di cessazione, dovresti capire che la data di cessazione dovrebbe dovrebbe essere la data di decesso.
-
-Michele Friscia   9:34
-Sì, vabbè, per intuizione sì, vabbè.
-Niente, lasciamo così, dai.
-
-Piscitelli Terenzio   9:41
-Sì, secondo me non serve aggiungere ulteriore dettaglio.
-
-Michele Friscia   9:43
-Sì, Ciao.
-Va bene poi quando si va nella nell'area operativa c'è in alto data decesso.
-Altro Aspe che mi ricordo.
-Però questo forse è un problema collegato a questo, a questo.
-La posizione assicurativa, perché se guardi.
-Allora vedo, vedo voi.
-Ecco data di recesso, qui è scritto 2022.
-Mentre se vai nel dettaglio la schermata di prima c'è scritto data cessazione 2023, secondo me lì si mischiano le varie posizioni posizioni assicurative.
-Vedi cessazioni 2023, quindi questo è morto prima e poi cessa dopo, diciamo, è un po un punto senso.
-
-Piscitelli Terenzio   10:59
-Va sì, ma non lo so, a me siamo sulla mia.
-
-Michele Friscia   11:02
-Saranno i dati sporchi, insomma, queste cose qui.
-
-Piscitelli Terenzio   11:05
-E l'ambiente di sviluppo, questo non so se hanno fatto qualcosa per.
-
-Michele Friscia   11:10
 Vabbè.
 
-Piscitelli Terenzio   11:13
-Vabbè, diciamocelo, segniamo, verifichiamo, insomma.
+Mercuri Flavio   2:24
+Non so se Gianluca vuoi però andare da qualche parte pure su l'Internet di per vedere se.
 
-Michele Friscia   11:15
-No vabbè, ma questo secondo me perché su questa pratica ti fai 1000 domande, cioè tante domande, quindi magari c'hai un po' di dati sporchi, vabbè OK.
-Va bene, vediamo un po cosa avete.
-Cosa avete riportato di sviluppo?
+Laferla Gianluca   2:28
+Sì, stavo, stavo controllando e anche in altre search bar fa esattamente la stessa cosa che al click si evidenzia e quel bottone sì.
 
-Laferla Gianluca   11:37
-Allora tra le cose che abbiamo aggiunto nell'area operativa di home abbiamo integrato la ricerca come era fatta per il Legacy, quindi attualmente si può cercare nome o cognome.
+Mercuri Flavio   2:35
+Ma son così vicini, prova un attimo su Internet, perché questo sta molto su Internet, questo componente pure sul sito dell'Inps proprio.
 
-Michele Friscia   11:46
+Laferla Gianluca   2:43
+Controllo.
+
+Mercuri Flavio   2:49
+Ma perché non sei tu che Proietti è Paolo Michele, OK, vabbè.
+
+Michele Friscia   2:52
 Sì.
+Allora su questo questa è 1 1 pratica che ho fatto per solo per simulare la pensione e vabbè c'ha.
+Un conto assicurativo.
+Caricato eccetera eccetera, però quando vado a inserire i dati dati di registrazione si blocca, quindi magari c'è qualcosa che gli dà il nome, mi dà fastidio.
 
-Laferla Gianluca   11:55
-Inserendo.
-Il primo andrà messo nel cognome, nel secondo nel nome, nel caso in cui invece c'è un nome composto de virgola Luca Antonio.
-
-Michele Friscia   11:59
-OK.
-
-Laferla Gianluca   12:14
-Forse ho sbagliato con la spazzatura?
-Ma dove va attaccato, forse?
-E non mi ricordo Ana.
-
-Michele Friscia   12:34
-Ci dovrebbe essere lo spazio, credo.
-
-Laferla Gianluca   12:34
-Sì.
-
-Tantar Ana Maria   12:34
-No, era dove sì, devi mettere lo spazio sulla virgola.
-
-Laferla Gianluca   12:37
-Lo spazio anche a me.
-Spazio virgola.
-
-Tantar Ana Maria   12:44
-No virgola, spazio e poi il nome.
-
-Laferla Gianluca   12:56
-Non lo prende.
-
-Tantar Ana Maria   12:56
-Non te l'ha preso, ma penso che sia.
-
-Laferla Gianluca   13:02
-Dovremmo non averlo mandato questo in sviluppo.
-
-Tantar Ana Maria   13:06
-No, sì, l'abbiamo mandato, però ieri funzionava.
-
-Laferla Gianluca   13:08
-L'abbiamo testato infatti ieri.
-
-Tantar Ana Maria   13:09
-Abbiamo abbiamo testato ieri.
-
-Mercuri Flavio   13:13
-Allora vi direi se uno dei due può condividere il locale, intanto vediamo la funzionalità locale e poi cerchiamo di capire che è successo nel porting sviluppo.
-
-Tantar Ana Maria   13:26
-Considera a me non me sta a partire proprio la VPN inps adesso in questo momento quindi non riesco.
-
-Mercuri Flavio   13:32
-Guarda che non.
-
-Laferla Gianluca   13:32
-Due minuti e lo tiro su io.
-
-Tantar Ana Maria   13:32
-Però in qualsiasi caso, in qualsiasi caso, comunque il cioè il funzionamento è quello.
-
-Mercuri Flavio   13:35
-Vai, Gianluca.
-
-Tantar Ana Maria   13:45
-E poi se metti il codice fiscale ti va direttamente su da dimensionato.
-
-Laferla Gianluca   13:49
-Sì.
-A dove stiamo?
-Sì.
-Tanto che si tira su jboss, vi faccio vedere altre cose che abbiamo implementato, tra cui.
-
-Michele Friscia   14:12
-Lì nella ricerca anagrafica ce lo puoi mettere anche il numero Domus, ve l'ho già detto, mi sa.
-La volta scorsa come evoluzione.
-
-Laferla Gianluca   14:22
-Sì.
-All'interno qui della ricerca anagrafica.
-
-Michele Friscia   14:28
-O anche o anche all'inizio, se metti il codice fiscale, nome, cognome o numero Domus.
-
-Laferla Gianluca   14:36
-OK.
-
-Michele Friscia   14:37
-Vai direttamente sulla domanda di quella.
-
-Laferla Gianluca   14:42
-Il microservizio per fare ciò immagino ce l'abbiamo già predisposto.
-Quindi qui anche con numerus.
-
-Tantar Ana Maria   14:58
-Nella ricerca.
-
-Michele Friscia   15:00
-Sì, cioè diciamo che dal numero Domus dovresti beccare il codice fiscale e rifai poi.
-
-Tantar Ana Maria   15:08
-Però dal numero domus non era fatto neanche nel Legacy, quindi non so neanche se potrebbe funzionare.
-
-Michele Friscia   15:13
-No, non c'è nel Legacy. No, nel Legacy non c'è. No, questo è come evolutiva, non c'è nel Legacy.
-Vabbè, questo quando?
-Se è possibile fare, insomma, però non è non è nel Legacy.
-
-Mercuri Flavio   15:38
-OK, allora mi sa che è 1 1 mev.
-Del di una fase diversa da questa.
-
-Michele Friscia   15:45
-Sì.
-
-Mercuri Flavio   15:48
-Non so se ce lo possiamo appuntare noi o se magari Terenzio deve prendere.
-
-Piscitelli Terenzio   15:50
-Ma Michele, perché dovremmo un numero Domus per una ricerca anagrafica?
-
-Michele Friscia   15:58
-E loro vanno col numero Domus e molti da web non vanno col numero Domus.
-
-Piscitelli Terenzio   16:04
-Ma se tu sul web vai a fare la ricerca col numero Domus ti tira fuori i dati della domanda, tra cui anche il soggetto, quindi non è che ti tira fuori però.
-
-Michele Friscia   16:05
-Sì.
-Certo però il web non producono elenchi non più di codici fiscali, ma elenchi di numero Domus, cioè si distribuiscono alle gli operatori mi devi fare queste domande con questo numero Domus.
-Non dovrebbero avere più codici fiscali.
-Quindi loro vanno prendete uno dopo, vanno sul web, lo vanno a vedere il codice fiscale e poi lo ribaltano qui.
-OK, per evitare questo giro, se fai metti di nuovo Domus, becchi direttamente la persona.
-
-Piscitelli Terenzio   17:00
-Becchi direttamente la persona per modo di dire, nel senso che se io sono in una ricerca anagrafica dove diciamo lo scopo è quello di tirar fuori l'anagrafica del soggetto, significa che devo fare un doppio giro, prima chiamo webcam e poi chiamo arc.
+Mercuri Flavio   3:15
 No.
 
-Michele Friscia   17:14
-Sì.
+Michele Friscia   3:24
+Quindi io vi passerei il codice fiscale.
+Per vedere un po.
+Le cause?
 
-Piscitelli Terenzio   17:15
-Però non può essere una cosa che dici tu Michele, che io vado direttamente sulla domanda, cioè se stai in ricerca anagrafica io ti devo tirare fuori l'anagrafica quello mi stai chiedendo?
+Piscitelli Terenzio   3:40
+No, in realtà Michele abbiamo già qui, cioè proprio non è non dipende dal codice fiscale, lo fa con tutti i casi in cui inseriamo per la prima volta, diciamo i dati di cessazione.
 
-Mercuri Flavio   17:17
-E.
+Mercuri Flavio   3:51
+Emanuele.
 
-Michele Friscia   17:26
-Sì.
+Laferla Gianluca   3:53
+E vi confermo che è già stato risolto, non potete vederlo perché è ancora in locale, ma è già risolto il problema.
 
-Mercuri Flavio   17:26
-Scusate però, giacché è una conversazione che comunque dovrà essere rimandata a una fase diversa, perché evidentemente nella med forse non sì, non ne parlerei adesso.
+Michele Friscia   4:01
+Questo problema dicevi di caricamento OK.
 
-Michele Friscia   17:34
-La rimandiamo.
-OK.
+Laferla Gianluca   4:02
+Sì, il Legacy lo gestisce bene, anche se riceve un errore e la nuova UI si bloccava proprio per quell'errore, quindi invece adesso lo ignora anche la nuova UI.
 
-Mercuri Flavio   17:38
-Grazie.
+Michele Friscia   4:14
+OK, allora?
 
-Laferla Gianluca   17:42
-Allora io proseguirei facendovi vedere l'ultimo miglio perché mancavano vari pulsanti della sezione.
+Mercuri Flavio   4:16
+Michele, nel frattempo ho messo dentro alla Chattina, ho messo uno screenshot di come è fatto il sito.
+Il sito, proprio il sito dell'Inps pure è proprio sì, è proprio un elemento fatto così, col bottone subito attaccato al.
 
-Michele Friscia   17:50
-Sì.
+Michele Friscia   4:24
+La ricerca.
+Le ricerche dici?
 
-Laferla Gianluca   18:21
-Allora intanto mancava l'alert per essere allineato al Legacy. In più adesso appare il pulsante per la modifica dati cessazione al servizio. Stessa cosa per la modifica dei dati.
-Economici.
-E tutti i dati che venivano mostrati anche da Legacy sono stati messi nella tabella nuova UI. Abbiamo anche messo il background per distinguere le voci retributive rispetto al resto che prima risultavano.
+Mercuri Flavio   4:32
+Laser bar.
 
-Michele Friscia   18:56
-Sì.
+Laferla Gianluca   4:32
+Quello che ho notato dalla homepage è che il sito dell'Inps non evidenzia al click, quindi mi sa che gli hanno tolto proprio quel comportamento di bordino.
 
-Laferla Gianluca   18:57
-Essere la stessa sezione.
-La modifica ovviamente si attiva nel momento in cui si ripristina la lavorazione, probabilmente è corretto che non sia cliccabile.
-
-Michele Friscia   19:15
-Sì, fai ripristina lavorazione.
-
-Laferla Gianluca   19:19
-Sì.
-Disattiva il pulsante al click è possibile modificare i campi.
-Si risalvano i dati.
-Cioè il toast adesso li abbiamo messi persistenti a 10 secondi, quindi rimangono per un po', poi volendo anche quando sono corti adesso rimangono per più tempo, è sicuro che vengano letti e alla verifica.
-De confermare.
-Le voci retributiva.
-E va a buon fine.
-
-Michele Friscia   20:11
-Mi ritorni di là, vediamo se si possono mettere i benefici dei miglioramenti contrattuali che prima non si potevano mettere.
-
-Laferla Gianluca   20:25
-Erano questi benefici alla cessazione?
-
-Michele Friscia   20:28
-Fai ripristino lavorazione.
-
-Laferla Gianluca   20:29
-Contrattuale, sì.
-Sì, compaiono i due nuovi pulsanti anche con la nuova icona del più.
-
-Michele Friscia   20:38
+Michele Friscia   4:32
 Ok.
+
+Mercuri Flavio   4:41
+No, in realtà quello non si può. Quello non si può togliere perché quello comunica con comunica gli eventi con al browser e quindi non lo puoi togliere per questioni di accessibilità. Quello che succede è che per esempio sul sito dell'Inps.
+
+Laferla Gianluca   4:51
 Sì.
 
-Laferla Gianluca   20:46
-Nell'inserimento si sbloccano i campi, possono essere resettati.
-E stessa cosa sotto.
-Con tutti i propri disposti.
+Michele Friscia   4:51
+Ma.
 
-Michele Friscia   21:05
+Mercuri Flavio   4:55
+Quando premi per avere il focus della casella succedono altre cose, il fondo diventa blu, quindi quello lo perdi.
+
+Laferla Gianluca   5:01
+Sì.
+
+Mercuri Flavio   5:03
+Però diciamo che è così, quindi voglio dire, questa è una responsabilità demanda.
+
+Michele Friscia   5:06
+Ma ti devo fare lo screenshot, non ho capito.
+
+Mercuri Flavio   5:10
+De che?
+No, io te l'ho, io ho mandato nella chatina di questa conversazione, ho mandato uno screenshot che ho preso dal sito dell'Inps in cui vedi che anche lì sono attaccati il bottone e la e la search bar.
+
+Michele Friscia   5:12
+Mi ha detto.
+OK.
+OK.
+Ecco, sì.
+Va bene?
+
+Mercuri Flavio   5:33
+Ok, tu hai visto, avevi avuto modo di vedere qualcos'altro in settimana che t'aveva?
+
+Michele Friscia   5:36
+Sì.
+Centro.
+Paolo è arrivato.
+Allora questo qui?
+Data felicità.
+E quando vado a ripristinare la lavorazione?
+E modificare i dati economici solo su questo caso mi sembra se io scrivo.
+5 zeri sì, vabbè, sbaglia qui la separazione delle migliaia, il punto.
+
+Mercuri Flavio   6:22
+Ciao.
+
+Michele Friscia   6:22
+Però in realtà lo memorizza bene alla fine, quando vado a salvare eccetera.
+
+Mercuri Flavio   6:26
+Bene.
+OK, sì, è un fatto di esposizione.
+
+Michele Friscia   6:29
+Cioè qui non si vede, però se vado a vedere poi dopo la pratica il CAP eccetera me lo mette corretto, cioè mette i 10.000.
+
+Mercuri Flavio   6:41
+E sì, perché poi quando salvi comunque non ci stanno divisori, quando salvi il numero è integrale.
+
+Michele Friscia   6:49
+Però.
+
+Mercuri Flavio   6:51
+Devo reggere, sì.
+
+Laferla Gianluca   6:53
+Sì, questo ce l'aveva evidenziato Terenzio, quando c'è la doppia cifra dopo il migliaio c'è il puntino, se c'è una sola cifra non lo mette e ha in lavorazione anche questo.
+
+Michele Friscia   6:53
+Storno.
+Sì, ma solo su questo campo qui però non credo.
+
+Laferla Gianluca   7:13
+E se metti tipo 3000 dovrebbe togliertelo.
+
+Mercuri Flavio   7:14
+Beh, comunque.
+
+Michele Friscia   7:16
+Aspetta, no, anche qui.
+
+Laferla Gianluca   7:18
+Sì.
+
+Mercuri Flavio   7:22
+Verifica che facciamo su tutto, diciamo su tutto.
+
+Michele Friscia   7:28
+Va beh, a parte qui questo.
+Allora mettiamo dei colori giusti.
+Andiamo ai dati economici.
+Quando mi fa inserire gli economici?
+Mi dice giustamente verifiche degli integrativi, non lo puoi fare.
+Perché devo confermare le cose retributive?
+OK.
+E tu no qua però non me lo fa, non mi fa salvare.
+Allora?
+Dobbiamo.
+
+Laferla Gianluca   8:50
+È possibile che al click di salva dati economici dovrebbe apparire un alert che in Lega si mostra e la nuova UI ancora non mostra. Anche questo è uno dei punti che ci aveva evidenziato terenzio e anche questo è in sviluppo.
+
+Michele Friscia   9:01
 Bene.
 
-Laferla Gianluca   21:11
-Da avevamo una sequenza che ci avevate sottolineato di vari piccoli errori di lettere accentate e non quelle sono state corrette tutte, non ve le farei vedere tutte in questo frangente perché sono sparse in vari punti.
+Mercuri Flavio   9:10
+Ma c'è una rotta agganciata, Michele, ti posso chiedere di aprire l'inspector?
+
+Michele Friscia   9:14
+Cosa?
+
+Mercuri Flavio   9:16
+Ti posso chiedere di aprire l'inspector se premi F 12?
+OK, adesso dovresti andare nella scheda.
+Rete, ci stai già OK, prova a premere quel bottone, a modificare le voci retributive e a salvare.
+Non succede niente.
+
+Michele Friscia   9:49
+No.
+
+Mercuri Flavio   9:51
+Non c'è una, non c'è un'azione agganciata.
+O forse è esploso il front end prima e quindi non sta?
+
+Michele Friscia   9:57
+Perché prima mi ha funzionato, quindi mi sa che forse.
+
+Mercuri Flavio   10:01
+Sì, perché forse l'abbiamo fatto esplodere prima, quando esplode così ogni tanto non poi non se non se riacchiappa.
+
+Michele Friscia   10:09
+Faccio refresh secondo voi oppure oppure?
+
+Mercuri Flavio   10:11
+Sì, fai un refresh, fai un refresh.
+Solo io vedo.
+Molto male.
+
+Laferla Gianluca   10:27
+No, anche io da subito, dall'inizio.
+
+Michele Friscia   10:28
+No.
+
+Mercuri Flavio   10:30
+OKOKOK.
+OK, sempre se riesci a riaprire il l'inspector, vediamo se parte qualcosa stavolta.
+Non c'è bisogno perché evidentemente è partito visto.
+
+Michele Friscia   10:46
+Me l'ha stampato.
+
+Mercuri Flavio   10:47
+OK quindi questo correggendo quell'errore di prima che del caricamento infinito poi non si rompe più il front end e questi problemi non ce l'abbiamo più.
+
+Michele Friscia   10:59
+Allora poi su questo ho fatto la riverifica del diritto.
+E.
+Sì, questo non l'ho fatto.
+Allora qua quello che ho notato è che.
+Vabbè qua questo queste sezioni riferimento domanda se si potessero mettere in un rettangolo, anche se non so se lei non mi ricordo se c'è o non c'è.
+
+Mercuri Flavio   11:46
+Ma allora mi ricordo che ne avevamo già parlato, forse l'abbiamo anche già fatto un intervento del genere.
+
+Laferla Gianluca   11:50
+Sì, ce l'abbiamo già.
+
+Mercuri Flavio   11:53
+Era su questo?
+
+Michele Friscia   11:55
+Era su, forse era su un'altro, mi pare, non so, non mi ricordo.
+
+Laferla Gianluca   12:00
+Ne avevamo uno in ultimo miglio.
+
+Michele Friscia   12:02
+E l'avete fatto quello?
+
+Laferla Gianluca   12:04
+Sì, allora no, questo forse ci manca, dati pensionistici.
+
+Michele Friscia   12:10
+Tipo domande, periodo domande dei pensionistici.
+Paola, avrei visto senza di te.
+
+Capobianco Paolo   12:19
+No, sì, hai fatto bene, non ti preoccupare.
+
+Michele Friscia   12:22
+Allora meglio.
+
+Mercuri Flavio   12:23
+Ciao Paolo, ben giunto.
+
+Michele Friscia   12:25
+Allora su invece sulle normative, cliccando qui su azioni fa vedere i vincoli.
+Però li fa vedere quaggiù.
+Giusto, l'avete messo qui e mi chiedevo, non è meglio metterli come sotto forma di dettaglio che si apre con la schermata AA lato anziché metterla sotto?
+O magari non lo vede peggio?
+
+Capobianco Paolo   12:56
+No, più che altro non si capisce a quale dei due si riferisce.
+
+Michele Friscia   13:00
+Sì, c'è questo punto, non si capisce a quale di cui si riferisce.
+
+Mercuri Flavio   13:08
+No, aspettate un attimo.
+Allora, andando per ordine.
+
+Capobianco Paolo   13:13
+Il tuo telefono dove sta?
+
+Mercuri Flavio   13:15
+Diciamo che la modalità di aprire la tabella sotto è un ormai l'abbiamo credo interiorizzata la usiamo in altri punti.
+Che sicuramente rende più comodo, diciamo.
+Allora io non so molto.
+Confidente rispetto all'inserimento di tabelle dati in forma tabellare nel nella nella nella modale drawer, che è quella che esce dal lato.
+
+Michele Friscia   13:46
+Sì.
+
+Mercuri Flavio   13:47
+Infatti finora quando l'abbiamo utilizzata abbiamo usato delle forme tabellari leggere insomma che non ora. Se questi sono dati diciamo che hanno una.
+Non un'importanza così, cioè che so dati di corredo è un conto, se invece questi sono dettagli importanti secondo me invece è il caso di tenerli di tenerli in questa in questa maniera.
+Rispetto al fatto che non si capisca a quale dei due record è relazionato, a quale record in generale questo bisogna un attimo capire se quale, cioè qual è la relazione che vi aspettereste, cioè in che.
+Questi sono la descrizione di cosa, per esempio noi potremmo mettere lì dove c'è scritto vincoli verificati, potremmo mettere vincoli verificati per cosa?
+
+Michele Friscia   14:43
+Cioè.
+O qua se io clicco qui questo è il video dedicato è per questo tipo di normativa o si evidenzia questo, cioè la riga che evidenziata, cioè un segno di.
+
+Mercuri Flavio   14:53
+Esatto, ma e qual è, cioè che quale?
+
+Michele Friscia   15:00
+Punto non lo so, cioè questo si deve agganciare al primo che ho cliccato.
+
+Mercuri Flavio   15:05
+Sì, certo, naturalmente, però dovremmo mettere sì.
+
+Capobianco Paolo   15:06
+Allora Flavio ascolta Flavio, queste normative no che sono state verificate, in realtà non c'hanno un titolo che è una descrizione estesa soltanto, non c'è un titolo semplificativo, come ti voglio dire.
+
+Mercuri Flavio   15:12
+Sì.
+Mhm.
+Sì, sarebbero queste sarebbero.
+
+Capobianco Paolo   15:23
+Ok, non c'è normativa 128 e normativa 263, c'è una descrizione estesa no che tutta questa requisiti per iscritto donne con iscrizione anteriore a 1985 prestazione servizio dal.
+
+Mercuri Flavio   15:32
+Sì.
+
+Capobianco Paolo   15:38
+1 gennaio 2012 e così via OK ora per poter legare eventualmente questi il la riga a cui si riferiscono i dati che stanno al di sotto.
+
+Mercuri Flavio   15:51
+Sì.
+
+Capobianco Paolo   15:52
+E tu oggi non ci avresti altro che andare a mettere questa descrizione a fianco a vincoli verificati un qualcosa del genere immagino, no, questo di questo parlavi tu, giusto?
+
+Mercuri Flavio   16:00
+No, però a questo punto io io a questo punto io ti darei una ti darei una soluzione. Sì, però ti darei una soluzione più ho visto che m'hai chiarito il problema di darei una soluzione più robusta e la soluzione più robusta è che visto che questo.
+Dover leggere tutta la descrizione della del della normativa devi andare a consultare l'ellipsis, cioè appoggi al mouse.
+
+Capobianco Paolo   16:26
+Sì.
+
+Mercuri Flavio   16:28
+In realtà forse nel momento in cui tu vai a vedere il dettaglio io direttamente sopra la tabellina dei vincoli verificati metti un se metti un titolino in cui si dice descrizione della normativa e sotto si.
+Si rimette per esteso la descrizione della normativa, così se uno vuole può leggere la descrizione intera contestualmente alla visione dei dati esplosi.
+Non so se.
+
+Capobianco Paolo   16:59
+Sì, ma invece fare un qualcosa come sta nel.
+Relativo.
+
+Mercuri Flavio   17:07
+Nel Legacy non francamente non me lo ricordo. Se ce l'avete aperto lo vediamo insieme e capiamo no.
+
+Capobianco Paolo   17:08
+E conviene lei che si.
+
+Michele Friscia   17:11
+Ma lei che si apre qua sotto, apre una lista qui sotto la riga.
+
+Mercuri Flavio   17:14
+Se esce un esce un expandable roe esce un expandable roe allora io sono un po' sfavorevole in realtà diciamo non solo io alla tabella di tabella di tabella di tabella.
+Perché secondo me rende un po' complicata poi la comprensione, tanto che molti sistemi inps hanno implementato nel tempo l'utilizzo degli accordion, perché tu c'hai una riga con una, diciamo con una primo set di dati.
+Radio con un titolo, una descrizione e poi quando espandi c'hai un'altro elemento dentro, capito? Non è un elemento figlio uguale a quello che hai espanso, che poi potrebbe diventare insomma una ricorsione.
+Che è un po pesante da gestire, ma non lo so, a me non sembra. Cioè questa poi trattata nella sua versione più arcaica, questo sarebbe un dettaglio quindi?
+Teoricamente qua tu dovresti saltare da questa pagina alla pagina di dettaglio della normativa e poi là ci avresti naturalmente poi sia la sintesi della descrizione sotto la tabella, qui per essere diciamo per brevità di navigazione per rendere la UX meno.
+Meno, anche meno standard, meno noiosa per l'operatore, s'è scelto di aprire il dettaglio contestualmente in pagina, considerando che comunque con i sistemi moderni c'abbiamo possibilità.
+
+Michele Friscia   18:47
+Io allora io farei farei, io non so, io farei se io clicco qui.
+E vedo metterei un segno di spunta che sto è attivo questo un dettaglio attivo se clicco qui metti segno di spunta qua in modo che da in qualche modo dare un dinamismo fra quello che vedo e l'azione da dove da dove è partito.
+Cioè, diciamo banalmente, poi.
+
+Mercuri Flavio   19:16
+Va bene allora non mi non mi vicino alla all'azione mi sa che ci torna complicato nella diciamo nella quello che possiamo fare è modificare la sicuramente l'iconcina dell'azione.
+
+Michele Friscia   19:32
+OO modificare l'azione del.
+
+Piscitelli Terenzio   19:32
+Ma non c'è la.
+Non c'è la possibilità di fare 111 sorta di highlight della riga.
+
+Mercuri Flavio   19:40
+Questa cosa è da verificare, eventualmente si dovrebbe pensare a uno sviluppo ad hoc, però certo vai a tocca un componente core per un diciamo per un'esigenza molto specifica. Non mi ricordo se avevamo già implementato o meno. Gianluca, tu te lo ricordi?
+
+Laferla Gianluca   19:57
+No, l'highlight della riga non me lo ricordo proprio, potremmo se no fare uno scroll down visto che stiamo implementando anche quello per far capire che si è aperto quello.
+
+Mercuri Flavio   20:01
+Ok.
+Emma è uguale, è uguale, però non hai relazione con la con la riga sopra. Vabbè, facciamo così, esploriamo.
+
+Michele Friscia   20:13
+Per esempio la situazione magari verde, non lo so, oppure cambi zona.
+
+Mercuri Flavio   20:17
+Facciamo così, esploriamo, esploriamo noi un sistema visivo che renda chiaro il fatto, la relazione tra la riga che s'è cliccato e quella che s'è la tabella che s'è aperta e poi valutiamo insieme quale diciamo se.
+
+Michele Friscia   20:26
+Sì.
+
+Mercuri Flavio   20:32
+Se abbiamo capito, ma io penso che abbiamo capito, quindi rimane solo diciamo un tema un po' più tecnico, se e quanto è fattibile o quanto diventa poi oneroso dal punto di vista dello sviluppo, fare cose troppo pirotecniche va bene.
+
+Michele Friscia   20:43
+Sì.
+Un'altra cosa, questa normativa selezionata qui, Terenzio, qual è lo scopo di quest'icona qui?
+
+Piscitelli Terenzio   20:55
+L'icona dice quale delle due normative è la vincente.
+Quindi in questo caso è stata assegnata la prima normativa da cui abbiamo poi tirato fuori.
+
+Michele Friscia   21:00
+OK.
+E allora mettiamoci un qualcosa.
+Riceviamo meglio perché io non ho capito perché io immaginavo che qui ci fosse un download di qualcosa di scarico della normativa.
+
+Mercuri Flavio   21:18
+Vuoi mettere un tool tip?
 
 Michele Friscia   21:21
-Sì.
-Sì.
-Va bene.
+Sì, qualcosa sì.
 
-Laferla Gianluca   21:31
-Ora controllo se riesco a farvi vedere.
-La parte di area operativa in locale.
-No, c'ho lo stesso problema anche io, quello che c'ha Anna.
-Se lo riusciamo a far vedere la prossima volta in sviluppo?
+Mercuri Flavio   21:23
+Vai, mettiamo tutto il tip.
 
-Mercuri Flavio   22:19
-Non ho capito, scusa Gianluca.
-
-Laferla Gianluca   22:22
-E non glielo riusciamo a far vedere in locale.
-
-Mercuri Flavio   22:22
-Non funziona in sviluppo.
-Perché?
-
-Laferla Gianluca   22:30
-Beh c'ho un problema pure io tra un report client in se non mi carica l'utenza quella in alto c'ho bisogno di fare un piccolo reset, jbox eccetera.
-Quindi quello lo includerei nel prossimo rilascio.
-
-Mercuri Flavio   22:57
-OK.
-
-Laferla Gianluca   22:59
-Non so se abbiamo un'utenza già sbloccata per fare il giro del flusso, perché un'altra delle cose che abbiamo integrato è proprio il fatto che prima non si sbloccava il pulsante di felpe e non si riusciva a arrivare alla fine.
-Al completamento.
-
-Michele Friscia   23:16
-Sì, ricordo.
-
-Laferla Gianluca   23:17
-E.
-Forse mi devo fare sbloccare le utenze da Emanuele perché probabilmente le abbiamo testate recentemente, però proprio con quest'altro codice fiscale.
-
-Mercuri Flavio   23:25
-Ma.
-
-Laferla Gianluca   23:37
-No, non ho attualmente modo per farvelo vedere, però qualora lo testaste voi dovreste riuscire senza problemi e arrivare fino alla fine del flusso e anche a fare il controllo finale con lo sblocco di felpe e l'invio dei dati a felpe.
-Purtroppo noi ogni volta, avendo un solo codice fiscale o due, dobbiamo sempre repingare il backend per farci resettare tutta l'utenza e ogni volta ritestare da capo.
-
-Michele Friscia   24:08
-Ne provo uno io, adesso vediamo che succede.
-
-Laferla Gianluca   24:10
-Sì.
-Caso ti lascio anche la condivisione.
-
-Michele Friscia   24:14
-Questo è un sembra di Vincenzo, è quello di prima, vediamo un po che fa.
-Dunque.
-Non divide, vediamo.
-E mi dai la condivisione?
-
-Mercuri Flavio   24:37
-Vai, aspetta.
-Brescia.
-
-Piscitelli Terenzio   24:50
-Vai Michele, vai fatto, fatto.
-
-   24:52
-Sì.
-
-Mercuri Flavio   24:53
-Al cassetto di Renzi sì.
-
-Michele Friscia   25:00
-Allora?
-Vabbè, sono qui, sono in calcolo pensioni.
-Vabbè, qui c'è foglio di calco, download e confronto.
-Così funziona.
-
-Laferla Gianluca   25:23
-Ma.
-
-Michele Friscia   25:25
-Rischiare questo?
-E questo funziona, va beh, è uguale perché magari passato sempre la stessa, la stessa cosa.
-Metto al 100% così lo vediamo un po le dimensioni.
-Amica.
-Ore di pensione, età sufficienti.
-Ma queste ha solo il contributivo.
-Terza quota.
-Vabbè, forse sì.
-Allora vediamo un po il foglio di calcolo che diceva qui.
-Sono 96.
-Ora.
+Michele Friscia   21:31
+Poi.
 Va bene?
-Allora a questo punto.
-Maggio, Salve, prosegui.
-Faccio retribuzioni.
-Se sono disabilità ti faccio verifiche con guida conto.
-OK.
-Sì.
-Allora qui salvo l'informazione su felpe.
 
-Piscitelli Terenzio   28:47
-Questo è il vecchio.
+Capobianco Paolo   21:41
+Non ho capito però il tooltip che fa il tooltip che cosa mi dice?
 
-Mercuri Flavio   28:48
-Questa.
+Michele Friscia   21:45
+E tu ci passano tutte e c'è scritto qui normativa vincente, una cosa del genere c'è scritto normativa applicata.
 
-Michele Friscia   28:48
-E non compare una scrittura qui.
+Capobianco Paolo   21:52
+Che proprio deve scrivere, scrive normativa selezionata.
+Eseguire.
+Quello che dovrebbe scrivere il Toltip per non essere poi confusionari, sarebbe normativa selezionata.
+Che cosa pensate che possa scrivere?
 
-Piscitelli Terenzio   28:52
-Ma la vecchia grafica?
-
-Michele Friscia   28:54
-No, non compare. Chi può fare questo va bene, ma qui c'era. Se vuoi, se vuoi liquidare la pensione devi andare su salvo informazioni su felpe.
-
-Piscitelli Terenzio   28:54
-Su quel papà.
+Mercuri Flavio   22:12
 Sì.
 
-Michele Friscia   29:09
-C'è una seconda frase che dice che cosa, cosa puoi fare?
+Michele Friscia   22:12
+Seleziona ma normativa selezionata secondo me è normativa selezionata.
 
-Laferla Gianluca   29:13
-Questa utenza è un caso specifico.
-Perché? Perché testando con l'altro codice fiscale che abbiamo a disposizione, a volte il salvataggio su felpe non ci apriva questa ultima dialog che ci dà quell'unicarp.
+Capobianco Paolo   22:17
+E allora se non va bene, non va bene nemmeno sopra, capito quello che dico?
 
-Michele Friscia   29:18
-Che.
+Michele Friscia   22:23
+Sì, ho capito.
 
-Laferla Gianluca   29:31
-Immagino che avrà magari dei dati.
+Capobianco Paolo   22:25
+Cioè non è che.
 
-Michele Friscia   29:32
-Questo è uno, è uno Stato, diciamo, non ha nulla di particolare, nel senso una volta fatto il conto vi si apre, qui viene abilitato il tasto e poi qui c'è una frase che dice attenzione se vuoi.
-Deve continuare, eccetera eccetera, salvo informato su felpe.
-Ora vediamo, salvo qui vediamo cosa compare.
-Perché, perché così mi diceva Unicarp, si legge chip del.
+Michele Friscia   22:26
+Normativa selezionata, normativa vincente, forse.
+Normativa applicata.
 
-Laferla Gianluca   30:11
-Per quello ti ho fatto la domanda, perché in casi di test che abbiamo fatto noi non c'era mai apparsa.
+Mercuri Flavio   22:34
+Allora intanto forse leverei il trattino a quella non applicata.
 
-Michele Friscia   30:19
-Allora dovrebbe essere uno Stato, a meno che qui non si legge che è una.
-Che è chip del.
-Ma dal comparto, dalla qualifica, dal dal contratto dovrebbe essere uno Stato, però vediamo.
+Capobianco Paolo   22:35
+Normativa applicata così però io lo metterei pure sopra normativa applicata, cioè se lo metti nel tolti pure sopra devi mettere la stessa frase perché che senso ha? Se no facciamo solo confusione.
 
-Tantar Ana Maria   30:37
-Michele, scusami, mi ci puoi passare per favore anche questo?
-Il codice fiscale.
-
-Michele Friscia   30:44
-Sì, non preso in carico.
-
-Piscitelli Terenzio   30:50
-E questa, Michele, è una cosa che hanno aggiunto.
-
-Michele Friscia   30:55
-Web Dome.
-
-Piscitelli Terenzio   30:55
-Da poco.
-Sì, questa webdom no, cioè nel senso se.
-Se la domanda non risulta presa in carico, non ti fa fare nulla.
-È una cosa nuova che è uscita in sviluppo, cioè che è uscita da poco.
-Infatti volevamo approfondire un attimino sta cosa, perché?
-Se, come tu ben sai, qui noi non c'abbiamo.
-Cioè nel senso c'è da fare credo un'attività lato lato web, prima di poter poi lavorare la pratica.
-
-Michele Friscia   31:36
-Sì.
-Vabbè, questa è una cosa che loro potrebbero fare anche automaticamente, però bisogna vedere, ma è giusto questo percorso oppure no?
-Sì.
-Quindi deve essere il soggetto, io lo prendo in carico oppure qualsiasi.
-E c'è il controllo se io sto lavorando e la prende in carico, che so, Paolo?
-C'è un controllo su questo momento, no?
-
-Piscitelli Terenzio   32:17
-Non lo so, questo non lo so proprio. Non io ancora neanche ho approfondito sto discorso. M'hanno avvertito che c'è questo nuovo controllo su webcam, ma non ho indagato ancora.
-
-Michele Friscia   32:32
-Va beh, qua bisogna secondo me bisogna parlare con gli amministrativi che dici?
-Perché questi presi in carico o si fanno o lo fanno all'inizio?
-Cioè a questo punto potremmo mettere quando la prendi in carico su ASI di ma l'hai presa in carico su webdom?
-Fai il controllo prima.
-
-Mercuri Flavio   32:59
-Scusate, giusto per chiarezza, anche questa è una, diciamo questione ascrivibile alle mev, quindi è un'altro non voglio militarizzare il tempo, però diciamo che noi.
-
-Michele Friscia   33:08
-Sì, no.
-
-Mercuri Flavio   33:16
-Dovremmo, soprattutto per la fase che stiamo attraversando, dovremmo un po verticalizzare sul requisito, diciamo principale che ci che ci riguarda.
-Quindi mi dispiace diciamo segare le conversazioni analitiche su cose che non appartengono al requisito, però purtroppo se noi c'abbiamo pochissimo tempo a disposizione.
-
-Michele Friscia   33:35
-No, ma hai ragione, quindi vai.
-Vabbè e quindi la prova qua per fare questa prova bisogna andare sul web e prendere in carico.
-Giusto continua sul web, vediamo un po se funziona.
-
-Piscitelli Terenzio   33:52
-Io non lo so, non l'ho ancora fatta. Ripeto, sta verifica non so come si in che cosa si traduce.
-
-Michele Friscia   34:04
-Sì forse vabbè qua bisogna vedere perché io c'ho forse il link no l'applicativo va su un link diverso da webdom non è più richiesto 2008 e ne ho un'altro. Su questo cosa ti ha detto devi fare un approfondimento.
-OK.
-
-Piscitelli Terenzio   34:23
-Allora lì c'è un problema di fondo, no? Che è in sperimentazione, in realtà webdom 2.0, per cui fintanto che non diventa ufficiale il nuovo webdom per me rimane richieste 2008 in esercizio quello ufficiale.
-Che poi vabbè.
-
-Michele Friscia   34:45
-Vabbè, bisogna fare una riunione con loro qui amministrativi, dai.
-
-Piscitelli Terenzio   34:51
+Michele Friscia   22:40
 Sì.
 
-Michele Friscia   34:52
-Per fare le prove qui, adesso che facciamo?
+Capobianco Paolo   22:49
+E mettiamo due frasi diverse.
+O fai una cosa che ci metti tutto un papiello che spieghi tutto la normativa che ho accettato perché era più conveniente per l'iscritto e cose del genere o se devi mettere la frasetta piccola è la stessa che sta scritta.
+Nella nella descrizione della colonna.
 
-Piscitelli Terenzio   34:59
-Adesso ripeto, adesso non so come aiutarti, nel senso se neanche so come sblocca sta cosa non ti so dire. Penso dobbiamo capire come prendere in carico sta cosa su webdom e poi dopo magari la prossima call si fa.
-Se rifà pure questa di prova.
-
-Michele Friscia   35:21
-Dunque mi ricordo.
-Vediamo calcolo pensione di questi qui.
-Volevo vedere l'altra frasetta, ma mi ricordo che c'era un'altra frase dopo che si faceva la verifica di congruità.
-
-Piscitelli Terenzio   35:57
-Sennò mica dovresti vabbè.
-Qui pure se prendiamo, mi sa che pure se prendiamo un qualcuno su cui abbiamo già fatto l'invio a felpe.
-
-Michele Friscia   36:12
-Domanda, è già in lavorazione, è possibile procedere con la presa in caio? Questo cos'è sempre da web, dopo così mi viene fuori.
-Da Roberto.
-Carabinieri.
-E non sa che tu segui.
-Allora verifica comunità, vediamo giù cosa c'è.
-Ecco, qui compare.
-Per continuare con la liquidazione, tramite il VS per accedere salvo informazioni offerte.
-Compare.
-Forse allora quel messaggio lì, quel messaggio lì, compariva solo per la cassa, per le chip del sì.
-
-Piscitelli Terenzio   37:27
-Emanuele.
-Per le chip del.
-Perché tecnicamente per le chip della tu non dovresti fare l'invio a felpe?
-Brava sì.
-
-Michele Friscia   37:42
-Vediamo che succede qua.
-Ce l'ha fatto?
-Me l'ha fatto, forse perché questo l'avevo già preso in carico io, boh.
-Vediamo se faccio così sul web non.
-Va bene?
-Sì, allora quel in quell'altro caso era giusto il messaggio, infatti compariva il messaggio di controllare che non va su anycar.
-Va bene, c'è altro che avete fatto?
-
-Laferla Gianluca   38:28
-Allora io approfitterei al volo per farvi rivedere l'area operativa perché si è risbloccato il backend, così vi facciamo vedere il funzionamento.
-Ho ripreso un segno della condivisione e poi nel prossimo rilascio avrete questa funzionalità Antonio.
-De Luca nel cognome e Antonio nel nome è esattamente il funzionamento del Legacy.
-
-Michele Friscia   38:58
+Michele Friscia   23:13
 Sì.
-
-Laferla Gianluca   39:01
-Quindi non l'avete ora in sviluppo, ma il prossimo rilascio ci sarà.
-
-Michele Friscia   39:05
-Va bene.
-
-Mercuri Flavio   39:12
-Ok, abbiamo finito con le cose che erano emerse nello scorso sal.
-
-Laferla Gianluca   39:18
-Sì.
-
-Mercuri Flavio   39:20
-Siccome ci abbiamo ancora un po di tempo a disposizione, come vogliamo fare? Facciamo un giretto insieme, Michele, fai qualche giretto tu dove li tieni?
-Che sia interessante provare, testare.
-Oppure oppure scusa, aspetta no, c'è una questione che dobbiamo indagare però Gianluca se gentilmente Condividi andiamo a vedere quella tabella di cui parlavamo ieri con Terenzio.
-
-Michele Friscia   39:37
-Guarda, io ho visto.
-
-Tantar Ana Maria   39:49
-Io posso richiedere gentilmente quel codice fiscale?
-
-Michele Friscia   39:53
-Di prima.
-
-Tantar Ana Maria   39:54
-Sì, grazie Michele.
-
-Michele Friscia   39:56
-Se me lo ricordo, era Anselmo o qualche cosa.
-
-Tantar Ana Maria   40:01
-Si iniziava con NV qualcosa.
-
-Mercuri Flavio   40:02
-C'è una scheda.
-Gian, aprite una scheda pure collegasi per favore.
-
-Michele Friscia   40:08
-Però quello non era, non era.
-Problema alla fine.
-
-Tantar Ana Maria   40:15
-Sì, no, è che ho visto, ho visto una cosa, vorrei un attimino ricontrollarla.
-
-Michele Friscia   40:21
-Aurora.
-
-Piscitelli Terenzio   40:21
-Beh Michele, comunque era un problema nel senso è vero che è comparso un messaggio, però no, cioè nel senso il problema era della presa in carico, bisogna capire.
-
-Michele Friscia   40:27
-E deve prendere in carico quello di.
-
-Piscitelli Terenzio   40:30
-Perché una volta che tu fai l'invio a felpe, poi comunque se tu decidi di farlo l'invio te lo devo fare, quindi rimane comunque in piedi quel problema che però ripeto dovrebbe dipende da dalle regole nuove che ha che ha messo webdom.
-
-Michele Friscia   40:42
-Sì, quel problema rimane, non so perché adesso poco fa è andata bene.
-E quello di prima Anselmo, no, vediamo se va beh, dovrebbe essere un'attività recente, in teoria no.
-Devi devi trovare lì.
-
-Piscitelli Terenzio   41:06
-Anselmo Vicenza.
-E Anselmo, Vincenzo, ce ne sono due, ce ne sono svariate di attività recenti.
-2 2 attività recenti, il 24 giugno abbiamo fatto sullo stesso soggetto, mi sa, abbiamo preso due domande sullo stesso soggetto, perché Anselmo Vincenzo è il classico soggetto dove proprio ci buttiamo di tutto la classica discarica quel soggetto.
-
-Michele Friscia   41:30
-Sì.
-Allora questo l'ho fatto prima che arrivaste questo qui.
-E questo l'abbiamo fatto insieme.
-Non no, non sto, non sto condividendo.
-
-Laferla Gianluca   42:26
-No, ce l'ho io, te la ripasso.
-
-Michele Friscia   42:27
-OK.
-Allora metto la chat.
-Questo codice fiscale.
-Allora, andando nella sezione operativa.
-Questo me lo.
-Me lo invertite? No, non si può invertire l'operatore mettere in fondo no.
-E le persone vengono fuori.
-Se lo faccio?
-Fate così, viene bene.
-E tu?
-Posso non era questo?
-Ci proviamo a fare su questo, su questo caso.
-Vedi che vedi che qua mi dice.
-Va tutto bene.
-Passa qui c'è stato, ma secondo me non è quello che ti ho fatto poco fa.
-Domanda, no, gli ho fatto, ho fatto un'altra domanda.
-E questo è andato bene.
-
-Piscitelli Terenzio   45:52
-Dovrebbe essere probabilmente concludare il conto assicurativo integrato verificata la prima che vediamo.
-
-Michele Friscia   45:58
-E dove?
-Questa qui no, questo è proprio il passerini.
-
-Piscitelli Terenzio   46:06
-Però è quella dove ti eri fermato lì, congruità del conto assicurativo integrato verificata, lì c'eravamo fermati pure noi.
-
-Michele Friscia   46:14
-No bene.
-Questa qui con questo.
-
-Piscitelli Terenzio   46:17
-Quella.
-No, non so se è questa, però noi avevamo fatto la congruità che l'avevamo fatta e poi non siamo riusciti a fare l'invio a felpe.
-
-Michele Friscia   46:28
-OK, però.
-
-Piscitelli Terenzio   46:28
-Certo, non può essere passerini, perché ovviamente tu non sei passerini.
-
-Michele Friscia   46:31
-E infatti perché io adesso ho fatto questa, cioè il mio il mio codice fiscale, questo quello che ho fatto adesso che è stata completata su felpa.
-OK, vediamo, aspetti, mettiamoci più elementi.
-
-Piscitelli Terenzio   46:45
-Magari metti.
-Sono già tutti.
-
-Michele Friscia   46:56
-Vediamo, proviamo questo qui.
-Ma questo è da fare. Ecco, qui c'è casa di Benedetto locali.
-Però è strano che uno stesso iscritto c'ha case diverse.
-
-Piscitelli Terenzio   47:21
-E se abbiamo fatto manualmente avremmo caricato un conto mettendo un ente locale, niente di più semplice su sviluppo.
-
-Michele Friscia   47:30
-Allora proviamo a fare le verifiche con non era.
-Vediamo che mi dice.
-E vabbè, facciamo questo.
-Dice unica che vede che ciplal.
-
-Piscitelli Terenzio   48:02
-Non vorrei che qui la presa in carico, Michele, faccia riferimento al discorso che se non è una.
-Forse una cosa in carico non è prevista che sia in carico ad ASI non lo so, mo sto sto cotizzando.
-
-Michele Friscia   48:45
-Questo è un'altro problema.
-O potrebbe essere lo stesso, non lo so.
-
-Piscitelli Terenzio   48:49
-Sì.
-No, non lo so mica però ti ripeto, stiamo prendendo Anselmo Vincenza, cioè veramente fai fai test con Anselmo Vincenza è veramente come voler.
-
-Michele Friscia   49:01
-Va beh, allora non facciamo un.
-E vabbè, poi dobbiamo fare qualche altra prova.
-Ecco 1 1 po più o meno pulito.
-
-Piscitelli Terenzio   49:17
-Sì, no, infatti noi stiamo già, ci stiamo già muovendo da questa direzione, però vabbè.
-
-Michele Friscia   49:17
-Vabbè, sì.
-E per quanto riguarda poi, visto che ci sono ancora schede ancora da fare?
-
-Piscitelli Terenzio   50:00
-Scusate, io non so se vi se vi sento ancora perché la mia connessione avevo pieno è andata giù, quindi mi sono sganciato per qualche secondo.
-
-Mercuri Flavio   50:10
-Sì, pure io in realtà.
-
-Laferla Gianluca   50:10
-Sì, anche a me.
-Tutti.
-Sì.
-
-Piscitelli Terenzio   50:20
-E vabbè, Michele, quindi?
-Allora se hai qualche caso verifica che hai intenzione particolare di vedere, magari ce la segnali, nel frattempo noi magari possiamo predisporre qualche caso pulito, magari da poter vedere appunto il giro.
-Nella sua interezza di lavorazione.
-E per la prossima volta e.
-
-Michele Friscia   50:45
-Sono tornato.
-
-Piscitelli Terenzio   50:47
-Pure tu sei tornato, OK?
-
-Michele Friscia   50:49
-Sì.
-Va bene.
-E niente, ci vediamo, cioè stavo dicendo, cioè ci vediamo la prossima volta con un caso pulito per facciamo un'altra.
-
-Piscitelli Terenzio   50:58
-Sì.
-Sì, poi ripeto, se tu vuoi qualche caso, proprio qualche situazione, perché io pure adesso a memoria magari qualcuna me le posso scorda, se vuoi voler vedere qualche situazione particolare, magari scrivi un messaggio e te la predisponiamo per la prossima volta.
-
-Michele Friscia   51:01
-Verifica.
-
-Piscitelli Terenzio   51:15
-Però sì, diciamo meglio evitare di utilizzare lo sviluppo, i vari Anselmo, falini e più in altri 3 4 che sono veramente super inflazionari come?
-
-Michele Friscia   51:22
-Pallino.
-
-Piscitelli Terenzio   51:28
-Come casi di test.
-
-Michele Friscia   51:31
-Ma la comunque la banca dati è la stessa di quello di sviluppo, giusto?
-
-Piscitelli Terenzio   51:35
-Sì, è tutto, è tutto lo stesso di sviluppo.
-
-Michele Friscia   51:39
-Quindi potrei prendere uno degli ultimi che ho fatto la prova.
-
-Piscitelli Terenzio   51:43
-Diciamo, se tu hai un caso, hai fatto delle prove, un caso pulito, sì, puoi prendere l'ultimo e ragionare su quello. Insomma, volendo puoi fare prove? Assolutamente sì. Se tu hai già dei casi già pronti, già fatti, comunque puliti, puliti, vanno bene. In generale vanno bene.
-
-Michele Friscia   51:54
-Sì.
-
-Piscitelli Terenzio   51:59
-Questi qui che abbiamo provato adesso no, perché veramente Anselmo, Farini e più altri 3 4 sono veramente dei casi da non usare.
-
-Mercuri Flavio   52:04
-Sì.
-
-Michele Friscia   52:09
-Va bene.
-
-Laferla Gianluca   52:10
-E volevo approfittare di un'ultima cosa, visto che ci siamo tutti, sui punti che ci ha evidenziato ieri Terenzio su cui siamo già all'opera, ce n'era uno in cui mi sono confrontato con Ana e è quello per il periodo da prestazione in cui c'è.
-Una leggera discrepanza, ci sono meno celle nella tabella nella nuova UI rispetto al Legacy però si ricorda Anna del fatto che fosse stata proprio una richiesta di snellirla un po' di questi dati qua.
-Quindi volevamo chiedere conferma o in caso riadattiamo la tabella al Legacy.
-Così le vedete entrambe.
-
-Michele Friscia   52:56
-Allora lì come informazioni, se c'era data inizio della fine, giorni diritto e giorni misure che gli abbiamo tolto noi la.
-
-Laferla Gianluca   53:05
-Retribuzione teorica.
-Teorica contrattuale e imponibile, sì, contributivo.
-
-Michele Friscia   53:09
-De quadributiva.
-
-Piscitelli Terenzio   53:10
-Contributiva.
-
-Laferla Gianluca   53:14
-E imponibile.
-
-Michele Friscia   53:21
-E perché l'abbiamo tolto, Terenzio, ti ricordi?
-
-Piscitelli Terenzio   53:24
-No, io infatti sono io che l'ho segnalata questa cosa Michele, gliel'ho segnalata.
-
-Tantar Ana Maria   53:27
-No, io mi ricordo che esattamente io mi ricordo Michele che tu ci avevi detto ma io ti parlo di forse 3, 4 mesi fa, quindi si tratta di un po' di tempo fa che siccome c'era lo scroll della tabella era meglio.
-
-Michele Friscia   53:37
-Sì.
-
-Tantar Ana Maria   53:44
-A questo punto togliere dei dati per evitare appunto di dover scrollare sulla pagina sulla tabella.
-
-Michele Friscia   53:51
-M.
-
-Tantar Ana Maria   53:55
-Però ecco, se servono li rimettiamo.
-
-Michele Friscia   53:56
-E quindi come e come e come campi avete scelto quelli le parte delle retribuzioni?
-
-Tantar Ana Maria   54:02
-Ce l'avevi detti proprio tu, ce l'avevi detti tu di mantenere questi che ci sono adesso.
-
-Michele Friscia   54:03
-Ciao.
-Di togliere.
-
-Laferla Gianluca   54:09
-Dovremmo aggiungere un'azione di dettaglio in caso in cui sono mostrati tutti.
-
-Piscitelli Terenzio   54:18
-Sì, pure secondo me il dettaglio eventualmente dovrebbe essere la soluzione.
-
-Michele Friscia   54:26
-Metti il dettaglio lì come a fianco, sì, al limite uno sì.
-Ciao, ma sono delle informazioni che non stai a controllare.
-A prima acchitto, cioè se ti serve.
-A vedere le retribuzioni, però, insomma, è una cosa che vedi di più è i giorni di diritto e misura.
-
-Laferla Gianluca   54:57
-Allora facciamo così, le mettiamo nell'azione.
-
-Michele Friscia   54:57
-Poi col dettaglio è semplice vederlo, basta un click, lo vedi, no?
-Devo vedere?
-
-Tantar Ana Maria   55:08
-OK, allora mettiamo mettiamo il dettaglio direttamente.
-
-Michele Friscia   55:14
-Sì, insomma, sì.
-
-Piscitelli Terenzio   55:21
-Michele, credo che Luigi abbia già avviato la call di là che è 12:00.
-
-Laferla Gianluca   55:21
-Ok, era solo questo.
-
-Michele Friscia   55:26
-OK.
-
-Mercuri Flavio   55:29
-Ma rimane in piedi una questione importante, però.
-
-Michele Friscia   55:30
-Va bene.
-
-Piscitelli Terenzio   55:34
-Sì, lo so, Flavio.
-Quello che ci abbiamo, sì, ti sento.
-
-Mercuri Flavio   55:38
-La vediamo.
-
-Michele Friscia   55:38
-Ale.
-
-Mercuri Flavio   55:42
-Sì, no, dico, la vediamo poi.
-Su incontro, se ditemi.
-
-Piscitelli Terenzio   55:47
-Non lo so se dice Michele poi se vogliamo far aspettare Luigi, però penso che almeno un altri 05:10 qui ci servono.
-
-Michele Friscia   55:52
-Vabbè, accendila ci riflettiamo su, ma qual è la questione importante?
-
-Mercuri Flavio   55:57
-Dai Gianluca al volo, scusa.
-
-Laferla Gianluca   55:58
-Questo e lo vediamo già direttamente da qui, da l'impaginazione.
-
-Mercuri Flavio   56:01
-OK.
-Che tabella è questa? Però se non gli diamo un testo non capisce Michele.
-
-Piscitelli Terenzio   56:07
-Questa è la misura Michele, la visualizzazione dell'anzianità dell'esito dell'anzianità contributiva per la misura noi abbiamo su legasi essenzialmente una lista con sia con i dettagli che con i subtotali e totali evidenziati in nero e insomma inventati a destra.
-
-Michele Friscia   56:18
-Sì.
-Sì.
-
-Piscitelli Terenzio   56:26
-Tra i subtotali e i totali. E vabbè e adesso lascio proseguire invece diciamo Gianluca vai.
-
-Michele Friscia   56:28
-Sì.
-
-Mercuri Flavio   56:33
-Sì, allora qua.
-Cioè addirittura delle righe Scendi Gianluca ancora sulla tabella Legacy nel Legacy tu alla fine c'hai addirittura una riga che somma i totali.
-
-Laferla Gianluca   56:39
-Sì.
-
-Michele Friscia   56:46
-Sì.
-
-Mercuri Flavio   56:47
-Diciamo che questa rappresentazione qui è sicuramente fuori design system e io personalmente la sconsiglio perché diciamo che è una.
-
-Michele Friscia   56:54
-Ciao.
-Non avevo, non avevo dubbi che poi si è fuori dal De San Simeoni.
-
-Mercuri Flavio   57:01
-Michele, che te devo fa Michele? Però possiamo trovare delle soluzioni, queste soluzioni. Una delle soluzioni in questione è per esempio tirare fuori tutti questi queste righe. Diciamo che titolano.
-
-Michele Friscia   57:05
-Che.
-
-Mercuri Flavio   57:17
-E renderle un titolino che precede una tabellina, quindi fare una invece che una fila di record di una tabella, fare n tabelle dove n è il numero dei blocchi che vengono riassunti dai titoli.
-
-Michele Friscia   57:26
+E allora boh, la magia, questa mente è vincente.
 No.
-Vabbè, mi puoi mandare un'immagine? Non ho capito così devo andare da Luigi che mi ha già mi ha chiamato.
 
-Mercuri Flavio   57:38
-Va bene, però insomma il problema l'hai capito questo questa qua noi cioè l'abbiamo anche riprodotta, però non secondo me non la possiamo, cioè è sconsigliabile. Quindi io se tu Sei d'accordo ti suggerirei direttamente una soluzione.
+Capobianco Paolo   23:24
+Applicata, metti applicata più che vincente applicata.
 
-Michele Friscia   57:43
+Michele Friscia   23:26
+Applicato, vabbè.
+
+Mercuri Flavio   23:29
+E Gianluca, te segni che io toglierei il trattino a quelle non applicate.
+
+Laferla Gianluca   23:35
 Sì.
 
-Mercuri Flavio   57:54
-Compliant col design system e anche, diciamo le.
+Mercuri Flavio   23:37
+Lo lasciamo vuoto proprio.
+Ma attraverso, scusate, questa è solo curiosità, attraverso che processo viene selezionata sta normativa?
 
-Michele Friscia   57:57
-E fammela vedere, Fammi vedere, Fammi vedere le immagini, vediamo un po, OK?
+Capobianco Paolo   23:56
+Perché è quella più conveniente per l'iscritto.
 
-Mercuri Flavio   58:02
-E anche compliant, quelle logiche di architettura dell'informazione contemporanea va bene.
+Mercuri Flavio   24:00
+No, dico proprio praticamente, cioè io da è da qua che seleziono la normativa che approvo.
 
-Michele Friscia   58:09
-OK, Ciao.
+Capobianco Paolo   24:07
+No, tu non la.
 
-Mercuri Flavio   58:11
-D'accordo, Ciao, Ciao, Ciao.
+Michele Friscia   24:07
+No, è il no, è il sistema, il sistema della strada.
 
-Laferla Gianluca   58:12
+Piscitelli Terenzio   24:08
+No.
+
+Mercuri Flavio   24:09
+OK.
+
+Capobianco Paolo   24:09
+Sistema automaticamente definisce.
+
+Piscitelli Terenzio   24:10
 Ciao.
 
-Piscitelli Terenzio   58:12
-Ragazzi, vi saluto anch'io che devo andare alla stessa cosa.
+Mercuri Flavio   24:12
+OK.
 
-Michele Friscia   58:13
-Ciao Ciao.
+Piscitelli Terenzio   24:13
+Cioè diciamo c'è un servizio di back-end che nel darti la risposta della verifica del diritto ti dice, queste sono le normative che io ho verificato con esito positivo e di quelle che ho verificato con esito positivo ho assegnato come.
 
-Tantar Ana Maria   58:13
-Ciao Ciao.
+Mercuri Flavio   24:20
+Quella più conveniente?
+
+Piscitelli Terenzio   24:29
+Complicata questa qua, perché qui ce ne sono due, ne sarebbero potute anche essere 341 sola, sempre soltanto ne viene.
+
+Mercuri Flavio   24:34
+Di più, certo.
+EOKOK allora Gianluca, torniamo sul tema del trattino, non solo togliamo il trattino, ma mettiamo, diciamo l'icona antitetica a quella che rappresenta la normativa approvata, che probabilmente poi cerca la nel sistema visivo loro.
+
+Piscitelli Terenzio   24:38
+Applicata.
+
+Mercuri Flavio   24:54
+Sarà un foglietto con una X invece che con la V che rimane grigio invece che così visivamente rafforziamo il concetto che una di tutte.
+In stato approvato.
+
+Laferla Gianluca   25:07
+Perfetto, sì.
+
+Michele Friscia   25:13
+Allora altra cosa, ho fatto qualche prova sul calcolo pensione futura.
+Non so se in fase di lavoro, qui la divisione delle righe è un pochettino diversa rispetto alle altre schermate.
+
+Mercuri Flavio   25:37
 Va.
 
-Mercuri Flavio   58:16
-OKOKA dopo Ciao Ciao.
+Michele Friscia   25:39
+Avete avete visto?
 
-Tantar Ana Maria   58:16
-Va bene.
+Mercuri Flavio   25:43
+No, in che senso, Michele?
 
-Laferla Gianluca   58:17
-Va bene.
+Michele Friscia   25:45
+E sai, qui appiccicato contratto, c'è un'interlinea ridotta.
 
-Piscitelli Terenzio   58:18
-A più tardi, Ciao, Ciao, Ciao.
+Mercuri Flavio   25:49
+Lo spaziatura OK, andiamo, verifichiamo.
 
-Tantar Ana Maria   58:18
-Chao, chao, chao, chao.
+Michele Friscia   25:51
+OK.
+E poi?
 
-Laferla Gianluca   58:20
-A dopo.
+Capobianco Paolo   25:56
+Però ci ha provato a farlo metterlo tutto visibile.
+È una bella cosa.
 
-Mercuri Flavio   58:22
-Voi rimanete un secondo aspetta che blocca registrazione.
+Mercuri Flavio   26:04
+Come Paolo, scusa, io ti ho perso.
 
-Tantar Ana Maria   58:24
+Capobianco Paolo   26:06
+Cioè che capito, puoi fare così, inserire tutti i dati senza nemmeno fare uno scroll, una cosa che.
+
+Mercuri Flavio   26:12
+OK, dici così tu più compatto.
+
+Capobianco Paolo   26:15
+Non so se lo vai ad aggiustare, poi alla fine devi scrollare. Mi sa, lo so, tu c'hai ragione, ma c'ho ragione pure io. Boh.
+
+Michele Friscia   26:19
+E lo so.
+Sì, però è diverso rispetto al resto. Allora qui importi importi qua si comportano normalmente se metto 50.000.
+
+Capobianco Paolo   26:29
+Sì, hai ragione, sì.
+
+Michele Friscia   26:36
+Mettere le separatore delle migliaia correttamente invece non mi non mi funziona per il suo acconto assicurativo.
+Tre.
+A tutti.
+Non so se questo.
+È in corso di lavorazione, quindi però non mi fa nulla sul conto assicurativo.
+
+Mercuri Flavio   27:10
+E allora ti pregherei di fare un refresh e poi di riaprire di nuovo l'inspector, così vediamo se parte qualcosa.
+
+Michele Friscia   27:16
+Che faccio un refresh?
+
+Mercuri Flavio   27:18
+Sì, fai un refresh e poi premi F 12 dopo che hai refreshato.
+O premi F 12.
+OK, adesso torna lì.
+
+Michele Friscia   27:44
+OK.
+Qui funziona adesso.
+
+Capobianco Paolo   27:56
+[ Fill/] Se GAVI combina la comida.
+
+Michele Friscia   27:59
+L'avete visto quello che ho combinato? Non ho fatto niente di.
+
+Capobianco Paolo   28:01
+No, hai fatto qualche pasticcio.
+Comunque Terry, tutto il tuo lavoro sul diritto non viene valutato nulla.
+Perché normative verificate sta scritto Piccirillo, Piccirillo, Piccirillo.
+
+Piscitelli Terenzio   28:52
+Scusa Paola, non ho capito dove.
+
+Capobianco Paolo   28:55
+Era una battuta qui nei risultati no della simulazione ci sta normative verificate, però secondo me sta scritto un po troppo piccolino se.
+Vediamo se parlo un po di più.
+
+Michele Friscia   29:28
+Queste scarpe che ho messo a mano, c'è questa distinzione, non è colorato il tuo periodo manuale.
+Possiamo mettere i colori OO evitato?
+
+Mercuri Flavio   29:42
+Joan.
+
+Michele Friscia   29:45
+E quando mettiamo dei periodi in più manualmente e nelle sì, questi, questi, questi righe sono colorate in modo diverso.
+
+Mercuri Flavio   29:53
+Ok, possiamo mettere un badge intorno a manuale o effettivo?
+Così si vede che sono diversi.
+
+Piscitelli Terenzio   30:05
+Qui dobbiamo vederlo insieme, perché questo in realtà ci sono svariati colori, qui ogni colore era stato pensato per identificare una particolare modifica fatta sul periodo.
+
+Michele Friscia   30:10
 Sì.
 
-Laferla Gianluca   58:24
-Yes.
+Piscitelli Terenzio   30:18
+Che poteva essere un inserimento proprio di un periodo ex novo oppure la modifica.
+
+Mercuri Flavio   30:22
+E ti viene in mente quanti so ti viene in mente quanti più o meno potevano essere?
+
+Piscitelli Terenzio   30:27
+Quanti ne erano 4, 5?
+
+Mercuri Flavio   30:29
+Vabbè dai, ce l'abbiamo, ce l'abbiamo.
+
+Michele Friscia   30:31
+Sì, 4 5 sì, una del genere.
+
+Mercuri Flavio   30:33
+Ce li abbiamo.
+
+Michele Friscia   30:37
+Allora qui che posso fare?
+
+Capobianco Paolo   30:38
+E scusami se vai un po un po sopra Michele, prima di continuare con questo nuovo servizio.
+
+Michele Friscia   30:45
+Sì.
+
+Capobianco Paolo   30:45
+Da un po più sopra.
+Vedi qui normative verificate.
+No, se c'è la possibilità di aprire questo.
+
+Michele Friscia   30:52
+Ese ti passai diritto.
+
+Capobianco Paolo   30:55
+Vai un poco giù.
+
+Mercuri Flavio   30:55
+Il l'accordion, dici tu l'accordion.
+
+Capobianco Paolo   30:58
+Sì, normative verificate, la scritta è un po troppo piccolina.
+
+Mercuri Flavio   31:04
+Sai che pure questa è una cosa che abbiamo discusso proprio sta settimana perché lo stavamo usando e ci siamo resi conto che effettivamente sto testo nell'accordo non è piccolino, però anche qui sono diciamo disposizioni recepite.
+Quindi il componente è fatto proprio così, io boh.
+Non l'abbiamo forzato perché francamente non mandava di.
+
+Capobianco Paolo   31:33
+No, lo sai perché te lo dico, lo sai perché te lo dico, non è che diciamo è solo una questione estetica.
+
+Mercuri Flavio   31:33
+Di contraddire.
+
+Michele Friscia   31:39
+Vabbè, neanche si vede, cioè io non l'avevo visto.
+
+Capobianco Paolo   31:42
+Allora tu devi sapere che molto spesso a me mi chiamano al telefono, nemmeno mi scrivono, mi chiamano al telefono e mi chiedono, ma perché gli ha dato questo diritto a pensione? E stiamo parlando dell'ecasi dove questa cosa è.
+Scritta molto più ampia, io gli devo spiegare, dice Guarda, ma non c'è bisogno che mi telefoni, siamo di là, ti faccio vedere che ci stanno le cose unificate e va così.
+
+Mercuri Flavio   32:02
+Il perché?
+Paolo, tu hai fatto tu adesso, in questo momento hai fatto, hai fatto un'operazione fantastica e cioè ci hai dato un caso che a noi diciamo ci apre un frangente di riprogettazione della UX, proprio della dell'esperienza di utilizzo.
+
+Capobianco Paolo   32:15
+Sì.
+Sì.
+
+Mercuri Flavio   32:23
+E ti dico che molto probabilmente, per quanto possa essere diciamo visivamente evidente, forse comunque loro fanno fatica a razionalizzare il fatto che queste informazioni stanno messe lì. Quindi io mo adesso quello che faccio è darti un bel suggerimento. Noi ce ne usciamo con suggerimento Michele, scusa poi.
+
+Capobianco Paolo   32:37
+Esatto, sì, perfetto.
+
+Mercuri Flavio   32:43
+Chiude la cordeon.
+
+Michele Friscia   32:45
+Aspetta.
+
+Mercuri Flavio   32:46
+Delle normative verificate. Allora secondo me questo espandibile qua sta infilato mo nel Legacy non mi ricordo dove esattamente sta messo e come però questo sta infilato in un form come se fosse in campo di un form in realtà.
+In realtà realtà non è proprio così. In realtà è un espandibile che contiene delle informazioni molto importanti, però nessuno dice perché sono importanti. Al limite se io lo vedo leggo normative verificate, però non è diciamo immediata la connessione normative verificate.
+Che risponde alla domanda, ma perché gli abbiamo dato sto sto diritto? OK, quindi quello che farei io è il seguente, farei dello intanto dello spazio, mi rendo conto che magari scendiamo di un di un.
+
+Capobianco Paolo   33:24
+Ma.
+
+Mercuri Flavio   33:35
+Micron in più e quindi facciamo uno scrollettino in più. Però questa cosa deve ti leva un problema direttamente a te perché magari smettono le chiamate. Quindi che cosa farei io? Io farei un leggero spazio tra i pezzi del pezzo sopra il Form e il pezzo sotto del Form.
+Questa parte la evidenzierei, quindi la metterei magari su un canvas di quel Colorino celeste chiaro e metterei un paragrafetto le due righe che però dice.
+In questo accordion normative verificate trovi le motivazioni per cui la il diritto è stato accordato oppure non è stato accordato. E quindi tu che cosa fai? Rispondi ad una domanda prima che la domanda degeneri.
+
+Capobianco Paolo   34:24
+OK, vabbè, senza come no.
+
+Mercuri Flavio   34:28
+Va bene e sotto è la stessa cosa l'altro accordo di retribuzione media menzionabile.
+
+Capobianco Paolo   34:35
+Diciamo questo è un po meno, leggermente meno importante, però sì, non lo so. Terenzio che dici?
+
+Mercuri Flavio   34:42
+Che c'è dentro?
+
+Piscitelli Terenzio   34:46
+Ma se volete saperlo, io non ho mai capito perché avete voluto qua la retribuzione media pensionabile buttata lì è soltanto quella, non l'ho mai capito, cioè la retribuzione media pensionabile, il montante contributivo.
+
+Michele Friscia   34:46
+Amo.
+
+Capobianco Paolo   34:56
+Hai ragione, sì, quello là no, brutto e cattivo. Il montante è cattivo, brutto e cattivo invece non lo facciamo vedere. Hai ragione, sì, in effetti hai ragione, sì.
+
+Piscitelli Terenzio   34:59
+Non so perché.
+Non so perché sì.
+
+Michele Friscia   35:11
+No, la cosa che non si capisce che cliccando qui ha delle spiegazioni.
+E non c'è 1 1 frase che dice, per vedere le normative premi questo pulsante.
+
+Capobianco Paolo   35:19
+E perciò, diciamo, lui propone di fare.
+
+Michele Friscia   35:30
+E uno dice, non me li litigate, quindi lo prende come un dato di fatto e va avanti.
+
+Mercuri Flavio   35:38
+OK, allora se Gianluca ha preso appunti la ve la proponiamo. Non so se la prossima riunione direttamente vediamo quante cose si accumulano.
+
+Michele Friscia   35:38
+Sì.
+
+Laferla Gianluca   35:49
+Grazie.
+
+Mercuri Flavio   35:50
+Va bene.
+
+Michele Friscia   35:53
+Sì.
+
+Mercuri Flavio   35:53
+OK allora non so se Michele ha finito o meno, però sono le 15:42 siccome ci rimane solo un quarto d'ora e io tra l'altro sono costretto a essere pure molto puntuale oggi vi volevo dire che noi faremmo vedere, non l'abbiamo naturalmente deployata in sviluppo.
+Però vi possiamo farvi vedere quella soluzione alla al tabellare, quello dei del diritto e della misura nel calcolo dell'anzianità.
+E Gianluca si prende la connessione e ce la fa vedere e ce la ce la spiega. Naturalmente l'abbiamo elaborato la soluzione in maniera che non fosse necessario un refactor del servizio di back-end che avrebbe messo in difficoltà un po' tutto il, diciamo il sistema di.
+
+Laferla Gianluca   36:27
+Vi condivido.
+
+Mercuri Flavio   36:46
+Di lavoro e.
+Vabbè te lo faccio vedere. E poi vabbè c'abbiamo altre modifiche rispetto alle cose che c'eravamo detti la volta scorsa. Vediamo se facciamo in tempo a vederle già oggi, ma comunque erano sono quelle che ci siamo detti. Vai Gian.
+
+Laferla Gianluca   36:53
+Sì.
+Approfitto così vi faccio vedere anche il funzionamento dello Scroll down che è lo scorrimento contestuale all'apertura di un dettaglio, quindi in questo caso per l'utente diventa più facile capire qual è il dettaglio che si è aperto la chiusura poi.
+Torna.
+In posizione la parte che abbiamo implementato vi farei vedere prima com'era dal dato che ci arrivava il design system del tabellare di Sirio metteva così gli elementi. Il problema era.
+Proprio del fatto che i totali vengono messi su una riga e tutto il loro contenuto è allo stesso livello, così via per le sommatorie fino a arrivare a un calcolo totale complessivo.
+
+Mercuri Flavio   37:46
+E soprattutto poi per avere contezza della somma definitiva devi scorrere fino all'ultimo elemento e se ti sfugge sto tema non vedi più la insomma un po' 1 1 visualizzazione complicata questo bottoncone che abbiamo messo è solo per i termini di sviluppo.
+
+Michele Friscia   37:54
+Sì.
+
+Mercuri Flavio   38:04
+Poter switchare dalla cosa vecchia alla cosa nuova, così capite bene le differenze tra una visuale e l'altra.
+
+Capobianco Paolo   38:09
+Ok.
+
+Laferla Gianluca   38:13
+La soluzione che ci è venuta in mente è stato di wrappare ogni singolo totale in un accordion, in modo che l'utente possa avere già una visione complessiva sia dei totali e delle loro misure arrotondate della loro data.
+E anche le sommatorie con un totale finale in stile scontrino, manualmente potrà andare ad aprire singolarmente i totali che gli interessano oppure espanderli tutti, quindi in questo caso avrebbe.
+Una suddivisione? Sì, questo è il l'espandi tutti e poi ricomprime tutti.
+
+Mercuri Flavio   38:45
+Col bottone là sopra forse si è visto male, cioè lo vai più lento.
+
+Capobianco Paolo   38:50
+OK.
+
+Laferla Gianluca   38:54
+Una volta espansi tutti, l'utente si trova in una visualizzazione similare a quella che era della vecchia versione, quindi ha tutti gli elementi a disposizioni, ma suddivisi per tabellari e suddivisi nelle varie.
+Punti di calcolo.
+Ogni informazione che era presente prima è presente anche adesso, semplicemente prima i totali le disponevano qui le date e le i calcoli della misura, mentre adesso nella nuova versione si trovano direttamente nel.
+
+Capobianco Paolo   39:24
+Sì.
+
+Laferla Gianluca   39:29
+L'accordion e quando viene espanso l'accordion ha solo tutti gli elementi che fanno parte di quel totale.
+Questa è la visualizzazione complessa.
+
+Mercuri Flavio   39:38
+Allora mi permetto di tradurre e tirare la somma su che cosa ci ha mosso verso questa visualizzazione qua diciamo che qui, a parte separare le mele dalle pere, come dicevamo l'altra volta, abbiamo guadagnato un pezzo di funzionalità in più.
+Che è la visualizzazione per totali che sono un diciamo un dato logico diverso dal dal dal dettaglio OK, quindi io qua c'ho già davanti il totale, mettiamo che non mi interessa minimamente quali siano i record che compongono tu.
+Tutto quanto un dettaglio davanti c'è già il totale e vedo subito immediatamente il totale pure finale e scompongo le misure dei vari diciamo periodi di tempo e le misure arrotondate dei vari periodi di tempo e c'ho già davanti pure la misura e la misura arrotondata del totale definitivo.
+Quindi secondo noi, secondo noi.
+
+Capobianco Paolo   40:33
+OK, però quella scusa, OK, scusi, continuo, dico dopo.
+
+Mercuri Flavio   40:37
+No, dicevo che secondo noi è un pezzo di funzionalità che abbiamo guadagnato.
+
+Capobianco Paolo   40:46
+Sì.
+Due cose.
+Quel nei totali, quel misura non è misura il diritto.
+
+Mercuri Flavio   41:01
+Lo.
+
+Capobianco Paolo   41:03
+Cioè quando vuoi scrivere se misura no?
+
+Mercuri Flavio   41:05
+Sì.
+
+Capobianco Paolo   41:07
+Cioè aprine 1, 1 qualsiasi.
+OK.
+Perché voi siete iscritto proprio misura?
+
+Mercuri Flavio   41:18
+E poi nella parte di diritto immagino c'era il diritto.
+
+Capobianco Paolo   41:23
+E la passi di diritto, l'ho visto.
+Questi dettagli solo misura.
+
+Mercuri Flavio   41:28
+Esatto, poi tu chiudi, chiudi questa cosa, Gianluca, scusami.
+
+Laferla Gianluca   41:29
+Sì.
+
+Mercuri Flavio   41:33
+Chiudi il suo dettaglio premendo su chiudi.
+Ok, premi su chiudi torni alle tue tabelle esito calcolo misure esito calcolo diritto sopra c'hai il diritto.
+
+Capobianco Paolo   41:47
+Ma pure su quello normale te lo teniamo diviso.
+
+Piscitelli Terenzio   41:53
+Sì.
+
+Capobianco Paolo   41:55
+Va beh, lo so io.
+
+Piscitelli Terenzio   41:56
+Ma considera che.
+
+Mercuri Flavio   41:56
+Se vai sul diritto, vai un po sul diritto.
+
+Piscitelli Terenzio   41:58
+Anche nel sin era così, solo che addirittura nel sin, se ti ricordi Paola, addirittura erano proprio due funzioni diverse, quindi dovevi fare proprio due chiamate differenti per la diritta misura. Qui abbiamo accorpato diciamo con un'unica chiamata e quindi?
+
+Laferla Gianluca   42:01
+Questo è il diritto.
+
+Capobianco Paolo   42:12
+Va beh, allora va bene così, diciamo. L'altra cosa allora, che rimane l'unica è che le cassette di pere sono più grandi delle pere.
+
+Michele Friscia   42:26
+Graficare i font.
+
+Capobianco Paolo   42:28
+Di fronte c'hai ragione, però mannaggia.
+
+Mercuri Flavio   42:30
+Stiamo sempre là e guarda, questo era proprio il ragionamento che avevamo che avevamo fatto noi.
+Non lo so Paolo, io mi sono interrogato molto, non c'ho paura che forzando la mano, cioè in questo insomma mi rivolgo pure un po' a voi, dite voi, io così come valutazione secca forse lo modificherei perché mi dà proprio molto fastidio che cioè è un'architettura informativa.
+
+Capobianco Paolo   42:38
+E quindi?
+
+Mercuri Flavio   42:56
+Secondo me è sbagliata, però non l'ho fatta io, non l'hanno fatta i miei, non l'ho fatta io, non posso dire com'è.
+
+Capobianco Paolo   42:57
+E bruttolina, insomma, no, c'hai ragione, come no.
+
+Mercuri Flavio   43:03
+Dimmi tu se volete, io noi la lo modifichiamo.
+
+Capobianco Paolo   43:09
+Che dobbiamo fare?
+Perché è bruttino se tu vai capito a vedere, no, dai.
+
+Mercuri Flavio   43:15
+Sicuramente, sicuramente non è.
+
+Capobianco Paolo   43:17
+Capito vedi per quei totali piccirilli dove sopra invece quando era il dettaglio tutto bello grosso.
+È un po strano.
+
+Mercuri Flavio   43:25
+È cascato la perla.
+
+Michele Friscia   43:26
+Sì, è maiuscolo, però se è maiuscolo.
+
+Capobianco Paolo   43:30
+Ma no, è cascato proprio di brutto, cioè è andato via completamente.
+
+Mercuri Flavio   43:35
+È caduto Gianluca, sì, adesso vediamo che fine ha fatto.
+Comunque vabbè che vogliamo fare, vogliamo fare uno step intermedio per capire se basta mettere in maiuscolo i titoli?
+Oppure interveniamo già pesanti?
+
+Capobianco Paolo   43:51
+Che dici, Michele?
+
+Michele Friscia   43:55
+Se si può evidenziare di più, se non sono d'accordo, questa soluzione potrà diciamo, a me piace questo fatto che mi fai vedere subito i totali a primo acchitto e poi puoi espandere i dettagli.
+E.
+Se si potesse fare essere più evidenti il totale.
+Rispetto al dettaglio va bene.
+
+Capobianco Paolo   44:19
+Sì, un poco sì, va bene.
+
+Michele Friscia   44:22
+Però.
+
+Capobianco Paolo   44:23
+A dir la verità, Michele, il grosso delle persone.
+Proprio sempre il foglio di calcolo in cui stai.
+Sono super affezionati, io così li vedo che vanno subito a fare il foglio di calcolo e basta, perché?
+
+Michele Friscia   44:33
+Sì.
+Ma lì non c'è quello di calcolo, faccio il calcolo, sennò non c'è.
+
+Capobianco Paolo   44:42
+Però.
+E no, ci dovrebbe stare. No, ci sta. Normalmente ci sta, appunto, poi vediamo.
+Sono Flavio e Flavio.
+
+Piscitelli Terenzio   44:49
+Non ce l'abbiamo, Paolo, su.
+
+Mercuri Flavio   44:50
+No, ma io ho paura, ho paura che mi sono perso. Che foglio di calcolo c'è un'esportazione in Excel?
+
+Capobianco Paolo   44:58
+E non ce l'abbiamo nel telefono.
+
+Michele Friscia   44:59
+No, lì no.
+
+Piscitelli Terenzio   45:00
+No rispetto al sin no. Sul sin avevamo proprio un template, un template ad hoc per diritto e misura. Qui non l'avete mai considerato necessario. Effettivamente non credo che venisse solo un granché.
+Forse anche sul sin, forse non più, non lo so.
+
+Mercuri Flavio   45:24
+Allora Gianluca c'ha c'ha.
+
+Piscitelli Terenzio   45:24
+Ho capito, Paolo, che dici?
+
+Capobianco Paolo   45:26
+Flavio.
+Non mi ricordo, non mi ricordo.
+
+Piscitelli Terenzio   45:30
+E se lo volete poi lo aggiungeremo ovviamente poi proprio in realtà su Legacy, vabbè solo sulla versione finale, però voglio dire, in realtà su asi non l'avevate considerato necessario.
+
+Capobianco Paolo   45:49
+Va beh, allora lasciamo così, insomma.
+
+Mercuri Flavio   45:53
+Va bene allora Gianluca purtroppo c'ha un problema a livello proprio dei quartieri che hanno sono un paio di giorni che salta la corrente e quindi e quindi c'ha con esatto, diciamo che io vedo nel cielo un alone di.
+
+Capobianco Paolo   46:02
+La colpa è sua, vuole stare preso.
+
+Mercuri Flavio   46:12
+Di fumo da fuoco e lo sento pure dalla temperatura che c'è fuoco, quindi penso che i condizionatori staranno a livelli mai visti proprio.
+Vabbè, quindi però era importante. Eccolo, ce l'abbiamo di nuovo Gianluca, tutto a posto nel quartiere.
+
+Laferla Gianluca   46:28
+No, purtroppo sono dei problemi che ti dicevo a Centocelle questi giorni sono regali di tensione, sono dal telefono, quindi non vi riesco a ricondividere.
+
+Mercuri Flavio   46:29
+Mica tanto.
+OK, vabbè comunque intanto l'importante è che te lo trasferiamo il messaggio de Paolo che te suggeriva di spegnere il condizionatore.
+
+Laferla Gianluca   46:40
+Sì.
+
+Capobianco Paolo   46:44
+No, poveretto, però muore da un'altro punto di vista.
+
+Laferla Gianluca   46:44
+Ottimo Consiglio, ma non.
+Sì, tanto ora è spento per forza.
+
+Mercuri Flavio   46:48
+Vabbè.
+Va bene allora intanto era importante consolidare questa parte diciamo della del Refactor della tabella, non so se la vogliamo avallare direttamente così o se volete rimandare poi il giudizio a ai agli amministrativi.
+E mi prendo questi ultimi 7 minuti di call per domandare, ma questo processo in cui inneschiamo gli amministrativi e inizio a fare un po' di test, come ve lo state pilotando sta andando?
+
+Capobianco Paolo   47:23
+No, non ancora.
+
+Michele Friscia   47:24
+Per ora no.
+Per ora non lo sto andando.
+
+Mercuri Flavio   47:27
+OK, perché ho paura che di questo passo finiamo a dopo l'estate.
+Considerando la diciamo la disponibilità di tutti durante il periodo un po' più di vacanza, ecco, non so se ci avete la briglia della questione.
+
+Michele Friscia   47:44
+Sì, infatti sicuramente è un po difficile perché adesso ci sono le ferie, ora con Terenzio no? Come si era messo che la data verifica si partiva il 31 agosto mi pare.
+
+Mercuri Flavio   47:51
+Caputo.
+Al fresco, quindi, diciamo.
+
+Michele Friscia   48:02
+A presto.
+
+Mercuri Flavio   48:04
+Va bene, vabbè. Insomma, era un un'informazione che forse non avevo ben ben consolidato. Va bene, OK, allora tutto a posto.
+
+Michele Friscia   48:18
+Cioè ho ne ho paura, diciamo che ho paura che cioè se gli faccio vedere qualcosa che mi sa dire secondo me non cioè non ci calcola per nulla, devo dire la verità in questo momento storico.
+
+Capobianco Paolo   48:27
+Ma magari Michele, magari io invece ho paura il contrario.
+
+Michele Friscia   48:29
+Sì.
+
+Mercuri Flavio   48:31
+Allora?
+Diciamo che io, io, io parlo per me, che naturalmente non ho, diciamo legami forti con queste persone, con questi uffici. Il mio personale obiettivo è quello di targettare la.
+
+Piscitelli Terenzio   48:33
+La realtà.
+
+Mercuri Flavio   48:47
+Collaudo e quindi? Cioè per me che siano gli amministrativi che danno 5 stelline su 5 alle valutazioni e che scoppiano di gioia oppure bestemmiano in lingue che non conoscono nemmeno o che pure siate voi alla fine a un certo punto dite vabbè OK.
+Va bene, io come target ho quello e quindi oltre diciamo oltre quello non posso, non posso vedere. Diciamo che è un interesse sicuramente vostro che loro facciano quello che devono fare, però probabilmente è pure loro interesse perché se loro hanno delle osservazioni.
+
+Michele Friscia   49:19
+Bene.
+
+Mercuri Flavio   49:22
+Che gli facilitano il lavoro e le fanno tempestivamente. Insomma, se risolvono dei problemi nel quotidiano no. Al di là dei della giornata o delle due giornate, devono star lì AAA ripercorrere quello che fanno quotidianamente. Insomma, no su un sistema.
+Revisto, non so se concordate o.
+
+Michele Friscia   49:43
+Sì, concludiamo.
+Terenzio, tu come la vedi?
+
+Piscitelli Terenzio   49:52
+Io Michele l'ho detto, secondo me non ne usciremo mai con un test con gli amministrativi sull'ambiente di sviluppo. Per me c'è un'unica soluzione che è quella di fare una sperimentazione direttamente in esercizio con.
+Magari determinati soggetti proprio selezionati, cioè io ti fa, io magari potrei pensare consentire la doppia diciamo versione dell'applicativo in esercizio a degli utenti selezionati.
+Che possono switchare in qualunque momento dall'una all'altra e devono fare sto lavoro perché loro lavoreranno normalmente mentre lavorano. Chi meglio da loro ti può dire sta cosa funziona, sta cosa no, sta cosa ci piace, quest'altra cosa no.
+E ci possono dare tutti i feedback e.
+
+Michele Friscia   50:42
+Quindi una sperimentazione.
+Bene, diciamo produzione.
+
+Piscitelli Terenzio   50:49
+Sì, ma per dirti no, cioè proprio del tipo io, mentre tutte le sedi, tutti gli altri lavoreranno sempre col sistema Legacy, io comunque consento alla Passerini di turno mo che sia barbaro o qualcun altro, non importa anche di poter accedere alla nuova versione grafica.
+Con la possibilità sempre di switchare dall'una all'altra, perché ovviamente se poi rimani bloccato con la nuova versione perché magari c'è qualcosa che non funziona, puoi sempre tornare sulla vecchia, sperando che sulla vecchia poi funzioni. Insomma, se il sistema dai che si poi funzioni.
+Perché secondo me solo così riusciamo a coprire tutti i casi. Ma come facciamo su sviluppo Michele AA Replicare tutti quanti i casi che gli innumerevoli casi che ci abbiamo su esercizio non ci riusciamo?
+
+Mercuri Flavio   51:35
+E poi, tanto per cominciare, per rendere un test da sviluppo decisivo, dovresti ribaltare i dati da produzione, che se non loro come fanno a dire sì, è giusto che sto dato stia qui o non è giusto che sto dato non stia qui?
+
+Piscitelli Terenzio   51:50
+Sì, no, ma a parte quello è proprio comunque in generale la difficoltà nell'individuare tutte le casistiche che sono impattate, perché poi alla fine uno pure qui diciamo devi pure andare, cioè dovresti pure individuare le casistiche, non proprio tutte, tutte.
+Ma quelle che impattano le modifiche che abbiamo fatto noi sull'interfaccia grafica, quindi secondo me è meglio che lo fanno direttamente in esercizio gli operatori, così pure Pallotta volendo può lavorare qualche cosa e giocarci.
+
+Mercuri Flavio   52:17
+Allora diciamo, diciamo da.
+Diciamo da un lato puramente.
+Così internos sappiamo perfettamente che noi i livelli di logica che erano presenti nel Legacy non li abbiamo toccati dentro a tutta la questione della gestione della domanda, quindi loro quello che possono trovare non sono sicuramente sorti.
+Prese dal punto di vista del risultato o di quello che si aspettano su come ragioni il sistema, lì è veramente tutta 1 1 differenza di interfaccia non oltre. D'altro canto c'è tutta quella parte di strumenti e.
+E attività e la parte dell'home page su quella diciamo che ci hanno delle diversità proprio di funzionamento che ci potrebbero essere, quindi quella sarebbe importante pure testarla quindi poi forse io sono un po' d'accordo con.
+Terenzio sul fatto che non mi fiderei di attendere la il placet delle degli amministrativi per spostare lo stato del progetto. Ecco, tanto diciamo che se con un po' di buona volontà vorremmo.
+Volessimo mettere un milestone, diciamo nella anche nella terza settimana d'agosto, se non a fine agosto, che più o meno magari qualcuno di noi è rientrato, potremmo definire quella come data ultima o sì, la fine d'agosto come data ultima.
+Dei test nostri Inter nostri, quelli che stiamo già facendo adesso queste riunioni cicliche, immaginando di aver coperto il più possibile insieme no e quindi poi di arrivare a un test già in esercizio dei degli amministrativi che sia meno sconvolgente possibile.
+Ok e che quindi non apra 1 1 conversazione su una possibile CR una possibile Emanuele o via discorrendo, ma che sia semplicemente un magari leggero raddrizzamento su certe cose se sono utili, comode e condivise da tutti oppure un grande una grandissima stretta di mano con insomma.
+La.
+Il La fine della fase progettuale.
+Che è successo? È caduta la corrente sul paese. Vabbè, OK, comunque carne sul piatto ce n'è.
+
+Michele Friscia   54:47
+No, per.
+Ho capito?
+Certo.
+Io io diciamo che glielo farei vedere a vabbè, bisogna presentarglielo a Luigi e Barbara e poi decidere insieme come fare. Perché sì, il test di sviluppo ha una.
+Una visione limitata, insomma.
+Sono accorto che sulla sperimentazione dal vivo, anche perché secondo me i problemi sono o mi parte il pulsante o non mi parte, cioè non è che sia.
+
+Mercuri Flavio   55:27
+Sì.
+
+Michele Friscia   55:27
+Non modificate le logiche, cioè o funziona premo il pulsante oppure non c'è per dire.
+
+Mercuri Flavio   55:33
+Sì, esatto.
+
+Michele Friscia   55:36
+Le soluzioni sono abbastanza semplici, cioè dovrebbe essere più o meno semplici.
+
+Mercuri Flavio   55:39
+Va bene allora come vi ripeto, purtroppo io mi devo sganciare, non so se voi volete continuare o comunque penso che c'è già tanto sul piatto. Spero che a questo punto nel prossimo incontro vi possiamo far.
+
+Michele Friscia   55:44
+Vabbè.
+
+Mercuri Flavio   55:55
+Cioè, o quantomeno in settimana, magari già in sviluppo tutte le cose che su cui stiamo lavorando e quindi magari voi ci avrete pure un po' di tempo, oltre che per smalazzare come e per fare tutte le analisi e le sacrosante osservazioni.
+Azioni che state facendo adesso, magari per organizzare questi ultimi step prima ripeto che inoltre che se inoltre luglio, perché poi a luglio noi cominciamo ad avere io stesso vado in ferie il torno alla metà di luglio e ci rivediamo poi alla metà di agosto.
+Quindi diventa poi un po pure un po più complicato avere insomma, naturalmente.
+
+Capobianco Paolo   56:32
+Prego.
+
+Michele Friscia   56:37
+Ma anche, ma anche io l'unico problema difficile è difficile.
+
+Mercuri Flavio   56:41
+E quindi magari arriva già la prossima settimana con un'idea chiara e già mezza formalizzata su come su come procediamo, è una buona idea.
+OK, non vi non vi disturbo più, vi lascio alle vostre cose e intanto grazie 1000 per la collaborazione preziosa e ci sentiamo la prossima settimana.
+
+Michele Friscia   57:00
+Bene.
+
+Mercuri Flavio   57:02
+Grazie 1000 a tutti, arrivederci, Ciao, Ciao, Ciao, Ciao, Ciao.
+
+Capobianco Paolo   57:02
+Ok.
+Me Cho.
+
+Michele Friscia   57:04
+Ciao.
+
+Piscitelli Terenzio   57:05
+Ciao a tutti, Ciao.
+
+Laferla Gianluca   57:07
+A tutti.
+
+Capobianco Paolo   57:08
+Terenzio.
+
+Piscitelli Terenzio   57:09
+Sì.
+
+Capobianco Paolo   57:11
+Senti, dobbiamo fare una cosa, noi ci dobbiamo vedere un attimo perché ci sta un memo che ipoteticamente riguarda Irma e Francesco mele sui miglioramenti contrattuali, dove c'era.
+Però c'è un'attività a nostro carico per vedere i miglioramenti contrattuali di ASI.
+Che dovremmo in qualche modo portare a compimento, dovremmo chiudere.
+
+Piscitelli Terenzio   57:41
+No Paolo, questo, ma questo me l'avevi già detto allora. Tecnicamente tecnicamente tutte le fasi di colloquio tra anche della parte ASI si sono svolte, i casi di test sono stati svolti col gruppo de IVS calcolo centrale.
+
+Capobianco Paolo   57:44
+Forse sì.
+E vabbè, diciamo arrivavano comunque in calcolo centrale, sì.
+
+Piscitelli Terenzio   58:06
+Sì, noi abbiamo fornito loro tutte le casistiche di cui avevano bisogno, quindi dirette, indirette, trasformazioni e ricostituzioni, diciamo. Dal nostro punto di vista i casi sono sempre stati fatti di Roma. Noi siamo stati anche tra i primi a fornire tutte quante le casistiche.
+
+Capobianco Paolo   58:08
+Grazie.
+
+Piscitelli Terenzio   58:23
+E tanto è vero che la nostra attività risulta conclusa comunque in quel in quel memo, se non in verifica amministrativa, forse non lo so.
+
+Capobianco Paolo   58:27
+No.
+Verifica amministrativa, quello è il punto che se verifica amministrativa, mentre gli altri stanno messi proprio.
+Niente chiusi, chiusi, insomma.
+Noi siamo in verifica amministrativa e quindi dovremmo chiudere questa cosa.
+
+Piscitelli Terenzio   58:48
+Quindi dobbiamo preparare i casi per Luigi e fargli vedere tutto il giro.
+
+Capobianco Paolo   58:54
+Vogliamo pigliare? Sì, qualche caso, un paio di casi li faccio vedere a Luigi.
+
+Piscitelli Terenzio   58:58
+OO li volete vedere soltanto voi, che in questo caso magari Luigi non è necessario?
+
+Capobianco Paolo   59:05
+Senti, io un giro almeno uno con Luigi lo farei, insomma.
+Poi che ti devo dire?
+Facciamo così, prepara un caso, lo vediamo noi e poi.
+
+Piscitelli Terenzio   59:14
+Ok.
+
+Michele Friscia   59:14
+Ciao.
+
+Piscitelli Terenzio   59:18
+Allora?
+
+Michele Friscia   59:18
+Paolo, di quale di quale casa sta parlando Paola? Miglioramenti contrattuali di che cosa?
+
+Capobianco Paolo   59:23
+I futuri miglioramenti contrattuali.
+
+Michele Friscia   59:26
+Ma no cumulo.
+
+Capobianco Paolo   59:28
+No, cumulo, no.
+
+Piscitelli Terenzio   59:28
+No.
+
+Capobianco Paolo   59:31
+Anzi normale.
+
+Michele Friscia   59:33
+Ma su questo non funziona o no?
+
+Capobianco Paolo   59:36
+No, funziona, capito? Cioè funziona tutto. Noi stiamo messi all'interno di un memo che è stato pensato per unicarpe. E infatti il memo è, diciamo, sotto la direzione di Irma.
+
+Michele Friscia   59:46
+Per unità.
+
+Capobianco Paolo   59:55
+E poi ci sta pure la parte relativa ad ASI, insomma, è stata inserita successivamente, a dir la verità, perché Luigi l'ha inserita successivamente ASI si è collegata a questo memo per questa cosa e soltanto hai capito che.
+
+Michele Friscia   1:00:04
+Sì.
+Sì.
+
+Capobianco Paolo   1:00:10
+Il nostro task, quello diciamo di ASI, per capirci, delle pensioni che vengono da ASI, è luglio che risulta ancora in.
+In analisi amministrative non è chiuso e quindi lo dobbiamo chiudere anche perché questo poi una volta che facciamo questo possiamo veramente fare mo al di là del della chiusura del memo veramente possiamo fare le pensioni con i miglioramenti contrattuali e questo ti cambia tutto.
+
+Michele Friscia   1:00:35
+E certo.
+
+Capobianco Paolo   1:00:38
+Insomma.
+
+Michele Friscia   1:00:39
+Devo fare un caso veloce per testarlo.
+
+Piscitelli Terenzio   1:00:43
+Allora tecnicamente qui possiamo prendere un qualunque caso, cioè nel senso un qualunque soggetto, tanto poi gli elementi contrattuali ce li vuoi aggiungere tu, quindi magari Paolo se mi se mi vuoi anticipare perché noi i casi di test li abbiamo fatti molto a fantasia, nel senso li abbiamo messi noi con date nostre così.
+
+Michele Friscia   1:00:47
+Sì.
+
+Piscitelli Terenzio   1:01:00
+Diciamo un caso di test come dovrebbe essere, quindi per esempio decorrenza, che ne so?
+
+Michele Friscia   1:01:09
+Quando.
+
+Piscitelli Terenzio   1:01:10
+Adesso 2026, che ne so, 31 agosto vengo per dì, poi magari, che ne so, un primo miglioramento contrattuale 1 gennaio 2027, uno al 1 gennaio 2028, ad esempio, mettendone due.
+
+Michele Friscia   1:01:24
+Ma possiamo prendere, scusami, il l'esempio che ho fatto adesso, questo di felicita pedata che funziona.
+Se metti mi chiamate contrattuale, vai su FERT e basta.
+
+Capobianco Paolo   1:01:37
+Quindi, e questo che cessazione è?
+
+Piscitelli Terenzio   1:01:37
+No, ma per farlo no, ma per fargli far giro in diretta, per fargli far giro in diretta magari a Luigi.
+
+Capobianco Paolo   1:01:41
+Questo che roba è? Non ho capito per dargli un minimo di coerenza. Michele, metti che ne so se questo cessa 26, metti il metti il triennio 25, 27 insomma.
+
+Michele Friscia   1:01:45
+Vabbè no, ma io dico per tanto per.
+Io ho capito, ma per vedere se noi dobbiamo vedere intanto se funziona il non è che dobbiamo avere una valenza amministrativa se lo scaglione è uguale e.
+
+Capobianco Paolo   1:01:57
+Sì.
+Non lo puoi fare però la cessazione adesso non la fare, Terenzio.
+Perché è problematica, dobbiamo mettere solo quelle che sono già passate le date.
+
+Piscitelli Terenzio   1:02:12
+Quelle per le quali dobbiamo fare la ricostituzione per motivi contributivi, nel quale ci andiamo a mettere i miglioramenti contrattuali.
+
+Capobianco Paolo   1:02:18
+Perfetto è chiaro perché calcolo centrale non secondo me c'è un problema, cioè se tu gli metti una cosa con un miglioramento contrattuale nel 2027 dico per dire il 1 gennaio 2027.
+Secondo me va a ******* e allora non lo lasciamo perdere, non lo facciamo questa cosa.
+OK, quindi prendi la cessazione vecchia più vecchia in cui.
+
+Piscitelli Terenzio   1:02:43
+2025 magari.
+
+Michele Friscia   1:02:46
+Le vigile pedata, 2024.
+
+Capobianco Paolo   1:02:50
+No, 2024 non.
+
+Michele Friscia   1:02:54
+Che succede?
+
+Capobianco Paolo   1:02:54
+Metti una cosa che abbia senso per Luigi, perché il 2024 è del triennio 22, 23 e 24 e quindi se c'è solo il 2024 non c'ho future scadenze, posso metterne una finta nel 2025?
+Ma là Luigi ti inizia a rompere i ********, che è una cosa che non ha senso, quindi.
+
+Michele Friscia   1:03:15
+Ho capito quello, ho capito io, ma per noi, per fare il Dio nostro, basta una qualsiasi.
+
+Capobianco Paolo   1:03:21
+E volevo fare una cosa che poi propone, vamo pure a Luigi, che vamo pure.
+
+Piscitelli Terenzio   1:03:31
+Vabbè Paolo, quindi OK prendiamo no Michele ma tanto non ci mettiamo niente, cioè voglio dire, ne possiamo prendere quanti ne vogliamo da esercizio dei casi con decorrenza 2025 che li riproduciamo su sviluppo?
+
+Michele Friscia   1:03:31
+E sui due se non cambia nulla, no?
+
+Capobianco Paolo   1:03:32
+Vabbè, vabbè.
+
+Piscitelli Terenzio   1:03:46
+Poi.
+E anzi, possiamo proprio direttamente portare su sviluppo con tutta la pensione.
+
+Capobianco Paolo   1:03:51
+Nel 2025 ci metti un solo miglioramento contrattuale al 1 gennaio 2026.
+Capito?
+
+Piscitelli Terenzio   1:03:58
+Sì.
+Sì, perché proprio era proprio questa, diciamo, la necessità che tu con la ricostituzione per motivi contributivi andavi a gestire gli elementi contrattuali che non eri riuscito a gestire in prima liquidazione.
+
+Capobianco Paolo   1:04:02
+Facciamo così.
+
+Michele Friscia   1:04:14
+Va bene, vi saluto.
+
+Piscitelli Terenzio   1:04:14
+OK.
+Ciao Michele, OK vabbè Paolo ne ne facciamo ma io guarda io pure a sto punto, magari più di un pure più di un caso posso fare pure perché considera che io quello che so io si può arrivare fino a tre no miglioramenti contrattuali.
+
+Michele Friscia   1:04:18
+Ciao.
+
+Capobianco Paolo   1:04:24
+Sì, male.
+Sì, cioè sono tre, ma sono due in realtà.
+
+Piscitelli Terenzio   1:04:35
+Sì, diciamo uno di solito coincide con la data di decorrenza, il primo, gli altri due.
+
+Capobianco Paolo   1:04:37
+Esatto, uno a regime e gli altri due dopo.
+
+Piscitelli Terenzio   1:04:41
+Esatto, sì, vabbè allora OK, allora come dici tu, allora facciamo così, prepariamo un caso di cessazione 2025 Senti, ma sempre per come dici tu, per restare coerente, che casistica prendiamo a livello di contratto qualifica?
+Per chi si applica in particolare scuola oppure qualche altra categoria?
+
+Capobianco Paolo   1:05:01
+No.
+Ma anche scuola sì, scuola potrebbe essere la cosa più sì.
+
+Piscitelli Terenzio   1:05:07
+OK, vado per la scuola.
+Va bene, Paolo.
+
+Capobianco Paolo   1:05:13
+Va bene.
+
+Piscitelli Terenzio   1:05:14
+Li prepariamo subito.
+Ok, Michele in realtà ci ha salutato, ma sta ancora qui, vedo.
+
+Capobianco Paolo   1:05:23
+Infatti non si è capito.
+
+Michele Friscia   1:05:23
+Sono ancora qui, sì.
+
+Capobianco Paolo   1:05:28
+Vabbè.
+
+Piscitelli Terenzio   1:05:29
+Voleva sentire che cosa dicevamo, magari parlano male di me, parlano male di me, voglio sentirli.
+
+Michele Friscia   1:05:32
+Prego.
+
+Capobianco Paolo   1:05:32
+Se parlavamo male di lui?
+
+Piscitelli Terenzio   1:05:38
+No, a proposito, ma mica tu quando sparisci per le ferie?
+
+Michele Friscia   1:05:44
+Tra un po, tra qualche giorno.
+
+Capobianco Paolo   1:05:45
+Presto.
+
+Michele Friscia   1:05:47
+Spero.
+
+Piscitelli Terenzio   1:05:51
+Non ho capito quanto di preciso, proprio di preciso preciso.
+
+Michele Friscia   1:05:53
+Ma non lo so neanche io, tra qualche giorno, la prossima settimana forse.
+
+Piscitelli Terenzio   1:06:01
+OK, va beh, giusto pure per un attimino per capire come muoverci.
+Va bene, OK?
+
+Michele Friscia   1:06:08
+Va bene, Ciao Ciao.
+
+Piscitelli Terenzio   1:06:11
+Va bene, un saluto, Ciao, Ciao, Ciao.
+
+Michele Friscia   1:06:13
+Ciao.
+
+Capobianco Paolo   1:06:13
+OK, Ciao, Ciao, Ciao.
 
 Mercuri Flavio trascrizione arrestata

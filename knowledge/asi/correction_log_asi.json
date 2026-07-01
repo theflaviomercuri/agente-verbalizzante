@@ -1,8 +1,8 @@
 {
   "_meta": {
     "version": "1.0",
-    "total_patterns": 9,
-    "last_updated": "25/06/2026",
+    "total_patterns": 11,
+    "last_updated": "01/07/2026",
     "project_slug": "asi"
   },
   "patterns": [
@@ -498,6 +498,103 @@
       "occurrences": 1,
       "first_seen": "20260624",
       "last_seen": "20260624"
+    },
+    {
+      "pattern_id": "CRR-010",
+      "verbale": "20260630",
+      "category": "actions",
+      "changes": [
+        {
+          "field": "actions[1].action",
+          "original": "Verificare la presenza del riquadro separatore nelle sezioni «Riferimento domanda» della scheda dati pensionistici e implementarlo se assente; verificare e correggere l’interlinea ridotta nella scheda calcolo pensione futura.",
+          "corrected": "Implementare il tooltip «Normativa applicata» sull’icona della normativa selezionata e sostituire il trattino delle normative non applicate con un’icona antitetica (foglietto con X, colore grigio)."
+        },
+        {
+          "field": "actions[2].action",
+          "original": "Implementare il tooltip «Normativa applicata» sull’icona della normativa selezionata e sostituire il trattino delle normative non applicate con un’icona antitetica (foglietto con X, colore grigio).",
+          "corrected": "Esplorare soluzioni visive per collegare la riga selezionata nella tabella normative al pannello dei vincoli verificati aperto (highlight o equivalenti) e presentare la proposta al prossimo SAL."
+        },
+        {
+          "field": "actions[3].action",
+          "original": "Esplorare soluzioni visive per collegare la riga selezionata nella tabella normative al pannello dei vincoli verificati aperto (highlight, scroll contestuale o equivalenti) e presentare la proposta al prossimo SAL.",
+          "corrected": "Progettare l’evidenziazione dell’accordion «Normative verificate» con sfondo colorato e testo introduttivo esplicativo; presentare la soluzione al prossimo SAL."
+        },
+        {
+          "field": "actions[4].action",
+          "original": "Progettare l’evidenziazione dell’accordion «Normative verificate» con sfondo colorato e testo introduttivo esplicativo; presentare la soluzione al prossimo SAL.",
+          "corrected": "Correggere la gerarchia tipografica dell’accordion calcolo anzianità (font titoli dei totali troppo piccolo rispetto ai dettagli). Inizialmente con caps."
+        },
+        {
+          "field": "actions[5].owner",
+          "original": "Almaviva S.p.A.",
+          "corrected": "INPS"
+        },
+        {
+          "field": "actions[5].action",
+          "original": "Correggere la gerarchia tipografica dell’accordion calcolo anzianità (font titoli dei totali troppo piccolo rispetto ai dettagli).",
+          "corrected": "Organizzare una riunione con i responsabili (Luigi e Barbara) per condividere la proposta di sperimentazione in esercizio con utenti selezionati e definire le modalità di collaudo."
+        },
+        {
+          "field": "actions[6].owner",
+          "original": "INPS",
+          "corrected": "Almaviva S.p.A."
+        },
+        {
+          "field": "actions[6].action",
+          "original": "Organizzare una riunione con i responsabili (Luigi e Barbara) per condividere la proposta di sperimentazione in esercizio con utenti selezionati e definire le modalità di collaudo.",
+          "corrected": "Preparare casi di test per i miglioramenti contrattuali ASI (settore scuola, cessazione 2025, miglioramento contrattuale al 1° gennaio 2026) e sottoporli a Luigi per chiudere l’attività in verifica amministrativa."
+        }
+      ],
+      "description": "Il testo generato includeva un'azione basata su un'osservazione informale non confermata esplicitamente come task ('verificare la presenza del riquadro separatore... se assente; verificare e correggere l'interlinea'). L'utente ha eliminato questa azione. In un'altra azione è stata rimossa l'opzione 'scroll contestuale' dall'elenco delle soluzioni da esplorare, in quanto già in sviluppo per altro scopo. → In FASE 2, includere un'azione solo se nella trascrizione è presente un'assegnazione esplicita o un accordo confermato tra i partecipanti; non trasformare in azione le segnalazioni informali o le verifiche tentative. Omettere dalle opzioni di esplorazione le tecniche già in sviluppo per altri scopi.",
+      "occurrences": 1,
+      "first_seen": "20260630",
+      "last_seen": "20260630"
+    },
+    {
+      "pattern_id": "CRR-011",
+      "verbale": "20260630",
+      "category": "sections",
+      "changes": [
+        {
+          "field": "sections[1]",
+          "title": "Scopo del documento",
+          "original_length": 123,
+          "revised_length": 161,
+          "char_delta": 38
+        },
+        {
+          "field": "sections[2]",
+          "title": "Introduzione",
+          "original_length": 531,
+          "revised_length": 520,
+          "char_delta": -11
+        },
+        {
+          "field": "sections[3]",
+          "title": "Anomalie interfaccia: stato di avanzamento",
+          "original_length": 1228,
+          "revised_length": 1090,
+          "char_delta": -138
+        },
+        {
+          "field": "sections[4]",
+          "title": "Sezione «Normative verificate»: tooltip, icona e collegamento visivo al dettaglio",
+          "original_length": 616,
+          "revised_length": 619,
+          "char_delta": 3
+        },
+        {
+          "field": "sections[7]",
+          "title": "Pianificazione test con utenti amministrativi e collaudo",
+          "original_length": 683,
+          "revised_length": 582,
+          "char_delta": -101
+        }
+      ],
+      "description": "Il testo generato includeva nelle sezioni: un'osservazione informale non confermata come punto operativo (interlinea ridotta nella scheda calcolo pensione futura); una data indicativa di pianificazione ('indicativamente fissata al 31 agosto 2026') nella sezione collaudo; il qualificatore 'SIN' ridondante dopo 'Legacy' in contesti narrativi dove il sistema era già stabilito. L'utente ha eliminato il riferimento all'interlinea (coerentemente con la rimozione dell'azione associata), ha rimosso la data indicativa del 31 agosto e ha semplificato 'il Legacy SIN' in 'il Legacy'. → In FASE 2, per il livello resolved: non includere nelle sezioni osservazioni informali non ancora confermate come punti operativi; omettere nelle sezioni le date marcate come indicative (se necessario, riportarle nelle note); usare 'Legacy' senza il qualificatore 'SIN' in contesti narrativi dove il sistema è già stabilito nel testo.",
+      "occurrences": 1,
+      "first_seen": "20260630",
+      "last_seen": "20260630"
     }
   ]
 }
