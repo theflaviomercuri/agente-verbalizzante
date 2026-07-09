@@ -1,1549 +1,1205 @@
-Reingegnerizzazione UIUX ASI-20260630_150617-Registrazione della riunione
-30 giugno 2026, 01:06PM
-1 h 6 m 18 s
+Reingegnerizzazione UIUX ASI-20260707_150334-Registrazione della riunione
+7 luglio 2026, 01:03PM
+56 m 15 s
 
 Mercuri Flavio trascrizione avviata
 
-Michele Friscia   0:03
-Un caso.
-Aspetta, torni indietro perché vi faccio vedere una cosa che.
-Allora qui c'è.
-Qui c'è tra la XE il tasto c'è una sovrapposizione, non so se la vedete.
-
-Mercuri Flavio   0:34
-Io non vedo proiezioni, c'ho gli altri.
+Mercuri Flavio   0:05
+OK, la registrazione è avviata. Possiamo cominciare da dove vogliamo iniziare le cose che abbiamo rivisto noi in settimana abbiamo completato tutte le diciamo le revisioni.
+Rispetto alle cose che erano emerse sia nel sal della scorsa settimana che nel sal della settimana ancora prima, quindi magari molto velocemente, se Gianluca o Anna ce lo vogliono mostrare, le vediamo un attimo insieme.
 
 Laferla Gianluca   0:37
-No.
+Sì, vi condivido e volendo ve le elenco tutte quante, poi in caso mi fermate se ci sono dei dubbi.
+OK, qui sono direttamente su sviluppo, quindi tutte le modifiche sono già presenti e testabili.
+La prima cosa che è stata modificata è stata la nomenclatura del tooltip per allinearlo alla Legacy, quindi adesso è vai all'area operativa e il Dante causa è tornato ad essere ricerca domande indirette.
+Istrando.
+In area operativa è un'altra delle modifiche che abbiamo fatto, che è quella del concatenamento delle due informazioni, prima la nuova UI mostrava solo la parte iniziale, quindi giacente adesso.
 
-Michele Friscia   0:38
-No, non mi sto, non mi stavo condividendo, quindi si aspetta.
-E Terenzio mi fai il relatore?
-
-Piscitelli Terenzio   0:46
+Michele Friscia   1:28
 Sì.
-Bye.
 
-Michele Friscia   1:10
-Quando si inserisce il nome qua c'è fra la XE il pulsante c'è una sovrapposizione, non so se la vedete.
+Mercuri Flavio   1:30
+Gian, no iPhone contro meno, please.
 
-Mercuri Flavio   1:21
-Non solo la vediamo, ma mi sa che quella è.
-Allora la sovrapposizione, diciamo, interviene quando viene.
-Mostrato il contorno che corrisponde al focus, purtroppo questa lo sai che è una configurazione che è già così nella libreria vostra.
+Laferla Gianluca   1:32
+Sì.
+E poi ditemi voi se più o meno perché ho una forma particolare dello schermo.
 
-Michele Friscia   1:38
-Sì, con tutto.
+Mercuri Flavio   1:42
+Un'altra bottarella.
+
+Laferla Gianluca   1:44
+Bene.
+Sempre.
 
 Mercuri Flavio   1:48
-Non fa impazzire nemmeno noi e anche noi ci siamo interrogati sulla possibilità di intervenire per generare un po' di spazio tra la casella e il bottone, però boh c'ho paura che poi magari noi la.
+Ci siamo, grazie.
 
-Michele Friscia   2:04
-Ma solo solo su questo l'ho visto o perché c'è solo questa questo pulsante, questa.
+Laferla Gianluca   1:51
+In periodi da prestazione.
+Abbiamo uniformato i dati andando a mettere quello che mancava del Legacy all'interno del dettaglio del Drawer e ho qui anche per poter vedere retribuzione teorica e retribuzione teorica contrattuale.
+Attuale, queste due non erano presenti nella nuova UI, adesso per semplicità qui non sono mostrate subito, ma il dettaglio le mostra.
+Abbiamo deciso precedentemente proprio di rimuoverle dalla tabella per renderla più facile nella sua visualizzazione.
+Andando invece nel flusso.
+Verifica diritto.
+Una delle cose che abbiamo fatto è stata intanto separare riferimento domanda con il suo background per differenziarlo da dati pensionistici, scendendo abbiamo dato un'icona per la normativa applicata.
+Che per la normativa non applicata e per il caso nel quale viene aperto un dettaglio, si scende con la visualizzazione per aiutare l'utente e si ha anche contezza di qual è il dettaglio del.
+Quale si sta visualizzando?
 
-Mercuri Flavio   2:09
-Questo qua, quello che tu vedi, è un elemento che esiste, è proprio una ricerca già formalizzata dalla libreria de dell'Inps.
-Capito? Non l'abbiamo composta noi, come detto, come un form, è proprio un elemento.
+Michele Friscia   3:28
+E.
 
-Michele Friscia   2:20
+Laferla Gianluca   3:28
+Con questo bordino blu e un'evidenziazione di tutto il testo, questo dovrebbe aiutare l'utente e quindi switchando andrà a cambiare.
+Poi, sempre in questa sezione, Terenzio c'aveva chiesto.
+
+Michele Friscia   3:46
+Poi mi salvi un attimo prima che mi hai fatto vedere che c'erano i dati giuridici, no, ancora prima, ancora prima.
+
+Laferla Gianluca   3:49
 Sì.
+
+Michele Friscia   3:57
+C'è riferimento domanda mentre si era fatto perché qui c'è un pochino sulla sinistra.
+
+Laferla Gianluca   4:04
+Sì, questo è sempre il design system, uno delle dei metodi che utilizziamo per evidenziare una parte, a volte utilizziamo o un background Celestino o questo con bordino.
+
+Michele Friscia   4:12
+OK.
+E tanti paesaggi invece non c'è però il questo bordino.
+E.
+
+Laferla Gianluca   4:21
+Lo preferiresti che inglobasse entrambi?
+
+Michele Friscia   4:26
+No o due o non capisco questo riferimento solo solo da riferimento domanda, cioè questo questa linea.
+
+Laferla Gianluca   4:38
+Taglia punti.
+
+Mercuri Flavio   4:38
+Forse io userei però, forse io però userei semplicemente il fondino, quello più azzurrino.
+
+Laferla Gianluca   4:44
+Ondino Celestino OKE, devi prendere entrambi anche dati pensionistici.
+
+Mercuri Flavio   4:46
+Sì, perché così?
+Ma questo scusa questa qua era una richiesta che era emersa. Gianluca, perdonami, ma non mi ricordo.
+
+Laferla Gianluca   4:55
+Sì, era una richiesta emersa nell'ultimo sal, io me l'ero appuntata.
+
+Mercuri Flavio   4:59
+Per evidenziare cosa? Solo un riferimento domanda.
+
+Laferla Gianluca   5:03
+Sì, da come me l'ero segnata era solo riferimento domande, era mi ricordo che era perché si perdeva un po' nella visualizzazione la differenza tra uno e l'altro.
+
+Michele Friscia   5:04
+Refezione.
+
+Laferla Gianluca   5:14
+Quindi era una delle motivazioni per cui avevamo deciso poi di evidenziarne solo uno, però non è un problema in caso raggrupparli entrambi, se ha senso logicamente farlo.
+
+Mercuri Flavio   5:23
+Secondo me no, nel senso che poi torni alla situazione precedente, cioè se metti il fondino a tutti e due è come se non mettessi il fondino a nessuno dei due fondamentalmente. Quindi se è il tema è diciamo sbalzare l'uno.
+Rispetto all'altro allora sì, però metterei il fondino, quello chiaro, quello diciamo azzurrino, chiaro, chiaro e basta.
+
+Michele Friscia   5:50
+Li metterei 2 2 chiari AA alla domanda e addetti pensionistici.
+Cioè, se poi direi così.
+
+Mercuri Flavio   5:57
+Quindi metteresti sotto al coso chiaro pure i dati pensionistici però.
+
+Michele Friscia   6:02
+Sì, per evidenziare le due gruppi di informazioni, ecco.
+
+Mercuri Flavio   6:08
 Vabbè.
 
-Mercuri Flavio   2:24
-Non so se Gianluca vuoi però andare da qualche parte pure su l'Internet di per vedere se.
+Laferla Gianluca   6:10
+OK, quindi li metto entrambi.
+Sempre in questa sezione, una delle richieste che ci aveva fatto Terenzio recentemente era di ingrandire leggermente questa icona.
+Che inizialmente aveva questa grandezza, ma era leggermente piccola e un po si perdeva nella grandezza della Select.
 
-Laferla Gianluca   2:28
-Sì, stavo, stavo controllando e anche in altre search bar fa esattamente la stessa cosa che al click si evidenzia e quel bottone sì.
-
-Mercuri Flavio   2:35
-Ma son così vicini, prova un attimo su Internet, perché questo sta molto su Internet, questo componente pure sul sito dell'Inps proprio.
-
-Laferla Gianluca   2:43
-Controllo.
-
-Mercuri Flavio   2:49
-Ma perché non sei tu che Proietti è Paolo Michele, OK, vabbè.
-
-Michele Friscia   2:52
+Michele Friscia   6:27
 Sì.
-Allora su questo questa è 1 1 pratica che ho fatto per solo per simulare la pensione e vabbè c'ha.
-Un conto assicurativo.
-Caricato eccetera eccetera, però quando vado a inserire i dati dati di registrazione si blocca, quindi magari c'è qualcosa che gli dà il nome, mi dà fastidio.
+Sì, queste icone operative dove devi cliccare, insomma, se si fa più grandi va bene.
 
-Mercuri Flavio   3:15
-No.
-
-Michele Friscia   3:24
-Quindi io vi passerei il codice fiscale.
-Per vedere un po.
-Le cause?
-
-Piscitelli Terenzio   3:40
-No, in realtà Michele abbiamo già qui, cioè proprio non è non dipende dal codice fiscale, lo fa con tutti i casi in cui inseriamo per la prima volta, diciamo i dati di cessazione.
-
-Mercuri Flavio   3:51
-Emanuele.
-
-Laferla Gianluca   3:53
-E vi confermo che è già stato risolto, non potete vederlo perché è ancora in locale, ma è già risolto il problema.
-
-Michele Friscia   4:01
-Questo problema dicevi di caricamento OK.
-
-Laferla Gianluca   4:02
-Sì, il Legacy lo gestisce bene, anche se riceve un errore e la nuova UI si bloccava proprio per quell'errore, quindi invece adesso lo ignora anche la nuova UI.
-
-Michele Friscia   4:14
-OK, allora?
-
-Mercuri Flavio   4:16
-Michele, nel frattempo ho messo dentro alla Chattina, ho messo uno screenshot di come è fatto il sito.
-Il sito, proprio il sito dell'Inps pure è proprio sì, è proprio un elemento fatto così, col bottone subito attaccato al.
-
-Michele Friscia   4:24
-La ricerca.
-Le ricerche dici?
-
-Mercuri Flavio   4:32
-Laser bar.
-
-Laferla Gianluca   4:32
-Quello che ho notato dalla homepage è che il sito dell'Inps non evidenzia al click, quindi mi sa che gli hanno tolto proprio quel comportamento di bordino.
-
-Michele Friscia   4:32
-Ok.
-
-Mercuri Flavio   4:41
-No, in realtà quello non si può. Quello non si può togliere perché quello comunica con comunica gli eventi con al browser e quindi non lo puoi togliere per questioni di accessibilità. Quello che succede è che per esempio sul sito dell'Inps.
-
-Laferla Gianluca   4:51
+Laferla Gianluca   6:39
 Sì.
-
-Michele Friscia   4:51
-Ma.
-
-Mercuri Flavio   4:55
-Quando premi per avere il focus della casella succedono altre cose, il fondo diventa blu, quindi quello lo perdi.
-
-Laferla Gianluca   5:01
-Sì.
-
-Mercuri Flavio   5:03
-Però diciamo che è così, quindi voglio dire, questa è una responsabilità demanda.
-
-Michele Friscia   5:06
-Ma ti devo fare lo screenshot, non ho capito.
-
-Mercuri Flavio   5:10
-De che?
-No, io te l'ho, io ho mandato nella chatina di questa conversazione, ho mandato uno screenshot che ho preso dal sito dell'Inps in cui vedi che anche lì sono attaccati il bottone e la e la search bar.
-
-Michele Friscia   5:12
-Mi ha detto.
-OK.
-OK.
-Ecco, sì.
-Va bene?
-
-Mercuri Flavio   5:33
-Ok, tu hai visto, avevi avuto modo di vedere qualcos'altro in settimana che t'aveva?
-
-Michele Friscia   5:36
-Sì.
-Centro.
-Paolo è arrivato.
-Allora questo qui?
-Data felicità.
-E quando vado a ripristinare la lavorazione?
-E modificare i dati economici solo su questo caso mi sembra se io scrivo.
-5 zeri sì, vabbè, sbaglia qui la separazione delle migliaia, il punto.
-
-Mercuri Flavio   6:22
-Ciao.
-
-Michele Friscia   6:22
-Però in realtà lo memorizza bene alla fine, quando vado a salvare eccetera.
-
-Mercuri Flavio   6:26
-Bene.
-OK, sì, è un fatto di esposizione.
-
-Michele Friscia   6:29
-Cioè qui non si vede, però se vado a vedere poi dopo la pratica il CAP eccetera me lo mette corretto, cioè mette i 10.000.
+Quindi questa l'abbiamo.
 
 Mercuri Flavio   6:41
-E sì, perché poi quando salvi comunque non ci stanno divisori, quando salvi il numero è integrale.
+Questa andrebbe centrata però orizzontalmente, Gian otticamente però.
+C'ho la centratura della S ottica.
 
-Michele Friscia   6:49
-Però.
+Laferla Gianluca   6:48
+Sì, probabilmente è stato lo sviluppo della qualcosa del CSS dello sviluppo, perché l'avevo centrata, me lo ricordo anche.
 
-Mercuri Flavio   6:51
-Devo reggere, sì.
+Mercuri Flavio   6:56
+OKOK.
 
-Laferla Gianluca   6:53
-Sì, questo ce l'aveva evidenziato Terenzio, quando c'è la doppia cifra dopo il migliaio c'è il puntino, se c'è una sola cifra non lo mette e ha in lavorazione anche questo.
-
-Michele Friscia   6:53
-Storno.
-Sì, ma solo su questo campo qui però non credo.
-
-Laferla Gianluca   7:13
-E se metti tipo 3000 dovrebbe togliertelo.
-
-Mercuri Flavio   7:14
-Beh, comunque.
-
-Michele Friscia   7:16
-Aspetta, no, anche qui.
-
-Laferla Gianluca   7:18
+Laferla Gianluca   6:58
 Sì.
 
-Mercuri Flavio   7:22
-Verifica che facciamo su tutto, diciamo su tutto.
+Michele Friscia   6:59
+Una cosa le invece torni un attimino su.
 
-Michele Friscia   7:28
-Va beh, a parte qui questo.
-Allora mettiamo dei colori giusti.
-Andiamo ai dati economici.
-Quando mi fa inserire gli economici?
-Mi dice giustamente verifiche degli integrativi, non lo puoi fare.
-Perché devo confermare le cose retributive?
-OK.
-E tu no qua però non me lo fa, non mi fa salvare.
-Allora?
-Dobbiamo.
+Laferla Gianluca   7:00
+Sì.
+Sì.
 
-Laferla Gianluca   8:50
-È possibile che al click di salva dati economici dovrebbe apparire un alert che in Lega si mostra e la nuova UI ancora non mostra. Anche questo è uno dei punti che ci aveva evidenziato terenzio e anche questo è in sviluppo.
+Michele Friscia   7:03
+Non la fai, fai, fai.
 
-Michele Friscia   9:01
-Bene.
+Laferla Gianluca   7:05
+Sì.
 
-Mercuri Flavio   9:10
-Ma c'è una rotta agganciata, Michele, ti posso chiedere di aprire l'inspector?
+Michele Friscia   7:06
+Ma vai pure giù dove c'è scritto la queste frasi, regime pensionistico è più piccolo del resto o è la mia impressione?
+Di fonti di queste.
+Forse la mia impressione è una.
 
-Michele Friscia   9:14
-Cosa?
+Laferla Gianluca   7:23
+A vedere.
 
-Mercuri Flavio   9:16
-Ti posso chiedere di aprire l'inspector se premi F 12?
-OK, adesso dovresti andare nella scheda.
-Rete, ci stai già OK, prova a premere quel bottone, a modificare le voci retributive e a salvare.
-Non succede niente.
+Mercuri Flavio   7:24
+Quale resto ti riferisci, Michele?
 
-Michele Friscia   9:49
-No.
+Laferla Gianluca   7:26
+Parla di uno di questi.
 
-Mercuri Flavio   9:51
-Non c'è una, non c'è un'azione agganciata.
-O forse è esploso il front end prima e quindi non sta?
+Michele Friscia   7:27
+Hai sì, uno di questi sì.
 
-Michele Friscia   9:57
-Perché prima mi ha funzionato, quindi mi sa che forse.
+Laferla Gianluca   7:31
+Il 16 pixel è il default di Sirio, no è uguale, probabilmente è perché ho leggermente dezoomato io lo schermo.
 
-Mercuri Flavio   10:01
-Sì, perché forse l'abbiamo fatto esplodere prima, quando esplode così ogni tanto non poi non se non se riacchiappa.
+Mercuri Flavio   7:33
+No, è tutto uguale, è tutto uguale.
 
-Michele Friscia   10:09
-Faccio refresh secondo voi oppure oppure?
+Capobianco Paolo   7:44
+Eccomi qui, scusate il ritardo.
 
-Mercuri Flavio   10:11
-Sì, fai un refresh, fai un refresh.
-Solo io vedo.
-Molto male.
-
-Laferla Gianluca   10:27
-No, anche io da subito, dall'inizio.
-
-Michele Friscia   10:28
-No.
-
-Mercuri Flavio   10:30
-OKOKOK.
-OK, sempre se riesci a riaprire il l'inspector, vediamo se parte qualcosa stavolta.
-Non c'è bisogno perché evidentemente è partito visto.
-
-Michele Friscia   10:46
-Me l'ha stampato.
-
-Mercuri Flavio   10:47
-OK quindi questo correggendo quell'errore di prima che del caricamento infinito poi non si rompe più il front end e questi problemi non ce l'abbiamo più.
-
-Michele Friscia   10:59
-Allora poi su questo ho fatto la riverifica del diritto.
-E.
-Sì, questo non l'ho fatto.
-Allora qua quello che ho notato è che.
-Vabbè qua questo queste sezioni riferimento domanda se si potessero mettere in un rettangolo, anche se non so se lei non mi ricordo se c'è o non c'è.
-
-Mercuri Flavio   11:46
-Ma allora mi ricordo che ne avevamo già parlato, forse l'abbiamo anche già fatto un intervento del genere.
-
-Laferla Gianluca   11:50
-Sì, ce l'abbiamo già.
-
-Mercuri Flavio   11:53
-Era su questo?
-
-Michele Friscia   11:55
-Era su, forse era su un'altro, mi pare, non so, non mi ricordo.
-
-Laferla Gianluca   12:00
-Ne avevamo uno in ultimo miglio.
-
-Michele Friscia   12:02
-E l'avete fatto quello?
-
-Laferla Gianluca   12:04
-Sì, allora no, questo forse ci manca, dati pensionistici.
-
-Michele Friscia   12:10
-Tipo domande, periodo domande dei pensionistici.
-Paola, avrei visto senza di te.
-
-Capobianco Paolo   12:19
-No, sì, hai fatto bene, non ti preoccupare.
-
-Michele Friscia   12:22
-Allora meglio.
-
-Mercuri Flavio   12:23
+Mercuri Flavio   7:47
 Ciao Paolo, ben giunto.
 
-Michele Friscia   12:25
-Allora su invece sulle normative, cliccando qui su azioni fa vedere i vincoli.
-Però li fa vedere quaggiù.
-Giusto, l'avete messo qui e mi chiedevo, non è meglio metterli come sotto forma di dettaglio che si apre con la schermata AA lato anziché metterla sotto?
-O magari non lo vede peggio?
+Laferla Gianluca   7:48
+Ciao.
+OK.
 
-Capobianco Paolo   12:56
-No, più che altro non si capisce a quale dei due si riferisce.
+Michele Friscia   7:57
+Gli fai vedere quel fatto del diritto, torni un po su.
 
-Michele Friscia   13:00
-Sì, c'è questo punto, non si capisce a quale di cui si riferisce.
-
-Mercuri Flavio   13:08
-No, aspettate un attimo.
-Allora, andando per ordine.
-
-Capobianco Paolo   13:13
-Il tuo telefono dove sta?
-
-Mercuri Flavio   13:15
-Diciamo che la modalità di aprire la tabella sotto è un ormai l'abbiamo credo interiorizzata la usiamo in altri punti.
-Che sicuramente rende più comodo, diciamo.
-Allora io non so molto.
-Confidente rispetto all'inserimento di tabelle dati in forma tabellare nel nella nella nella modale drawer, che è quella che esce dal lato.
-
-Michele Friscia   13:46
+Laferla Gianluca   8:03
 Sì.
 
-Mercuri Flavio   13:47
-Infatti finora quando l'abbiamo utilizzata abbiamo usato delle forme tabellari leggere insomma che non ora. Se questi sono dati diciamo che hanno una.
-Non un'importanza così, cioè che so dati di corredo è un conto, se invece questi sono dettagli importanti secondo me invece è il caso di tenerli di tenerli in questa in questa maniera.
-Rispetto al fatto che non si capisca a quale dei due record è relazionato, a quale record in generale questo bisogna un attimo capire se quale, cioè qual è la relazione che vi aspettereste, cioè in che.
-Questi sono la descrizione di cosa, per esempio noi potremmo mettere lì dove c'è scritto vincoli verificati, potremmo mettere vincoli verificati per cosa?
+Michele Friscia   8:03
+Ho delle norme che vincono una volta che tu espandi il dettaglio.
 
-Michele Friscia   14:43
-Cioè.
-O qua se io clicco qui questo è il video dedicato è per questo tipo di normativa o si evidenzia questo, cioè la riga che evidenziata, cioè un segno di.
+Laferla Gianluca   8:08
+Allora sì, Paolo, abbiamo integrato le nuove icone, quindi sia per la normativa applicata che non applicata e nel caso di visualizzazione del dettaglio del vincolo, si viene portati giù con la visualizzazione e.
 
-Mercuri Flavio   14:53
-Esatto, ma e qual è, cioè che quale?
+Capobianco Paolo   8:16
+OK.
 
-Michele Friscia   15:00
-Punto non lo so, cioè questo si deve agganciare al primo che ho cliccato.
+Laferla Gianluca   8:24
+Per avere sempre il riferimento del dettaglio aperto si ha questo Bordino celeste e un'evidenziazione proprio di tutta la linea.
 
-Mercuri Flavio   15:05
-Sì, certo, naturalmente, però dovremmo mettere sì.
+Capobianco Paolo   8:29
+OK.
+OK, penso che va bene. Michele, no, penso che va bene così.
 
-Capobianco Paolo   15:06
-Allora Flavio ascolta Flavio, queste normative no che sono state verificate, in realtà non c'hanno un titolo che è una descrizione estesa soltanto, non c'è un titolo semplificativo, come ti voglio dire.
+Laferla Gianluca   8:35
+No, non switchare.
 
-Mercuri Flavio   15:12
-Sì.
-Mhm.
-Sì, sarebbero queste sarebbero.
-
-Capobianco Paolo   15:23
-Ok, non c'è normativa 128 e normativa 263, c'è una descrizione estesa no che tutta questa requisiti per iscritto donne con iscrizione anteriore a 1985 prestazione servizio dal.
-
-Mercuri Flavio   15:32
+Michele Friscia   8:37
 Sì.
 
-Capobianco Paolo   15:38
-1 gennaio 2012 e così via OK ora per poter legare eventualmente questi il la riga a cui si riferiscono i dati che stanno al di sotto.
+Laferla Gianluca   8:43
+Quindi poi l'iconcina questo è confermato che la grandezza è corretta passerei al calcolo pensione.
+All'interno del calcolo pensione avevamo.
+Un'altra di queste tabelle, questa è la versione precedente che è sempre fatta con lo stesso schema di totali parziali e totali finali che il nostro design system non riesce a far vedere in maniera chiara l'utente, quindi abbiamo riportato la stessa logica del.
+Diritto e misura a questa visualizzazione, quindi si hanno tutti i periodi e si vedono sempre i totali, i totali arrotondati e il coefficiente di rendimento aprendo.
+Tutti i dettagli che venivano già mostrati precedentemente al totale si hanno anche i parziali prima dei.
+Finali sempre con coefficienti.
+E la parte finale è dedicata sempre alla visualizzazione in stile scontrino del totale complessivo, quindi con tutto sommato si ha sempre la possibilità di espandere e comprimere rapidamente tutto.
+Tutto.
+E appunto, come vi facevo vedere, il totale finale è questo qui e poi viene riportato nel nuovo approccio in questo modo.
 
-Mercuri Flavio   15:51
+Michele Friscia   10:13
+Scusa, mi riparti da zero in questo, in questa, in questa tabella, quando viene fuori questa lista, quando viene fuori.
+
+Laferla Gianluca   10:24
+Quindi si parte da qui, si ha questo accordion servizi utili.
+
+Michele Friscia   10:28
+OK.
+
+Laferla Gianluca   10:30
+Si espande.
+
+Michele Friscia   10:31
+OK, perché perché è evidenziato il servizio 95 1 volta che tu hai espanso?
+
+Laferla Gianluca   10:40
+Perché questo è un totale parziale che ti riesco a far vedere da qui mandandolo tutto.
+Ciao.
+È questo qui.
+
+Michele Friscia   10:54
+Sì, no, l'ho capito, ma perché è evidenziato il 95 e non gli altri? Perché c'è quelle la riga verticale su quella su quella scritta lì?
+
+Laferla Gianluca   11:05
+E questo è per differenziarlo da per far capire all'utente che questo si apre, quindi è un accordion che va aperto, mentre questo è un elemento statico, quindi anche semplicemente il cursore mostra all'utente il fatto che non.
+
+Michele Friscia   11:12
+OK.
+
+Laferla Gianluca   11:20
+Può avvenire il click.
+
+Michele Friscia   11:22
+Ok, quella è una, quindi una riga di.
+
+Mercuri Flavio   11:22
+Esatto, e questo quando, questo quando c'hai più, quando c'hai più totali parziali, che naturalmente lo vedi meglio perché vedi molti accordi imbianchi che si possono espandere, che so i diciamo sono i subtotali, chiamiamoli così.
+
+Michele Friscia   11:27
+OK.
 Sì.
 
-Capobianco Paolo   15:52
-E tu oggi non ci avresti altro che andare a mettere questa descrizione a fianco a vincoli verificati un qualcosa del genere immagino, no, questo di questo parlavi tu, giusto?
+Mercuri Flavio   11:38
+Poi c'hai il totale parziale, poi c'hai altri subtotali in alto totale parziale e poi magari c'hai il totale definitivo oppure ci sono alcuni momenti in cui lui somma i più totali parziali, quindi questo che vedi tu potrebbe essercene un'altro che somma altri subtotali.
 
-Mercuri Flavio   16:00
-No, però a questo punto io io a questo punto io ti darei una ti darei una soluzione. Sì, però ti darei una soluzione più ho visto che m'hai chiarito il problema di darei una soluzione più robusta e la soluzione più robusta è che visto che questo.
-Dover leggere tutta la descrizione della del della normativa devi andare a consultare l'ellipsis, cioè appoggi al mouse.
+Michele Friscia   11:44
+Sì, OK.
 
-Capobianco Paolo   16:26
+Mercuri Flavio   11:54
+Totali e poi uno che somma i due.
+
+Michele Friscia   11:54
+Sì, ho capito, ho capito, questo qui è il totale che non si espande, quello fisso, mentre quelli che si espandono c'è il la freccetta poi verso il basso.
+
+Mercuri Flavio   11:59
+Esatto, esatto, esatto, questo qui, quello con la con la Cosetta, con la marca a sinistra, è il subtotale di tutti i totali che stanno subito sopra, sostanzialmente.
+
+Capobianco Paolo   11:59
+Ok.
+
+Laferla Gianluca   12:16
+Esatto.
+
+Michele Friscia   12:16
 Sì.
 
-Mercuri Flavio   16:28
-In realtà forse nel momento in cui tu vai a vedere il dettaglio io direttamente sopra la tabellina dei vincoli verificati metti un se metti un titolino in cui si dice descrizione della normativa e sotto si.
-Si rimette per esteso la descrizione della normativa, così se uno vuole può leggere la descrizione intera contestualmente alla visione dei dati esplosi.
-Non so se.
+Capobianco Paolo   12:19
+L'unica cosa vorrei capire questo allora in questo non ho capito bene se è un caso reale o meno, però in questo caso fondamentalmente noi c'abbiamo un sistema misto per cui i periodi dal 96 in poi.
+Non portano a un coefficiente reale della pensione, per cui quel totale finale non ci dovrebbe essere, quello zero servizio totale utile lo puoi mettere, servizio arrotondato lo puoi pure mettere.
+
+Mercuri Flavio   12:40
+E infatti non totalizzano.
+
+Capobianco Paolo   12:51
+Ma quel coefficiente non ha molto senso, perché dal 96 in poi si prende una pensione contributiva calcolata in modo diverso, non con il coefficiente che sarebbe un po'.
+
+Laferla Gianluca   12:56
+Esatto.
+Perché nel Legacy, comunque, viene riportato nella vecchia visualizzazione.
+
+Capobianco Paolo   13:06
+Questo qui.
+Ma pure lì è sbagliata come cosa, perché in realtà.
+Diciamo io utilizzo, cioè si utilizzano soltanto i coefficienti fino al 95, insomma.
+È quello che viene prima, quindi quello del 92 e poi fino al 95, in questo caso se fosse un retributivo sarebbe diverso perché sarebbe fino al 2012 e così via.
+
+Mercuri Flavio   13:38
+No però scusa aspetta Paolo scusa qua c'è bisogno che chiariamo un attimo il requisito perché potrebbe essere requisito funzionale questo scusa Gianluca ti posso chiedere di tornare alla nostra visualizzazione che è più chiara?
+
+Capobianco Paolo   13:40
+Sì.
+
+Laferla Gianluca   13:48
+Sì.
+
+Mercuri Flavio   13:51
+OK, qui comprimi tutto per favore.
+
+Capobianco Paolo   13:58
+Infatti questo.
+
+Mercuri Flavio   13:58
+OK, qui noi c'abbiamo una coppia diciamo di insiemi di periodi che sono quelli che vanno dal 311290 fino al 311292, poi c'abbiamo una serie di periodi che vanno da gennaio 93.
+
+Capobianco Paolo   14:10
+Perfetto.
+
+Mercuri Flavio   14:14
+Fino a fine dicembre del 95 e vengono totalizzati là sotto con un coefficiente di rendimento che è.
+
+Capobianco Paolo   14:16
+Sì.
+Al 95, però.
+
+Mercuri Flavio   14:25
+Esatto, poi dopo sotto c'abbiamo tutti quelli dopo il 95 in buona sostanza.
+
+Capobianco Paolo   14:28
+Perché per i due anni tu ci vai per differenze, hai capito? Per i due anni 93, 95 verrà calcolato per differenza, quindi quello al 95 meno quello del 92 sarà quello che applicherò per questi tre anni, diciamo così.
+
+Mercuri Flavio   14:34
+Sì.
+
+Capobianco Paolo   14:44
+OK.
+
+Mercuri Flavio   14:44
+Intanto perché? Perché in quello dal 93 al 95 non c'è il totale del coefficiente rendimento.
+
+Capobianco Paolo   14:51
+E perché, diciamo per tutta una serie di norme, determinare il coefficiente che valide vale al 95 o anche dal 93 al 95 non lo puoi vedere in maniera astratta?
+Estrapolando soltanto questi due anni, ma lo devi vedere nel contesto anche degli anni che ha avuto nel 92.
+
+Mercuri Flavio   15:17
+OKE, come arriva lui però da 0,07 spicci del 92 allo 0,144 spicci del totale fino al 95?
+
+Capobianco Paolo   15:18
+OK.
+
+Michele Friscia   15:26
+Sì.
+
+Capobianco Paolo   15:28
+Allora lui diciamo 0,144 fondamentalmente il coefficiente calcolato per 5 anni, 10 mesi, 19 5 mesi e 11 5 anni e 11 mesi.
+OK.
+
+Mercuri Flavio   15:43
+Ciao.
+
+Capobianco Paolo   15:44
+Perfetto poi sappiamo che il 92 per due anni 11 mesi è 0,07 quindi per differenza io riconoscerò dal 93 al 95 0 virgola.
+14-0,07.
+
+Mercuri Flavio   16:04
+OK.
+
+Capobianco Paolo   16:05
+Sì.
+
+Mercuri Flavio   16:07
+Ok.
+
+Capobianco Paolo   16:07
+Dal 96 in poi diventa contributivo.
+
+Mercuri Flavio   16:09
+E quindi là evidentemente quello 0,879 è un'altro ragionamento che si fa includendo i periodi i periodi da dal 96 in poi.
+
+Capobianco Paolo   16:17
+Però però non è un ragionamento che ha senso qua, cioè tu hai fatto bene che hai fatto dal 1 gennaio 96, vedi, ci hai messo soltanto diritto e misura utile il periodo non hai messo nessun coefficiente.
+
+Mercuri Flavio   16:20
+OK.
+Esatto.
+
+Capobianco Paolo   16:32
+Perché lì non si parla più di coefficiente? Allora questo che viene qui fuori alla fine è un coefficiente ipotetico alla cessazione, che però non verrà mai utilizzato. Allora la sua presenza può essere anche.
+
+Mercuri Flavio   16:33
+Esatto.
+
+Capobianco Paolo   16:49
+Fuorviante, insomma, no, far capire che qualcosa di diverso.
+
+Mercuri Flavio   16:51
+Sì, allora questa cosa qua la dovete un secondo vedere con terenzio, perché è un tema funzionale che parte dal Legacy.
 
 Capobianco Paolo   16:59
-Sì, ma invece fare un qualcosa come sta nel.
-Relativo.
+Sì.
+Esatto, esatto.
 
-Mercuri Flavio   17:07
-Nel Legacy non francamente non me lo ricordo. Se ce l'avete aperto lo vediamo insieme e capiamo no.
+Laferla Gianluca   17:02
+Sì, come conferma anche qua.
 
-Capobianco Paolo   17:08
-E conviene lei che si.
+Mercuri Flavio   17:08
+Diciamo che noi naturalmente, come da come da requisito, ci siamo attenuti a quello che funzionalmente c'è, anche perché non come sai, non siamo noi che gestiamo sto numero arriva da back-end, quindi poi magari per chiarire sta situazione con lui.
 
-Michele Friscia   17:11
-Ma lei che si apre qua sotto, apre una lista qui sotto la riga.
+Capobianco Paolo   17:16
+Sì.
+Sì.
 
-Mercuri Flavio   17:14
-Se esce un esce un expandable roe esce un expandable roe allora io sono un po' sfavorevole in realtà diciamo non solo io alla tabella di tabella di tabella di tabella.
-Perché secondo me rende un po' complicata poi la comprensione, tanto che molti sistemi inps hanno implementato nel tempo l'utilizzo degli accordion, perché tu c'hai una riga con una, diciamo con una primo set di dati.
-Radio con un titolo, una descrizione e poi quando espandi c'hai un'altro elemento dentro, capito? Non è un elemento figlio uguale a quello che hai espanso, che poi potrebbe diventare insomma una ricorsione.
-Che è un po pesante da gestire, ma non lo so, a me non sembra. Cioè questa poi trattata nella sua versione più arcaica, questo sarebbe un dettaglio quindi?
-Teoricamente qua tu dovresti saltare da questa pagina alla pagina di dettaglio della normativa e poi là ci avresti naturalmente poi sia la sintesi della descrizione sotto la tabella, qui per essere diciamo per brevità di navigazione per rendere la UX meno.
-Meno, anche meno standard, meno noiosa per l'operatore, s'è scelto di aprire il dettaglio contestualmente in pagina, considerando che comunque con i sistemi moderni c'abbiamo possibilità.
+Mercuri Flavio   17:24
+E.
 
-Michele Friscia   18:47
-Io allora io farei farei, io non so, io farei se io clicco qui.
-E vedo metterei un segno di spunta che sto è attivo questo un dettaglio attivo se clicco qui metti segno di spunta qua in modo che da in qualche modo dare un dinamismo fra quello che vedo e l'azione da dove da dove è partito.
-Cioè, diciamo banalmente, poi.
+Capobianco Paolo   17:24
+Cioè, per capirci, per una cessazione per alcuni tipo di cessazioni, questo sistema aveva senso per alcune cessazioni avvenute prima del 2012 con il sistema retributivo, per cui ci stava il coefficiente della cessazione aveva il suo senso.
 
-Mercuri Flavio   19:16
-Va bene allora non mi non mi vicino alla all'azione mi sa che ci torna complicato nella diciamo nella quello che possiamo fare è modificare la sicuramente l'iconcina dell'azione.
+Mercuri Flavio   17:42
+Gian, mi faresti rivedere il Legacy un secondo per favore?
 
-Michele Friscia   19:32
-OO modificare l'azione del.
+Laferla Gianluca   17:45
+Sì.
 
-Piscitelli Terenzio   19:32
-Ma non c'è la.
-Non c'è la possibilità di fare 111 sorta di highlight della riga.
+Capobianco Paolo   17:49
+Legacy.
 
-Mercuri Flavio   19:40
-Questa cosa è da verificare, eventualmente si dovrebbe pensare a uno sviluppo ad hoc, però certo vai a tocca un componente core per un diciamo per un'esigenza molto specifica. Non mi ricordo se avevamo già implementato o meno. Gianluca, tu te lo ricordi?
+Mercuri Flavio   17:54
+Questa che cosa è, che sezione è?
 
-Laferla Gianluca   19:57
-No, l'highlight della riga non me lo ricordo proprio, potremmo se no fare uno scroll down visto che stiamo implementando anche quello per far capire che si è aperto quello.
+Laferla Gianluca   17:58
+È calcolo pensione del flusso integrativo e questo è proprio quello che siamo in sviluppo.
 
-Mercuri Flavio   20:01
+Mercuri Flavio   18:05
 Ok.
-Emma è uguale, è uguale, però non hai relazione con la con la riga sopra. Vabbè, facciamo così, esploriamo.
+Gli do un appunto a Terenzio, così si ricorda che ne dovete parlare.
 
-Michele Friscia   20:13
-Per esempio la situazione magari verde, non lo so, oppure cambi zona.
+Capobianco Paolo   18:09
+Sì, poi ti faccio vedere una cosa, se mi dai un attimo la possibilità di cose giusto per farti capire, lo puoi vedere pure da te. Se prendi un foglio di calcolo ci dovrebbe stare qui il foglio di calcolo.
+Senza che mi me lo fai vedere a me.
+Eccolo qua.
+Sulla destra.
+Foglio di calcolo PDF vai su PDF l'icona PDF.
+Vai un poco più giù nella parte dove ci stanno tutti i servizi alla seconda pagina.
 
-Mercuri Flavio   20:17
-Facciamo così, esploriamo, esploriamo noi un sistema visivo che renda chiaro il fatto, la relazione tra la riga che s'è cliccato e quella che s'è la tabella che s'è aperta e poi valutiamo insieme quale diciamo se.
-
-Michele Friscia   20:26
+Michele Friscia   18:57
 Sì.
 
-Mercuri Flavio   20:32
-Se abbiamo capito, ma io penso che abbiamo capito, quindi rimane solo diciamo un tema un po' più tecnico, se e quanto è fattibile o quanto diventa poi oneroso dal punto di vista dello sviluppo, fare cose troppo pirotecniche va bene.
+Capobianco Paolo   18:58
+OK, vedi qui che tieni totale servizi al 92 OK c'ha il suo coefficiente, poi totale servizi fino al 95 e ci sta 0 14 dopodiché questo finale.
 
-Michele Friscia   20:43
-Sì.
-Un'altra cosa, questa normativa selezionata qui, Terenzio, qual è lo scopo di quest'icona qui?
+Laferla Gianluca   19:13
+Grazie.
 
-Piscitelli Terenzio   20:55
-L'icona dice quale delle due normative è la vincente.
-Quindi in questo caso è stata assegnata la prima normativa da cui abbiamo poi tirato fuori.
+Capobianco Paolo   19:13
+Quindi non ce l'hai più il coefficiente di riquota di rendimento e tra l'altro non ci hai nemmeno indicati il servizio arrotondato.
+Perché? Perché il servizio arrotondato è quello che poi ti porta a questa aliquota di rendimento, ma in questo caso non ha senso e quindi non viene proprio visualizzato. Allora io mi aspetterei un coso io.
+Sì, dico la verità, non ho fatto caso al Legacy come faceva, ma probabilmente già lo faceva un po' sbagliato. Insomma, però il modo di rappresentare questo qui è corretto. Insomma, no?
 
-Michele Friscia   21:00
-OK.
-E allora mettiamoci un qualcosa.
-Riceviamo meglio perché io non ho capito perché io immaginavo che qui ci fosse un download di qualcosa di scarico della normativa.
+Mercuri Flavio   19:50
+OK, va bene, quindi?
+Sì, chiaro, evidente, evidente. OK quindi su questa cosa ho lasciato un appunto a Terenzio e gli ho chiesto di segnarsi e poi quando potete, insomma ne riparlate e sistemato di là, se sistemato il servizio di là, questo si fixa automaticamente.
 
-Mercuri Flavio   21:18
-Vuoi mettere un tool tip?
+Capobianco Paolo   20:00
+Prego.
 
-Michele Friscia   21:21
-Sì, qualcosa sì.
+Mercuri Flavio   20:10
+Vai Gian, vai avanti per favore.
 
-Mercuri Flavio   21:23
-Vai, mettiamo tutto il tip.
+Laferla Gianluca   20:13
+E allora dentro retribuzione media pensionabile anche c'è un caso che stiamo gestendo.
+Perché i totali di questa tabella?
+Ci sono.
+Probabilmente non ha il totale nella vecchia versione system e come è fatto il Legacy, i totali vanno a finire completamente sulla destra, questo proprio per come funziona le tabelle di Sirio.
+Può portare l'utente, soprattutto con questa visualizzazione, a arrivare in fondo e non avere piena contezza dei totali, quindi dover per forza fare questa operazione.
 
-Michele Friscia   21:31
-Poi.
-Va bene?
+Mercuri Flavio   20:58
+Ma poi soprattutto qua c'è un tema di, diciamo, coerenza del dato all'interno della tabella, non possiamo mettere inserire delle righe che non rappresentano il dato come viene rappresentato in tutte le altre, cioè deve essere la rappresentazione.
+Diciamo formale del dato logico deve essere coerente a se stessa sempre in tutte, diciamo in tutte le righe della tabella. Questi sono valori diciamo secondari e ottenuti da calcoli che si fanno sui dati tabellari.
+E quindi diciamo naturalmente dal punto di vista della UX vanno espressi in un'altra forma, in un'altro posto e la nostra soluzione adesso ce la fa, ce la fa vedere Gianluca.
+Magari tornando a una visualizzazione meno.
 
-Capobianco Paolo   21:41
-Non ho capito però il tooltip che fa il tooltip che cosa mi dice?
+Laferla Gianluca   21:46
+La soluzione?
+È quella di mettere un totale esplicitato alla fine, così da consentire, volendo, all'utente anche di poter non dover espandere per forza tutti i risultati per poter arrivare a un totale finale e poi poterlo confrontare comunque con le retribuzioni, i giorni di godimento.
 
-Michele Friscia   21:45
-E tu ci passano tutte e c'è scritto qui normativa vincente, una cosa del genere c'è scritto normativa applicata.
+Mercuri Flavio   22:07
+E lasci vincolata la tabella dalla dai totali. Così mentre guardi i totali hai possibilità di visitare più diciamo più zone della tabella per fare un'eventuale riscontro dei dati. Una giretto cognitivo diverso però tanto i dati c'hanno le i dati totali.
+Qua sotto c'hanno un nome e un cognome, quindi sono inequivocabili e sono pure decisamente molto più chiari.
 
-Capobianco Paolo   21:52
-Che proprio deve scrivere, scrive normativa selezionata.
-Eseguire.
-Quello che dovrebbe scrivere il Toltip per non essere poi confusionari, sarebbe normativa selezionata.
-Che cosa pensate che possa scrivere?
+Capobianco Paolo   22:31
+Sì, diciamo quello è l'unica cosa che se tu vedi qui no che sta nei in questi totali ci sta l'ottanta per 100 della retribuzione media. Questo influisce poi alla fine sulla tabella superiore.
 
-Mercuri Flavio   22:12
-Sì.
-
-Michele Friscia   22:12
-Seleziona ma normativa selezionata secondo me è normativa selezionata.
-
-Capobianco Paolo   22:17
-E allora se non va bene, non va bene nemmeno sopra, capito quello che dico?
-
-Michele Friscia   22:23
-Sì, ho capito.
-
-Capobianco Paolo   22:25
-Cioè non è che.
-
-Michele Friscia   22:26
-Normativa selezionata, normativa vincente, forse.
-Normativa applicata.
-
-Mercuri Flavio   22:34
-Allora intanto forse leverei il trattino a quella non applicata.
-
-Capobianco Paolo   22:35
-Normativa applicata così però io lo metterei pure sopra normativa applicata, cioè se lo metti nel tolti pure sopra devi mettere la stessa frase perché che senso ha? Se no facciamo solo confusione.
-
-Michele Friscia   22:40
+Mercuri Flavio   22:40
 Sì.
 
-Capobianco Paolo   22:49
-E mettiamo due frasi diverse.
-O fai una cosa che ci metti tutto un papiello che spieghi tutto la normativa che ho accettato perché era più conveniente per l'iscritto e cose del genere o se devi mettere la frasetta piccola è la stessa che sta scritta.
-Nella nella descrizione della colonna.
+Capobianco Paolo   22:46
+Nel senso che se noi abbiamo entro un limite del 25%, se non vado errato, se c'ho dei valori di retribuzione.
+Inferiori a questo 37, 4 e 94, questi valori vengono eliminati dal calcolo, quindi avremo sulla retribuzione queste che tiene 424342.
 
-Michele Friscia   23:13
-Sì.
-E allora boh, la magia, questa mente è vincente.
-No.
+Mercuri Flavio   23:02
+Aurora.
 
-Capobianco Paolo   23:24
-Applicata, metti applicata più che vincente applicata.
+Capobianco Paolo   23:12
+39 se dovesse esserci, vengono tolti quel.
+
+Mercuri Flavio   23:14
+Questi vengono presi.
+
+Michele Friscia   23:17
+Non deve essere.
+
+Mercuri Flavio   23:19
+Quelli superiori all'ottanta per 100 dell'attribuzione media.
+
+Michele Friscia   23:19
+Emanuele.
+
+Capobianco Paolo   23:21
+No, quelli inferiori vengono tolti dal calcolo della retribuzione media.
 
 Michele Friscia   23:26
-Applicato, vabbè.
+1030 7000, quelli che sono più piccoli vengono tolti, ma il totale della riga sotto.
 
-Mercuri Flavio   23:29
-E Gianluca, te segni che io toglierei il trattino a quelle non applicate.
+Mercuri Flavio   23:30
+E qua per esempio c'è ne stanno Gianluca, possiamo vedere un secondo.
 
-Laferla Gianluca   23:35
+Capobianco Paolo   23:35
+Questo qua forse non ci sta, allora.
+
+Michele Friscia   23:40
+Paolo.
+
+Mercuri Flavio   23:40
+Vediamo.
+
+Michele Friscia   23:42
+Non deve essere sotto il totale delle dimensioni teoriche, deve essere nella riga sotto.
+Cioè sotto sono tre campi, media 80 e totale di divisione teorica.
+
+Mercuri Flavio   23:49
+Quale?
+Quindi tu dici il terzo della prima riga va spostato alla seconda riga?
+
+Capobianco Paolo   23:54
+Grazie.
+No, è 0 80, ti basta 0 80, perché no, solo 0 80?
+
+Michele Friscia   24:02
+No, totale, le funzioni teoriche sta sulla prima riga, deve stare sulla seconda riga.
+Che è il valore finale.
+
+Laferla Gianluca   24:10
+Quindi questo ho postato sotto.
+Qui lo vorresti?
+
+Michele Friscia   24:15
 Sì.
+Se apre il foglio di carta oppure la vecchia versione dovrebbe essere giù.
 
-Mercuri Flavio   23:37
-Lo lasciamo vuoto proprio.
-Ma attraverso, scusate, questa è solo curiosità, attraverso che processo viene selezionata sta normativa?
+Capobianco Paolo   24:22
+Sì, se mi se mi dai la cosa a questo punto ve lo faccio vedere però su un prospetto di calcoli in cui effettivamente sono state tolte, che me lo so è quello di cui parlavo con Claudia adesso.
 
-Capobianco Paolo   23:56
-Perché è quella più conveniente per l'iscritto.
+Mercuri Flavio   24:32
+Allora guarda te la ti.
 
-Mercuri Flavio   24:00
-No, dico proprio praticamente, cioè io da è da qua che seleziono la normativa che approvo.
+Michele Friscia   24:34
+Ma no, qua sono diverse.
 
-Capobianco Paolo   24:07
-No, tu non la.
+Laferla Gianluca   24:37
+Vi lascio la condivisione.
 
-Michele Friscia   24:07
-No, è il no, è il sistema, il sistema della strada.
+Capobianco Paolo   24:39
+Sì, Dammi un attimo la condivisione, vi faccio vedere un caso in cui effettivamente lavora questo sistema.
+Tramola di viabilità.
 
-Piscitelli Terenzio   24:08
-No.
+Mercuri Flavio   24:55
+Ecco, aspetta, ci penso io.
+Bye.
+Abilito già pure Michele, così se ha voglia di.
 
-Mercuri Flavio   24:09
-OK.
-
-Capobianco Paolo   24:09
-Sistema automaticamente definisce.
-
-Piscitelli Terenzio   24:10
-Ciao.
-
-Mercuri Flavio   24:12
-OK.
-
-Piscitelli Terenzio   24:13
-Cioè diciamo c'è un servizio di back-end che nel darti la risposta della verifica del diritto ti dice, queste sono le normative che io ho verificato con esito positivo e di quelle che ho verificato con esito positivo ho assegnato come.
-
-Mercuri Flavio   24:20
-Quella più conveniente?
-
-Piscitelli Terenzio   24:29
-Complicata questa qua, perché qui ce ne sono due, ne sarebbero potute anche essere 341 sola, sempre soltanto ne viene.
-
-Mercuri Flavio   24:34
-Di più, certo.
-EOKOK allora Gianluca, torniamo sul tema del trattino, non solo togliamo il trattino, ma mettiamo, diciamo l'icona antitetica a quella che rappresenta la normativa approvata, che probabilmente poi cerca la nel sistema visivo loro.
-
-Piscitelli Terenzio   24:38
-Applicata.
-
-Mercuri Flavio   24:54
-Sarà un foglietto con una X invece che con la V che rimane grigio invece che così visivamente rafforziamo il concetto che una di tutte.
-In stato approvato.
-
-Laferla Gianluca   25:07
-Perfetto, sì.
-
-Michele Friscia   25:13
-Allora altra cosa, ho fatto qualche prova sul calcolo pensione futura.
-Non so se in fase di lavoro, qui la divisione delle righe è un pochettino diversa rispetto alle altre schermate.
-
-Mercuri Flavio   25:37
-Va.
-
-Michele Friscia   25:39
-Avete avete visto?
-
-Mercuri Flavio   25:43
-No, in che senso, Michele?
-
-Michele Friscia   25:45
-E sai, qui appiccicato contratto, c'è un'interlinea ridotta.
+Capobianco Paolo   25:12
+Aspetta che deve, mi deve arrivare, mi risponde sempre un pochino.
+Eccolo qua.
+Mi è capitato casualmente proprio la situazione, quindi allora io tengo questa retribuzione media pensionabile.
+Vedi come stai?
 
 Mercuri Flavio   25:49
-Lo spaziatura OK, andiamo, verifichiamo.
+Là c'è 2420.
 
-Michele Friscia   25:51
+Capobianco Paolo   25:51
 OK.
-E poi?
 
-Capobianco Paolo   25:56
-Però ci ha provato a farlo metterlo tutto visibile.
-È una bella cosa.
+Mercuri Flavio   25:52
+No, so questi qua sopra. So questi qua sopra sì. Quindi lo il meteo so i 30.598 tutti quelli sotto no, tutti quelli sopra vengono o sotto che avevamo detto tutti quelli sotto vengono eliminati.
 
-Mercuri Flavio   26:04
-Come Paolo, scusa, io ti ho perso.
+Capobianco Paolo   25:55
+Vedi, vedi?
+No, quelli sotto, quelli sotto nel limite di un 25% magari diciamo a te non è interessante più di tanto perché poi lo fa il sistema, il calcolo vengono tolte infatti vedi ci sta questo la penultima.
+Ultima.
+La terzultima.
 
-Capobianco Paolo   26:06
-Cioè che capito, puoi fare così, inserire tutti i dati senza nemmeno fare uno scroll, una cosa che.
+Mercuri Flavio   26:25
+Ma Senti, vogliamo fare una cosa? Vogliamo fare una cosa? Sì, quelli che mettono zero non vengono totalizzate. Gianluca, troviamo un caso in cui ci sta uno di questi zeri lì, per favore.
 
-Mercuri Flavio   26:12
-OK, dici così tu più compatto.
+Capobianco Paolo   26:25
+Quella salendo vedi queste che stanno punto zero e non vengono più.
 
-Capobianco Paolo   26:15
-Non so se lo vai ad aggiustare, poi alla fine devi scrollare. Mi sa, lo so, tu c'hai ragione, ma c'ho ragione pure io. Boh.
+Mercuri Flavio   26:38
+Riprendite un secondo la condivisione e vediamo un caso perché eventualmente quello che potremmo fare è cercare di dare una connotazione alla alle righe che c'hanno che non entrano nella totalizzazione.
 
-Michele Friscia   26:19
-E lo so.
-Sì, però è diverso rispetto al resto. Allora qui importi importi qua si comportano normalmente se metto 50.000.
+Laferla Gianluca   26:40
+Boh.
+Non so se già qua si trova un caso.
 
-Capobianco Paolo   26:29
-Sì, hai ragione, sì.
+Mercuri Flavio   26:55
+No, torna del là, torna del là, per favore, nella nuova.
+Questa dimentichiamola.
 
-Michele Friscia   26:36
-Mettere le separatore delle migliaia correttamente invece non mi non mi funziona per il suo acconto assicurativo.
-Tre.
-A tutti.
-Non so se questo.
-È in corso di lavorazione, quindi però non mi fa nulla sul conto assicurativo.
-
-Mercuri Flavio   27:10
-E allora ti pregherei di fare un refresh e poi di riaprire di nuovo l'inspector, così vediamo se parte qualcosa.
-
-Michele Friscia   27:16
-Che faccio un refresh?
+Laferla Gianluca   27:01
+OK.
 
 Mercuri Flavio   27:18
-Sì, fai un refresh e poi premi F 12 dopo che hai refreshato.
-O premi F 12.
-OK, adesso torna lì.
+C'è.
+Vabbè comunque non serve trovarlo, immagino che ci siamo capiti dove si presenti questa situazione potremmo rendere la riga differente.
 
-Michele Friscia   27:44
+Capobianco Paolo   27:33
+Sì, no, va beh, ma diciamo al di là di questo, quello che diceva Michele, forse di allinearli in verticale, forse per rendere un poco più evidente la situazione di allinearla alla cosa.
+
+Mercuri Flavio   27:33
+Cioè cercare di dargli una.
+No, Michele diceva Michele. Michele diceva semplicemente, hai visto che ci stanno due righe di totali? Michele diceva semplicemente che il totale, quello totale retribuzione teorica, invece di stare nella riga sopra, va nella riga sotto come ultimo dato, tutto a destra.
+
+Capobianco Paolo   27:49
+Sì.
+
+Michele Friscia   28:00
+Sì, anche se in realtà è esposto in modo diverso nel fuori di calcolo.
+Però dicevo, questo mi sembra, mi sembra più ordinato, c'è la media, il totale di revisione media e il totale, il totale finale.
+
+Mercuri Flavio   28:07
+Sì, perché voi la.
+
+Capobianco Paolo   28:07
+Beh.
+
+Mercuri Flavio   28:09
+Perché quella però?
+Sì.
+Sì.
+
+Michele Friscia   28:16
+E su i giorni e i giorni nell'articolo precisativo sempre.
+
+Mercuri Flavio   28:22
+E soprattutto così, tu sei in grado di avere sempre sott'occhio i totali, però poi diciamo appunto camminare sui dati in tabella osservando il dato destrutturato, ecco.
+Il totale del strutturato.
+Va bene, allora ci appuntiamo di spostare questo totale retribuzione teorica in basso e quindi essere il terzo, diciamo dato della seconda riga.
+
+Laferla Gianluca   28:50
+E questi due immagino che andranno a destra leggermente.
+
+Mercuri Flavio   28:52
+E rimangono là.
+Non lo do.
+
+Laferla Gianluca   28:57
+Fatto.
+Poi lascio là.
+
+Mercuri Flavio   29:05
+Non lo so perché a dire il vero quella è una riga di tutti i totali, effettivamente forse sarebbe strano spezzare i totali.
+Però vabbè dai, questa è un dettaglio risibile secondo me.
+L'essenziale è che funzioni bene come sistema di lettura dei dati per come sono fatti logicamente.
+Possiamo andare avanti?
+
+Michele Friscia   29:36
+Sì.
+
+Laferla Gianluca   29:39
+OK, passerei a calcolo pensione futura, ci sono alcune modifiche.
+E intanto l'abbiamo allineato alla nuova UI, c'era qualche piccolo problema di interlinea e qualche tooltip che era rimasto nero, ora è perfettamente allineato.
+Procedendo.
+Alla predisposizione del conto.
+Ai periodi è stato dato il badge colorato per differenziarli. Nelle varie tipologie possono avere 5 casistiche diverse che abbiamo gestito sempre con i colori del design system. Questo è uno dei casi in cui si vede.
+E si hanno entrambi i badge all'interno.
+
+Capobianco Paolo   30:29
 OK.
-Qui funziona adesso.
 
-Capobianco Paolo   27:56
-[ Fill/] Se GAVI combina la comida.
+Laferla Gianluca   30:30
+C'è la possibilità sempre di espandere il dettaglio e di avere lo Stato che rispecchia sempre lo stesso tipo di logica.
+All'interno di calcolo pensione futura abbiamo anche proseguendo con la simulazione.
+Migliorato la visualizzazione degli accordion che c'erano che ci avevate segnalato il fatto che gli utenti scorrendo.
+A volte ignoravano il fatto che questo era un accordo inespandibile, quindi abbiamo provveduto a incasellarlo in un background che lo evidenziasse e gli abbiamo dato anche un'indicazione all'utente del fatto che sono presenti dei dati da poter controllare.
 
-Michele Friscia   27:59
-L'avete visto quello che ho combinato? Non ho fatto niente di.
-
-Capobianco Paolo   28:01
-No, hai fatto qualche pasticcio.
-Comunque Terry, tutto il tuo lavoro sul diritto non viene valutato nulla.
-Perché normative verificate sta scritto Piccirillo, Piccirillo, Piccirillo.
-
-Piscitelli Terenzio   28:52
-Scusa Paola, non ho capito dove.
-
-Capobianco Paolo   28:55
-Era una battuta qui nei risultati no della simulazione ci sta normative verificate, però secondo me sta scritto un po troppo piccolino se.
-Vediamo se parlo un po di più.
-
-Michele Friscia   29:28
-Queste scarpe che ho messo a mano, c'è questa distinzione, non è colorato il tuo periodo manuale.
-Possiamo mettere i colori OO evitato?
-
-Mercuri Flavio   29:42
-Joan.
-
-Michele Friscia   29:45
-E quando mettiamo dei periodi in più manualmente e nelle sì, questi, questi, questi righe sono colorate in modo diverso.
-
-Mercuri Flavio   29:53
-Ok, possiamo mettere un badge intorno a manuale o effettivo?
-Così si vede che sono diversi.
-
-Piscitelli Terenzio   30:05
-Qui dobbiamo vederlo insieme, perché questo in realtà ci sono svariati colori, qui ogni colore era stato pensato per identificare una particolare modifica fatta sul periodo.
-
-Michele Friscia   30:10
+Michele Friscia   31:16
 Sì.
 
-Piscitelli Terenzio   30:18
-Che poteva essere un inserimento proprio di un periodo ex novo oppure la modifica.
+Laferla Gianluca   31:17
+Quindi l'utente al click può espanderlo, ci sono vari casi.
+In cui si possono avere uno o più accordi, questa credo sia una casistica in cui se ne hanno tre e quindi verranno evidenziati in questa.
+Poi in ultimo miglio.
+In ultimo miglio no, questo l'avevamo già visto nel trascorso Sal beneficia la cessazione. Questo è un caso che c'era sempre stata richiesta da Terenzio. Non lo riuscite a vedere adesso, ma nel caso in cui non sono presenti.
+I dati in tabella prima veniva molto compresso e c'era solo una piccola dicitura che non veniva Letta bene, mentre adesso apparirebbe la tabella così com'è con la scritta non sono presenti i dati in tabella.
+Questa era un'altra richiesta che ci aveva fatto Terenzio.
 
-Mercuri Flavio   30:22
-E ti viene in mente quanti so ti viene in mente quanti più o meno potevano essere?
+Michele Friscia   32:23
+1 1 cosa su questo, siccome sia benefici della cessazione sia benefici contrattuali futuri contengono al massimo tre elementi, diciamo non si può togliere questo il fatto.
+Il folder finale, elementi per pagina, 10, eccetera eccetera.
 
-Piscitelli Terenzio   30:27
-Quanti ne erano 4, 5?
+Laferla Gianluca   32:41
+Impaginatore, assolutamente.
 
-Mercuri Flavio   30:29
-Vabbè dai, ce l'abbiamo, ce l'abbiamo.
+Mercuri Flavio   32:42
+La paginazione? Certo, sì.
+Quindi su tutte le tabelle di sta pagina.
 
-Michele Friscia   30:31
-Sì, 4 5 sì, una del genere.
+Michele Friscia   32:53
+Guarda verifica di registrazione, sì, sono due o due o tre, i numeri contrari sono generalmente tre al massimo e vai un po su se c'è qualche altro elenco.
 
-Mercuri Flavio   30:33
-Ce li abbiamo.
-
-Michele Friscia   30:37
-Allora qui che posso fare?
-
-Capobianco Paolo   30:38
-E scusami se vai un po un po sopra Michele, prima di continuare con questo nuovo servizio.
-
-Michele Friscia   30:45
+Laferla Gianluca   33:02
 Sì.
 
-Capobianco Paolo   30:45
-Da un po più sopra.
-Vedi qui normative verificate.
-No, se c'è la possibilità di aprire questo.
+Michele Friscia   33:06
+Dati pensionistici, anche questo è soltanto uno.
+È soltanto un folder di tutta questa schermata.
 
-Michele Friscia   30:52
-Ese ti passai diritto.
+Mercuri Flavio   33:17
+E allora sì, togliamoli i paginatori.
 
-Capobianco Paolo   30:55
-Vai un poco giù.
+Laferla Gianluca   33:18
+Sì.
+Sì, con queste informazioni sì, noi ci predisponiamo sempre per poter gestire più elementi, perché sappiamo a volte quanti di quanti se ne possono popolare avendo sempre dei casi di test noi che utilizziamo.
+Perfetto.
+Le ultime due cose che sono più generali.
+Abbiamo risolto il problema che c'era nell'approdo ad ultimo miglio che ogni tanto una nuova UI generava un caricamento infinito, quindi ora è allineato con il Legacy e non avrete più quel problema e in più, come potete vedere da qui, abbiamo messo.
+La punteggiatura corretta ha le cifre, quindi adesso qualunque cifra del migliaio eccetera prende bene il punto è generalizzato su tutto l'applicativo.
+Prima c'era il problema che solo la doppia cifra del migliaio riceveva poi il *******.
 
-Mercuri Flavio   30:55
-Il l'accordion, dici tu l'accordion.
+Michele Friscia   34:13
+OK.
 
-Capobianco Paolo   30:58
-Sì, normative verificate, la scritta è un po troppo piccolina.
+Mercuri Flavio   34:20
+Gianluca, scusa, ma questo è l'unico caso in cui un importo non c'ha il segnetto dell'euro?
 
-Mercuri Flavio   31:04
-Sai che pure questa è una cosa che abbiamo discusso proprio sta settimana perché lo stavamo usando e ci siamo resi conto che effettivamente sto testo nell'accordo non è piccolino, però anche qui sono diciamo disposizioni recepite.
-Quindi il componente è fatto proprio così, io boh.
-Non l'abbiamo forzato perché francamente non mandava di.
+Laferla Gianluca   34:27
+E.
 
-Capobianco Paolo   31:33
-No, lo sai perché te lo dico, lo sai perché te lo dico, non è che diciamo è solo una questione estetica.
+Mercuri Flavio   34:27
+O son tutti così gli importi?
 
-Mercuri Flavio   31:33
-Di contraddire.
+Laferla Gianluca   34:31
+Forse ci arriva così il dato, in questo caso non mi ricordo di altre tabelle che lo hanno.
 
-Michele Friscia   31:39
-Vabbè, neanche si vede, cioè io non l'avevo visto.
+Mercuri Flavio   34:34
+Tali un po vediamo gli altri, vediamo altri importi, vediamo qua sopra per esempio non c'è mai giustamente questi ho dati di calcolo.
+Vediamo una tabella.
 
-Capobianco Paolo   31:42
-Allora tu devi sapere che molto spesso a me mi chiamano al telefono, nemmeno mi scrivono, mi chiamano al telefono e mi chiedono, ma perché gli ha dato questo diritto a pensione? E stiamo parlando dell'ecasi dove questa cosa è.
-Scritta molto più ampia, io gli devo spiegare, dice Guarda, ma non c'è bisogno che mi telefoni, siamo di là, ti faccio vedere che ci stanno le cose unificate e va così.
+Laferla Gianluca   34:45
+Probabilmente rispecchiando il Legacy.
+Anche il Legacy si.
+Non ci sono importi.
 
-Mercuri Flavio   32:02
-Il perché?
-Paolo, tu hai fatto tu adesso, in questo momento hai fatto, hai fatto un'operazione fantastica e cioè ci hai dato un caso che a noi diciamo ci apre un frangente di riprogettazione della UX, proprio della dell'esperienza di utilizzo.
+Mercuri Flavio   34:56
+Vai su quelle su cui stavamo prima, per esempio.
 
-Capobianco Paolo   32:15
+Laferla Gianluca   35:01
+C'è ancora.
+E ad esempio, questi sono importi, no?
+
+Mercuri Flavio   35:07
+E vabbè certo questo però questi però sono diciamo forme, quindi sono numeri che servono anche a fare dei calcoli e non me lo possono avere però nel caso della rappresentazione tipo in quella che dicevamo prima, quella tabella che dicevamo prima.
+
+Laferla Gianluca   35:08
+Sì.
+
+Mercuri Flavio   35:25
+Coi totali sotto, guarda che tabella era.
+
+Laferla Gianluca   35:27
+Sì, devo rientrare nel flusso io.
+Servizi utili è questa sotto retribuzione media pensionabile.
+
+Mercuri Flavio   35:52
+E no, manco qua c'è allora o sì, no, sì, qua c'è.
+
+Laferla Gianluca   35:55
+C'è.
+
+Mercuri Flavio   35:57
+E questo dato a noi ci arriva come una stringa già composta, arriva da backend con la e alla fine.
+
+Laferla Gianluca   36:03
+No, credo di no. Io immagino che il Legacy sia fatto nello stesso modo e ricalcandolo pedissequamente abbiamo preso, abbiamo preso l'euro quando il Legacy lo mette e non messo quando non lo mette.
+
+Mercuri Flavio   36:11
+Non hai messo la.
+Beh no, in realtà dobbiamo fare facciamo così, poniamo attenzione a questa cosa dove non l'abbiamo messo mettiamolo perché o sempre o mai.
+
+Laferla Gianluca   36:23
 Sì.
 Sì.
 
-Mercuri Flavio   32:23
-E ti dico che molto probabilmente, per quanto possa essere diciamo visivamente evidente, forse comunque loro fanno fatica a razionalizzare il fatto che queste informazioni stanno messe lì. Quindi io mo adesso quello che faccio è darti un bel suggerimento. Noi ce ne usciamo con suggerimento Michele, scusa poi.
+Mercuri Flavio   36:31
+Ok.
 
-Capobianco Paolo   32:37
-Esatto, sì, perfetto.
-
-Mercuri Flavio   32:43
-Chiude la cordeon.
-
-Michele Friscia   32:45
-Aspetta.
-
-Mercuri Flavio   32:46
-Delle normative verificate. Allora secondo me questo espandibile qua sta infilato mo nel Legacy non mi ricordo dove esattamente sta messo e come però questo sta infilato in un form come se fosse in campo di un form in realtà.
-In realtà realtà non è proprio così. In realtà è un espandibile che contiene delle informazioni molto importanti, però nessuno dice perché sono importanti. Al limite se io lo vedo leggo normative verificate, però non è diciamo immediata la connessione normative verificate.
-Che risponde alla domanda, ma perché gli abbiamo dato sto sto diritto? OK, quindi quello che farei io è il seguente, farei dello intanto dello spazio, mi rendo conto che magari scendiamo di un di un.
-
-Capobianco Paolo   33:24
-Ma.
-
-Mercuri Flavio   33:35
-Micron in più e quindi facciamo uno scrollettino in più. Però questa cosa deve ti leva un problema direttamente a te perché magari smettono le chiamate. Quindi che cosa farei io? Io farei un leggero spazio tra i pezzi del pezzo sopra il Form e il pezzo sotto del Form.
-Questa parte la evidenzierei, quindi la metterei magari su un canvas di quel Colorino celeste chiaro e metterei un paragrafetto le due righe che però dice.
-In questo accordion normative verificate trovi le motivazioni per cui la il diritto è stato accordato oppure non è stato accordato. E quindi tu che cosa fai? Rispondi ad una domanda prima che la domanda degeneri.
-
-Capobianco Paolo   34:24
-OK, vabbè, senza come no.
-
-Mercuri Flavio   34:28
-Va bene e sotto è la stessa cosa l'altro accordo di retribuzione media menzionabile.
-
-Capobianco Paolo   34:35
-Diciamo questo è un po meno, leggermente meno importante, però sì, non lo so. Terenzio che dici?
-
-Mercuri Flavio   34:42
-Che c'è dentro?
-
-Piscitelli Terenzio   34:46
-Ma se volete saperlo, io non ho mai capito perché avete voluto qua la retribuzione media pensionabile buttata lì è soltanto quella, non l'ho mai capito, cioè la retribuzione media pensionabile, il montante contributivo.
-
-Michele Friscia   34:46
-Amo.
-
-Capobianco Paolo   34:56
-Hai ragione, sì, quello là no, brutto e cattivo. Il montante è cattivo, brutto e cattivo invece non lo facciamo vedere. Hai ragione, sì, in effetti hai ragione, sì.
-
-Piscitelli Terenzio   34:59
-Non so perché.
-Non so perché sì.
-
-Michele Friscia   35:11
-No, la cosa che non si capisce che cliccando qui ha delle spiegazioni.
-E non c'è 1 1 frase che dice, per vedere le normative premi questo pulsante.
-
-Capobianco Paolo   35:19
-E perciò, diciamo, lui propone di fare.
-
-Michele Friscia   35:30
-E uno dice, non me li litigate, quindi lo prende come un dato di fatto e va avanti.
-
-Mercuri Flavio   35:38
-OK, allora se Gianluca ha preso appunti la ve la proponiamo. Non so se la prossima riunione direttamente vediamo quante cose si accumulano.
-
-Michele Friscia   35:38
+Laferla Gianluca   36:32
 Sì.
 
-Laferla Gianluca   35:49
-Grazie.
+Mercuri Flavio   36:40
+Pariato.
 
-Mercuri Flavio   35:50
-Va bene.
-
-Michele Friscia   35:53
-Sì.
-
-Mercuri Flavio   35:53
-OK allora non so se Michele ha finito o meno, però sono le 15:42 siccome ci rimane solo un quarto d'ora e io tra l'altro sono costretto a essere pure molto puntuale oggi vi volevo dire che noi faremmo vedere, non l'abbiamo naturalmente deployata in sviluppo.
-Però vi possiamo farvi vedere quella soluzione alla al tabellare, quello dei del diritto e della misura nel calcolo dell'anzianità.
-E Gianluca si prende la connessione e ce la fa vedere e ce la ce la spiega. Naturalmente l'abbiamo elaborato la soluzione in maniera che non fosse necessario un refactor del servizio di back-end che avrebbe messo in difficoltà un po' tutto il, diciamo il sistema di.
-
-Laferla Gianluca   36:27
-Vi condivido.
+Laferla Gianluca   36:41
+E queste no, erano tutte le modifiche che erano emerse negli ultimi due sal.
 
 Mercuri Flavio   36:46
-Di lavoro e.
-Vabbè te lo faccio vedere. E poi vabbè c'abbiamo altre modifiche rispetto alle cose che c'eravamo detti la volta scorsa. Vediamo se facciamo in tempo a vederle già oggi, ma comunque erano sono quelle che ci siamo detti. Vai Gian.
+OKOKOK quindi queste sono appunto tutte le osservazioni che c'eravamo fatti nel Sal scorso, in quello del Sal ancora prima. Adesso non lo so, c'avete qualcosa voi avete visto qualcosa in settimana che volevate discutere?
 
-Laferla Gianluca   36:53
+Michele Friscia   37:04
+Io ho visto qualcosa.
+
+Mercuri Flavio   37:06
+Fine yeah.
+
+Michele Friscia   37:09
+Mi riprendo la.
+
+Laferla Gianluca   37:15
+Interrompo.
+
+Michele Friscia   37:16
 Sì.
-Approfitto così vi faccio vedere anche il funzionamento dello Scroll down che è lo scorrimento contestuale all'apertura di un dettaglio, quindi in questo caso per l'utente diventa più facile capire qual è il dettaglio che si è aperto la chiusura poi.
-Torna.
-In posizione la parte che abbiamo implementato vi farei vedere prima com'era dal dato che ci arrivava il design system del tabellare di Sirio metteva così gli elementi. Il problema era.
-Proprio del fatto che i totali vengono messi su una riga e tutto il loro contenuto è allo stesso livello, così via per le sommatorie fino a arrivare a un calcolo totale complessivo.
+Allora questa in questa.
+Allora nei dati cessazione del servizio rispetto a Legacy c'era c'è qualche differenza?
+Legacy.
 
-Mercuri Flavio   37:46
-E soprattutto poi per avere contezza della somma definitiva devi scorrere fino all'ultimo elemento e se ti sfugge sto tema non vedi più la insomma un po' 1 1 visualizzazione complicata questo bottoncone che abbiamo messo è solo per i termini di sviluppo.
+Mercuri Flavio   38:18
+L'abbiamo perso, Michele.
 
-Michele Friscia   37:54
-Sì.
+Michele Friscia   38:20
+No, vedo se metti il Legacy.
 
-Mercuri Flavio   38:04
-Poter switchare dalla cosa vecchia alla cosa nuova, così capite bene le differenze tra una visuale e l'altra.
-
-Capobianco Paolo   38:09
-Ok.
-
-Laferla Gianluca   38:13
-La soluzione che ci è venuta in mente è stato di wrappare ogni singolo totale in un accordion, in modo che l'utente possa avere già una visione complessiva sia dei totali e delle loro misure arrotondate della loro data.
-E anche le sommatorie con un totale finale in stile scontrino, manualmente potrà andare ad aprire singolarmente i totali che gli interessano oppure espanderli tutti, quindi in questo caso avrebbe.
-Una suddivisione? Sì, questo è il l'espandi tutti e poi ricomprime tutti.
-
-Mercuri Flavio   38:45
-Col bottone là sopra forse si è visto male, cioè lo vai più lento.
-
-Capobianco Paolo   38:50
+Mercuri Flavio   38:23
 OK.
 
-Laferla Gianluca   38:54
-Una volta espansi tutti, l'utente si trova in una visualizzazione similare a quella che era della vecchia versione, quindi ha tutti gli elementi a disposizioni, ma suddivisi per tabellari e suddivisi nelle varie.
-Punti di calcolo.
-Ogni informazione che era presente prima è presente anche adesso, semplicemente prima i totali le disponevano qui le date e le i calcoli della misura, mentre adesso nella nuova versione si trovano direttamente nel.
+Michele Friscia   38:27
+Almeno di queste.
+Miliardi di maschere che ho aperto, vabbè, casomai lo prendo da qui, dai.
+Allora c'è questa indifferenza qua c'è questo aggeggio per fare no sì, cessazione, contratto, qualifica, motivo di cessazione, aggiornato e categoria di invalidità.
+Questo che è una chip del.
+Beccate una chip del.
 
-Capobianco Paolo   39:24
-Sì.
+Laferla Gianluca   39:41
+Ad esempio, lo slide del no sì l'abbiamo trasformato in una select che può essere switchata da sì a no.
 
-Laferla Gianluca   39:29
-L'accordion e quando viene espanso l'accordion ha solo tutti gli elementi che fanno parte di quel totale.
-Questa è la visualizzazione complessa.
+Michele Friscia   39:50
+È 1 1 lista.
+Questo è che mi sente, perché c'ha questa.
+Vabbè qua siamo qua c'è questi valori qua che vabbè lasciamo perdere per il momento questo è l'oggetto della del mio intervento. L'oggetto del mio intervento è vabbè c'ha questi questi ordini qui, poi c'hai altre righe in cui c'è l'equindennizzo tutto in una riga.
+E nell'idea speciale tutto in un'altra riga come argomenti, quindi vorrei mantenere questo tipo di logica di esposizione.
+E vedi qua.
+No, stavo qui.
+Dove mi sono perso?
+Ok.
+Questo qui, per esempio, l'eco di indirizzo inizia da qui a destra e non in questa riga.
+OK.
 
-Mercuri Flavio   39:38
-Allora mi permetto di tradurre e tirare la somma su che cosa ci ha mosso verso questa visualizzazione qua diciamo che qui, a parte separare le mele dalle pere, come dicevamo l'altra volta, abbiamo guadagnato un pezzo di funzionalità in più.
-Che è la visualizzazione per totali che sono un diciamo un dato logico diverso dal dal dal dettaglio OK, quindi io qua c'ho già davanti il totale, mettiamo che non mi interessa minimamente quali siano i record che compongono tu.
-Tutto quanto un dettaglio davanti c'è già il totale e vedo subito immediatamente il totale pure finale e scompongo le misure dei vari diciamo periodi di tempo e le misure arrotondate dei vari periodi di tempo e c'ho già davanti pure la misura e la misura arrotondata del totale definitivo.
-Quindi secondo noi, secondo noi.
+Mercuri Flavio   41:03
+OK.
 
-Capobianco Paolo   40:33
-OK, però quella scusa, OK, scusi, continuo, dico dopo.
-
-Mercuri Flavio   40:37
-No, dicevo che secondo noi è un pezzo di funzionalità che abbiamo guadagnato.
-
-Capobianco Paolo   40:46
-Sì.
-Due cose.
-Quel nei totali, quel misura non è misura il diritto.
-
-Mercuri Flavio   41:01
-Lo.
-
-Capobianco Paolo   41:03
-Cioè quando vuoi scrivere se misura no?
+Michele Friscia   41:04
+Quindi argomento una riga apposta e indennità in un'altra riga.
 
 Mercuri Flavio   41:05
+E che.
+
+Capobianco Paolo   41:10
+La suddivisione in subparagrafi, insomma, la vuole come stai dall'altra parte, insomma.
+
+Michele Friscia   41:14
 Sì.
 
-Capobianco Paolo   41:07
-Cioè aprine 1, 1 qualsiasi.
-OK.
-Perché voi siete iscritto proprio misura?
+Mercuri Flavio   41:15
+Sì, è che è anche corretto, però io adesso in questo momento non ho capito come deve essere fatta la riga del dell'indennizzo ci deve essere il campo è previsto recupero da co-indennizzo, subito dopo recupera co-indennizzo e poi ente recupera indennizzo giusto?
 
-Mercuri Flavio   41:18
-E poi nella parte di diritto immagino c'era il diritto.
-
-Capobianco Paolo   41:23
-E la passi di diritto, l'ho visto.
-Questi dettagli solo misura.
-
-Mercuri Flavio   41:28
-Esatto, poi tu chiudi, chiudi questa cosa, Gianluca, scusami.
-
-Laferla Gianluca   41:29
+Michele Friscia   41:24
 Sì.
+Sì, tre campi ci devono essere, è previsto recupero, questo e quest'altro, recupero e ente recupero così.
 
-Mercuri Flavio   41:33
-Chiudi il suo dettaglio premendo su chiudi.
-Ok, premi su chiudi torni alle tue tabelle esito calcolo misure esito calcolo diritto sopra c'hai il diritto.
+Mercuri Flavio   41:30
+OKOKOK.
+OK, quindi bisogna solo portare quel campo là sopra, è previsto recupero dell'eco indennizzo, bisogna portarlo in basso a sinistra, OK?
 
-Capobianco Paolo   41:47
-Ma pure su quello normale te lo teniamo diviso.
+Michele Friscia   41:41
+Esatto.
+Così anche per l'idea speciale che non la vedo e poi qui c'è.
+Qui ci sono 5 campi, mentre in realtà.
+Nell'uovo ci sono quattro gatti.
+E il contratto e qualifica, che sono due formazioni gemelle, diciamo attunenti, sono su due righe diverse.
+Allora?
+Io farei questa proposta di mettere data ultimo periodo precompilazione data cessazione e motivo cessazione anziché contratto metterei motivo cessazione.
+Poi contratto e qualifica della seconda riga.
+Che sono due argomenti simili, è aggiornato, quindi avremo una riga con quattro.
+Un'altra seconda riga con tre campi, questi.
 
-Piscitelli Terenzio   41:53
-Sì.
+Mercuri Flavio   42:42
+La terza con tre campi.
 
-Capobianco Paolo   41:55
-Va beh, lo so io.
+Michele Friscia   42:45
+Eco-indennizzo con tre campi e l'università speciale con tre campi che non si vede.
 
-Piscitelli Terenzio   41:56
-Ma considera che.
+Mercuri Flavio   42:50
+Basta.
 
-Mercuri Flavio   41:56
-Se vai sul diritto, vai un po sul diritto.
+Michele Friscia   42:54
+E la categoria di disabilità in questo posto, solo che qui non mi ricordo.
+E secondo me, a seconda dei motivi di citazione si aprono altri folder, si aprono altri campi.
+Tu ti ricordi, Paolo, che cosa succedeva altro?
 
-Piscitelli Terenzio   41:58
-Anche nel sin era così, solo che addirittura nel sin, se ti ricordi Paola, addirittura erano proprio due funzioni diverse, quindi dovevi fare proprio due chiamate differenti per la diritta misura. Qui abbiamo accorpato diciamo con un'unica chiamata e quindi?
+Capobianco Paolo   43:11
+No, ma non ce l'ho presente, Michele.
 
-Laferla Gianluca   42:01
-Questo è il diritto.
+Michele Friscia   43:14
+Io ho fatto qualche prova, se c'era.
+E i motivi che sono stati terminati, doveva esserci la categoria di abilità particolare.
 
-Capobianco Paolo   42:12
-Va beh, allora va bene così, diciamo. L'altra cosa allora, che rimane l'unica è che le cassette di pere sono più grandi delle pere.
+Capobianco Paolo   43:31
+No, è da privilegiata che c'ha la categoria di rapina, l'infermità non dovrebbe avercela.
 
-Michele Friscia   42:26
-Graficare i font.
+Michele Friscia   43:40
+E sulle dimissioni?
+Articolo 2, comma 12.
 
-Capobianco Paolo   42:28
-Di fronte c'hai ragione, però mannaggia.
+Capobianco Paolo   43:47
+Articolo due, comma 12, sì, sicuramente.
 
-Mercuri Flavio   42:30
-Stiamo sempre là e guarda, questo era proprio il ragionamento che avevamo che avevamo fatto noi.
-Non lo so Paolo, io mi sono interrogato molto, non c'ho paura che forzando la mano, cioè in questo insomma mi rivolgo pure un po' a voi, dite voi, io così come valutazione secca forse lo modificherei perché mi dà proprio molto fastidio che cioè è un'architettura informativa.
-
-Capobianco Paolo   42:38
-E quindi?
-
-Mercuri Flavio   42:56
-Secondo me è sbagliata, però non l'ho fatta io, non l'hanno fatta i miei, non l'ho fatta io, non posso dire com'è.
-
-Capobianco Paolo   42:57
-E bruttolina, insomma, no, c'hai ragione, come no.
-
-Mercuri Flavio   43:03
-Dimmi tu se volete, io noi la lo modifichiamo.
-
-Capobianco Paolo   43:09
-Che dobbiamo fare?
-Perché è bruttino se tu vai capito a vedere, no, dai.
-
-Mercuri Flavio   43:15
-Sicuramente, sicuramente non è.
-
-Capobianco Paolo   43:17
-Capito vedi per quei totali piccirilli dove sopra invece quando era il dettaglio tutto bello grosso.
-È un po strano.
-
-Mercuri Flavio   43:25
-È cascato la perla.
-
-Michele Friscia   43:26
-Sì, è maiuscolo, però se è maiuscolo.
-
-Capobianco Paolo   43:30
-Ma no, è cascato proprio di brutto, cioè è andato via completamente.
-
-Mercuri Flavio   43:35
-È caduto Gianluca, sì, adesso vediamo che fine ha fatto.
-Comunque vabbè che vogliamo fare, vogliamo fare uno step intermedio per capire se basta mettere in maiuscolo i titoli?
-Oppure interveniamo già pesanti?
+Michele Friscia   43:49
+Vediamo che sta.
 
 Capobianco Paolo   43:51
-Che dici, Michele?
+Ore la categoría.
 
-Michele Friscia   43:55
-Se si può evidenziare di più, se non sono d'accordo, questa soluzione potrà diciamo, a me piace questo fatto che mi fai vedere subito i totali a primo acchitto e poi puoi espandere i dettagli.
-E.
-Se si potesse fare essere più evidenti il totale.
-Rispetto al dettaglio va bene.
+Michele Friscia   44:00
+No.
+Questo.
+Questo qui.
+Ecco, OK, quindi cerca di inabilità, scegli l'opzione.
+Questo va bene, questi due campi vanno bene, poi c'è quest'altro campo, il quinto, che va bene data richiesta.
+È prevista revisione sì, no, data di revisione, data bellissima.
 
-Capobianco Paolo   44:19
-Sì, un poco sì, va bene.
+Capobianco Paolo   44:34
+Per questo non possiamo fare altro che così, perché?
 
-Michele Friscia   44:22
-Però.
-
-Capobianco Paolo   44:23
-A dir la verità, Michele, il grosso delle persone.
-Proprio sempre il foglio di calcolo in cui stai.
-Sono super affezionati, io così li vedo che vanno subito a fare il foglio di calcolo e basta, perché?
-
-Michele Friscia   44:33
-Sì.
-Ma lì non c'è quello di calcolo, faccio il calcolo, sennò non c'è.
-
-Capobianco Paolo   44:42
-Però.
-E no, ci dovrebbe stare. No, ci sta. Normalmente ci sta, appunto, poi vediamo.
-Sono Flavio e Flavio.
-
-Piscitelli Terenzio   44:49
-Non ce l'abbiamo, Paolo, su.
-
-Mercuri Flavio   44:50
-No, ma io ho paura, ho paura che mi sono perso. Che foglio di calcolo c'è un'esportazione in Excel?
-
-Capobianco Paolo   44:58
-E non ce l'abbiamo nel telefono.
-
-Michele Friscia   44:59
-No, lì no.
-
-Piscitelli Terenzio   45:00
-No rispetto al sin no. Sul sin avevamo proprio un template, un template ad hoc per diritto e misura. Qui non l'avete mai considerato necessario. Effettivamente non credo che venisse solo un granché.
-Forse anche sul sin, forse non più, non lo so.
-
-Mercuri Flavio   45:24
-Allora Gianluca c'ha c'ha.
-
-Piscitelli Terenzio   45:24
-Ho capito, Paolo, che dici?
-
-Capobianco Paolo   45:26
-Flavio.
-Non mi ricordo, non mi ricordo.
-
-Piscitelli Terenzio   45:30
-E se lo volete poi lo aggiungeremo ovviamente poi proprio in realtà su Legacy, vabbè solo sulla versione finale, però voglio dire, in realtà su asi non l'avevate considerato necessario.
-
-Capobianco Paolo   45:49
-Va beh, allora lasciamo così, insomma.
-
-Mercuri Flavio   45:53
-Va bene allora Gianluca purtroppo c'ha un problema a livello proprio dei quartieri che hanno sono un paio di giorni che salta la corrente e quindi e quindi c'ha con esatto, diciamo che io vedo nel cielo un alone di.
-
-Capobianco Paolo   46:02
-La colpa è sua, vuole stare preso.
-
-Mercuri Flavio   46:12
-Di fumo da fuoco e lo sento pure dalla temperatura che c'è fuoco, quindi penso che i condizionatori staranno a livelli mai visti proprio.
-Vabbè, quindi però era importante. Eccolo, ce l'abbiamo di nuovo Gianluca, tutto a posto nel quartiere.
-
-Laferla Gianluca   46:28
-No, purtroppo sono dei problemi che ti dicevo a Centocelle questi giorni sono regali di tensione, sono dal telefono, quindi non vi riesco a ricondividere.
-
-Mercuri Flavio   46:29
-Mica tanto.
-OK, vabbè comunque intanto l'importante è che te lo trasferiamo il messaggio de Paolo che te suggeriva di spegnere il condizionatore.
-
-Laferla Gianluca   46:40
+Michele Friscia   44:37
 Sì.
 
-Capobianco Paolo   46:44
-No, poveretto, però muore da un'altro punto di vista.
+Capobianco Paolo   44:38
+5 non ce la facciamo a metterli tutti assieme.
 
-Laferla Gianluca   46:44
-Ottimo Consiglio, ma non.
-Sì, tanto ora è spento per forza.
+Mercuri Flavio   44:42
+Beh, 5 è un po 5 è un po fuori.
 
-Mercuri Flavio   46:48
-Vabbè.
-Va bene allora intanto era importante consolidare questa parte diciamo della del Refactor della tabella, non so se la vogliamo avallare direttamente così o se volete rimandare poi il giudizio a ai agli amministrativi.
-E mi prendo questi ultimi 7 minuti di call per domandare, ma questo processo in cui inneschiamo gli amministrativi e inizio a fare un po' di test, come ve lo state pilotando sta andando?
+Michele Friscia   44:42
+Quindi.
 
-Capobianco Paolo   47:23
-No, non ancora.
+Capobianco Paolo   44:44
+Poi la vedono poco complicata e viene brutto, insomma.
 
-Michele Friscia   47:24
-Per ora no.
-Per ora non lo sto andando.
+Mercuri Flavio   44:46
+È una ma poi un po fuori i voli.
+La INPS suggerisce fino a quattro campi in orizzontale.
 
-Mercuri Flavio   47:27
-OK, perché ho paura che di questo passo finiamo a dopo l'estate.
-Considerando la diciamo la disponibilità di tutti durante il periodo un po' più di vacanza, ecco, non so se ci avete la briglia della questione.
+Capobianco Paolo   44:55
+Sì, ma basta che sta un po così, hai capito come un paragrafetto va benissimo, non è un problema, pure se vado a capo, hai capito?
 
-Michele Friscia   47:44
-Sì, infatti sicuramente è un po difficile perché adesso ci sono le ferie, ora con Terenzio no? Come si era messo che la data verifica si partiva il 31 agosto mi pare.
+Mercuri Flavio   45:00
+Sì, beh, diciamo sistemati per argomento, certo, certo, sì.
 
-Mercuri Flavio   47:51
-Caputo.
-Al fresco, quindi, diciamo.
+Michele Friscia   45:05
+Sì, quindi allora Ricapitolando, motivi di cessazione, mentre al posto del contratto.
+Poi quindi viene fuori qui contratto, qualifica e aggiornato il in questo posto.
+Eco indennizzo a capo la riga sotto con sempre questi altri due campi e così anche per l'indennità speciale. Andiamo a vedere il legacy. Poi ci sono questi altri due campetti che vengono fuori in certe situazioni penso.
 
-Michele Friscia   48:02
-A presto.
+Mercuri Flavio   45:21
+Esatto.
 
-Mercuri Flavio   48:04
-Va bene, vabbè. Insomma, era un un'informazione che forse non avevo ben ben consolidato. Va bene, OK, allora tutto a posto.
+Michele Friscia   45:39
+Ente locale.
+Ma qui io Paolo però non vede, questo è il vigile del fuoco.
 
-Michele Friscia   48:18
-Cioè ho ne ho paura, diciamo che ho paura che cioè se gli faccio vedere qualcosa che mi sa dire secondo me non cioè non ci calcola per nulla, devo dire la verità in questo momento storico.
+Mercuri Flavio   45:45
+Ma tu scusa, ci puoi dare sto questo caso Michele o qua stai in esercizio?
 
-Capobianco Paolo   48:27
-Ma magari Michele, magari io invece ho paura il contrario.
+Capobianco Paolo   45:47
+Ma.
+Guarda che secondo me questo non è molto, molto comodo, questo caso secondo me.
 
-Michele Friscia   48:29
+Michele Friscia   45:51
+No, forse sviluppo.
+Questo è Anselmo Vincenzo, che magari è allora.
+
+Mercuri Flavio   45:58
+Oh, dai, and c'è molto chance.
+
+Capobianco Paolo   45:59
+Potrebbe essere Bolzano. Hai capito che hai fatto una prova a Bolzano, quindi ente locale, però vigile del fuoco. Può darsi che è un caso di quelli particolari e quindi ci portano fuori strada.
+
+Michele Friscia   46:03
+Va bene, adesso lo.
+Va bene.
+Prendiamo lo stesso.
+Vediamo che succede.
+No, non mi compare quello.
+Mi dia il fuoco.
+Ma questo è un po un mischione, perché questo qua professori sanitari interministri, questo enti locali.
+D'estate secondo me qui, in questa questo dato di sviluppo, ce ne sono un po di dati così.
+
+Capobianco Paolo   47:10
+Ma piglia un'altro, scusami mo, perché devi fissare con questo, non ti fissare con questo.
+
+Michele Friscia   47:16
+No, non mi piace questo. Vabbè, casomai se compaiono va bene, cioè.
+To the flag, OK.
+Poi.
+Il fatto della vaccinazione ve l'ho detto, è una cosa che un'altra cosa che non vi do è che era già emersa tempo fa.
+Cioè mesi fa.
+Grazie.
+Il fatto che quando vado in una lista non so dove mi trovo.
+Se vado alla lista dei preferiti?
+E io mi perdo alla fine.
+Cioè qui dove sono non c'è scritto nulla che è un preferito.
+
+Mercuri Flavio   48:08
+Qua però perché non avevamo effettivamente non avevamo definito, perché in realtà questa non è una lista dei preferiti, questa è una lista di attività.
+
+Michele Friscia   48:08
+Proposto.
+
+Mercuri Flavio   48:18
+Hanno queste attività, hanno come caratteristica il fatto che sono dei preferiti, cioè è come di che tu vorresti entrare, fai conto in una lista che ha come Stato che Stati c'ha questa qua.
+Possibile, se vai un attimo col mouse sopra gli Stati vediamo che Stati sono.
+
+Michele Friscia   48:39
+No, gli Stati sono quasi.
+
+Mercuri Flavio   48:39
+No, proprio sullo stato vai in secondo sull'iconcina dello Stato dentro la tabella.
+
+Michele Friscia   48:46
+Quale dici?
+
+Mercuri Flavio   48:46
+L'iconcina sull'iconcina l'iconcina esatto attività da completare, cioè è come se tu entrassi in questa lista nella forma diciamo di ricerca di solo attività di visualizzazione di solo attività da completare, quella non è.
+1 1 lista di attività da completare è comunque una lista di attività filtrata per le attività da completare. Quindi voglio dire, questa tabella qua non si può mai chiamare preferiti, appunto.
+
+Michele Friscia   49:10
+No, ma c'ho anche quelle, quelle completate.
+Cioè anche quelle con.
+
+Mercuri Flavio   49:15
+Appunto, e qua c'hai.
+
+Michele Friscia   49:16
+C'ho anche quel.
+
+Mercuri Flavio   49:19
+Appunto, dico, questa qua non è mai una tabella di preferiti, questa può essere una tabella di attività.
+Diciamo connotate dal fatto che sono preferiti perché è una forma diciamo di espressione visiva di questo componente qua proprio a livello pure diciamo di architettura tecnica. Questo è un componente delle attività nel quale tu accedi con la forma. Se non mi sbaglio avevamo.
+Ventilato la possibilità di aggiungere al titolo sulla barra blu quella barra blu sopra la tabella, quella lì. Esatto, le tue attività trattino preferiti potevamo gestirla così.
+
+Michele Friscia   49:51
+Sì.
+Sì.
+Una frasetta del genere ci vuole perché questo accedo ai miei preferiti che sono attività completate e non completate. OK, se vado, che so, sulle liquidazioni.
+Solo la tipologia qua mi può dire che sono nella tabella delle trasformazioni diciamo o ricostituzioni, ma poi non c'ho nessun'altra descrizione.
+E se faccio un po' di giri, alla fine dico, dove sto?
+
+Mercuri Flavio   50:44
+Va beh, non lo so se tu pensi che sia una, cioè oggettivamente però questa è una potrebbe essere un effort diciamo.
+Non voglio dire considerevole, però comunque è un effort degno di nota e bisogna capire se è veramente, cioè se veramente a un certo punto gli viene la labirintite oppure se comunque, conoscendo il loro lavoro, magari sopperiscono.
+
+Michele Friscia   51:16
+No, ci vuole qualcosa che mi dica.
+
+Mercuri Flavio   51:19
+OK.
+
+Michele Friscia   51:21
+Anche minima che mi dice sto in questa lista, sto vedendo le mie attività perché ci sono tutti uguali, c'è scritto attività da avviare per sempre.
+
+Mercuri Flavio   51:32
+E vabbè, e allora possiamo fare così, possiamo fare che a seconda dell'accesso alla.
+
+Michele Friscia   51:38
+Questo in attesa della domanda, perché lo posso capire da dalla tipologia, per esempio?
+Però deve entrare dentro questa denominazione.
+C'è già se si abbina questa descrizione, la tipologia.
+
+Mercuri Flavio   51:59
+Però Michele, allora io io io capisco, io la capisco il tuo, cioè l'intento lo capisco perfettamente e penso che non sia nemmeno sbagliato da parte tua cercare di tutelare, come dire, una certa persistenza della chiarezza durante la navigazione però.
+Quando tu atterri su una pagina sulla quale sei entrato, diciamo autonomamente, nemmeno sotto minaccia, cioè hai premuto, hai premuto su.
+
+Michele Friscia   52:30
+Sì, però poi non me lo ma non me lo ricordo, se magari faccio un'altra cosa e ritorno dove sto, cioè?
+
+Mercuri Flavio   52:38
+Ma son comunque sempre azioni che fai tu. Però vabbè io non veramente non voglio. Allora ho appena ho detto che è un effort significativo. Sicuramente non stiamo parlando di lanciare razzi, quindi secondo me lo possiamo anche fare. Non vorrei che ci occupa spazio che potrebbe essere occupato da altre cose, magari meno.
+
+Michele Friscia   52:38
+Dai.
+
+Mercuri Flavio   52:57
+O meno sottili e più però se appunto questo è un giudizio mio che però prescinde dalla dalla comprensione profonda di questa di questo tema che sollevi, quindi se tu ritieni che sia.
+Una un'attività che va fatta la facciamo assolutamente ad ognuno di questi link alle liste veloci associamo una parola che andiamo ad aggiungere al nome della al nome del contesto di dati, quindi attività da avviare diventeranno o attività da avviare.
+Passi dal link normale, attività da avviare quasi pronte, attività da avviare superstiti oppure via discorrendo. Insomma, quelle che.
+Quello che bisogna definire va bene.
+
+Michele Friscia   53:43
 Sì.
 
-Mercuri Flavio   48:31
-Allora?
-Diciamo che io, io, io parlo per me, che naturalmente non ho, diciamo legami forti con queste persone, con questi uffici. Il mio personale obiettivo è quello di targettare la.
-
-Piscitelli Terenzio   48:33
-La realtà.
-
-Mercuri Flavio   48:47
-Collaudo e quindi? Cioè per me che siano gli amministrativi che danno 5 stelline su 5 alle valutazioni e che scoppiano di gioia oppure bestemmiano in lingue che non conoscono nemmeno o che pure siate voi alla fine a un certo punto dite vabbè OK.
-Va bene, io come target ho quello e quindi oltre diciamo oltre quello non posso, non posso vedere. Diciamo che è un interesse sicuramente vostro che loro facciano quello che devono fare, però probabilmente è pure loro interesse perché se loro hanno delle osservazioni.
-
-Michele Friscia   49:19
-Bene.
-
-Mercuri Flavio   49:22
-Che gli facilitano il lavoro e le fanno tempestivamente. Insomma, se risolvono dei problemi nel quotidiano no. Al di là dei della giornata o delle due giornate, devono star lì AAA ripercorrere quello che fanno quotidianamente. Insomma, no su un sistema.
-Revisto, non so se concordate o.
-
-Michele Friscia   49:43
-Sì, concludiamo.
-Terenzio, tu come la vedi?
-
-Piscitelli Terenzio   49:52
-Io Michele l'ho detto, secondo me non ne usciremo mai con un test con gli amministrativi sull'ambiente di sviluppo. Per me c'è un'unica soluzione che è quella di fare una sperimentazione direttamente in esercizio con.
-Magari determinati soggetti proprio selezionati, cioè io ti fa, io magari potrei pensare consentire la doppia diciamo versione dell'applicativo in esercizio a degli utenti selezionati.
-Che possono switchare in qualunque momento dall'una all'altra e devono fare sto lavoro perché loro lavoreranno normalmente mentre lavorano. Chi meglio da loro ti può dire sta cosa funziona, sta cosa no, sta cosa ci piace, quest'altra cosa no.
-E ci possono dare tutti i feedback e.
-
-Michele Friscia   50:42
-Quindi una sperimentazione.
-Bene, diciamo produzione.
-
-Piscitelli Terenzio   50:49
-Sì, ma per dirti no, cioè proprio del tipo io, mentre tutte le sedi, tutti gli altri lavoreranno sempre col sistema Legacy, io comunque consento alla Passerini di turno mo che sia barbaro o qualcun altro, non importa anche di poter accedere alla nuova versione grafica.
-Con la possibilità sempre di switchare dall'una all'altra, perché ovviamente se poi rimani bloccato con la nuova versione perché magari c'è qualcosa che non funziona, puoi sempre tornare sulla vecchia, sperando che sulla vecchia poi funzioni. Insomma, se il sistema dai che si poi funzioni.
-Perché secondo me solo così riusciamo a coprire tutti i casi. Ma come facciamo su sviluppo Michele AA Replicare tutti quanti i casi che gli innumerevoli casi che ci abbiamo su esercizio non ci riusciamo?
-
-Mercuri Flavio   51:35
-E poi, tanto per cominciare, per rendere un test da sviluppo decisivo, dovresti ribaltare i dati da produzione, che se non loro come fanno a dire sì, è giusto che sto dato stia qui o non è giusto che sto dato non stia qui?
-
-Piscitelli Terenzio   51:50
-Sì, no, ma a parte quello è proprio comunque in generale la difficoltà nell'individuare tutte le casistiche che sono impattate, perché poi alla fine uno pure qui diciamo devi pure andare, cioè dovresti pure individuare le casistiche, non proprio tutte, tutte.
-Ma quelle che impattano le modifiche che abbiamo fatto noi sull'interfaccia grafica, quindi secondo me è meglio che lo fanno direttamente in esercizio gli operatori, così pure Pallotta volendo può lavorare qualche cosa e giocarci.
-
-Mercuri Flavio   52:17
-Allora diciamo, diciamo da.
-Diciamo da un lato puramente.
-Così internos sappiamo perfettamente che noi i livelli di logica che erano presenti nel Legacy non li abbiamo toccati dentro a tutta la questione della gestione della domanda, quindi loro quello che possono trovare non sono sicuramente sorti.
-Prese dal punto di vista del risultato o di quello che si aspettano su come ragioni il sistema, lì è veramente tutta 1 1 differenza di interfaccia non oltre. D'altro canto c'è tutta quella parte di strumenti e.
-E attività e la parte dell'home page su quella diciamo che ci hanno delle diversità proprio di funzionamento che ci potrebbero essere, quindi quella sarebbe importante pure testarla quindi poi forse io sono un po' d'accordo con.
-Terenzio sul fatto che non mi fiderei di attendere la il placet delle degli amministrativi per spostare lo stato del progetto. Ecco, tanto diciamo che se con un po' di buona volontà vorremmo.
-Volessimo mettere un milestone, diciamo nella anche nella terza settimana d'agosto, se non a fine agosto, che più o meno magari qualcuno di noi è rientrato, potremmo definire quella come data ultima o sì, la fine d'agosto come data ultima.
-Dei test nostri Inter nostri, quelli che stiamo già facendo adesso queste riunioni cicliche, immaginando di aver coperto il più possibile insieme no e quindi poi di arrivare a un test già in esercizio dei degli amministrativi che sia meno sconvolgente possibile.
-Ok e che quindi non apra 1 1 conversazione su una possibile CR una possibile Emanuele o via discorrendo, ma che sia semplicemente un magari leggero raddrizzamento su certe cose se sono utili, comode e condivise da tutti oppure un grande una grandissima stretta di mano con insomma.
-La.
-Il La fine della fase progettuale.
-Che è successo? È caduta la corrente sul paese. Vabbè, OK, comunque carne sul piatto ce n'è.
-
-Michele Friscia   54:47
-No, per.
-Ho capito?
-Certo.
-Io io diciamo che glielo farei vedere a vabbè, bisogna presentarglielo a Luigi e Barbara e poi decidere insieme come fare. Perché sì, il test di sviluppo ha una.
-Una visione limitata, insomma.
-Sono accorto che sulla sperimentazione dal vivo, anche perché secondo me i problemi sono o mi parte il pulsante o non mi parte, cioè non è che sia.
-
-Mercuri Flavio   55:27
-Sì.
-
-Michele Friscia   55:27
-Non modificate le logiche, cioè o funziona premo il pulsante oppure non c'è per dire.
-
-Mercuri Flavio   55:33
-Sì, esatto.
-
-Michele Friscia   55:36
-Le soluzioni sono abbastanza semplici, cioè dovrebbe essere più o meno semplici.
-
-Mercuri Flavio   55:39
-Va bene allora come vi ripeto, purtroppo io mi devo sganciare, non so se voi volete continuare o comunque penso che c'è già tanto sul piatto. Spero che a questo punto nel prossimo incontro vi possiamo far.
-
-Michele Friscia   55:44
-Vabbè.
-
-Mercuri Flavio   55:55
-Cioè, o quantomeno in settimana, magari già in sviluppo tutte le cose che su cui stiamo lavorando e quindi magari voi ci avrete pure un po' di tempo, oltre che per smalazzare come e per fare tutte le analisi e le sacrosante osservazioni.
-Azioni che state facendo adesso, magari per organizzare questi ultimi step prima ripeto che inoltre che se inoltre luglio, perché poi a luglio noi cominciamo ad avere io stesso vado in ferie il torno alla metà di luglio e ci rivediamo poi alla metà di agosto.
-Quindi diventa poi un po pure un po più complicato avere insomma, naturalmente.
-
-Capobianco Paolo   56:32
-Prego.
-
-Michele Friscia   56:37
-Ma anche, ma anche io l'unico problema difficile è difficile.
-
-Mercuri Flavio   56:41
-E quindi magari arriva già la prossima settimana con un'idea chiara e già mezza formalizzata su come su come procediamo, è una buona idea.
-OK, non vi non vi disturbo più, vi lascio alle vostre cose e intanto grazie 1000 per la collaborazione preziosa e ci sentiamo la prossima settimana.
-
-Michele Friscia   57:00
-Bene.
-
-Mercuri Flavio   57:02
-Grazie 1000 a tutti, arrivederci, Ciao, Ciao, Ciao, Ciao, Ciao.
-
-Capobianco Paolo   57:02
+Mercuri Flavio   53:44
 Ok.
-Me Cho.
 
-Michele Friscia   57:04
-Ciao.
+Michele Friscia   53:47
+Vabbè, nel Legacy non c'è, non c'è neanche questa distinzione.
 
-Piscitelli Terenzio   57:05
+Mercuri Flavio   53:52
+No, ma però però se tu ritieni ma sì, guarda, i refactoring si fanno per questa ragione, no, perché magari c'hai pure bisogno di una di un aiuto. Poi questo è proprio un intervento degli UX.
+
+Michele Friscia   53:52
+Effettivamente, però si fa una nuova interfaccia e.
+
+Mercuri Flavio   54:13
+Che io trovo molto cautelativo. Però effettivamente tu poi sei tu che hai le redini quotidiane della del lavoro che fanno loro e di quello che fai pure tu, perché lo vedi pure tu e quindi io me mi allineo.
+Al team a questo punto va bene così, OK Gianluca, è chiaro allora quello che dobbiamo fare, abbiamo preso Ana, abbiamo preso un appunto.
+Claro.
+
+Laferla Gianluca   54:40
+Sì.
+
+Mercuri Flavio   54:41
+OK, perfetto, d'accordo, OK, se diventiamo questo allora a sto punto però forse, visto che abbiamo finito il tempo, se tu non hai altre cose che ti vengono in mente a posto, allora se diventerei queste come indicazioni abbiamo preso appunti per immagino due o tre.
+
+Michele Friscia   54:49
+No.
+
+Mercuri Flavio   55:00
+Due o tre tasche non PBI in modo che la prossima settimana ci apprestiamo a fare credo l'ultimo Sal prima delle ferie OKE quindi poi magari cominciamo alla prossima settimana a meno che non abbiate trovato durante questa settimana delle cose.
+Per cui vale la pena fare una riflessione, cominciamo a fare un po un piano di battaglia su come ci muoveremo poi a.
+Al rientro alle ferie sicuramente, poi tendendo a fine agosto, quando abbiamo insomma ci siamo già un po accordati su come dovremmo procedere.
+Va bon.
+
+Capobianco Paolo   55:39
+OK.
+
+Michele Friscia   55:39
+OK.
+
+Mercuri Flavio   55:41
+Allora grazie 1000 per questa ennesima bella riunione e ci sentiamo la prossima settimana. Vi aspettate il.
+Il resoconto, il verbale della riunione, come sempre tra oggi e domani e di nuovo grazie, buon pomeriggio.
+
+Michele Friscia   55:59
+OK, grazie.
+
+Laferla Gianluca   56:00
 Ciao a tutti, Ciao.
 
-Laferla Gianluca   57:07
-A tutti.
+Mercuri Flavio   56:01
+Ciao, Ciao, Ciao, Ciao.
 
-Capobianco Paolo   57:08
-Terenzio.
+Tantar Ana Maria   56:01
+Ciao, Ciao.
 
-Piscitelli Terenzio   57:09
-Sì.
-
-Capobianco Paolo   57:11
-Senti, dobbiamo fare una cosa, noi ci dobbiamo vedere un attimo perché ci sta un memo che ipoteticamente riguarda Irma e Francesco mele sui miglioramenti contrattuali, dove c'era.
-Però c'è un'attività a nostro carico per vedere i miglioramenti contrattuali di ASI.
-Che dovremmo in qualche modo portare a compimento, dovremmo chiudere.
-
-Piscitelli Terenzio   57:41
-No Paolo, questo, ma questo me l'avevi già detto allora. Tecnicamente tecnicamente tutte le fasi di colloquio tra anche della parte ASI si sono svolte, i casi di test sono stati svolti col gruppo de IVS calcolo centrale.
-
-Capobianco Paolo   57:44
-Forse sì.
-E vabbè, diciamo arrivavano comunque in calcolo centrale, sì.
-
-Piscitelli Terenzio   58:06
-Sì, noi abbiamo fornito loro tutte le casistiche di cui avevano bisogno, quindi dirette, indirette, trasformazioni e ricostituzioni, diciamo. Dal nostro punto di vista i casi sono sempre stati fatti di Roma. Noi siamo stati anche tra i primi a fornire tutte quante le casistiche.
-
-Capobianco Paolo   58:08
-Grazie.
-
-Piscitelli Terenzio   58:23
-E tanto è vero che la nostra attività risulta conclusa comunque in quel in quel memo, se non in verifica amministrativa, forse non lo so.
-
-Capobianco Paolo   58:27
-No.
-Verifica amministrativa, quello è il punto che se verifica amministrativa, mentre gli altri stanno messi proprio.
-Niente chiusi, chiusi, insomma.
-Noi siamo in verifica amministrativa e quindi dovremmo chiudere questa cosa.
-
-Piscitelli Terenzio   58:48
-Quindi dobbiamo preparare i casi per Luigi e fargli vedere tutto il giro.
-
-Capobianco Paolo   58:54
-Vogliamo pigliare? Sì, qualche caso, un paio di casi li faccio vedere a Luigi.
-
-Piscitelli Terenzio   58:58
-OO li volete vedere soltanto voi, che in questo caso magari Luigi non è necessario?
-
-Capobianco Paolo   59:05
-Senti, io un giro almeno uno con Luigi lo farei, insomma.
-Poi che ti devo dire?
-Facciamo così, prepara un caso, lo vediamo noi e poi.
-
-Piscitelli Terenzio   59:14
-Ok.
-
-Michele Friscia   59:14
+Michele Friscia   56:01
 Ciao.
 
-Piscitelli Terenzio   59:18
-Allora?
-
-Michele Friscia   59:18
-Paolo, di quale di quale casa sta parlando Paola? Miglioramenti contrattuali di che cosa?
-
-Capobianco Paolo   59:23
-I futuri miglioramenti contrattuali.
-
-Michele Friscia   59:26
-Ma no cumulo.
-
-Capobianco Paolo   59:28
-No, cumulo, no.
-
-Piscitelli Terenzio   59:28
-No.
-
-Capobianco Paolo   59:31
-Anzi normale.
-
-Michele Friscia   59:33
-Ma su questo non funziona o no?
-
-Capobianco Paolo   59:36
-No, funziona, capito? Cioè funziona tutto. Noi stiamo messi all'interno di un memo che è stato pensato per unicarpe. E infatti il memo è, diciamo, sotto la direzione di Irma.
-
-Michele Friscia   59:46
-Per unità.
-
-Capobianco Paolo   59:55
-E poi ci sta pure la parte relativa ad ASI, insomma, è stata inserita successivamente, a dir la verità, perché Luigi l'ha inserita successivamente ASI si è collegata a questo memo per questa cosa e soltanto hai capito che.
-
-Michele Friscia   1:00:04
-Sì.
-Sì.
-
-Capobianco Paolo   1:00:10
-Il nostro task, quello diciamo di ASI, per capirci, delle pensioni che vengono da ASI, è luglio che risulta ancora in.
-In analisi amministrative non è chiuso e quindi lo dobbiamo chiudere anche perché questo poi una volta che facciamo questo possiamo veramente fare mo al di là del della chiusura del memo veramente possiamo fare le pensioni con i miglioramenti contrattuali e questo ti cambia tutto.
-
-Michele Friscia   1:00:35
-E certo.
-
-Capobianco Paolo   1:00:38
-Insomma.
-
-Michele Friscia   1:00:39
-Devo fare un caso veloce per testarlo.
-
-Piscitelli Terenzio   1:00:43
-Allora tecnicamente qui possiamo prendere un qualunque caso, cioè nel senso un qualunque soggetto, tanto poi gli elementi contrattuali ce li vuoi aggiungere tu, quindi magari Paolo se mi se mi vuoi anticipare perché noi i casi di test li abbiamo fatti molto a fantasia, nel senso li abbiamo messi noi con date nostre così.
-
-Michele Friscia   1:00:47
-Sì.
-
-Piscitelli Terenzio   1:01:00
-Diciamo un caso di test come dovrebbe essere, quindi per esempio decorrenza, che ne so?
-
-Michele Friscia   1:01:09
-Quando.
-
-Piscitelli Terenzio   1:01:10
-Adesso 2026, che ne so, 31 agosto vengo per dì, poi magari, che ne so, un primo miglioramento contrattuale 1 gennaio 2027, uno al 1 gennaio 2028, ad esempio, mettendone due.
-
-Michele Friscia   1:01:24
-Ma possiamo prendere, scusami, il l'esempio che ho fatto adesso, questo di felicita pedata che funziona.
-Se metti mi chiamate contrattuale, vai su FERT e basta.
-
-Capobianco Paolo   1:01:37
-Quindi, e questo che cessazione è?
-
-Piscitelli Terenzio   1:01:37
-No, ma per farlo no, ma per fargli far giro in diretta, per fargli far giro in diretta magari a Luigi.
-
-Capobianco Paolo   1:01:41
-Questo che roba è? Non ho capito per dargli un minimo di coerenza. Michele, metti che ne so se questo cessa 26, metti il metti il triennio 25, 27 insomma.
-
-Michele Friscia   1:01:45
-Vabbè no, ma io dico per tanto per.
-Io ho capito, ma per vedere se noi dobbiamo vedere intanto se funziona il non è che dobbiamo avere una valenza amministrativa se lo scaglione è uguale e.
-
-Capobianco Paolo   1:01:57
-Sì.
-Non lo puoi fare però la cessazione adesso non la fare, Terenzio.
-Perché è problematica, dobbiamo mettere solo quelle che sono già passate le date.
-
-Piscitelli Terenzio   1:02:12
-Quelle per le quali dobbiamo fare la ricostituzione per motivi contributivi, nel quale ci andiamo a mettere i miglioramenti contrattuali.
-
-Capobianco Paolo   1:02:18
-Perfetto è chiaro perché calcolo centrale non secondo me c'è un problema, cioè se tu gli metti una cosa con un miglioramento contrattuale nel 2027 dico per dire il 1 gennaio 2027.
-Secondo me va a ******* e allora non lo lasciamo perdere, non lo facciamo questa cosa.
-OK, quindi prendi la cessazione vecchia più vecchia in cui.
-
-Piscitelli Terenzio   1:02:43
-2025 magari.
-
-Michele Friscia   1:02:46
-Le vigile pedata, 2024.
-
-Capobianco Paolo   1:02:50
-No, 2024 non.
-
-Michele Friscia   1:02:54
-Che succede?
-
-Capobianco Paolo   1:02:54
-Metti una cosa che abbia senso per Luigi, perché il 2024 è del triennio 22, 23 e 24 e quindi se c'è solo il 2024 non c'ho future scadenze, posso metterne una finta nel 2025?
-Ma là Luigi ti inizia a rompere i ********, che è una cosa che non ha senso, quindi.
-
-Michele Friscia   1:03:15
-Ho capito quello, ho capito io, ma per noi, per fare il Dio nostro, basta una qualsiasi.
-
-Capobianco Paolo   1:03:21
-E volevo fare una cosa che poi propone, vamo pure a Luigi, che vamo pure.
-
-Piscitelli Terenzio   1:03:31
-Vabbè Paolo, quindi OK prendiamo no Michele ma tanto non ci mettiamo niente, cioè voglio dire, ne possiamo prendere quanti ne vogliamo da esercizio dei casi con decorrenza 2025 che li riproduciamo su sviluppo?
-
-Michele Friscia   1:03:31
-E sui due se non cambia nulla, no?
-
-Capobianco Paolo   1:03:32
-Vabbè, vabbè.
-
-Piscitelli Terenzio   1:03:46
-Poi.
-E anzi, possiamo proprio direttamente portare su sviluppo con tutta la pensione.
-
-Capobianco Paolo   1:03:51
-Nel 2025 ci metti un solo miglioramento contrattuale al 1 gennaio 2026.
-Capito?
-
-Piscitelli Terenzio   1:03:58
-Sì.
-Sì, perché proprio era proprio questa, diciamo, la necessità che tu con la ricostituzione per motivi contributivi andavi a gestire gli elementi contrattuali che non eri riuscito a gestire in prima liquidazione.
-
-Capobianco Paolo   1:04:02
-Facciamo così.
-
-Michele Friscia   1:04:14
-Va bene, vi saluto.
-
-Piscitelli Terenzio   1:04:14
-OK.
-Ciao Michele, OK vabbè Paolo ne ne facciamo ma io guarda io pure a sto punto, magari più di un pure più di un caso posso fare pure perché considera che io quello che so io si può arrivare fino a tre no miglioramenti contrattuali.
-
-Michele Friscia   1:04:18
+Capobianco Paolo   56:04
 Ciao.
-
-Capobianco Paolo   1:04:24
-Sì, male.
-Sì, cioè sono tre, ma sono due in realtà.
-
-Piscitelli Terenzio   1:04:35
-Sì, diciamo uno di solito coincide con la data di decorrenza, il primo, gli altri due.
-
-Capobianco Paolo   1:04:37
-Esatto, uno a regime e gli altri due dopo.
-
-Piscitelli Terenzio   1:04:41
-Esatto, sì, vabbè allora OK, allora come dici tu, allora facciamo così, prepariamo un caso di cessazione 2025 Senti, ma sempre per come dici tu, per restare coerente, che casistica prendiamo a livello di contratto qualifica?
-Per chi si applica in particolare scuola oppure qualche altra categoria?
-
-Capobianco Paolo   1:05:01
-No.
-Ma anche scuola sì, scuola potrebbe essere la cosa più sì.
-
-Piscitelli Terenzio   1:05:07
-OK, vado per la scuola.
-Va bene, Paolo.
-
-Capobianco Paolo   1:05:13
-Va bene.
-
-Piscitelli Terenzio   1:05:14
-Li prepariamo subito.
-Ok, Michele in realtà ci ha salutato, ma sta ancora qui, vedo.
-
-Capobianco Paolo   1:05:23
-Infatti non si è capito.
-
-Michele Friscia   1:05:23
-Sono ancora qui, sì.
-
-Capobianco Paolo   1:05:28
-Vabbè.
-
-Piscitelli Terenzio   1:05:29
-Voleva sentire che cosa dicevamo, magari parlano male di me, parlano male di me, voglio sentirli.
-
-Michele Friscia   1:05:32
-Prego.
-
-Capobianco Paolo   1:05:32
-Se parlavamo male di lui?
-
-Piscitelli Terenzio   1:05:38
-No, a proposito, ma mica tu quando sparisci per le ferie?
-
-Michele Friscia   1:05:44
-Tra un po, tra qualche giorno.
-
-Capobianco Paolo   1:05:45
-Presto.
-
-Michele Friscia   1:05:47
-Spero.
-
-Piscitelli Terenzio   1:05:51
-Non ho capito quanto di preciso, proprio di preciso preciso.
-
-Michele Friscia   1:05:53
-Ma non lo so neanche io, tra qualche giorno, la prossima settimana forse.
-
-Piscitelli Terenzio   1:06:01
-OK, va beh, giusto pure per un attimino per capire come muoverci.
-Va bene, OK?
-
-Michele Friscia   1:06:08
-Va bene, Ciao Ciao.
-
-Piscitelli Terenzio   1:06:11
-Va bene, un saluto, Ciao, Ciao, Ciao.
-
-Michele Friscia   1:06:13
-Ciao.
-
-Capobianco Paolo   1:06:13
-OK, Ciao, Ciao, Ciao.
 
 Mercuri Flavio trascrizione arrestata

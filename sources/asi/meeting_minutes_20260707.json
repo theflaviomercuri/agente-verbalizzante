@@ -1,0 +1,279 @@
+{
+    "document": {
+        "title": "Verbale SAL \u2013 Reingegnerizzazione UI/UX ASI \u2013 07/07/2026",
+        "document_name": "Verbale SAL \u2013 Reingegnerizzazione UI/UX ASI \u2013 07/07/2026",
+        "document_type": "Verbale di riunione",
+        "ssu_code": "-",
+        "client_references": [
+            "Michele Friscia, Capobianco Paolo"
+        ],
+        "management_area": "Santina Niglio",
+        "application_code": "-",
+        "project_slug": "asi",
+        "contract_reference": "\u00abSviluppo Applicativo INPS\u00bb Lotto 2 CIG: 96497845AB",
+        "supplier": "Almaviva S.p.A.",
+        "version": "1.0",
+        "author": {
+            "name": "Mercuri Flavio",
+            "organization": "Almaviva S.p.A."
+        },
+        "history": [
+            {
+                "version": "1.0",
+                "date": "07/07/2026",
+                "description": "Versione iniziale",
+                "sections": "-"
+            }
+        ],
+        "distribution": [
+            {
+                "name": "Capobianco Paolo",
+                "role": "-",
+                "organization": "INPS"
+            },
+            {
+                "name": "Laferla Gianluca",
+                "role": "-",
+                "organization": "Almaviva S.p.A."
+            },
+            {
+                "name": "Mercuri Flavio",
+                "role": "-",
+                "organization": "Almaviva S.p.A."
+            },
+            {
+                "name": "Michele Friscia",
+                "role": "-",
+                "organization": "INPS"
+            },
+            {
+                "name": "Tantar Ana Maria",
+                "role": "-",
+                "organization": "Almaviva S.p.A."
+            }
+        ],
+        "approvals": [
+            {
+                "version": "1.0",
+                "approval_date": "-",
+                "name": "-",
+                "organization": "-"
+            }
+        ]
+    },
+    "meeting": {
+        "date": "07/07/2026",
+        "start_time": "15:03",
+        "end_time": "15:59",
+        "location": "Videoconferenza",
+        "subject": "SAL Reingegnerizzazione UI/UX ASI \u2013 Revisione modifiche implementate, flusso Calcolo Pensione, Dati Cessazione e contestualizzazione viste lista",
+        "participants": [
+            {
+                "name": "Capobianco Paolo",
+                "role": "Referente Cliente",
+                "organization": "INPS"
+            },
+            {
+                "name": "Laferla Gianluca",
+                "role": "Sviluppatore FE",
+                "organization": "Almaviva S.p.A."
+            },
+            {
+                "name": "Mercuri Flavio",
+                "role": "Sviluppatore Lead UI/UX FE",
+                "organization": "Almaviva S.p.A."
+            },
+            {
+                "name": "Michele Friscia",
+                "role": "Referente Cliente",
+                "organization": "INPS"
+            },
+            {
+                "name": "Tantar Ana Maria",
+                "role": "Sviluppatore FE",
+                "organization": "Almaviva S.p.A."
+            }
+        ]
+    },
+    "references": [],
+    "glossary": [
+        {
+            "term": "SAL",
+            "description": "Stato di Avanzamento Lavori: riunione periodica di monitoraggio dell\u2019avanzamento del progetto."
+        },
+        {
+            "term": "UI/UX",
+            "description": "User Interface / User Experience: disciplina di progettazione delle interfacce utente e dell\u2019esperienza d\u2019uso."
+        },
+        {
+            "term": "Legacy",
+            "description": "Versione precedente del sistema informatico attualmente in produzione, oggetto del processo di reingegnerizzazione."
+        },
+        {
+            "term": "Sirio",
+            "description": "Design system di riferimento adottato per lo sviluppo dell\u2019interfaccia del portale."
+        },
+        {
+            "term": "Tooltip",
+            "description": "Suggerimento contestuale visualizzato al passaggio del mouse su un elemento dell\u2019interfaccia, utilizzato per descrivere le azioni disponibili."
+        },
+        {
+            "term": "Accordion",
+            "description": "Componente dell\u2019interfaccia che consente di espandere o comprimere sezioni di contenuto; utilizzato per separare i totali dai dettagli dei periodi contributivi."
+        },
+        {
+            "term": "Area operativa",
+            "description": "Sezione del portale ASI dedicata all\u2019operativit\u00e0 quotidiana degli operatori, con liste di attivit\u00e0, filtri e accessi rapidi."
+        },
+        {
+            "term": "Drawer",
+            "description": "Pannello laterale espandibile che mostra il dettaglio di un elemento selezionato nella tabella senza navigare verso una nuova pagina."
+        },
+        {
+            "term": "Paginatore",
+            "description": "Componente di navigazione che suddivide una lista di elementi in pagine; da rimuovere quando la cardinalit\u00e0 degli elementi \u00e8 fissa e limitata."
+        },
+        {
+            "term": "Badge",
+            "description": "Etichetta grafica colorata associata a un elemento per indicarne la categoria o lo stato; nel contesto del flusso Calcolo Pensione Futura, identifica la tipologia del periodo contributivo."
+        }
+    ],
+    "sections": [
+        {
+            "number": "1",
+            "title": "Scopo del documento",
+            "paragraphs": [
+                "Il presente documento riporta la trascrizione di quanto \u00e8 stato discusso e stabilito durante lo svolgimento della riunione."
+            ]
+        },
+        {
+            "number": "2",
+            "title": "Introduzione",
+            "paragraphs": [
+                "La riunione si \u00e8 svolta in videoconferenza tra i referenti INPS e il team di sviluppo Almaviva. L\u2019incontro aveva come obiettivi principali la verifica delle modifiche implementate in risposta alle osservazioni emerse nei due SAL precedenti e la revisione di nuove segnalazioni portate da INPS. Sono stati affrontati il flusso Verifica Diritto e Misura, il Calcolo Pensione corrente e futuro, la gestione della tabella Retribuzione Media Pensionabile, la sezione Dati Cessazione del Servizio e la contestualizzazione delle viste lista nell\u2019area operativa."
+            ]
+        },
+        {
+            "number": "4",
+            "title": "Revisione delle modifiche implementate: area operativa e flusso Verifica Diritto e Misura",
+            "paragraphs": [
+                "Laferla Gianluca ha presentato le modifiche completate in risposta alle osservazioni degli ultimi due SAL, gi\u00e0 rilasciate e testabili nell\u2019ambiente di sviluppo. Nel tooltip dell\u2019area operativa la nomenclatura \u00e8 stata allineata al Legacy (\u00abvai all\u2019area operativa\u00bb e \u00abricerca domande indirette\u00bb). Nel Drawer del dettaglio sono stati aggiunti i campi retribuzione teorica e retribuzione teorica contrattuale, precedentemente assenti nella nuova UI.",
+                "Nel flusso Verifica Diritto sono state introdotte le icone per la normativa applicata e non applicata; all\u2019apertura del dettaglio di un vincolo la visualizzazione scorre automaticamente e la riga corrispondente viene evidenziata con bordo celeste e sfondo colorato. Concordata l\u2019estensione del background azzurrino chiaro anche alla sezione \u00abDati pensionistici\u00bb, in aggiunta a \u00abRiferimento domanda\u00bb gi\u00e0 evidenziata, per uniformare la differenziazione visiva dei due blocchi informativi. \u00c8 stata rilevata una regressione CSS nel centraggio ottico dell\u2019icona normativa all\u2019interno della select, da correggere."
+            ]
+        },
+        {
+            "number": "5",
+            "title": "Calcolo Pensione: coefficiente di rendimento per periodi post-1995",
+            "paragraphs": [
+                "Nel flusso Calcolo Pensione la nuova UI visualizza un coefficiente di rendimento anche per i periodi contributivi post-1995, in analogia con il Legacy. Capobianco Paolo ha segnalato che tale coefficiente non ha rilevanza funzionale per i periodi in regime contributivo e la sua esposizione pu\u00f2 risultare fuorviante per l\u2019operatore. Il valore \u00e8 fornito dal back-end senza elaborazioni lato front-end e il comportamento rispecchia quello del Legacy. Concordato che Almaviva approfondisce il requisito con il coordinamento di progetto per valutare un eventuale intervento."
+            ]
+        },
+        {
+            "number": "6",
+            "title": "Retribuzione Media Pensionabile: riorganizzazione dei totali di riga",
+            "paragraphs": [
+                "Nella tabella Retribuzione Media Pensionabile il campo \u00abTotale retribuzione teorica\u00bb \u00e8 attualmente esposto nella prima riga dei totali. Friscia ha proposto di spostarlo nella seconda riga dei totali come terzo elemento, per rendere pi\u00f9 ordinata la lettura e coerente la rappresentazione con il foglio di calcolo di riferimento. La modifica \u00e8 stata concordata."
+            ]
+        },
+        {
+            "number": "7",
+            "title": "Calcolo Pensione Futura: miglioramenti alla visualizzazione",
+            "paragraphs": [
+                "Nel flusso Calcolo Pensione Futura sono state implementate le modifiche concordate nei SAL precedenti: allineamento alla nuova UI (interlinea e tooltip corretti), assegnazione di badge colorati ai periodi in cinque casistiche distinte (palette del design system Sirio), miglioramento della visibilit\u00e0 degli accordion con sfondo evidenziato e testo descrittivo per segnalare la presenza di contenuti espandibili, gestione dello stato tabella vuota nella sezione \u00abBenefici della cessazione\u00bb con messaggio esplicito, e risoluzione del caricamento infinito nell\u2019approdo alla sezione \u00abUltimo miglio\u00bb."
+            ]
+        },
+        {
+            "number": "8",
+            "title": "Rimozione dei paginatori dalle tabelle a cardinalit\u00e0 fissa",
+            "paragraphs": [
+                "Friscia ha segnalato la presenza di paginatori in tabelle che, per natura funzionale, contengono un numero fisso e limitato di elementi (al massimo tre). Concordata la rimozione dei paginatori dalle tabelle \u00abBenefici della cessazione\u00bb, \u00abBenefici contrattuali futuri\u00bb e \u00abDati pensionistici\u00bb nella sezione Calcolo Pensione Futura."
+            ]
+        },
+        {
+            "number": "9",
+            "title": "Uniformazione simbolo euro e separatore migliaia",
+            "paragraphs": [
+                "Mercuri Flavio ha rilevato che il simbolo euro (\u20ac) e il separatore delle migliaia non sono applicati in modo uniforme su tutti gli importi dell\u2019applicativo. Concordato il principio \u00absempre o mai\u00bb: Almaviva interverr\u00e0 per estendere la formattazione corretta a tutti gli importi attualmente privi del simbolo euro o del separatore delle migliaia."
+            ]
+        },
+        {
+            "number": "10",
+            "title": "Dati Cessazione del Servizio: riorganizzazione del layout dei campi",
+            "paragraphs": [
+                "Friscia ha illustrato differenze di layout rispetto al Legacy nella sezione \u00abDati Cessazione del Servizio\u00bb e proposto una riorganizzazione in righe tematiche. Concordata la struttura in quattro righe: prima riga con data ultimo periodo precompilazione, data cessazione e motivo cessazione; seconda riga con contratto, qualifica e aggiornato; terza riga per l\u2019eco-indennizzo (con i campi \u00ab\u00c8 previsto recupero\u00bb, \u00abRecupero co-indennizzo\u00bb e \u00abEnte recupero indennizzo\u00bb); quarta riga per l\u2019indennit\u00e0 speciale con analoga struttura. Il campo \u00ab\u00c8 previsto recupero eco-indennizzo\u00bb \u00e8 posizionato come primo elemento della terza riga."
+            ]
+        },
+        {
+            "number": "11",
+            "title": "Contestualizzazione delle viste lista nell\u2019area operativa",
+            "paragraphs": [
+                "Friscia ha segnalato l\u2019assenza di una label identificativa durante la navigazione delle viste lista nell\u2019area operativa (es. preferiti, liquidazioni, attivit\u00e0 per tipologia), rendendo difficile all\u2019operatore riconoscere il contesto di visualizzazione. Il Legacy non prevede tale indicazione; la nuova UI introduce tuttavia una struttura di navigazione pi\u00f9 articolata che rende l\u2019orientamento contestuale necessario. Concordata l\u2019aggiunta di una label descrittiva nella barra di intestazione di ciascuna vista lista (es. \u00abLe tue attivit\u00e0 \u2013 Preferiti\u00bb), da implementare come nuovi item di backlog."
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "owner": "Almaviva S.p.A.",
+            "action": "Applicare il background azzurrino chiaro alla sezione \u00abDati pensionistici\u00bb nel flusso Verifica Diritto, uniformando il trattamento visivo con la sezione \u00abRiferimento domanda\u00bb.",
+            "due_date": "-",
+            "status": "aperta"
+        },
+        {
+            "owner": "Almaviva S.p.A.",
+            "action": "Correggere il centraggio ottico dell\u2019icona normativa nella select (regressione CSS).",
+            "due_date": "-",
+            "status": "aperta"
+        },
+        {
+            "owner": "Almaviva S.p.A.",
+            "action": "Approfondire con il coordinamento di progetto il requisito funzionale relativo alla visualizzazione del coefficiente di rendimento per i periodi contributivi post-1995 nel flusso Calcolo Pensione.",
+            "due_date": "-",
+            "status": "aperta"
+        },
+        {
+            "owner": "Almaviva S.p.A.",
+            "action": "Spostare il campo \u00abTotale retribuzione teorica\u00bb dalla prima alla seconda riga dei totali nella tabella Retribuzione Media Pensionabile.",
+            "due_date": "-",
+            "status": "aperta"
+        },
+        {
+            "owner": "Almaviva S.p.A.",
+            "action": "Rimuovere il paginatore dalle tabelle a cardinalit\u00e0 fissa nella sezione Calcolo Pensione Futura (benefici della cessazione, benefici contrattuali futuri, dati pensionistici).",
+            "due_date": "-",
+            "status": "aperta"
+        },
+        {
+            "owner": "Almaviva S.p.A.",
+            "action": "Uniformare il simbolo euro e il separatore delle migliaia su tutti gli importi dell\u2019applicativo (principio \u00absempre o mai\u00bb).",
+            "due_date": "-",
+            "status": "aperta"
+        },
+        {
+            "owner": "Almaviva S.p.A.",
+            "action": "Riorganizzare il layout dei campi nella sezione \u00abDati Cessazione del Servizio\u00bb secondo la struttura concordata (quattro righe tematiche: cessazione, contratto/qualifica, eco-indennizzo, indennit\u00e0 speciale).",
+            "due_date": "-",
+            "status": "aperta"
+        },
+        {
+            "owner": "Almaviva S.p.A.",
+            "action": "Aggiungere una label contestuale nella barra di intestazione di ciascuna vista lista nell\u2019area operativa (es. \u00abLe tue attivit\u00e0 \u2013 Preferiti\u00bb).",
+            "due_date": "-",
+            "status": "aperta"
+        }
+    ],
+    "notes": [
+        "Il prossimo SAL \u00e8 previsto per la settimana del 14 luglio 2026 ed \u00e8 indicato come l\u2019ultimo incontro prima delle ferie estive.",
+        "Piscitelli Terenzio non era presente alla riunione; \u00e8 stato lasciato un appunto affinch\u00e9 possa chiarire con INPS il requisito funzionale relativo al coefficiente di rendimento post-1995."
+    ],
+    "issues": [],
+    "generation_options": {
+        "include_summary": true,
+        "include_references_section": true,
+        "include_glossary_section": true,
+        "include_issues_section": true,
+        "date_format": "dd/MM/yyyy",
+        "empty_value_placeholder": "-",
+        "language": "it",
+        "synthesis_level": "resolved"
+    }
+}

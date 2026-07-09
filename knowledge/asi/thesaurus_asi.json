@@ -1,9 +1,9 @@
 {
   "_meta": {
     "version": "1.0",
-    "last_updated": "01/07/2026",
-    "last_verbale": "meeting_minutes_20260630.json",
-    "total_meetings": 9,
+    "last_updated": "09/07/2026",
+    "last_verbale": "meeting_minutes_20260707.json",
+    "total_meetings": 10,
     "project_slug": "asi"
   },
   "participants": [
@@ -18,7 +18,8 @@
         "20260526",
         "20260604",
         "20260616",
-        "20260630"
+        "20260630",
+        "20260707"
       ],
       "confirmed_in": 0,
       "status": "pending_review"
@@ -47,7 +48,8 @@
         "20260604",
         "20260616",
         "20260624",
-        "20260630"
+        "20260630",
+        "20260707"
       ],
       "confirmed_in": 0,
       "status": "pending_review"
@@ -64,7 +66,8 @@
         "20260604",
         "20260616",
         "20260624",
-        "20260630"
+        "20260630",
+        "20260707"
       ],
       "confirmed_in": 0,
       "status": "pending_review"
@@ -81,7 +84,8 @@
         "20260604",
         "20260616",
         "20260624",
-        "20260630"
+        "20260630",
+        "20260707"
       ],
       "confirmed_in": 0,
       "status": "pending_review"
@@ -126,7 +130,8 @@
         "20260526",
         "20260604",
         "20260616",
-        "20260624"
+        "20260624",
+        "20260707"
       ],
       "confirmed_in": 0,
       "status": "pending_review"
@@ -151,7 +156,7 @@
       "normalized": "sal",
       "description": "Stato di Avanzamento Lavori: riunione periodica di monitoraggio dell'avanzamento del progetto.",
       "first_seen": "20260112",
-      "last_seen": "20260630",
+      "last_seen": "20260707",
       "confirmed_in": 0,
       "status": "pending_review",
       "_pending_description": "Stato di Avanzamento Lavori: riunione periodica di monitoraggio dell’avanzamento del progetto."
@@ -161,7 +166,7 @@
       "normalized": "ui/ux",
       "description": "User Interface / User Experience: disciplina di progettazione delle interfacce utente e dell'esperienza d'uso.",
       "first_seen": "20260112",
-      "last_seen": "20260630",
+      "last_seen": "20260707",
       "confirmed_in": 0,
       "status": "pending_review",
       "_pending_description": "User Interface / User Experience: disciplina di progettazione delle interfacce utente e dell’esperienza d’uso."
@@ -198,7 +203,7 @@
       "normalized": "legacy",
       "description": "Versione precedente del sistema informatico attualmente in produzione, oggetto del processo di reingegnerizzazione.",
       "first_seen": "20260112",
-      "last_seen": "20260630",
+      "last_seen": "20260707",
       "confirmed_in": 0,
       "status": "pending_review",
       "_pending_description": "Versione precedente dell’applicativo ASI, utilizzata come riferimento per il confronto funzionale."
@@ -208,7 +213,7 @@
       "normalized": "sirio",
       "description": "Design system di riferimento utilizzato per lo sviluppo dell'interfaccia del portale.",
       "first_seen": "20260112",
-      "last_seen": "20260630",
+      "last_seen": "20260707",
       "confirmed_in": 0,
       "status": "pending_review",
       "_pending_description": "Design system di riferimento adottato per lo sviluppo dell’interfaccia del portale."
@@ -236,10 +241,10 @@
       "normalized": "area operativa",
       "description": "Sezione del portale ASI dedicata all'operatività quotidiana degli operatori, con liste di attività, filtri e accessi rapidi.",
       "first_seen": "20260526",
-      "last_seen": "20260616",
+      "last_seen": "20260707",
       "confirmed_in": 0,
       "status": "pending_review",
-      "_pending_description": "Sezione dell’applicativo ASI dedicata alla gestione operativa delle pratiche degli iscritti."
+      "_pending_description": "Sezione del portale ASI dedicata all’operatività quotidiana degli operatori, con liste di attività, filtri e accessi rapidi."
     },
     {
       "term": "Precalcolate",
@@ -283,7 +288,7 @@
       "normalized": "tooltip",
       "description": "Suggerimento contestuale visualizzato al passaggio del mouse su un elemento dell’interfaccia, utilizzato per descrivere le azioni disponibili.",
       "first_seen": "20260604",
-      "last_seen": "20260630",
+      "last_seen": "20260707",
       "confirmed_in": 0,
       "status": "pending_review"
     },
@@ -437,9 +442,10 @@
       "normalized": "accordion",
       "description": "Componente dell’interfaccia che consente di espandere o comprimere sezioni di contenuto; utilizzato nel calcolo anzianità per separare i totali dai dettagli dei periodi contributivi.",
       "first_seen": "20260630",
-      "last_seen": "20260630",
+      "last_seen": "20260707",
       "confirmed_in": 0,
-      "status": "pending_review"
+      "status": "pending_review",
+      "_pending_description": "Componente dell’interfaccia che consente di espandere o comprimere sezioni di contenuto; utilizzato per separare i totali dai dettagli dei periodi contributivi."
     },
     {
       "term": "Verifica del diritto",
@@ -447,6 +453,33 @@
       "description": "Processo automatico di valutazione delle normative applicabili per l’attribuzione del diritto pensionistico; il sistema seleziona e indica la normativa più conveniente per l’iscritto.",
       "first_seen": "20260630",
       "last_seen": "20260630",
+      "confirmed_in": 0,
+      "status": "pending_review"
+    },
+    {
+      "term": "Drawer",
+      "normalized": "drawer",
+      "description": "Pannello laterale espandibile che mostra il dettaglio di un elemento selezionato nella tabella senza navigare verso una nuova pagina.",
+      "first_seen": "20260707",
+      "last_seen": "20260707",
+      "confirmed_in": 0,
+      "status": "pending_review"
+    },
+    {
+      "term": "Paginatore",
+      "normalized": "paginatore",
+      "description": "Componente di navigazione che suddivide una lista di elementi in pagine; da rimuovere quando la cardinalità degli elementi è fissa e limitata.",
+      "first_seen": "20260707",
+      "last_seen": "20260707",
+      "confirmed_in": 0,
+      "status": "pending_review"
+    },
+    {
+      "term": "Badge",
+      "normalized": "badge",
+      "description": "Etichetta grafica colorata associata a un elemento per indicarne la categoria o lo stato; nel contesto del flusso Calcolo Pensione Futura, identifica la tipologia del periodo contributivo.",
+      "first_seen": "20260707",
+      "last_seen": "20260707",
       "confirmed_in": 0,
       "status": "pending_review"
     }
@@ -505,6 +538,12 @@
       "verbale": "Verbale SAL – Reingegnerizzazione UI/UX ASI – 30/06/2026",
       "actions_count": 8,
       "sections_count": 6
+    },
+    {
+      "date": "07/07/2026",
+      "verbale": "Verbale SAL – Reingegnerizzazione UI/UX ASI – 07/07/2026",
+      "actions_count": 8,
+      "sections_count": 8
     }
   ],
   "open_issues": [

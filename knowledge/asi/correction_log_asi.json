@@ -1,8 +1,8 @@
 {
   "_meta": {
     "version": "1.0",
-    "total_patterns": 11,
-    "last_updated": "01/07/2026",
+    "total_patterns": 13,
+    "last_updated": "07/07/2026",
     "project_slug": "asi"
   },
   "patterns": [
@@ -595,6 +595,94 @@
       "occurrences": 1,
       "first_seen": "20260630",
       "last_seen": "20260630"
+    },
+    {
+      "pattern_id": "CRR-012",
+      "verbale": "20260707",
+      "category": "actions",
+      "changes": [
+        {
+          "field": "actions[2].owner",
+          "original": "Almaviva S.p.A.",
+          "corrected": "INPS"
+        },
+        {
+          "field": "actions[5].action",
+          "original": "Uniformare il simbolo euro e il separatore delle migliaia su tutti gli importi dell’applicativo (principio «sempre o mai»).",
+          "corrected": "Uniformare il simbolo euro e il separatore delle migliaia su tutti gli importi dell’applicativo (principio «sempre o mai»), salvo form o campi numerici."
+        }
+      ],
+      "description": "Il testo generato assegnava ad Almaviva S.p.A. l'azione di chiarimento del requisito funzionale sul coefficiente di rendimento post-1995. L'utente ha trasferito l'ownership a INPS, in quanto titolare della decisione su quale comportamento il sistema debba adottare per quel dato. Per l'azione di uniformazione del simbolo euro, l'utente ha aggiunto la clausola 'salvo form o campi numerici', escludendo i contesti in cui il valore è un input numerico immesso dall'utente (non una stringa visualizzata). → In FASE 2: assegnare a INPS le azioni che richiedono chiarimento o decisione su requisiti funzionali, non le attività di sviluppo tecnico; quando si descrivono azioni di uniformazione della formattazione numerica o valutaria, specificare esplicitamente l'esclusione dei form e dei campi di input numerico.",
+      "occurrences": 1,
+      "first_seen": "20260707",
+      "last_seen": "20260707"
+    },
+    {
+      "pattern_id": "CRR-013",
+      "verbale": "20260707",
+      "category": "sections",
+      "changes": [
+        {
+          "field": "sections[1]",
+          "title": "Scopo del documento",
+          "original_length": 123,
+          "revised_length": 161,
+          "char_delta": 38
+        },
+        {
+          "field": "sections[4]",
+          "title": "Calcolo Pensione: coefficiente di rendimento per periodi post-1995",
+          "original_length": 1053,
+          "revised_length": 692,
+          "char_delta": -361
+        },
+        {
+          "field": "sections[5]",
+          "title": "Retribuzione Media Pensionabile: riorganizzazione dei totali di riga",
+          "original_length": 569,
+          "revised_length": 359,
+          "char_delta": -210
+        },
+        {
+          "field": "sections[6]",
+          "title": "Calcolo Pensione Futura: miglioramenti alla visualizzazione",
+          "original_length": 359,
+          "revised_length": 595,
+          "char_delta": 236
+        },
+        {
+          "field": "sections[7]",
+          "title": "Rimozione dei paginatori dalle tabelle a cardinalità fissa",
+          "original_length": 595,
+          "revised_length": 328,
+          "char_delta": -267
+        },
+        {
+          "field": "sections[8]",
+          "title": "Uniformazione simbolo euro e separatore migliaia",
+          "original_length": 328,
+          "revised_length": 446,
+          "char_delta": 118
+        },
+        {
+          "field": "sections[9]",
+          "title": "Dati Cessazione del Servizio: riorganizzazione del layout dei campi",
+          "original_length": 344,
+          "revised_length": 612,
+          "char_delta": 268
+        },
+        {
+          "field": "sections[10]",
+          "title": "Contestualizzazione delle viste lista nell’area operativa",
+          "original_length": 623,
+          "revised_length": 595,
+          "char_delta": -28
+        }
+      ],
+      "description": "Il testo generato numerava le sezioni tematiche a partire da '4' (gap 2→4), saltando la posizione 3. L'utente ha spostato la prima sezione tematica alla posizione '3', ottenendo una numerazione consecutiva (1, 2, 3, 4, …) coerente con il verbale precedente del 30/06/2026 e con la struttura effettiva del template. Nella sezione sul coefficiente post-1995, l'utente ha aggiunto il dettaglio tecnico che una correzione a livello BE si propagherebbe automaticamente alla nuova UI. Nella sezione sulla formattazione euro, è stata aggiunta l'eccezione per form e campi numerici (allineata a CRR-012). Nella sezione Dati Cessazione, 'eco-indennizzo' è stato corretto in 'indennizzo'. Nelle note, è stata rimossa la nota su Piscitelli Terenzio (osservazione interna non pertinente al verbale formale). → In FASE 2: numerare le sezioni tematiche a partire da '3' (non '4'), senza salti nella sequenza; usare 'indennizzo' (non 'eco-indennizzo') per i campi di recupero indennizzo nei Dati di Cessazione; non includere nelle note osservazioni interne sulla gestione degli assenti.",
+      "occurrences": 1,
+      "first_seen": "20260707",
+      "last_seen": "20260707"
     }
   ]
 }
