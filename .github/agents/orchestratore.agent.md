@@ -32,7 +32,7 @@ Cattura l'output del comando (il percorso del file scelto dall'utente).
 python scripts\extract_transcript.py "<percorso_trascrizione>" --output sources\_transcript_tmp.txt
 ```
 
-Leggi il file `sources\_transcript_tmp.txt` per le elaborazioni successive.
+Verifica che lo script sia terminato senza errori. **Non leggere il contenuto di `sources\_transcript_tmp.txt`** — sarà caricato direttamente dal sub-agent Generatore JSON in FASE 2.
 
 ### 0b. Estrai metadata dall'header
 
@@ -60,9 +60,11 @@ Se lo script emette errore (exit code 1), leggi manualmente l'header da `sources
 
 Carica `knowledge/thesaurus.json` se esiste. Estrai:
 
-- Lista partecipanti noti (nome, ruolo, organizzazione, alias) → da usare in FASE 2
-- Lista termini tecnici noti con definizioni confermate → da usare in FASE 2
-- Pattern di correzione attivi da `knowledge/correction_log.json` se esiste → anti-pattern da evitare in FASE 2
+- Lista partecipanti noti (nome, ruolo, organizzazione, alias) → conta per il messaggio di orientamento
+- Lista termini tecnici noti con definizioni confermate → conta per il messaggio di orientamento
+- Pattern di correzione attivi da `knowledge/correction_log.json` se esiste → conta per il messaggio di orientamento
+
+Il contenuto completo del thesaurus e del correction_log sarà caricato direttamente dal sub-agent Generatore JSON.
 
 ### 0d. Identifica speaker nuovi
 
@@ -187,188 +189,35 @@ Se l'utente fornisce dati testuali (es. "Tantar Ana Maria, PM, Acme"), usali per
 
 ## FASE 2 — Produzione del JSON strutturato
 
-### CONTESTO DAL THESAURUS
+Prepara il brief per il sub-agent `Generatore JSON` con tutti i valori estratti nelle fasi precedenti, poi invocalo.
 
-Prima di generare, considera:
+Il brief da passare nel prompt:
 
-- **Partecipanti noti**: pre-popola `name`, `role`, `organization` dai dati del thesaurus per i partecipanti già riconosciuti. Non sovrascrivere con valori meno precisi estratti dalla trascrizione.
-- **Termini tecnici noti**: includi nel `glossary` i termini già presenti nel thesaurus con le loro definizioni confermate (`status: confirmed`). Aggiungi eventuali nuovi termini emersi dalla trascrizione.
-- **Pattern di correzione**: se `correction_log.json` contiene pattern attivi, leggine la `description` e usala come anti-pattern. Es.: se un pattern dice "In sezioni filtri/navigazione preferire forma collettiva", applica quella regola nel livello `attributed`.
-
-### ISTRUZIONI PER LIVELLO DI SINTESI
-
-Applica le seguenti istruzioni in base a `SYNTHESIS_LEVEL` scelto dall'utente:
-
-**`verbatim` — Verbale esteso**
-
-- Includi citazioni dirette tra virgolette attribuite al parlante, o parafrasi molto strette
-- Riporta le posizioni intermedie e i contro-argomenti rilevanti
-- Attribuisci ogni affermazione significativa al suo parlante
-- Ogni sezione ha 3-6 paragrafi ricchi di attribuzioni
-
-**`attributed` — Verbale standard** _(default)_
-
-- Riassumi la discussione con attribuzione ai contributori principali
-- Includi topic, argomenti chiave e soluzione/decisione con attribuzione
-- Ometti interventi brevi, ripetizioni, intercalari
-- Ogni sezione ha 2-4 paragrafi con attribuzioni selettive
-
-**`resolved` — Verbale sintetico**
-
-- Riporta solo la decisione finale o l'esito concordato per ogni argomento
-- Includi la motivazione solo se spiega direttamente la decisione
-- Nessun dibattito, nessuna posizione intermedia
-- Ogni sezione ha 1-2 paragrafi brevi e diretti
-
-**`executive` — Sintesi esecutiva**
-
-- Una sola frase per argomento: cosa è stato deciso + impatto operativo
-- Nessuna attribuzione, nessun dibattito, nessuna motivazione
-- Ogni sezione ha 1 paragrafo di 1-2 righe massimo
-
-### ANALISI
-
-Dalla trascrizione estrai:
-
-- Partecipanti (dagli speaker label; integra con dati thesaurus)
-- Contesto della riunione
-- Punti di discussione rilevanti
-- Decisioni prese
-- Azioni operative (task concreti, responsabili, scadenze solo se esplicite)
-
-### NORMALIZZAZIONE
-
-- Da parlato → scritto formale
-- Rimuovi intercalari, ripetizioni, digressioni
-- Non essere generico: specifica chi ha chiesto cosa e quali sono le osservazioni conclusive
-- Mantieni solo contenuti verificabili e operativamente rilevanti
-
-### GESTIONE TRASCRIZIONI DI QUALITÀ VARIABILE
-
-- **Orari mancanti**: se l'orario assoluto non è ricavabile, usa `"-"` e aggiungi un issue con severity `"bassa"`
-- **Organizzazioni non esplicitate**: usa `"-"`; aggiungi issue se rilevante
-- **Frasi incomplete o interruzioni**: ricostruisci dal contesto se chiaro; se ambiguo, ometti e aggiungi nota
-- **Nomi incerti**: segnala in `issues`
-- **Discussioni senza esito**: documenta come paragrafo osservativo senza azione associata
-
-### STRUTTURA DELLE SEZIONI
-
-- Produci tra **5 e 10 sezioni tematiche** (numerate da `"3"` in poi)
-- Raggruppa argomenti correlati; non creare sezioni con un singolo paragrafo breve
-- Le sezioni `"1"` e `"2"` sono obbligatorie:
-  - `"1"` → `"Scopo del documento"` — scopo sintetico
-  - `"2"` → `"Introduzione"` — contesto allargato, precedenti, obiettivi
-
-### GLOSSARIO
-
-Includi in `glossary`:
-
-- Tutti i termini già confermati nel thesaurus che compaiono nella trascrizione
-- Nuovi acronimi non autoesplicanti, nomi di sistemi, termini di dominio
-
-### PARTECIPANTI vs DISTRIBUZIONE
-
-- `meeting.participants`: tutte le persone presenti
-- `document.distribution`: se non specificato, usa gli stessi partecipanti
-
-### INFORMAZIONI DOCUMENTO (metadati da knowledge base)
-
-Per i campi dell'area "Informazioni Documento" del template INPS:
-
-- `document.client_references`: **non usare array vuoto**. Deriva automaticamente i nomi (stringa separata da virgola) dei partecipanti la cui `organization` contiene `"INPS"` dalla lista `meeting.participants`. Es: `["Michele Friscia, Paolo Capobianco"]`.
-- `document.contract_reference`: usa il valore `contract_reference` letto da `projects.json` in FASE 0e. Se non presente, usa `"-"`.
-- `document.management_area`: usa il valore `management_area` letto da `projects.json` in FASE 0e (nome del direttore d'area, non l'area tematica). Se non presente, usa `"-"`.
-
-**Importante**: questi tre campi devono sempre essere valorizzati correttamente; `"-"` è accettabile solo se il valore non è disponibile nel knowledge base.
-
-### SCHEMA JSON OBBLIGATORIO
-
-Produci un JSON conforme ESATTAMENTE a questo schema:
-
-```json
-{
-  "document": {
-    "title": "",
-    "document_name": "",
-    "document_type": "Verbale di riunione",
-    "ssu_code": "-",
-    "client_references": [],
-    "management_area": "",
-    "application_code": "-",
-    "contract_reference": "",
-    "supplier": "",
-    "version": "1.0",
-    "author": { "name": "", "organization": "" },
-    "history": [
-      {
-        "version": "1.0",
-        "date": "",
-        "description": "Versione iniziale",
-        "sections": ""
-      }
-    ],
-    "distribution": [],
-    "approvals": [
-      {
-        "version": "1.0",
-        "approval_date": "-",
-        "name": "-",
-        "organization": "-"
-      }
-    ]
-  },
-  "meeting": {
-    "date": "",
-    "start_time": "",
-    "end_time": "",
-    "location": "",
-    "subject": "",
-    "participants": [{ "name": "", "role": "", "organization": "" }]
-  },
-  "references": [],
-  "glossary": [],
-  "sections": [],
-  "actions": [],
-  "notes": [],
-  "issues": [],
-  "generation_options": {
-    "include_summary": true,
-    "include_references_section": true,
-    "include_glossary_section": true,
-    "include_issues_section": true,
-    "date_format": "dd/MM/yyyy",
-    "empty_value_placeholder": "-",
-    "language": "it",
-    "synthesis_level": ""
-  }
-}
+```
+project_slug: <project_slug estratto in 0b>
+meeting_date_yyyymmdd: <YYYYMMDD>
+meeting_date: <dd/MM/yyyy>
+start_time: <HH:MM>
+end_time: <HH:MM>
+document_name: <document_name>
+project_name: <project_name>
+contract_reference: <valore da projects.json, o "-">
+management_area: <valore da projects.json, o "-">
+synthesis_level: <verbatim|attributed|resolved|executive>
+new_participants_handling: <risposta FASE 1 Domanda 2, o "n/a" se non ci sono nuovi speaker>
+output_path: sources/<project_slug>/meeting_minutes_<YYYYMMDD>.json
 ```
 
-### REGOLE OBBLIGATORIE
+**Attendi il risultato** del sub-agent prima di procedere con FASE 2.5.
 
-- NON aggiungere campi fuori schema
-- NON omettere campi; tutti gli array presenti anche se vuoti
-- Dati mancanti: `""` per campi testuali attesi, `"-"` per campi non applicabili; NON inventare
-- `number` nelle sezioni è una **STRINGA**; `paragraphs` è **SEMPRE** un array di stringhe
-- `actions[].due_date` e `meeting.date` nel formato `dd/MM/yyyy`
-- `generation_options.synthesis_level` → imposta il valore interno scelto (`verbatim` / `attributed` / `resolved` / `executive`)
-- Note: solo follow-up, date future, problemi aperti irrisolti
-- Issues: `{ "code": "", "description": "", "severity": "alta|media|bassa" }`
-- **Sezioni**: numera le sezioni tematiche a partire da `"3"`. Le sezioni `"1"` (Scopo) e `"2"` (Introduzione) sono riservate. La sezione `"1"` va sempre inclusa nel JSON ma il suo corpo non viene renderizzato nel DOCX (il template ha testo fisso); includi comunque un testo descrittivo sintetico.
-- **Azioni — owner**: usa sempre la denominazione organizzativa (`Almaviva S.p.A.` o `INPS`), mai il nominativo individuale, salvo che la responsabilità sia esplicitamente e nominalmente attribuita nella trascrizione.
-
-### SALVATAGGIO JSON
-
-Salva in `sources/meeting_minutes_YYYYMMDD.json`.
-Il file deve contenere **SOLO JSON** — nessun testo, nessun markdown, nessun commento.
-Codifica **UTF-8 senza BOM**.
+Se il sub-agent restituisce errori bloccanti, mostrali all'utente e fermati.
 
 ---
 
 ## FASE 2.5 — Validazione schema
 
 ```powershell
-python scripts\validate_json.py sources\meeting_minutes_YYYYMMDD.json
+python scripts\validate_json.py sources\<slug>\meeting_minutes_YYYYMMDD.json
 ```
 
 - **ERRORI**: correggi e ripeti fino a validazione pulita
@@ -378,7 +227,7 @@ python scripts\validate_json.py sources\meeting_minutes_YYYYMMDD.json
 ## FASE 2.6 — Validazione semantica
 
 ```powershell
-python scripts\validate_semantic.py sources\meeting_minutes_YYYYMMDD.json
+python scripts\validate_semantic.py sources\<slug>\meeting_minutes_YYYYMMDD.json
 ```
 
 - **ERRORI**: correggi il JSON e ripeti entrambe le validazioni
@@ -453,80 +302,15 @@ Quando hai finito, comunicamelo in questa chat.
 
 Quando l'utente comunica di aver depositato il verbale revisionato (qualsiasi formulazione: "ho caricato", "fatto", "depositato", ecc.):
 
-### 6a. Trova il file revisionato
-
-Cerca in `results/` il file `verbale_YYYYMMDD_v1_rev.docx`. Se non esiste, chiedi all'utente di confermarne il percorso.
-
-### 6b. Riestragi il JSON dal verbale revisionato
-
-Esegui lo script di reverse-mapping (deterministico, nessun LLM — legge le tabelle e le sezioni del DOCX e ricostruisce il JSON):
-
-```powershell
-python scripts\docx_reverse_map.py `
-    results\<slug>\verbale_YYYYMMDD_v1_rev.docx `
-    sources\<slug>\meeting_minutes_YYYYMMDD.json `
-    --template $TEMPLATE_PATH
-```
-
-Lo script produce automaticamente `sources/<slug>/meeting_minutes_YYYYMMDD_rev.json`.
-
-**Cosa estrae lo script senza LLM:**
-
-- `meeting.participants` e `document.distribution` dalla tabella partecipanti
-- `glossary` dalla tabella glossario
-- `references` dalla tabella riferimenti
-- `document.history` dalla tabella storico versioni
-- Sezioni tematiche (titoli + body) dai paragrafi numerati
-- Azioni dalla sezione "Azioni successive" (parsing `• Owner: testo (Scadenza: gg/mm/aaaa)`)
-- Note dalla sezione "Note"
-
-**I metadati scalari** (titolo, date, codici documento) vengono copiati dal JSON originale, che l'utente modifica raramente in Word.
-
-Se lo script emette errore (exit code 1), leggi manualmente il DOCX revisionato ed estrai le differenze rispetto all'originale per produrre il file `_rev.json`.
-
-### 6c. Esegui diff_and_learn
-
-```powershell
-python scripts\diff_and_learn.py sources\meeting_minutes_YYYYMMDD.json sources\meeting_minutes_YYYYMMDD_rev.json
-```
-
-### 6c.5. Analizza le differenze e popola le descrizioni dei pattern
-
-Dopo l'esecuzione di `diff_and_learn.py`, il `correction_log.json` contiene i nuovi pattern con `"description": ""`. Compila ora il campo `description` per ciascun pattern la cui `last_seen` corrisponde alla data della riunione corrente.
-
-Per ogni pattern nuovo:
-
-1. Leggi `category` e `changes` per capire cosa è cambiato
-2. Per ogni `change`, confronta i testi effettivi nei due JSON già in contesto (originale e revisionato)
-3. Scrivi una `description` strutturata in due parti:
-   - **Analisi**: cosa era sbagliato nel testo generato (eccessiva verbosità, tono informale, dettaglio operativo non richiesto, terminologia imprecisa, ecc.)
-   - **Istruzione**: regola applicabile in FASE 2, in forma imperativa e direttamente utilizzabile come anti-pattern
-
-   Esempio:
-
-   ```
-   "Il testo generato elencava i sotto-passi di pianificazione con eccessivo dettaglio operativo. L'utente ha condensato in una sintesi decisionale. → In FASE 2, per sezioni di pianificazione preferire la decisione e la data concordata, omettendo le micro-attività esecutive."
-   ```
-
-4. Aggiorna il campo `description` nel file `knowledge/<slug>/correction_log.json`
-
-**Regole:**
-
-- Se la `description` è già valorizzata (pattern con `occurrences > 1` già descritto), non sovrascrivere
-- Basa la descrizione esclusivamente sui testi effettivi dei due JSON — non fare ipotesi
-- Scrivi in italiano, tono diretto e operativo, massimo 2-3 frasi per pattern
-
-### 6d. Mostra il report delle correzioni apprese
+Prepara il brief per il sub-agent `Feedback Loop` e invocalo:
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-FEEDBACK LOOP — CORREZIONI APPRESE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  [elenco differenze rilevate per categoria]
-  Nuovi pattern in correction_log: [N]
-  Thesaurus aggiornato: [riepilogo]
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+slug: <project_slug>
+date: <YYYYMMDD>
+template_path: <TEMPLATE_PATH>
 ```
+
+**Attendi il risultato** e mostralo direttamente all'utente.
 
 ---
 
@@ -538,4 +322,5 @@ FEEDBACK LOOP — CORREZIONI APPRESE
 - Non avviare FASE 3 se FASE 2.5 ha riportato errori
 - Non avviare FASE 4 se FASE 3 ha fallito
 - Non passare alla FASE 6 senza conferma esplicita dell'utente
+- Non leggere mai `sources\_transcript_tmp.txt` direttamente: il testo della trascrizione è di esclusiva competenza del sub-agent Generatore JSON
 - Se lo script Python fallisce, mostra l'errore completo e proponi la causa
