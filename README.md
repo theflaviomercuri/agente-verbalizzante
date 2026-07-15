@@ -4,13 +4,20 @@ Sistema di generazione automatica di verbali di riunione a partire da trascrizio
 
 La pipeline è progettata per **minimizzare l'uso del modello LLM**: tutte le operazioni strutturali (parsing, validazione, generazione DOCX, diff, reverse-mapping) sono eseguite da script Python deterministici. Il modello interviene esclusivamente dove è indispensabile la comprensione del linguaggio naturale.
 
+L'architettura è **multi-agente**: l'orchestratore coordina l'intera pipeline ma delega le due operazioni LLM-intensive a sub-agent dedicati (`Generatore JSON` e `Feedback Loop`), ciascuno con contesto proprio e minimale. Il contesto dell'orchestratore non contiene mai il testo della trascrizione.
+
 ---
 
 ## Struttura del progetto
 
 ```
-├── .github/agents/
-│   └── orchestratore.agent.md              # Definizione agente Copilot "Agente Verbalizzatore"
+├── .github/
+│   ├── agents/
+│   │   ├── orchestratore.agent.md          # Agente principale "Agente Verbalizzatore" (coordinatore)
+│   │   ├── generatore-json.agent.md        # Sub-agent "Generatore JSON": trascrizione → JSON strutturato
+│   │   └── feedback-loop.agent.md          # Sub-agent "Feedback Loop": rev.docx → diff → pattern appresi
+│   └── prompts/
+│       └── schema-verbale.prompt.md        # Skill: schema JSON obbligatorio + regole di scrittura
 ├── knowledge/
 │   └── <project_slug>/
 │       ├── thesaurus.json                  # Partecipanti noti, termini tecnici, decisioni, issue aperte
@@ -65,12 +72,12 @@ Questa distinzione è centrale per capire il costo operativo del sistema e cosa 
 
 ### Operazioni che **richiedono il modello LLM**
 
-| Fase | Operazione                                  | Perché serve il modello                                                                                                                                                          |
-| ---- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1    | Domande interattive (`vscode_askQuestions`) | Interpretazione della risposta utente su nuovi partecipanti in formato libero                                                                                                    |
-| 2    | Analisi trascrizione → JSON strutturato     | Comprensione del parlato, sintesi, raggruppamento tematico, disambiguazione degli interventi, applicazione del livello di sintesi scelto                                         |
-| 0c   | Lettura e contestualizzazione del thesaurus | Il modello usa thesaurus e correction_log come contesto per la generazione                                                                                                       |
-| 6c.5 | Analisi diff → descrizione pattern          | Il modello confronta i testi originale/revisionato per ogni pattern e scrive nel `correction_log` una descrizione actionable dell'errore e l'anti-pattern da applicare in FASE 2 |
+| Fase | Agente          | Operazione                                  | Perché serve il modello                                                                                                                                                            |
+| ---- | --------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | Orchestratore   | Domande interattive (`vscode_askQuestions`) | Interpretazione della risposta utente su nuovi partecipanti in formato libero                                                                                                      |
+| 2    | Generatore JSON | Analisi trascrizione → JSON strutturato     | Comprensione del parlato, sintesi, raggruppamento tematico, disambiguazione degli interventi, applicazione del livello di sintesi scelto                                           |
+| 2    | Generatore JSON | Lettura e contestualizzazione del thesaurus | Il sub-agent carica thesaurus e correction_log come contesto per la generazione; l'orchestratore li legge solo per i conteggi del messaggio di orientamento                        |
+| 6c.5 | Feedback Loop   | Analisi diff → descrizione pattern          | Il sub-agent confronta i testi originale/revisionato per ogni pattern e scrive nel `correction_log` una descrizione actionable dell'errore e l'anti-pattern da applicare in FASE 2 |
 
 La **FASE 2** è l'unica operazione cognitivamente complessa e irriducibile al solo codice: trasformare decine di minuti di parlato non strutturato in un documento formale richiede comprensione semantica. Tutto il resto è eseguito da script.
 
@@ -108,7 +115,7 @@ Xh Ym Zs
 
 Lo script estrae con regex: `meeting_date`, `start_time`, `end_time`, `document_name`, `project_slug`. L'output è un JSON stampato su stdout, pronto per essere iniettato nel contesto del modello per FASE 2.
 
-**0c — Caricamento knowledge base:** Il modello legge `knowledge/<slug>/thesaurus.json` e `correction_log.json` per pre-popolare partecipanti, termini tecnici e anti-pattern da evitare.
+**0c — Caricamento knowledge base (conteggi):** L'orchestratore legge `knowledge/<slug>/thesaurus.json` e `correction_log.json` **solo per estrarre i conteggi** da mostrare nel messaggio di orientamento (N partecipanti noti, N termini, N pattern attivi). Il contenuto completo verrà caricato dal sub-agent `Generatore JSON` in FASE 2.
 
 **0d — Rilevamento speaker:**
 
@@ -137,9 +144,16 @@ Il modello pone due domande tramite `vscode_askQuestions`:
 
 ---
 
-### FASE 2 — Produzione del JSON strutturato `[LLM — operazione principale]`
+### FASE 2 — Produzione del JSON strutturato `[sub-agent: Generatore JSON]`
 
-Il modello analizza `sources/_transcript_tmp.txt` tenendo conto del thesaurus, del livello di sintesi e dei metadata estratti in FASE 0b. Produce `sources/<slug>/meeting_minutes_YYYYMMDD.json`.
+L'orchestratore prepara un brief compatto (slug, metadati header, livello di sintesi, parametri nuovi partecipanti) e invoca il sub-agent **`Generatore JSON`**. Il sub-agent parte con contesto fresco e minimale:
+
+1. Legge `.github/prompts/schema-verbale.prompt.md` per le regole di scrittura e lo schema
+2. Carica `knowledge/<slug>/thesaurus.json` e `correction_log.json`
+3. Legge `sources/_transcript_tmp.txt` (il testo della trascrizione non entra mai nel contesto dell'orchestratore)
+4. Genera e salva `sources/<slug>/meeting_minutes_YYYYMMDD.json`
+
+L'orchestratore riceve il risultato e prosegue con FASE 2.5.
 
 Il JSON contiene:
 
@@ -236,14 +250,14 @@ python scripts\diff_and_learn.py `
 
 Confronta campo per campo i due JSON, scrive le correzioni in `knowledge/<slug>/correction_log.json` come pattern (`CRR-XXX`) applicati automaticamente alle generazioni future.
 
-**6c.5 — Analisi LLM delle differenze `[LLM]`:**
+**6c.5 — Analisi diff → descrizione pattern `[sub-agent: Feedback Loop]`:**
 
-Il modello legge i nuovi pattern scritti in `correction_log.json` (quelli con `description` vuota) e, confrontando i testi effettivi dal JSON originale e revisionato già in contesto, popola il campo `description` di ciascun pattern con:
+Il sub-agent `Feedback Loop` (invocato dall'orchestratore al momento della conferma dell'utente) esegue 6b e 6c in modo deterministico, poi legge i nuovi pattern in `correction_log.json` (quelli con `description` vuota) e popola il campo `description` di ciascun pattern con:
 
 - **Analisi** di cosa era sbagliato nel testo generato
 - **Istruzione** applicabile in FASE 2 come anti-pattern, in forma imperativa
 
-Questo è l'unico punto del feedback loop in cui interviene il modello. L'output è un aggiornamento mirato al `correction_log.json` — nessun nuovo file prodotto.
+Il sub-agent opera con contesto fresco (solo i due JSON e il correction_log) senza portare in memoria l'intera sessione di generazione. L'output è un aggiornamento mirato al `correction_log.json` — nessun nuovo file prodotto.
 
 ---
 
@@ -279,7 +293,9 @@ genera verbale
 vai
 ```
 
-L'agente apre automaticamente la finestra di selezione file e conduce l'intera pipeline in autonomia.
+L'agente apre automaticamente la finestra di selezione file e conduce l'intera pipeline in autonomia. Nelle fasi LLM-intensive (FASE 2 e FASE 6c.5), invoca automaticamente i sub-agent `Generatore JSON` e `Feedback Loop` — l'utente non deve fare nulla di diverso.
+
+> **Nota:** I sub-agent non sono pensati per essere invocati direttamente dall'utente. Sono interni alla pipeline e ricevono il contesto necessario dall'orchestratore.
 
 ---
 
