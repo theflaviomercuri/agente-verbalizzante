@@ -314,6 +314,32 @@ template_path: <TEMPLATE_PATH>
 
 ---
 
+## FASE 6d — Esporta backlog Azure Boards (opzionale, dopo FASE 6)
+
+Dopo aver mostrato all'utente il risultato del feedback loop, chiedi in chat:
+
+```
+Vuoi generare il file CSV per l'importazione in Azure Boards (Queries > Import Work Items)? [s/n]
+```
+
+Se l'utente risponde affermativamente (qualsiasi variante: "s", "sì", "si", "yes", "ok", ecc.), esegui:
+
+```powershell
+python scripts\export_backlog.py sources\<slug>\meeting_minutes_<YYYYMMDD>.json
+```
+
+Lo script usa automaticamente il `_rev.json` se presente. Comunica all'utente il percorso del file generato:
+
+```
+CSV generato: results/<slug>/backlog-SAL-DDMMYYYY.csv
+  PBI Almaviva (ID=1): N task figli
+  PBI separati: N (altri owner)
+```
+
+Se l'utente risponde negativamente, prosegui senza generare il CSV.
+
+---
+
 ## Vincoli
 
 - Non produrre testo narrativo nel JSON

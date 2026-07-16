@@ -1,0 +1,49 @@
+# ──────────────────────────────────────────────────────────────
+# Agente Verbalizzante — .gitignore
+#
+# Il repo pubblica solo l'infrastruttura generica:
+#   scripts/, .github/agents/, .github/prompts/, README.md
+#
+# Tutti i dati di progetto restano locali (trascrizioni, verbali,
+# knowledge base accumulata, template e output con branding cliente).
+# Un clone pulito ottiene la struttura cartelle vuota tramite i
+# file .gitkeep, pronto per essere usato su qualsiasi progetto.
+# ──────────────────────────────────────────────────────────────
+
+# ── Knowledge base ────────────────────────────────────────────
+# JSON in knowledge/ root: projects.json (CIG, nomi cliente) e
+# *_global.json (KB accumulate nel tempo con dati di progetto)
+knowledge/*.json
+# Cartelle per-progetto: knowledge/<slug>/thesaurus.json, correction_log.json
+knowledge/*/
+
+# ── Trascrizioni e JSON strutturati ───────────────────────────
+# Cartelle per-progetto: sources/<slug>/meeting_minutes_*.json
+sources/*/
+# File temporaneo di estrazione trascrizione (mai committare)
+sources/_transcript_tmp.txt
+
+# ── Output generati (DOCX, CSV) ───────────────────────────────
+# Cartelle per-progetto: results/<slug>/verbale_*.docx, backlog-*.csv
+results/*/
+
+# ── Template DOCX / immagini con branding cliente ─────────────
+templates/*.docx
+templates/*.dotx
+templates/*.png
+templates/*.jpg
+templates/*.jpeg
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ── Sistema operativo ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor ────────────────────────────────────────────────────
+*.swp
+*.swo
